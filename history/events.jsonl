@@ -6,3 +6,6 @@
 {"stage": "engineering_red", "status": "expected_failure", "agent": "v2_policies", "artifact": "tests/test_policies.py", "detail": "Module absent; tests committed before production. Feature tests inherited from V1."}
 {"stage": "engineering_red", "status": "expected_failure", "agent": "v2_inference", "artifact": "tests/test_inference.py", "detail": "Verified missing-module collection failure before implementation."}
 {"stage": "engineering_red", "status": "expected_failure", "agent": "v2_matcher", "artifact": "tests/test_matcher.py", "detail": "Verified missing-module collection failure before implementation."}
+{"stage": "engineering_red", "status": "expected_failure", "agent": "root", "artifact": "tests/test_research.py", "detail": "Research module absent; gate and holdout-seal tests fail collection before implementation."}
+{"stage": "agent_failure", "status": "continued_from_saved_files", "agent": "v2_policies", "artifact": "src/nqprofit/policies.py", "detail": "Usage interruption after agent reported 26 passing tests; root recovered artifacts and rechecks integration."}
+{"stage": "agent_interruption", "status": "continued_from_saved_files", "agent": "v2_inference,v2_matcher", "artifact": "src/nqprofit/inference.py,src/nqprofit/matcher.py", "detail": "Session interrupted; implementations persisted. Root verifying their tests before integration."}

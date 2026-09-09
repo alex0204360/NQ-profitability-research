@@ -15,3 +15,5 @@
 {"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_matcher", "artifact": "src/nqprofit/matcher.py"}
 {"stage": "engineering", "status": "implemented_and_reviewed", "agent": "root", "artifact": "src/nqprofit/replay.py,src/nqprofit/research.py,src/nqprofit/cli.py"}
 {"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_integration_review", "artifact": "docs/component-review.md"}
+{"agent": "root", "artifact": "reports/input_manifest.json", "detail": "Training/calendar reused; inherited exclusions retained; holdout not opened", "stage": "phase1", "status": "completed", "time_utc": "2026-09-09T23:13:06.790563+00:00"}
+{"stage": "phase1.5", "status": "completed", "agent": "root", "artifact": "reports/labeling.json", "opportunities": 130817, "common45_fit_opportunities": 125518, "actions": 1080, "heldout_outcomes_opened": false}

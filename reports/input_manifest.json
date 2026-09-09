@@ -1,0 +1,15 @@
+{
+  "holdout_access": "not_opened_by_v2",
+  "holdout_cutoff": "2025-01-01T05:00:00+00:00",
+  "holdout_end": "2025-12-12T05:00:00+00:00",
+  "holdout_rows": 330516,
+  "holdout_sha256": "6bf3ab113bb8a8b20f741d1e5fdfc9bfbf46ec60107261215f3b99e8ca8675fe",
+  "input_hashes": {
+    "schedule.parquet": "fccb7ac0bc7b5c709f76ca5528b303b861b42ef8d78c6d36703252771c9c24a3",
+    "training.parquet": "1722334651520716155d7d14aca334342319e4431c084b5d6be8d24bd31b6f08"
+  },
+  "metadata_ready": false,
+  "raw_sha256": "1577e60a7feab411e49da7a56c7052a64738cd1757cfd60aa11fd783ff43b60b",
+  "training_rows": 706008,
+  "v1_commit": "731607099729bdc1e3151b767a695e5c86aea503"
+}

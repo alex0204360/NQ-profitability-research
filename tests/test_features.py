@@ -70,9 +70,7 @@ def test_gap_and_contract_change_restart_the_entire_warmup(boundary):
     assert features["valid"].iloc[79]
     assert not features["valid"].iloc[80:140].any()
     assert features["valid"].iloc[140:].all()
-    pd.testing.assert_frame_equal(
-        features.iloc[80:], compute_features(frame.iloc[80:])
-    )
+    pd.testing.assert_frame_equal(features.iloc[80:], compute_features(frame.iloc[80:]))
 
 
 def test_features_need_no_more_than_the_current_and_sixty_prior_bars():
@@ -128,9 +126,15 @@ def test_flat_bars_and_zero_volume_have_finite_neutral_states():
     valid = features.loc[features["valid"]]
     assert np.isfinite(valid.drop(columns="valid").to_numpy(dtype=float)).all()
     for column in [
-        "body_fraction", "upper_wick_fraction", "lower_wick_fraction",
-        "lag1_return_to_range", "price_z20", "trend20_60", "volume_z20",
-        "range_z20", "range_to_atr14",
+        "body_fraction",
+        "upper_wick_fraction",
+        "lower_wick_fraction",
+        "lag1_return_to_range",
+        "price_z20",
+        "trend20_60",
+        "volume_z20",
+        "range_z20",
+        "range_to_atr14",
     ]:
         assert (valid[column] == 0).all()
 
@@ -165,7 +169,10 @@ def test_unparseable_timestamps_fail_clearly():
         compute_features(frame)
 
 
-@pytest.mark.parametrize("defect", ["naive", "descending", "duplicate", "missing", "nonfinite", "negative_volume", "bad_ohlc"])
+@pytest.mark.parametrize(
+    "defect",
+    ["naive", "descending", "duplicate", "missing", "nonfinite", "negative_volume", "bad_ohlc"],
+)
 def test_rejects_invalid_downstream_bar_contract(defect):
     frame = bars(80)
     if defect == "naive":

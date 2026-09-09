@@ -29,3 +29,9 @@ source = ["nqprofit"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+
+[tool.ruff.lint.per-file-ignores]
+# Invalid decoded JSON structure is reported consistently as ValueError.
+"src/nqprofit/matcher.py" = ["TRY004"]
+# A failed candidate must be logged without stopping the other candidate family.
+"src/nqprofit/research.py" = ["BLE001"]

@@ -56,7 +56,7 @@ def library(tmp_path, monkeypatch):
                 "predicted_net_points": 0.7,
                 "ranking_score": 0.2,
             },
-        ]
+        ],
     }
     (tmp_path / "models" / "fixture.json").write_text(json.dumps(model))
     encoder_fixture = {"fixture": True, "family": "synthetic_policy", "n_states": 1}
@@ -69,8 +69,12 @@ def library(tmp_path, monkeypatch):
             "policy_id": "synthetic_policy",
             "model_path": "models/fixture.json",
             "encoder_path": "models/encoder.json",
-            "model_sha256": hashlib.sha256((tmp_path / "models/fixture.json").read_bytes()).hexdigest(),
-            "encoder_sha256": hashlib.sha256((tmp_path / "models/encoder.json").read_bytes()).hexdigest(),
+            "model_sha256": hashlib.sha256(
+                (tmp_path / "models/fixture.json").read_bytes()
+            ).hexdigest(),
+            "encoder_sha256": hashlib.sha256(
+                (tmp_path / "models/encoder.json").read_bytes()
+            ).hexdigest(),
             "stats": {"n": 41, "mean_net_points": 0.6, "fixture": True},
             "qualified": qualified,
             "status": "historically_qualified" if qualified else "diagnostic_unqualified",
@@ -342,8 +346,12 @@ def test_real_policy_serving_uses_frozen_encoder_and_feasible_action(tmp_path):
                         "policy_id": "regime8",
                         "model_path": "models/policy.json",
                         "encoder_path": "models/encoder.json",
-                        "model_sha256": hashlib.sha256((tmp_path / "models/policy.json").read_bytes()).hexdigest(),
-                        "encoder_sha256": hashlib.sha256((tmp_path / "models/encoder.json").read_bytes()).hexdigest(),
+                        "model_sha256": hashlib.sha256(
+                            (tmp_path / "models/policy.json").read_bytes()
+                        ).hexdigest(),
+                        "encoder_sha256": hashlib.sha256(
+                            (tmp_path / "models/encoder.json").read_bytes()
+                        ).hexdigest(),
                         "stats": {"fixture": True},
                         "qualified": False,
                         "status": "synthetic_unqualified",
@@ -364,20 +372,22 @@ def test_real_policy_serving_uses_frozen_encoder_and_feasible_action(tmp_path):
 def test_edited_model_cannot_inherit_qualified_statistics(library, tmp_path):
     write, _, path = library
     write(qualified=True)
-    model = tmp_path / 'models/fixture.json'
-    model.write_text(model.read_text() + ' ')
-    with pytest.raises(ValueError, match='hash'):
+    model = tmp_path / "models/fixture.json"
+    model.write_text(model.read_text() + " ")
+    with pytest.raises(ValueError, match="hash"):
         PolicyMatcher(path)
 
 
 def test_swapped_identity_cannot_inherit_qualified_statistics(library, tmp_path):
     write, payload, path = library
     write(qualified=True)
-    model = tmp_path / 'models/fixture.json'
+    model = tmp_path / "models/fixture.json"
     content = json.loads(model.read_text())
-    content['policy_id'] = 'another_policy'
+    content["policy_id"] = "another_policy"
     model.write_text(json.dumps(content))
-    payload['qualified_policies'][0]['model_sha256'] = hashlib.sha256(model.read_bytes()).hexdigest()
+    payload["qualified_policies"][0]["model_sha256"] = hashlib.sha256(
+        model.read_bytes()
+    ).hexdigest()
     path.write_text(json.dumps(payload))
-    with pytest.raises(ValueError, match='identity'):
+    with pytest.raises(ValueError, match="identity"):
         PolicyMatcher(path)

@@ -9,3 +9,9 @@
 {"stage": "engineering_red", "status": "expected_failure", "agent": "root", "artifact": "tests/test_research.py", "detail": "Research module absent; gate and holdout-seal tests fail collection before implementation."}
 {"stage": "agent_failure", "status": "continued_from_saved_files", "agent": "v2_policies", "artifact": "src/nqprofit/policies.py", "detail": "Usage interruption after agent reported 26 passing tests; root recovered artifacts and rechecks integration."}
 {"stage": "agent_interruption", "status": "continued_from_saved_files", "agent": "v2_inference,v2_matcher", "artifact": "src/nqprofit/inference.py,src/nqprofit/matcher.py", "detail": "Session interrupted; implementations persisted. Root verifying their tests before integration."}
+{"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_execution", "artifact": "src/nqprofit/execution.py"}
+{"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_policies", "artifact": "src/nqprofit/policies.py"}
+{"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_inference", "artifact": "src/nqprofit/inference.py"}
+{"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_matcher", "artifact": "src/nqprofit/matcher.py"}
+{"stage": "engineering", "status": "implemented_and_reviewed", "agent": "root", "artifact": "src/nqprofit/replay.py,src/nqprofit/research.py,src/nqprofit/cli.py"}
+{"stage": "engineering", "status": "implemented_and_reviewed", "agent": "v2_integration_review", "artifact": "docs/component-review.md"}

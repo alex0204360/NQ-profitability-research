@@ -13,3 +13,9 @@
 - Committed failing causal-feature, conservative-execution, learned-policy, and replay tests before implementations.
 
 - Committed failing paired profit-inference and standard-OHLCV matcher contracts.
+
+## 2026-09-09 — Profit research engine
+
+- Implemented 1,080 ATR-scaled TP/SL/window actions, conservative payoff labels and nonoverlapping replay.
+- Added four learned policies, paired block inference, hash-bound standard-OHLCV matching and sealed terminal orchestration.
+- Resolved independent review findings on incomplete benchmarks, serving identity, input hashes and candidate failure isolation before any market outcome evaluation.

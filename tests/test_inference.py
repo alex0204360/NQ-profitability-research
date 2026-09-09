@@ -222,7 +222,9 @@ def test_bootstrap_does_not_mutate_inputs():
     pd.testing.assert_frame_equal(policy, before)
 
 
-@pytest.mark.parametrize("failure", ["missing_day", "unpaired", "nan", "negative_count", "cash_without_trade", "overlap"])
+@pytest.mark.parametrize(
+    "failure", ["missing_day", "unpaired", "nan", "negative_count", "cash_without_trade", "overlap"]
+)
 def test_malformed_bootstrap_periods_rejected(failure):
     policy = daily([1.0] * 25)
     baseline = daily([0.0] * 25, [0] * 25)
@@ -244,7 +246,15 @@ def test_malformed_bootstrap_periods_rejected(failure):
         bootstrap_evidence(periods, draws=9)
 
 
-@pytest.mark.parametrize("kwargs", [{"draws": 0}, {"draws": 2.5}, {"draws": 9, "block_lengths": ()}, {"draws": 9, "block_lengths": (0,)}])
+@pytest.mark.parametrize(
+    "kwargs",
+    [
+        {"draws": 0},
+        {"draws": 2.5},
+        {"draws": 9, "block_lengths": ()},
+        {"draws": 9, "block_lengths": (0,)},
+    ],
+)
 def test_invalid_bootstrap_configuration_rejected(kwargs):
     frame = daily([1] * 10)
     with pytest.raises(ValueError):

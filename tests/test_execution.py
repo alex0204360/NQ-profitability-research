@@ -65,8 +65,15 @@ def test_action_rejects_invalid_distances(tp, sl):
 
 @pytest.mark.parametrize(
     "atr,multiple,expected",
-    [(0.1, 0.5, 0.25), (0.125, 1, 0.25), (0.374999, 1, 0.25),
-     (0.375, 1, 0.5), (0.625, 1, 0.75), (1.25, 0.5, 0.75), (4, 3, 12)],
+    [
+        (0.1, 0.5, 0.25),
+        (0.125, 1, 0.25),
+        (0.374999, 1, 0.25),
+        (0.375, 1, 0.5),
+        (0.625, 1, 0.75),
+        (1.25, 0.5, 0.75),
+        (4, 3, 12),
+    ],
 )
 def test_distance_rounding_is_half_up_with_one_tick_minimum(atr, multiple, expected):
     assert quantize_distance(atr, multiple) == expected
@@ -80,8 +87,12 @@ def test_distance_rounding_rejects_invalid_inputs(atr, multiple):
 
 @pytest.mark.parametrize(
     "direction,high,low,reason,gross,exit_price",
-    [(1, 105, 99, "tp", 4, 104), (-1, 101, 95, "tp", 4, 96),
-     (1, 101, 95, "sl", -4, 96), (-1, 105, 99, "sl", -4, 104)],
+    [
+        (1, 105, 99, "tp", 4, 104),
+        (-1, 101, 95, "tp", 4, 96),
+        (1, 101, 95, "sl", -4, 96),
+        (-1, 105, 99, "sl", -4, 104),
+    ],
 )
 def test_next_open_entry_and_single_barrier_fills(direction, high, low, reason, gross, exit_price):
     frame = bars()
@@ -106,10 +117,16 @@ def test_next_open_entry_and_single_barrier_fills(direction, high, low, reason, 
 
 @pytest.mark.parametrize(
     "direction,open_,expected_price,reason,gross",
-    [(1, 106, 104, "tp", 4), (1, 94, 94, "sl", -6),
-     (-1, 94, 96, "tp", 4), (-1, 106, 106, "sl", -6)],
+    [
+        (1, 106, 104, "tp", 4),
+        (1, 94, 94, "sl", -6),
+        (-1, 94, 96, "tp", 4),
+        (-1, 106, 106, "sl", -6),
+    ],
 )
-def test_opening_gaps_use_worse_stop_price_and_cap_target(direction, open_, expected_price, reason, gross):
+def test_opening_gaps_use_worse_stop_price_and_cap_target(
+    direction, open_, expected_price, reason, gross
+):
     frame = bars()
     set_bar(frame, 2, open_, open_ + 0.5, open_ - 0.5, open_)
     result = simulate_trade(frame, 0, Action(direction, 1, 1, 3), atr=4)
@@ -152,7 +169,9 @@ def test_timeout_is_actual_signed_close_payoff_at_exact_horizon(direction, horiz
     assert result["resolution_bars"] == horizon
     assert result["gross_points"] == direction * 1.75
     assert result["net_points"] == direction * 1.75 - 1
-    assert pd.Timestamp(result["exit_time"]) == frame.loc[horizon, "timestamp"] + pd.Timedelta(minutes=1)
+    assert pd.Timestamp(result["exit_time"]) == frame.loc[horizon, "timestamp"] + pd.Timedelta(
+        minutes=1
+    )
 
 
 def test_hit_on_45th_bar_is_included():
@@ -236,7 +255,7 @@ def test_detection_index_is_positional_not_dataframe_label():
 
 @pytest.mark.parametrize("index", [-1, 50, 1.5, True])
 def test_invalid_detection_index_rejected(index):
-    with pytest.raises((ValueError, IndexError)):
+    with pytest.raises((ValueError, IndexError, TypeError)):
         simulate_trade(bars(), index, Action(1, 1, 1, 1), atr=4)
 
 
@@ -258,7 +277,9 @@ def test_matrix_preserves_action_order_dtype_and_all_grid_payoffs():
     set_bar(frame, 2, 100, 104, 97, 102)
     actions = action_grid()
     actual = payoff_matrix(frame, np.array([0]), np.array([4.0]), actions=actions, cost=1.5)
-    expected = [simulate_trade(frame, 0, action, atr=4, cost=1.5)["net_points"] for action in actions]
+    expected = [
+        simulate_trade(frame, 0, action, atr=4, cost=1.5)["net_points"] for action in actions
+    ]
     assert actual.shape == (1, 1080)
     assert actual.dtype == np.float32
     np.testing.assert_allclose(actual[0], expected, atol=1e-6)
@@ -285,11 +306,16 @@ def test_matrix_matches_scalar_for_random_paths_gaps_segments_contracts_and_part
         for h in (1, 2, 7, 45)
     )
     actual = payoff_matrix(frame, indices, atrs, actions=actions, cost=1.25)
-    expected = np.array([
-        [simulate_trade(frame, int(i), action, float(atr), cost=1.25)["net_points"]
-         for action in actions]
-        for i, atr in zip(indices, atrs, strict=True)
-    ], dtype=np.float32)
+    expected = np.array(
+        [
+            [
+                simulate_trade(frame, int(i), action, float(atr), cost=1.25)["net_points"]
+                for action in actions
+            ]
+            for i, atr in zip(indices, atrs, strict=True)
+        ],
+        dtype=np.float32,
+    )
     np.testing.assert_allclose(actual, expected, rtol=1e-6, atol=1e-6, equal_nan=True)
 
 

@@ -4,3 +4,5 @@
 {"stage": "engineering_red", "status": "expected_failure", "agent": "root", "artifact": "tests/test_features.py", "detail": "Module absent; tests committed before production. Feature tests inherited from V1."}
 {"stage": "engineering_red", "status": "expected_failure", "agent": "v2_execution", "artifact": "tests/test_execution.py", "detail": "Module absent; tests committed before production. Feature tests inherited from V1."}
 {"stage": "engineering_red", "status": "expected_failure", "agent": "v2_policies", "artifact": "tests/test_policies.py", "detail": "Module absent; tests committed before production. Feature tests inherited from V1."}
+{"stage": "engineering_red", "status": "expected_failure", "agent": "v2_inference", "artifact": "tests/test_inference.py", "detail": "Verified missing-module collection failure before implementation."}
+{"stage": "engineering_red", "status": "expected_failure", "agent": "v2_matcher", "artifact": "tests/test_matcher.py", "detail": "Verified missing-module collection failure before implementation."}

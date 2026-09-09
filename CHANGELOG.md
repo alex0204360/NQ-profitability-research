@@ -11,3 +11,5 @@
 
 - Added package scaffold and pre-evaluation timestamp/booking clarifications.
 - Committed failing causal-feature, conservative-execution, learned-policy, and replay tests before implementations.
+
+- Committed failing paired profit-inference and standard-OHLCV matcher contracts.

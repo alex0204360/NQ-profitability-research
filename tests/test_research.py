@@ -118,3 +118,37 @@ def test_empty_freeze_skips_holdout_without_opening_path(tmp_path):
     assert result["status"] == "not_run_no_survivors"
     assert not (tmp_path / "history/heldout_access.json").exists()
     assert json.loads((tmp_path / "reports/stage2.json").read_text())["status"] == result["status"]
+
+
+def test_frozen_candidate_failure_is_retained_and_other_candidate_runs(tmp_path):
+    from nqprofit.research import score_frozen_family
+    calls = []
+    def evaluate(name):
+        calls.append(name)
+        if name == 'broken':
+            raise ValueError('fixture failure')
+        return {'policy_id':name,'summary':summary(),'reasons':[],
+                'bootstrap':{'p_value':.001,'lower_bounds_positive':True}}
+    results = score_frozen_family(tmp_path, ['broken','working'], evaluate)
+    assert calls == ['broken','working']
+    assert results[0]['qualified'] is False
+    assert results[0]['holm']['adjusted_p'] == 1.0
+    assert results[1]['qualified'] is True
+    assert results[1]['holm']['adjusted_p'] == .002
+    assert 'fixture failure' in (tmp_path/'history/events.jsonl').read_text()
+
+
+def test_terminal_shared_failure_leaves_terminal_artifact(tmp_path, monkeypatch):
+    import nqprofit.research as research
+    frozen_project(tmp_path)
+    document = json.loads((tmp_path/'reports/freeze.json').read_text())
+    document['survivors'] = ['fixture']
+    write_json(tmp_path/'reports/freeze.json', document)
+    write_json(tmp_path/'history/freeze_publication.json',
+               {'freeze_sha256':file_hash(tmp_path/'reports/freeze.json'),
+                'verified':True,'remote_commit':'1'*40})
+    result = research.terminal_validation(tmp_path, holdout_path=tmp_path/'missing.parquet')
+    assert result['status'] == 'failed'
+    assert result['qualified'] == []
+    assert (tmp_path/'reports/stage2.json').exists()
+    assert research.terminal_validation(tmp_path, holdout_path=tmp_path/'missing.parquet') == result

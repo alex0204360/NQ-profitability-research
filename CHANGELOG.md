@@ -26,3 +26,10 @@
 - Generated 1,080 cost-adjusted action labels on 125,518 common eligible fit observations.
 - Preserved inherited data-quality exclusions and metadata uncertainty. Holdout prices/outcomes were not decoded; only an opaque file digest was recorded.
 - Added opt-in full-round integration verification of costs, chronology, occupancy and the 45-minute cap.
+
+## 2026-09-09 — Tournament Round 1
+
+- Tested regime8 and prototype8 across all four chronological validation folds.
+- Both policies abstained at all 113,688 validation opportunities: no fitted action had a positive cost-adjusted ranking score. Both were rejected for insufficient executed trades and no established net expectancy.
+- No bootstrap or heldout evaluation ran; the no-trade outcome is a recorded research result.
+- Full-round integration verification passed, including the untouched-holdout guard.

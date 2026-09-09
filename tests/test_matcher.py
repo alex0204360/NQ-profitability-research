@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -31,6 +33,8 @@ def library(tmp_path, monkeypatch):
     (tmp_path / "patterns").mkdir()
     (tmp_path / "models").mkdir()
     model = {
+        "policy_id": "synthetic_policy",
+        "n_states": 1,
         "fixture_actions": [
             {
                 "action_id": "long_h45",
@@ -55,7 +59,8 @@ def library(tmp_path, monkeypatch):
         ]
     }
     (tmp_path / "models" / "fixture.json").write_text(json.dumps(model))
-    (tmp_path / "models" / "encoder.json").write_text(json.dumps({"fixture": True}))
+    encoder_fixture = {"fixture": True, "family": "synthetic_policy", "n_states": 1}
+    (tmp_path / "models" / "encoder.json").write_text(json.dumps(encoder_fixture))
     payload = {"schema_version": 2, "qualified_policies": [], "diagnostic_policies": []}
     path = tmp_path / "patterns" / "library.json"
 
@@ -64,6 +69,8 @@ def library(tmp_path, monkeypatch):
             "policy_id": "synthetic_policy",
             "model_path": "models/fixture.json",
             "encoder_path": "models/encoder.json",
+            "model_sha256": hashlib.sha256((tmp_path / "models/fixture.json").read_bytes()).hexdigest(),
+            "encoder_sha256": hashlib.sha256((tmp_path / "models/encoder.json").read_bytes()).hexdigest(),
             "stats": {"n": 41, "mean_net_points": 0.6, "fixture": True},
             "qualified": qualified,
             "status": "historically_qualified" if qualified else "diagnostic_unqualified",
@@ -75,15 +82,13 @@ def library(tmp_path, monkeypatch):
 
     def encode(features, timestamps, encoder):
         assert features["valid"].all()
-        assert encoder == {"fixture": True}
+        assert encoder == encoder_fixture
         assert pd.DatetimeIndex(timestamps).tz is not None
         return np.zeros(len(features), dtype=int)
 
     def select(model, state, max_horizon=45):
         assert state == 0
-        return next(
-            (a for a in model["fixture_actions"] if a["horizon"] <= max_horizon), None
-        )
+        return next((a for a in model["fixture_actions"] if a["horizon"] <= max_horizon), None)
 
     monkeypatch.setattr(matcher_module, "encode_states", encode)
     monkeypatch.setattr(matcher_module, "select_action", select)
@@ -337,6 +342,8 @@ def test_real_policy_serving_uses_frozen_encoder_and_feasible_action(tmp_path):
                         "policy_id": "regime8",
                         "model_path": "models/policy.json",
                         "encoder_path": "models/encoder.json",
+                        "model_sha256": hashlib.sha256((tmp_path / "models/policy.json").read_bytes()).hexdigest(),
+                        "encoder_sha256": hashlib.sha256((tmp_path / "models/encoder.json").read_bytes()).hexdigest(),
                         "stats": {"fixture": True},
                         "qualified": False,
                         "status": "synthetic_unqualified",
@@ -352,3 +359,25 @@ def test_real_policy_serving_uses_frozen_encoder_and_feasible_action(tmp_path):
     assert choice["horizon"] == 1
     assert choice["predicted_net_points"] == 1.0
     assert choice["qualified"] is False
+
+
+def test_edited_model_cannot_inherit_qualified_statistics(library, tmp_path):
+    write, _, path = library
+    write(qualified=True)
+    model = tmp_path / 'models/fixture.json'
+    model.write_text(model.read_text() + ' ')
+    with pytest.raises(ValueError, match='hash'):
+        PolicyMatcher(path)
+
+
+def test_swapped_identity_cannot_inherit_qualified_statistics(library, tmp_path):
+    write, payload, path = library
+    write(qualified=True)
+    model = tmp_path / 'models/fixture.json'
+    content = json.loads(model.read_text())
+    content['policy_id'] = 'another_policy'
+    model.write_text(json.dumps(content))
+    payload['qualified_policies'][0]['model_sha256'] = hashlib.sha256(model.read_bytes()).hexdigest()
+    path.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match='identity'):
+        PolicyMatcher(path)

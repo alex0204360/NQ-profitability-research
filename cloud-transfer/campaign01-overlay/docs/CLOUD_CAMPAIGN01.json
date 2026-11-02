@@ -1,0 +1,21 @@
+{
+  "version": "mnq-cloud-dual-delay-value-v1",
+  "registered": "2026-11-02",
+  "status": "registered_before_student_predictions_or_backtest",
+  "question": "Can a value model trained on matured prior outcomes avoid the $8 reference's delayed-fill collapse?",
+  "candidates": ["ridge_dual_delay", "extra_trees_dual_delay"],
+  "fits": 2,
+  "features": "Existing 18 causal opportunity features only; no teacher labels, future fields or outcomes as inputs",
+  "targets": "Two gross MNQ dollar movements: next-open to tenth-bar-close and one-bar-delayed next-open to tenth-bar-close, only within one contiguous segment",
+  "training_cutoff_exclusive": "2026-10-07T00:00:00Z",
+  "purge_minutes": 60,
+  "models": {"ridge_alpha": 100.0, "extra_trees": {"n_estimators": 80, "max_depth": 5, "min_samples_leaf": 80, "random_state": 20261102, "n_jobs": 1}},
+  "decision": "Long if both predicted gross dollar movements exceed $6; short if both are below -$6; otherwise abstain. No outcome-based threshold tuning.",
+  "evaluation": "Upload-only 2026-10-13 through 2026-10-29 UTC; same readiness, fixed ten-bar exit, base/stress/extreme costs and 0/1-bar delays as fresh02. This period was inspected before registration, so it is development evidence only.",
+  "comparison": "Unchanged fresh02 $8 gate and no-trade control; no baseline model refit",
+  "screen": {"minimum_trades": 50, "minimum_active_sessions": 10, "stress_delay0_net_usd_must_exceed_baseline": 196.5, "stress_delay1_net_usd_must_be_positive": true, "extreme_delay0_net_usd_must_be_positive": true, "session_bootstrap_stress_delay0_lower_expectancy_usd_must_be_positive": true},
+  "risk": "User specified no maximum drawdown. Report bar-close drawdown; the goal's risk-limit qualification gate remains unsatisfied unless a limit is later agreed before confirmation.",
+  "confirmation": "No confirmation on these opened observations. Freeze any selected complete policy and collect later untouched source-audited observations.",
+  "seal": "Never read sealed 2025 raw data",
+  "deployment": "Research/paper queries only; no broker or live orders"
+}

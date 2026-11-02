@@ -1,0 +1,192 @@
+{
+  "status": "not_ready",
+  "selection": null,
+  "observed_sessions": 2,
+  "source_sha256": "9639ef1fb72918ae6432fcbcf5e46ae6bbdc3506dd6279e8dd295417889aa654",
+  "results_sha256": "c1c54bd935c1e96bf54dbc6891fef77ac000f17083686aa1f12d0378b24fd608",
+  "evaluations": [
+    {
+      "policy": "unchanged_8_gate",
+      "delay": 0,
+      "cost": "base",
+      "trades": 28,
+      "net_usd": 485.0,
+      "expectancy_usd": 17.321428571428573,
+      "bar_close_drawdown_usd": 265.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_8_gate",
+      "delay": 0,
+      "cost": "stress",
+      "trades": 28,
+      "net_usd": 429.0,
+      "expectancy_usd": 15.321428571428571,
+      "bar_close_drawdown_usd": 271.0,
+      "bootstrap_lower_usd": 3.9444444444444446
+    },
+    {
+      "policy": "unchanged_8_gate",
+      "delay": 0,
+      "cost": "extreme",
+      "trades": 28,
+      "net_usd": 317.0,
+      "expectancy_usd": 11.321428571428571,
+      "bar_close_drawdown_usd": 283.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_8_gate",
+      "delay": 1,
+      "cost": "base",
+      "trades": 28,
+      "net_usd": 315.5,
+      "expectancy_usd": 11.267857142857142,
+      "bar_close_drawdown_usd": 269.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_8_gate",
+      "delay": 1,
+      "cost": "stress",
+      "trades": 28,
+      "net_usd": 259.5,
+      "expectancy_usd": 9.267857142857142,
+      "bar_close_drawdown_usd": 273.5,
+      "bootstrap_lower_usd": 8.342105263157896
+    },
+    {
+      "policy": "unchanged_8_gate",
+      "delay": 1,
+      "cost": "extreme",
+      "trades": 28,
+      "net_usd": 147.5,
+      "expectancy_usd": 5.267857142857143,
+      "bar_close_drawdown_usd": 281.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 0,
+      "cost": "base",
+      "trades": 28,
+      "net_usd": -874.0,
+      "expectancy_usd": -31.214285714285715,
+      "bar_close_drawdown_usd": 928.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 0,
+      "cost": "stress",
+      "trades": 28,
+      "net_usd": -930.0,
+      "expectancy_usd": -33.214285714285715,
+      "bar_close_drawdown_usd": 969.0,
+      "bootstrap_lower_usd": -46.333333333333336
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 0,
+      "cost": "extreme",
+      "trades": 28,
+      "net_usd": -1042.0,
+      "expectancy_usd": -37.214285714285715,
+      "bar_close_drawdown_usd": 1077.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 1,
+      "cost": "base",
+      "trades": 28,
+      "net_usd": -1003.0,
+      "expectancy_usd": -35.82142857142857,
+      "bar_close_drawdown_usd": 1054.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 1,
+      "cost": "stress",
+      "trades": 28,
+      "net_usd": -1059.0,
+      "expectancy_usd": -37.82142857142857,
+      "bar_close_drawdown_usd": 1097.0,
+      "bootstrap_lower_usd": -46.333333333333336
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 1,
+      "cost": "extreme",
+      "trades": 28,
+      "net_usd": -1171.0,
+      "expectancy_usd": -41.82142857142857,
+      "bar_close_drawdown_usd": 1205.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 0,
+      "cost": "base",
+      "trades": 63,
+      "net_usd": 1217.0,
+      "expectancy_usd": 19.317460317460316,
+      "bar_close_drawdown_usd": 1042.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 0,
+      "cost": "stress",
+      "trades": 63,
+      "net_usd": 1091.0,
+      "expectancy_usd": 17.317460317460316,
+      "bar_close_drawdown_usd": 1082.0,
+      "bootstrap_lower_usd": -24.766666666666666
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 0,
+      "cost": "extreme",
+      "trades": 63,
+      "net_usd": 839.0,
+      "expectancy_usd": 13.317460317460318,
+      "bar_close_drawdown_usd": 1162.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 1,
+      "cost": "base",
+      "trades": 61,
+      "net_usd": -1220.0,
+      "expectancy_usd": -20.0,
+      "bar_close_drawdown_usd": 1688.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 1,
+      "cost": "stress",
+      "trades": 61,
+      "net_usd": -1342.0,
+      "expectancy_usd": -22.0,
+      "bar_close_drawdown_usd": 1782.5,
+      "bootstrap_lower_usd": -27.67241379310345
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 1,
+      "cost": "extreme",
+      "trades": 61,
+      "net_usd": -1586.0,
+      "expectancy_usd": -26.0,
+      "bar_close_drawdown_usd": 1970.5,
+      "bootstrap_lower_usd": null
+    }
+  ],
+  "confirmation": "not_run",
+  "prospective_paper": "not_run",
+  "sealed_2025_access": false
+}

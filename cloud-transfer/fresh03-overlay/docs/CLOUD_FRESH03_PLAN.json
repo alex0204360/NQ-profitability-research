@@ -1,0 +1,23 @@
+{
+  "version": "mnq-upload-only-fresh03-v1",
+  "registered": "2026-11-02 before predictions or profit evaluation",
+  "status": "diagnostic_no_selection",
+  "source_sha256": "9639ef1fb72918ae6432fcbcf5e46ae6bbdc3506dd6279e8dd295417889aa654",
+  "source_rows": 5041,
+  "source_metadata": "Filename claims Yahoo MNQ; contract symbol, roll method and interval-start convention not independently verified",
+  "conflicts": "Two of 3226 overlapping rows differ from the previous upload; use this file alone, never splice feeds",
+  "evaluation_start": "2026-10-30T00:00:00Z",
+  "evaluation_end_exclusive": "2026-11-02T20:54:00Z",
+  "warmup": "Only this upload's October 28-29 bars; no previous feed bars",
+  "policies": ["unchanged_8_gate", "ridge_dual_delay", "extra_trees_dual_delay"],
+  "selection": "None. Students failed prior development screen and cannot be rehabilitated by this small upload.",
+  "signals": "Frozen model/coefficients and thresholds, exact common readiness and 18 causal features",
+  "costs": {"base": {"commission_per_side": 1.5, "slippage_ticks_per_side": 1}, "stress": {"commission_per_side": 2.0, "slippage_ticks_per_side": 2}, "extreme": {"commission_per_side": 3.0, "slippage_ticks_per_side": 4}},
+  "delays_bars": [0, 1],
+  "exit": "fixed time10 under causal-v2 replay",
+  "evaluations": 18,
+  "support_screen": "Report trades, active sessions, costs, drawdown, and whole-session bootstrap. Fewer than 10 active sessions or 50 trades cannot establish repeatability.",
+  "confirmation": "Not eligible: inspected data lineage conflict and source metadata gap; this is a retrospective upload, not real-time paper operation",
+  "sealed_2025_access": false,
+  "orders_submitted": 0
+}

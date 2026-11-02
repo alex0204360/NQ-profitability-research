@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MNQ Fresh03 diagnostic</title>
+<style>body{font:16px system-ui;max-width:1100px;margin:3rem auto;padding:0 1rem;color:#17212c;background:#f8fafc}h1{font-size:2rem}.status{background:#fee2e2;border-left:5px solid #b91c1c;padding:1rem}table{border-collapse:collapse;width:100%;background:white}th,td{padding:.55rem;border-bottom:1px solid #ccd4dd;text-align:right}th:first-child,td:first-child{text-align:left}th{background:#e8eef4}.scroll{overflow-x:auto}small{color:#465466}</style>
+<main><h1>MNQ November upload diagnostic</h1><p class="status"><strong>Not ready.</strong> Two observed sessions are insufficient for repeatability, and the source contract and roll metadata are unverified. No candidate was selected or paper-traded.</p>
+<p>The uploaded 2026 CSV was evaluated alone, with its October 28–29 bars used only as warmup. Two of 3,226 rows overlapping the earlier upload disagree, so the two sources were never spliced. All policies and execution assumptions were frozen before this diagnostic: unchanged $8 gate, two previously rejected value students, $4/$6/$10 modeled round-trip costs, immediate and one-bar-delayed signals, and fixed ten-bar exits.</p>
+<div class="scroll"><table><thead><tr><th>Policy</th><th>Signal delay</th><th>Cost</th><th>Trades</th><th>Net</th><th>Net/trade</th><th>Bar-close drawdown</th><th>Session bootstrap lower net/trade</th></tr></thead><tbody><tr><td>unchanged_8_gate</td><td>0</td><td>base</td><td>28</td><td>$485.00</td><td>$17.32</td><td>$265.00</td><td>—</td></tr>
+<tr><td>unchanged_8_gate</td><td>0</td><td>stress</td><td>28</td><td>$429.00</td><td>$15.32</td><td>$271.00</td><td>$3.94</td></tr>
+<tr><td>unchanged_8_gate</td><td>0</td><td>extreme</td><td>28</td><td>$317.00</td><td>$11.32</td><td>$283.00</td><td>—</td></tr>
+<tr><td>unchanged_8_gate</td><td>1</td><td>base</td><td>28</td><td>$315.50</td><td>$11.27</td><td>$269.50</td><td>—</td></tr>
+<tr><td>unchanged_8_gate</td><td>1</td><td>stress</td><td>28</td><td>$259.50</td><td>$9.27</td><td>$273.50</td><td>$8.34</td></tr>
+<tr><td>unchanged_8_gate</td><td>1</td><td>extreme</td><td>28</td><td>$147.50</td><td>$5.27</td><td>$281.50</td><td>—</td></tr>
+<tr><td>ridge_dual_delay</td><td>0</td><td>base</td><td>28</td><td>$-874.00</td><td>$-31.21</td><td>$928.00</td><td>—</td></tr>
+<tr><td>ridge_dual_delay</td><td>0</td><td>stress</td><td>28</td><td>$-930.00</td><td>$-33.21</td><td>$969.00</td><td>$-46.33</td></tr>
+<tr><td>ridge_dual_delay</td><td>0</td><td>extreme</td><td>28</td><td>$-1,042.00</td><td>$-37.21</td><td>$1,077.00</td><td>—</td></tr>
+<tr><td>ridge_dual_delay</td><td>1</td><td>base</td><td>28</td><td>$-1,003.00</td><td>$-35.82</td><td>$1,054.50</td><td>—</td></tr>
+<tr><td>ridge_dual_delay</td><td>1</td><td>stress</td><td>28</td><td>$-1,059.00</td><td>$-37.82</td><td>$1,097.00</td><td>$-46.33</td></tr>
+<tr><td>ridge_dual_delay</td><td>1</td><td>extreme</td><td>28</td><td>$-1,171.00</td><td>$-41.82</td><td>$1,205.00</td><td>—</td></tr>
+<tr><td>extra_trees_dual_delay</td><td>0</td><td>base</td><td>63</td><td>$1,217.00</td><td>$19.32</td><td>$1,042.00</td><td>—</td></tr>
+<tr><td>extra_trees_dual_delay</td><td>0</td><td>stress</td><td>63</td><td>$1,091.00</td><td>$17.32</td><td>$1,082.00</td><td>$-24.77</td></tr>
+<tr><td>extra_trees_dual_delay</td><td>0</td><td>extreme</td><td>63</td><td>$839.00</td><td>$13.32</td><td>$1,162.00</td><td>—</td></tr>
+<tr><td>extra_trees_dual_delay</td><td>1</td><td>base</td><td>61</td><td>$-1,220.00</td><td>$-20.00</td><td>$1,688.50</td><td>—</td></tr>
+<tr><td>extra_trees_dual_delay</td><td>1</td><td>stress</td><td>61</td><td>$-1,342.00</td><td>$-22.00</td><td>$1,782.50</td><td>$-27.67</td></tr>
+<tr><td>extra_trees_dual_delay</td><td>1</td><td>extreme</td><td>61</td><td>$-1,586.00</td><td>$-26.00</td><td>$1,970.50</td><td>—</td></tr></tbody></table></div>
+<p><small>The session bootstrap has only two observed sessions and does not support a robust confidence claim. Bar-close drawdown can miss intrabar risk. The October 13–29 development results remain part of the evidence: the $8 gate lost $1,250 with delayed stressed fills there, and both new students failed their registered screens.</small></p>
+<h2>Decision and limits</h2><p>Keep the $8 gate as a comparison baseline. Reject ridge. Reject extra trees: its immediate gain turned into a delayed loss. No numerical drawdown limit was agreed, so the risk gate remains open. The filename claims Yahoo MNQ, but the exact contract, timestamp convention, and roll rule were not supplied. This is a retrospective upload, not real-time paper operation or untouched confirmation. Raw 2025 remains sealed; no orders were submitted.</p></main></html>

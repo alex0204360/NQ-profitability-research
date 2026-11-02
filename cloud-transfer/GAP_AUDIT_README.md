@@ -1,0 +1,7 @@
+# MNQ missing-bar and trade-concentration audit
+
+The frozen newer-upload tree result included a +$2,647 stressed trade closed at the next observed open after nine missing minute bars. Its +$1,091 reported net becomes -$1,556 when that one trade is removed as a sensitivity calculation. The newer exit student's +$1,379 reported net included four gap-exit trades contributing +$2,921. Removing trades after seeing outcomes is not a tradable policy; this audit exposes the dependence on unverifiable gap fills.
+
+Copy `cloud-transfer/gap-audit-overlay/` into `/workspace/mnq-oracle-code/` after restoring the original transfer and earlier overlays. The script `python -m tools.cloud_gap_audit` verifies each frozen private result manifest before regenerating the aggregate HTML and JSON in `/workspace/outputs`; `python -m tools.cloud_readiness_report` combines all bounded attempts into one readiness dashboard. Private bars and trade journals are not included here. The public aggregate is in `cloud-transfer/gap-audit-summary/`.
+
+The updated paper recorder in `campaign01-overlay/` now writes a `paper_gap_unresolved` incident when a pending paper entry crosses missing bars. It credits no fill and blocks further decisions for that source until operator review and a new audited source identity. A synthetic integration test checks this fail-closed behavior. This improves paper-data integrity; it does not make a strategy profitable or authorize live trading. Raw 2025 remains sealed.

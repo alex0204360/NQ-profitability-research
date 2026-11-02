@@ -36,6 +36,7 @@ class PaperRecorder:
         self.lock = threading.Lock()
         self.last = {}
         self.pending = {}
+        self.unresolved_sources = set()
         if self.journal.exists():
             for line in self.journal.read_text().splitlines():
                 record = json.loads(line)
@@ -48,6 +49,8 @@ class PaperRecorder:
                         self.pending[record['decision_id']] = record
                 elif record.get('status') == 'paper_fill':
                     self.pending.pop(record['decision_id'], None)
+                elif record.get('status') == 'paper_gap_unresolved':
+                    self.unresolved_sources.add(record['source_id'])
 
     def _append(self, record):
         with self.journal.open('a', encoding='utf-8') as stream:
@@ -80,6 +83,8 @@ class PaperRecorder:
                 ):
                     raise ValueError('Lowercase SHA-256 data identity required')
                 record.update(source_id=source, data_sha256=digest)
+                if source in self.unresolved_sources:
+                    raise ValueError('Unresolved source gap requires operator review')
                 obs = envelope['observation']
                 if not isinstance(obs, dict):
                     raise TypeError('Observation object required')
@@ -132,6 +137,8 @@ class PaperRecorder:
             decision = self.pending.get(envelope['decision_id'])
             if decision is None or decision['source_id'] != envelope['source_id']:
                 raise ValueError('Unknown pending paper entry')
+            if envelope['source_id'] in self.unresolved_sources:
+                raise ValueError('Unresolved source gap requires operator review')
             bar_start = _time(envelope['bar_start'])
             if bar_start != _time(decision['available_at']):
                 raise ValueError('Next bar is missing or out of order')
@@ -149,6 +156,30 @@ class PaperRecorder:
                       'fill_type': 'observed_next_open_reference', 'orders_submitted': 0}
             self._append(record)
             self.pending.pop(envelope['decision_id'])
+            return record
+
+    def record_gap(self, decision_id, source_id, observed_bar_start):
+        """Fail closed on missing bars: no simulated fill or continuing proposals."""
+        with self.lock:
+            decision = self.pending.get(decision_id)
+            if decision is None or decision['source_id'] != source_id:
+                raise ValueError('Unknown pending paper entry')
+            if source_id in self.unresolved_sources:
+                raise ValueError('Source gap is already unresolved')
+            expected = _time(decision['available_at'])
+            observed = _time(observed_bar_start)
+            if observed <= expected:
+                raise ValueError('Observed bar must follow expected next bar')
+            record = {'schema_version': 'paper-gap-event-v1',
+                      'status': 'paper_gap_unresolved', 'decision_id': decision_id,
+                      'source_id': source_id, 'expected_bar_start': expected.isoformat(),
+                      'observed_bar_start': observed.isoformat(),
+                      'missing_minutes': int((observed - expected).total_seconds() // 60),
+                      'reason': 'Missing completed bars; executable exit price unknown',
+                      'simulated_fill': None, 'orders_submitted': 0,
+                      'received_at': self.clock().astimezone(UTC).isoformat()}
+            self._append(record)
+            self.unresolved_sources.add(source_id)
             return record
 
 

@@ -1,0 +1,9 @@
+# Why the newer tree profits are not robust
+
+The frozen journals reveal a source gap on October 30, 2026: the last bar before it starts at 18:53 UTC and the next observed bar starts at 19:03 UTC. Nine intervening minute bars are missing. The causal replay closes an open position at the next observed open and explicitly labels it `unresolved_gap_next_observed_open`; it does **not** establish an executable exchange fill.
+
+The newer dual-delay tree's stressed immediate result was +$1,091 across 63 trades. One long position closed at that gap for **+$2,647**. The arithmetic total without that trade is **-$1,556**. Its delayed version did not take that trade and lost $1,342. The newer multi-horizon student made +$1,379 stressed immediate, but four gap-exit trades contributed +$2,921; the arithmetic remainder is **-$1,542**. These exclusions are forensic sensitivities, not tradable filters chosen before entry.
+
+The unchanged $8 gate had no unresolved-gap exits in its newer immediate stressed journal. It made +$429 over only two observed sessions and had 28 trades; that remains inadequate for repeatability and does not erase its earlier delayed loss. The gap audit dashboard at `/workspace/outputs/mnq_gap_audit.html` lists the frozen cases, top-five contribution and median trade. The machine-readable audit is `/workspace/outputs/mnq_gap_audit.json`.
+
+Future confirmation must require **zero unresolved-gap fills or independently verified executable prices**. When a feed gap occurs during paper operation, keep the position unresolved, record the incident and refrain from crediting a favorable simulated exit. This is a data-integrity gate, not an entry signal. The source's exact contract and roll conventions remain unknown, and the user has not set a maximum drawdown. No new strategy is selected by this audit; raw 2025 remains sealed.

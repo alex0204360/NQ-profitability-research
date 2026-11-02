@@ -40,3 +40,12 @@ def test_append_only_feed_builds_causal_state_and_rejects_rewritten_prefix(tmp_p
     pd.DataFrame(changed).to_csv(path, index=False)
     with pytest.raises(ValueError, match="Previously recorded feed bars changed"):
         submit(path, state_path, recorder, "audited-feed")
+    gap_rows = rows[:63]
+    gap_rows[62] = {**gap_rows[62], "timestamp_utc":
+                    (start + timedelta(minutes=64)).isoformat()}
+    pd.DataFrame(gap_rows).to_csv(path, index=False)
+    now = start + timedelta(minutes=65, seconds=10)
+    with pytest.raises(ValueError, match="paper position unresolved"):
+        submit(path, state_path, recorder, "audited-feed")
+    assert '"status": "paper_gap_unresolved"' in recorder.journal.read_text()
+    assert "audited-feed" in recorder.unresolved_sources

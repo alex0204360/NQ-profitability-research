@@ -60,6 +60,10 @@ def submit(history_csv: Path, state_path: Path, recorder: PaperRecorder, source_
         if _fingerprint(bars.iloc[:-1]) != prior["prefix_sha256"]:
             raise ValueError("Previously recorded feed bars changed")
         if prior["decision_id"] in recorder.pending:
+            if bars.timestamp.iloc[-1] != pd.Timestamp(prior["last_available_at"]):
+                recorder.record_gap(prior["decision_id"], source_id,
+                                    bars.timestamp.iloc[-1].isoformat())
+                raise ValueError("Source gap left paper position unresolved")
             recorder.record_next_open({"decision_id": prior["decision_id"],
                                        "source_id": source_id,
                                        "bar_start": bars.timestamp.iloc[-1].isoformat(),

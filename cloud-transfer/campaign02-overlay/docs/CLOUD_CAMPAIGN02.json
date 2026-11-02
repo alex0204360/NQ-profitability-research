@@ -1,0 +1,23 @@
+{
+  "version": "mnq-exit-value-teacher-student-v1",
+  "registered": "2026-11-02 before candidate fitting or new candidate profit evaluation",
+  "hypothesis": "Predicting expected value over four complete holding windows may find more robust exits than a fixed ten-bar action-value student.",
+  "candidate": "extra_trees_multihorizon",
+  "fit_budget": 1,
+  "model": {"n_estimators": 80, "max_depth": 5, "min_samples_leaf": 80, "random_state": 20261102, "n_jobs": 1},
+  "features": "Frozen 18 causal opportunity features; no teacher outcome or future prices as input",
+  "teacher": "After the signal, compute gross one-MNQ-contract outcomes for long and short at horizons 3, 5, 10 and 20, under immediate and one-bar-delayed next-open entry. Hindsight best action is diagnostic only. Train expected action values for all opportunities, including losers and abstentions.",
+  "training_end_exclusive": "2026-10-07T00:00:00Z",
+  "purge_minutes": 60,
+  "development_windows": ["2026-10-08T00:00Z through 2026-10-12T14:20Z original 2026 source", "2026-10-13T00:00Z through 2026-10-30T00:00Z upload-only fresh02 source", "2026-10-30T00:00Z through 2026-11-02T20:54Z upload-only fresh03 source"],
+  "decision": "For each horizon and direction, require positive expected net after $6 stress cost for both immediate and one-bar-delayed entries. Choose the action with largest minimum expected net; ties use shorter horizon then long before short. Otherwise abstain.",
+  "execution": "Causal next-open fill; fixed chosen holding horizon in 3,5,10,20; base/stress/extreme costs; evaluate immediate and one-bar-delayed signals. Compare unchanged $8 gate on identical windows.",
+  "costs": {"base": {"commission_per_side": 1.5, "slippage_ticks_per_side": 1}, "stress": {"commission_per_side": 2.0, "slippage_ticks_per_side": 2}, "extreme": {"commission_per_side": 3.0, "slippage_ticks_per_side": 4}},
+  "screen": {"minimum_trades_per_window": 50, "minimum_active_sessions_per_window": 10, "stress_net_positive_immediate_and_delayed": true, "extreme_net_positive_immediate_and_delayed": true, "session_bootstrap_lower_stress_expectancy_positive": true, "must_beat_unchanged_8_gate_stress_net_on_each_supported_window": true},
+  "risk": "Report bar-close and trade-level drawdowns; user specified no maximum, so risk-limit qualification remains open",
+  "selection": "No policy promotion from already inspected windows; no threshold or horizon tuning after results",
+  "confirmation": "Requires later untouched, source-audited observations after a complete freeze",
+  "seal": "2025 raw data unopened",
+  "orders_submitted": 0,
+  "references": ["https://www.cmegroup.com/markets/equities/nasdaq/micro-e-mini-nasdaq-100.contractSpecs.html", "https://scikit-learn.org/stable/modules/cross_validation.html#time-series-split"]
+}

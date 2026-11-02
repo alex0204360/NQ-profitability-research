@@ -106,6 +106,7 @@ class PaperRecorder:
                     raise ValueError('Decision engine lacks paper-only guard')
                 record.update(status='accepted', action=result['action'],
                               reason=result['reason'], model_hashes=result['hash_lineage'],
+                              planned_horizon_bars=result.get('planned_horizon_bars'),
                               decision_id=hashlib.sha256(_canonical({
                                   'source_id': source, 'available_at': available.isoformat(),
                                   'state_sha256': record['state_sha256'],
@@ -195,8 +196,12 @@ def main():
     parser.add_argument('--fold')
     parser.add_argument('--gate', type=int, choices=(8, 10), default=10)
     parser.add_argument('--student', choices=('ridge_dual_delay', 'extra_trees_dual_delay'))
+    parser.add_argument('--exit-student', action='store_true',
+                        help='Query rejected campaign-02 exit student for research/paper logging')
     parser.add_argument('--port', type=int, default=8765)
     args = parser.parse_args()
+    if args.student and args.exit_student:
+        parser.error('Choose only one student family')
     if args.student:
         from tools.cloud_student_decision_api import decide as student_decide
 
@@ -205,6 +210,14 @@ def main():
 
         recorder = PaperRecorder(args.journal, args.root, args.student, 'cloud_campaign01',
                                  gate_usd=None, engine=student_engine)
+    elif args.exit_student:
+        from tools.cloud_exit_student_decision_api import decide as exit_decide
+
+        def exit_engine(run, _candidate, _fold, observation, *, mode, now):
+            return exit_decide(run, observation, mode=mode, now=now)
+
+        recorder = PaperRecorder(args.journal, args.root, 'extra_trees_multihorizon',
+                                 'cloud_campaign02', gate_usd=None, engine=exit_engine)
     else:
         if not args.family or not args.fold:
             parser.error('--family and --fold are required without --student')

@@ -13,6 +13,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from tools.cloud_exit_student_decision_api import decide as exit_decide
 from tools.cloud_student_decision_api import decide as student_decide
 from tools.mnq_oracle_prepare import causal_features, load_candles, sha256
 from tools.opportunity_research import FEATURES
@@ -94,14 +95,26 @@ def main():
     parser.add_argument("--journal", type=Path, required=True)
     parser.add_argument("--source-id", required=True)
     parser.add_argument("--run", type=Path, required=True)
-    parser.add_argument("--student", choices=("ridge_dual_delay", "extra_trees_dual_delay"), required=True)
+    parser.add_argument("--student", choices=("ridge_dual_delay", "extra_trees_dual_delay"))
+    parser.add_argument("--exit-student", action="store_true")
     args = parser.parse_args()
+    if args.student and args.exit_student:
+        parser.error("Choose only one student family")
+    if not args.student and not args.exit_student:
+        parser.error("Choose --student or --exit-student")
 
     def engine(root, candidate, _fold, observation, *, mode, now):
         return student_decide(root, candidate, observation, mode=mode, now=now)
 
-    recorder = PaperRecorder(args.journal, args.run, args.student, "cloud_campaign01",
-                             gate_usd=None, engine=engine)
+    if args.exit_student:
+        def exit_engine(root, _candidate, _fold, observation, *, mode, now):
+            return exit_decide(root, observation, mode=mode, now=now)
+
+        recorder = PaperRecorder(args.journal, args.run, "extra_trees_multihorizon",
+                                 "cloud_campaign02", gate_usd=None, engine=exit_engine)
+    else:
+        recorder = PaperRecorder(args.journal, args.run, args.student, "cloud_campaign01",
+                                 gate_usd=None, engine=engine)
     print(json.dumps(submit(args.history_csv, args.feed_state, recorder, args.source_id), indent=2))
 
 

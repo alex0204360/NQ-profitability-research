@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MNQ exit-learning campaign</title>
+<style>body{font:16px system-ui;max-width:1100px;margin:3rem auto;padding:0 1rem;color:#17212c;background:#f8fafc}h1{font-size:2rem}.status{background:#fee2e2;border-left:5px solid #b91c1c;padding:1rem}table{border-collapse:collapse;width:100%;background:white}th,td{padding:.55rem;border-bottom:1px solid #ccd4dd;text-align:right}th:first-child,td:first-child{text-align:left}th{background:#e8eef4}.scroll{overflow-x:auto}small{color:#465466}</style>
+<main><h1>Learning entries and exits from hindsight outcomes</h1><p class="status"><strong>Not ready: reject this student.</strong> It lost on the 14-session development window under both immediate and delayed stressed fills. A two-session gain on the newer upload reversed under delay.</p>
+<p>One registered extra-trees model learned expected gross MNQ value for four holding windows (3, 5, 10 and 20 bars) and two entry delays. Hindsight future prices supplied training targets only. The live-style inputs are 18 causal game-state features available at the decision close. The rule chooses an action only when both predicted fill timings clear modeled $6 stressed round-trip costs.</p>
+<div class="scroll"><table><thead><tr><th>Development window</th><th>Delay</th><th>Cost</th><th>Trades</th><th>Net</th><th>Net/trade</th><th>Bar-close drawdown</th><th>Session bootstrap lower net/trade</th></tr></thead><tbody><tr><td>original_oct08_12</td><td>0</td><td>base</td><td>70</td><td>$-800.50</td><td>$-11.44</td><td>$1,397.00</td><td>—</td></tr>
+<tr><td>original_oct08_12</td><td>0</td><td>stress</td><td>70</td><td>$-940.50</td><td>$-13.44</td><td>$1,479.00</td><td>$-44.66</td></tr>
+<tr><td>original_oct08_12</td><td>0</td><td>extreme</td><td>70</td><td>$-1,220.50</td><td>$-17.44</td><td>$1,643.00</td><td>—</td></tr>
+<tr><td>original_oct08_12</td><td>1</td><td>base</td><td>70</td><td>$-885.50</td><td>$-12.65</td><td>$1,342.00</td><td>—</td></tr>
+<tr><td>original_oct08_12</td><td>1</td><td>stress</td><td>70</td><td>$-1,025.50</td><td>$-14.65</td><td>$1,390.00</td><td>$-41.84</td></tr>
+<tr><td>original_oct08_12</td><td>1</td><td>extreme</td><td>70</td><td>$-1,305.50</td><td>$-18.65</td><td>$1,648.00</td><td>—</td></tr>
+<tr><td>fresh02_oct13_29</td><td>0</td><td>base</td><td>378</td><td>$-3,629.50</td><td>$-9.60</td><td>$5,370.00</td><td>—</td></tr>
+<tr><td>fresh02_oct13_29</td><td>0</td><td>stress</td><td>378</td><td>$-4,385.50</td><td>$-11.60</td><td>$5,938.00</td><td>$-21.89</td></tr>
+<tr><td>fresh02_oct13_29</td><td>0</td><td>extreme</td><td>378</td><td>$-5,897.50</td><td>$-15.60</td><td>$7,079.00</td><td>—</td></tr>
+<tr><td>fresh02_oct13_29</td><td>1</td><td>base</td><td>378</td><td>$-3,274.50</td><td>$-8.66</td><td>$4,928.00</td><td>—</td></tr>
+<tr><td>fresh02_oct13_29</td><td>1</td><td>stress</td><td>378</td><td>$-4,030.50</td><td>$-10.66</td><td>$5,496.00</td><td>$-19.88</td></tr>
+<tr><td>fresh02_oct13_29</td><td>1</td><td>extreme</td><td>378</td><td>$-5,542.50</td><td>$-14.66</td><td>$6,633.00</td><td>—</td></tr>
+<tr><td>fresh03_oct30_nov02</td><td>0</td><td>base</td><td>66</td><td>$1,511.00</td><td>$22.89</td><td>$1,139.50</td><td>—</td></tr>
+<tr><td>fresh03_oct30_nov02</td><td>0</td><td>stress</td><td>66</td><td>$1,379.00</td><td>$20.89</td><td>$1,173.50</td><td>$-33.46</td></tr>
+<tr><td>fresh03_oct30_nov02</td><td>0</td><td>extreme</td><td>66</td><td>$1,115.00</td><td>$16.89</td><td>$1,241.50</td><td>—</td></tr>
+<tr><td>fresh03_oct30_nov02</td><td>1</td><td>base</td><td>65</td><td>$-1,219.50</td><td>$-18.76</td><td>$1,785.00</td><td>—</td></tr>
+<tr><td>fresh03_oct30_nov02</td><td>1</td><td>stress</td><td>65</td><td>$-1,349.50</td><td>$-20.76</td><td>$1,907.00</td><td>$-32.32</td></tr>
+<tr><td>fresh03_oct30_nov02</td><td>1</td><td>extreme</td><td>65</td><td>$-1,609.50</td><td>$-24.76</td><td>$2,151.00</td><td>—</td></tr></tbody></table></div>
+<p><small>All three periods were already inspected before this campaign. The newest upload contains two sessions and an unresolved source overlap. Model predictions and a causal replay are research estimates, not realized fills or returns. The teacher's perfect exit is hindsight-only and cannot run live.</small></p>
+<h2>Why the policy failed</h2><p>It chose the 20-bar exit for 4,320 of 4,322 active signals in the 14-session window, then lost $4,385.50 under stressed immediate fills. Its positive newer two-session result depended on five exceptional trades and became a $1,349.50 delayed loss. The unchanged $8 gate remains the comparison baseline, not a live qualification.</p>
+<h2>Readiness</h2><p>No candidate is selected. There is no untouched confirmation, real-time paper record, verified contract and roll source, or agreed numerical drawdown limit. The research API exposes action values and reasons but submits no orders. Raw 2025 data remains sealed.</p></main></html>

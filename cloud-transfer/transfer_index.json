@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "created_utc": "2026-11-02T17:07:32.779Z",
+  "source": "D:/Codex/NQ-Trading-Lab/cloud-transfer",
+  "private_research_only": true,
+  "sealed_2025_raw_included": false,
+  "chunk_bytes": 500000,
+  "files": [
+    {
+      "name": "mnq-oracle-code.zip",
+      "bytes": 696117,
+      "sha256": "1905f4b60ac98d010f073490a2c576420e9066bd6a79753b94138197a20cb1a4",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/mnq-oracle-code.zip/0000.part",
+          "sha": "a91d2f6cd3dc49e149789cb5f14562da8862fa9a"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-oracle-code.zip/0001.part",
+          "sha": "746135961f989f793f348bdd09231ddaf0958271"
+        }
+      ]
+    },
+    {
+      "name": "fresh01.zip",
+      "bytes": 587948,
+      "sha256": "557317d9a325ddde4b3d8313e1409d8db8d6a7bce8aa7f42041b46f89a6e25e1",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/fresh01.zip/0000.part",
+          "sha": "c9af3af71bc0dad1b0ea36b2df1355b2133f4287"
+        },
+        {
+          "path": "cloud-transfer/parts/fresh01.zip/0001.part",
+          "sha": "0384d747d431e33b101b041b1f212fd6b5c97137"
+        }
+      ]
+    },
+    {
+      "name": "fresh02.zip",
+      "bytes": 2172191,
+      "sha256": "c983c35426e1b9053d28683a101a2743d77ec48763c2cde14308b5ef7adc25f5",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/fresh02.zip/0000.part",
+          "sha": "4d55d67d53130d6be0a1a5b04a2ed28950fab6a9"
+        },
+        {
+          "path": "cloud-transfer/parts/fresh02.zip/0001.part",
+          "sha": "4e800983279e284627ff1253140e53fbac00e16e"
+        },
+        {
+          "path": "cloud-transfer/parts/fresh02.zip/0002.part",
+          "sha": "726339b0dce4111745449968ddac52452ae11696"
+        },
+        {
+          "path": "cloud-transfer/parts/fresh02.zip/0003.part",
+          "sha": "66eef9a43dbe494d2de644d56dce5b9ffe715269"
+        },
+        {
+          "path": "cloud-transfer/parts/fresh02.zip/0004.part",
+          "sha": "b5e684c7565d6d6aafb2a8cd0572aacbb0b6b538"
+        }
+      ]
+    },
+    {
+      "name": "gate8_iteration01.zip",
+      "bytes": 1350067,
+      "sha256": "e144392007964657b754563edf214933c195a99316571688bf703c4fd9f1e232",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/gate8_iteration01.zip/0000.part",
+          "sha": "1d10a3822d85fd148050cb7c941671f928e52f33"
+        },
+        {
+          "path": "cloud-transfer/parts/gate8_iteration01.zip/0001.part",
+          "sha": "455563aa1a1129c72b5785600c31e1e456a1a758"
+        },
+        {
+          "path": "cloud-transfer/parts/gate8_iteration01.zip/0002.part",
+          "sha": "6e2e150ba51b846a134dafb3e6949fc4937c7d8f"
+        }
+      ]
+    },
+    {
+      "name": "mnq-lineage.zip",
+      "bytes": 24537338,
+      "sha256": "dced5b2a5f7bfa0b8bde3b7f1d4956be11f1b50aeeeac091b6494269c84eb415",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0000.part",
+          "sha": "a781df38ca6e4cfc0fe39ca0c50a6e6ebf890f7a"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0001.part",
+          "sha": "8d8a8fa1e461afe760201333c7decbe50c519cd7"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0002.part",
+          "sha": "e44c6621182b92896481787d411d203f16941844"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0003.part",
+          "sha": "eb9f16eb0f3dfb726b1c485b8993c47e40a686bd"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0004.part",
+          "sha": "ba1dbcc94370d10fd23bca197a2a2511cee7c457"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0005.part",
+          "sha": "f6b575a96fb42c9897bf0936826de90c9fb1f845"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0006.part",
+          "sha": "4e093e88574b3feccf8e24bcdbd7978b18d64319"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0007.part",
+          "sha": "565816a729cab38e56fcb9335ab4f5d03df1a258"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0008.part",
+          "sha": "622c56d9d8b01c71e6fd2e7ab8aa66e409ac95e8"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0009.part",
+          "sha": "b058692a68024061f120ef4a9feed2a0f55990e4"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0010.part",
+          "sha": "8af094685749a88639fcc9e5106f8b1df6128d38"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0011.part",
+          "sha": "041f4e295ffdc43e2eed6709f6a8bee019636695"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0012.part",
+          "sha": "201f2188a396309103a31f9df7cad5ffaaf7e6c1"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0013.part",
+          "sha": "adcb2a307809b36afaa9ff1ca555bf10c75f012a"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0014.part",
+          "sha": "d83c784e07d65ab78f285b282a3bd4c7190eb12a"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0015.part",
+          "sha": "d035d053ed9511789f9aff8f34bca7fb41681e59"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0016.part",
+          "sha": "db4fd400eb1d28d146e721d0789d651c3eed1c53"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0017.part",
+          "sha": "e57fd9af397c8975769260dd63821e4dde692c62"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0018.part",
+          "sha": "566fb36a9add9d15c0356bfd74021af963650eb9"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0019.part",
+          "sha": "a8b00dd7b6c4e21a477988c9836378946c935d90"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0020.part",
+          "sha": "5502b98a11f90bad44e12c3891be520575c0a30e"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0021.part",
+          "sha": "14c3b16f2ecd0d3e99dd923b6004fe48d40ef1ec"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0022.part",
+          "sha": "5406322b8b29ba3c840e9b741268ad53b5eb6904"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0023.part",
+          "sha": "56f7f8788ef464985a42358a2589fdb6c0b77c83"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0024.part",
+          "sha": "50cec92746c0939f8854e740347abd4a6a49bec9"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0025.part",
+          "sha": "32951c4eb40c8a69651cd88828d19a055ea49c1b"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0026.part",
+          "sha": "0848eb0ec035fe2123578e25ce659aae8d1e9b91"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0027.part",
+          "sha": "71872a94ea17cec355aa17a22a6ac41109c92bed"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0028.part",
+          "sha": "4a5a486856de95bf76ddd2e9ac2c8c782fc75f8c"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0029.part",
+          "sha": "a2417270cdbc36fb8d7d075c2ace9bc5eb7e6a78"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0030.part",
+          "sha": "2dc608cbcf390fda79090c43aa99e2da54a1c70e"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0031.part",
+          "sha": "77eb705d912f9a5df5a6c906108413a157470265"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0032.part",
+          "sha": "c2d800da9315d0d75c3d11dcd8d2e1b089432f72"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0033.part",
+          "sha": "1362b9cfd3b2feded1b95f7d6d34d400b63fab2a"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0034.part",
+          "sha": "8422daf3ffc0ffa823d86d957eb8e9e8d6d80bb5"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0035.part",
+          "sha": "66dd9e6fb15924e7392e4e2848430ea013d49a4f"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0036.part",
+          "sha": "de90a4729d3c0f96de1d2cb51b2dd8f5d8005db5"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0037.part",
+          "sha": "f28d8c007767df16d6815aab9103d803b9fa1fd1"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0038.part",
+          "sha": "a2a6724de5bc31c8e86977d8c09e591e6e19150c"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0039.part",
+          "sha": "901e40af6e9f6fb5ea4a2eea2ffebe240a93c062"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0040.part",
+          "sha": "9c9cee19a792c35bdd675768a71d60803888a447"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0041.part",
+          "sha": "608f686e48157548bfe29199a80355d3fbd14798"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0042.part",
+          "sha": "cecbff963ebb71e7f47b2a8195ee16fda59d6937"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0043.part",
+          "sha": "4f2e0a0ca7d42d61887eae0fcb71885937800382"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0044.part",
+          "sha": "4ffc0dbabc7e3ee624e97f7c4898f09e7b540d90"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0045.part",
+          "sha": "54bc49c0559683cc48c1873940254e45af530d14"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0046.part",
+          "sha": "9b6b91ccb2b337cf9a0588f592028da1eff69e50"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0047.part",
+          "sha": "1cf713f5d82879f3472237e7c6bf7a9d776cb034"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0048.part",
+          "sha": "20520a561650753b6702f4714ab59d5274fa9cdf"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-lineage.zip/0049.part",
+          "sha": "0e774c0537ab09953d50053d3c060d7abcd535f7"
+        }
+      ]
+    },
+    {
+      "name": "mnq-2026-training.zip",
+      "bytes": 537837,
+      "sha256": "e652b13062deb9b8b537713e6a18ceb3ebb354c3fbb74ae848793ca0d09922f1",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/mnq-2026-training.zip/0000.part",
+          "sha": "99b4474a62c4617c6b5c29ea47041935a4d46626"
+        },
+        {
+          "path": "cloud-transfer/parts/mnq-2026-training.zip/0001.part",
+          "sha": "770ff317e907fe3a70d5bcdb27016551fbf03af5"
+        }
+      ]
+    },
+    {
+      "name": "mnq-outputs-core.zip",
+      "bytes": 91651,
+      "sha256": "d643fbf21aeae56c80eec01896407f9d411fc4ddb4f4a6a61694f62149690800",
+      "parts": [
+        {
+          "path": "cloud-transfer/parts/mnq-outputs-core.zip/0000.part",
+          "sha": "76a46b455c0484b718f38287be24b0f4af438416"
+        }
+      ]
+    }
+  ]
+}

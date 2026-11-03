@@ -1,0 +1,66 @@
+{
+  "id": "search_09",
+  "hypothesis": "Normalized returns at 1, 3, 8, 16, and 32 minutes may distinguish persistent movement from short-lived overextension. Compact causal subsets and restrained model capacity test whether that relation survives different fill delays without relying on hindsight prices as inputs.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr"],
+      "model": "ridge",
+      "params": {"alpha": 10.0}
+    },
+    {
+      "id": "v01",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "velocity_atr", "acceleration_atr", "trend_strength"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v02",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "rsi_centered", "prior20_position", "range_position"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v03",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "ema_spread_atr", "trend_strength", "volume_ratio20", "minute_sin", "minute_cos"],
+      "model": "ridge",
+      "params": {"alpha": 300.0}
+    },
+    {
+      "id": "v04",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "prior20_position", "prior8_range_atr"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 160, "max_features": 1.0, "bootstrap": false}
+    },
+    {
+      "id": "v05",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "volume_ratio20"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v06",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "velocity_atr", "trend_strength", "rsi_centered", "volume_ratio20", "minute_sin", "minute_cos"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v07",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "prior20_position"],
+      "model": "random_forest",
+      "params": {"n_estimators": 24, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v08",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "acceleration_atr", "ema_spread_atr", "rsi_centered", "prior8_range_atr", "volume_ratio20"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v09",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "bar_body_atr", "close_loc", "range_position", "prior20_position", "volume_ratio20", "session_open", "session_close"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 6, "min_samples_leaf": 320, "max_features": 0.75, "bootstrap": true}
+    }
+  ]
+}

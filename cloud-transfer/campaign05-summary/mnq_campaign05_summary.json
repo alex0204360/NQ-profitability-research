@@ -1,0 +1,4963 @@
+{
+  "status": "selection_complete",
+  "tested_variants": 100,
+  "search_agents": 10,
+  "test_agents": 10,
+  "rank_gate_pass_count": 24,
+  "selected": {
+    "searcher": 6,
+    "variant": 0,
+    "model": "ridge",
+    "features": [
+      "r3_atr",
+      "r5_atr",
+      "r8_atr",
+      "r16_atr",
+      "r32_atr",
+      "trend_strength",
+      "ema_spread_atr",
+      "rsi_centered",
+      "log1p_atr14_ticks"
+    ],
+    "fold_rank_scores": [
+      0.12799984795613903,
+      0.041656615117824404,
+      0.06728145346651729
+    ],
+    "mean_rank_score": 0.07897930551349357,
+    "oracle_positive_fraction_by_fold": [
+      0.9495240842226709,
+      0.9735516372795969,
+      0.9618382155334587
+    ],
+    "oracle_imitation_fraction_by_fold": [
+      0.14017882895875397,
+      0.06339210747271201,
+      0.04783660306369256
+    ],
+    "student_signal_fraction_by_fold": [
+      0.2601672916065763,
+      0.11167086481947942,
+      0.07148615963450686
+    ],
+    "current_paper_api_feature_parity": false,
+    "rank_gate_pass": true
+  },
+  "internal_holdout": {
+    "status": "complete_internal_development",
+    "selected_searcher": 6,
+    "selected_variant": 0,
+    "selected_model": "ridge",
+    "training_rows": 15024,
+    "holdout_ready_mature_opportunities": 4807,
+    "holdout_rank_score": 0.04630426613404126,
+    "oracle_positive_fraction": 0.9604743083003953,
+    "student_signal_fraction": 0.07156230497191596,
+    "oracle_action_imitation_fraction": 0.06636155606407322,
+    "selected_opportunity_robust_net_mean_usd": -4.979651162790698,
+    "signals": 370,
+    "holdout_is_confirmation": false,
+    "paper_api_feature_parity": false,
+    "live_authorized": false,
+    "broker_orders": 0,
+    "sealed_2025_access": false,
+    "evaluations": [
+      {
+        "delay": 0,
+        "cost": "base",
+        "metrics": {
+          "trades": 45,
+          "net": -294.5,
+          "expectancy": -6.544444444444444,
+          "win_rate": 0.4888888888888889,
+          "max_drawdown_bar_close": 734.5,
+          "gap_unresolved_trades": 2
+        },
+        "gap_exit_net_usd": 3.0,
+        "session_bootstrap": null
+      },
+      {
+        "delay": 0,
+        "cost": "stress",
+        "metrics": {
+          "trades": 45,
+          "net": -384.5,
+          "expectancy": -8.544444444444444,
+          "win_rate": 0.4888888888888889,
+          "max_drawdown_bar_close": 790.5,
+          "gap_unresolved_trades": 2
+        },
+        "gap_exit_net_usd": -1.0,
+        "session_bootstrap": {
+          "lower_2_5_percentile_usd_per_trade": -17.0,
+          "draws": 20000,
+          "zero_trade_draws": 0,
+          "observed_sessions": 5,
+          "active_sessions": 5
+        }
+      },
+      {
+        "delay": 0,
+        "cost": "extreme",
+        "metrics": {
+          "trades": 45,
+          "net": -564.5,
+          "expectancy": -12.544444444444444,
+          "win_rate": 0.4666666666666667,
+          "max_drawdown_bar_close": 902.5,
+          "gap_unresolved_trades": 2
+        },
+        "gap_exit_net_usd": -9.0,
+        "session_bootstrap": null
+      },
+      {
+        "delay": 1,
+        "cost": "base",
+        "metrics": {
+          "trades": 45,
+          "net": -345.0,
+          "expectancy": -7.666666666666667,
+          "win_rate": 0.5111111111111111,
+          "max_drawdown_bar_close": 780.0,
+          "gap_unresolved_trades": 3
+        },
+        "gap_exit_net_usd": -11.0,
+        "session_bootstrap": null
+      },
+      {
+        "delay": 1,
+        "cost": "stress",
+        "metrics": {
+          "trades": 45,
+          "net": -435.0,
+          "expectancy": -9.666666666666666,
+          "win_rate": 0.4888888888888889,
+          "max_drawdown_bar_close": 826.5,
+          "gap_unresolved_trades": 3
+        },
+        "gap_exit_net_usd": -17.0,
+        "session_bootstrap": {
+          "lower_2_5_percentile_usd_per_trade": -15.761538461538462,
+          "draws": 20000,
+          "zero_trade_draws": 0,
+          "observed_sessions": 5,
+          "active_sessions": 5
+        }
+      },
+      {
+        "delay": 1,
+        "cost": "extreme",
+        "metrics": {
+          "trades": 45,
+          "net": -615.0,
+          "expectancy": -13.666666666666666,
+          "win_rate": 0.4666666666666667,
+          "max_drawdown_bar_close": 952.5,
+          "gap_unresolved_trades": 3
+        },
+        "gap_exit_net_usd": -29.0,
+        "session_bootstrap": null
+      }
+    ]
+  },
+  "method": "Eight hindsight robust action values (long/short x 3/5/10/20 bars), each scored at the worse of immediate and one-bar-delayed fill after $6 stress cost. Future bars are labels only. Three purged chronological selection folds; one global winner may be tested once on an internal opened holdout.",
+  "limitations": [
+    "Yahoo contract/roll/timestamp identity unverified",
+    "All 2026 windows are development evidence",
+    "No paper feed or broker order is running",
+    "No agreed finite maximum drawdown"
+  ],
+  "families": [
+    {
+      "id": 1,
+      "hypothesis": "Short-horizon momentum may matter only after normalizing by contemporaneous volatility and checking acceleration, candle shape, and session context. Ten fixed causal variants compare linear shrinkage with shallow trees; the tester must retain every losing action label and reject unstable ranking.",
+      "best_variant": {
+        "searcher": 1,
+        "variant": 3,
+        "model": "ridge",
+        "features": [
+          "r1_atr",
+          "r3_atr",
+          "r5_atr",
+          "r16_atr",
+          "r32_atr",
+          "velocity_atr",
+          "acceleration_atr",
+          "trend_strength",
+          "ema_spread_atr",
+          "atr14",
+          "minute_sin",
+          "minute_cos"
+        ],
+        "fold_rank_scores": [
+          0.11985016507505865,
+          0.026059809297859962,
+          0.07831121018169851
+        ],
+        "mean_rank_score": 0.07474039485153904,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.14738967406980097,
+          0.05289672544080604,
+          0.04971781779091642
+        ],
+        "student_signal_fraction_by_fold": [
+          0.2988174214017883,
+          0.10663308144416457,
+          0.07632356893308251
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 6,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "hypothesis": "Short-term reversals may be conditionally forecastable when a completed bar stretches away from recent price and approaches a confirmed support or resistance level. Test normalized distance, range position, and confirmation flags without assuming a hindsight touch will reverse.",
+      "best_variant": {
+        "searcher": 2,
+        "variant": 5,
+        "model": "random_forest",
+        "features": [
+          "r1_atr",
+          "r3_atr",
+          "r5_atr",
+          "prior20_position",
+          "close_loc",
+          "support_distance_atr",
+          "resistance_distance_atr",
+          "support_missing",
+          "resistance_missing",
+          "support_confirmed",
+          "resistance_confirmed",
+          "range_position",
+          "log1p_atr14_ticks"
+        ],
+        "fold_rank_scores": [
+          0.06862685507540077,
+          0.01980419858761001,
+          0.08741201941559196
+        ],
+        "mean_rank_score": 0.05861435769286758,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.12835304297663686,
+          0.10495382031905962,
+          0.10722923945176029
+        ],
+        "student_signal_fraction_by_fold": [
+          0.24632246899336602,
+          0.3354324097397145,
+          0.2846009137328675
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 3,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "hypothesis": "A completed minute's position in the US trading session and its contemporaneous versus trailing volume may condition short-lived MNQ liquidity and follow-through. Compare smooth time effects with shallow and regularized tree interactions; treat missing volume state explicitly and keep price context small. No feature uses the next bar or the hindsight oracle.",
+      "best_variant": {
+        "searcher": 3,
+        "variant": 1,
+        "model": "ridge",
+        "features": [
+          "session_open",
+          "session_midday",
+          "session_close",
+          "minute_sin",
+          "minute_cos",
+          "weekday",
+          "relative_volume",
+          "volume_missing",
+          "volume_ratio20",
+          "log1p_atr14_ticks",
+          "r1_atr",
+          "r3_atr",
+          "bar_range_atr"
+        ],
+        "fold_rank_scores": [
+          0.03833438340388939,
+          0.038488338784989445,
+          0.06330979106479094
+        ],
+        "mean_rank_score": 0.046710837751223255,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.09749062590135564,
+          0.02686817800167926,
+          0.054823972050524056
+        ],
+        "student_signal_fraction_by_fold": [
+          0.25324488029997116,
+          0.020570948782535684,
+          0.06611126041386724
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": false
+      },
+      "gate_pass_count": 0,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "hypothesis": "Causal volatility and range context may separate breakout from exhaustion: prior eight-bar range relative to ATR, the just-completed bar range and body, recent normalized returns, and current ATR are available before any next-open entry. The ten variants test compact versus expanded context and linear versus shallow nonlinear value estimation; no future price or hindsight class is a feature.",
+      "best_variant": {
+        "searcher": 4,
+        "variant": 1,
+        "model": "ridge",
+        "features": [
+          "log1p_atr14_ticks",
+          "prior8_range_atr",
+          "bar_range_atr",
+          "bar_body_atr",
+          "r1_atr",
+          "r3_atr",
+          "r8_atr",
+          "r16_atr",
+          "r32_atr",
+          "volume_ratio20"
+        ],
+        "fold_rank_scores": [
+          0.061383589761586824,
+          0.04646124676410781,
+          0.04038249782262684
+        ],
+        "mean_rank_score": 0.04940911144944049,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.0862417075281223,
+          0.05289672544080604,
+          0.04058048911582908
+        ],
+        "student_signal_fraction_by_fold": [
+          0.1886357081049899,
+          0.10201511335012595,
+          0.02123085192152647
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": false
+      },
+      "gate_pass_count": 0,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "hypothesis": "Simple regularized action-value models over compact, causal state groups may transfer across sessions better than deep trees. Favor feature groups that the existing completed-bar API already computes; two variants test whether short normalized returns add information.",
+      "best_variant": {
+        "searcher": 5,
+        "variant": 5,
+        "model": "ridge",
+        "features": [
+          "velocity_atr",
+          "acceleration_atr",
+          "ema_spread_atr",
+          "support_distance_atr",
+          "resistance_distance_atr",
+          "relative_volume",
+          "log1p_atr14_ticks"
+        ],
+        "fold_rank_scores": [
+          0.06846272949405995,
+          0.05111503306941226,
+          0.0556978736832366
+        ],
+        "mean_rank_score": 0.05842521208223627,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.08970291318142486,
+          0.04450041981528128,
+          0.04326793872614888
+        ],
+        "student_signal_fraction_by_fold": [
+          0.14364003461205654,
+          0.0675902602854744,
+          0.02391830153184628
+        ],
+        "current_paper_api_feature_parity": true,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 1,
+      "paper_api_parity_count": 8,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "hypothesis": "A one-bar fill delay can erase signals driven by the just-closed candle. Predict robust action values from slower, completed-history trend persistence and market context (3- to 32-bar returns, EMA spread, RSI, structure, volume, and session), without the most recent one-bar return or candle body. The variants test whether that slower information survives both fill timings; all action alternatives, including losses, remain teacher targets.",
+      "best_variant": {
+        "searcher": 6,
+        "variant": 0,
+        "model": "ridge",
+        "features": [
+          "r3_atr",
+          "r5_atr",
+          "r8_atr",
+          "r16_atr",
+          "r32_atr",
+          "trend_strength",
+          "ema_spread_atr",
+          "rsi_centered",
+          "log1p_atr14_ticks"
+        ],
+        "fold_rank_scores": [
+          0.12799984795613903,
+          0.041656615117824404,
+          0.06728145346651729
+        ],
+        "mean_rank_score": 0.07897930551349357,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.14017882895875397,
+          0.06339210747271201,
+          0.04783660306369256
+        ],
+        "student_signal_fraction_by_fold": [
+          0.2601672916065763,
+          0.11167086481947942,
+          0.07148615963450686
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 5,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "hypothesis": "Price-action geometry at the completed candle may condition whether an apparent move continues or reverses. Close location, body and full range, position within prior ranges, and confirmed support or resistance are causal summaries available before the next open. Ten fixed variants compare compact geometry with trend, volume, and session context; they test learnable action values rather than using a hindsight winner as an input.",
+      "best_variant": {
+        "searcher": 7,
+        "variant": 1,
+        "model": "ridge",
+        "features": [
+          "close_loc",
+          "bar_body_atr",
+          "bar_range_atr",
+          "prior20_position",
+          "range_position",
+          "support_distance_atr",
+          "resistance_distance_atr",
+          "log1p_atr14_ticks"
+        ],
+        "fold_rank_scores": [
+          0.083642699641619,
+          0.021102397758912896,
+          0.07251006461379349
+        ],
+        "mean_rank_score": 0.05908505400477513,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.11566195558119412,
+          0.0491183879093199,
+          0.04246170384305294
+        ],
+        "student_signal_fraction_by_fold": [
+          0.25209114508220365,
+          0.09109991603694374,
+          0.02123085192152647
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 1,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "hypothesis": "The same local momentum can mean continuation in an established trend or reversal near a mature range boundary. Compare compact linear trend/range states with shallow and moderately deep trees that can learn the interaction, while avoiding a high-capacity hindsight imitator.",
+      "best_variant": {
+        "searcher": 8,
+        "variant": 0,
+        "model": "ridge",
+        "features": [
+          "trend_strength",
+          "ema_spread_atr",
+          "velocity_atr",
+          "acceleration_atr",
+          "r3_atr",
+          "r8_atr",
+          "r16_atr",
+          "log1p_atr14_ticks"
+        ],
+        "fold_rank_scores": [
+          0.13215583920049254,
+          0.03724523536921493,
+          0.06218232019520324
+        ],
+        "mean_rank_score": 0.0771944649216369,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.1396019613498702,
+          0.058354324097397145,
+          0.04918032786885246
+        ],
+        "student_signal_fraction_by_fold": [
+          0.2578598211710412,
+          0.10201511335012595,
+          0.07605482397205053
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 3,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "hypothesis": "Normalized returns at 1, 3, 8, 16, and 32 minutes may distinguish persistent movement from short-lived overextension. Compact causal subsets and restrained model capacity test whether that relation survives different fill delays without relying on hindsight prices as inputs.",
+      "best_variant": {
+        "searcher": 9,
+        "variant": 3,
+        "model": "ridge",
+        "features": [
+          "r1_atr",
+          "r3_atr",
+          "r8_atr",
+          "r16_atr",
+          "r32_atr",
+          "ema_spread_atr",
+          "trend_strength",
+          "volume_ratio20",
+          "minute_sin",
+          "minute_cos"
+        ],
+        "fold_rank_scores": [
+          0.10927366930606491,
+          0.01022599080759664,
+          0.05569435806790151
+        ],
+        "mean_rank_score": 0.05839800606052103,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.115950389385636,
+          0.056255247691015954,
+          0.04783660306369256
+        ],
+        "student_signal_fraction_by_fold": [
+          0.18690510527833862,
+          0.11670864819479429,
+          0.07417360924482666
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 1,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "hypothesis": "A disciplined combination of the current live-compatible shared state and a small set of causal OHLCV context fields may rank robust multihorizon payoffs more consistently than either family alone. Ridge is a low-capacity reference; shallow forests test bounded interactions. The added fields require identical historical and paper-feed construction before any deployment.",
+      "best_variant": {
+        "searcher": 10,
+        "variant": 2,
+        "model": "ridge",
+        "features": [
+          "velocity_atr",
+          "acceleration_atr",
+          "trend_strength",
+          "ema_spread_atr",
+          "rsi_centered",
+          "relative_volume",
+          "support_distance_atr",
+          "resistance_distance_atr",
+          "range_position",
+          "session_open",
+          "session_midday",
+          "session_close",
+          "log1p_atr14_ticks",
+          "r1_atr",
+          "r5_atr",
+          "r16_atr",
+          "bar_range_atr",
+          "prior20_position",
+          "volume_ratio20"
+        ],
+        "fold_rank_scores": [
+          0.10688594955780603,
+          0.029023884129799664,
+          0.06404130269596608
+        ],
+        "mean_rank_score": 0.06665037879452393,
+        "oracle_positive_fraction_by_fold": [
+          0.9495240842226709,
+          0.9735516372795969,
+          0.9618382155334587
+        ],
+        "oracle_imitation_fraction_by_fold": [
+          0.14335160080761467,
+          0.06717044500419815,
+          0.05106154259607632
+        ],
+        "student_signal_fraction_by_fold": [
+          0.3267955004326507,
+          0.13895885810243494,
+          0.08411717280300994
+        ],
+        "current_paper_api_feature_parity": false,
+        "rank_gate_pass": true
+      },
+      "gate_pass_count": 4,
+      "paper_api_parity_count": 0,
+      "fold_rows": [
+        {
+          "train": 5392,
+          "validation": 3467
+        },
+        {
+          "train": 8877,
+          "validation": 2382
+        },
+        {
+          "train": 11285,
+          "validation": 3721
+        }
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "searcher": 1,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.03593986358571137,
+        0.04230117892214468,
+        0.030938300458913135
+      ],
+      "mean_rank_score": 0.03639311432225639,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11248918373233342,
+        0.0382031905961377,
+        0.03789303950550927
+      ],
+      "student_signal_fraction_by_fold": [
+        0.284972598788578,
+        0.08228379513014274,
+        0.009674818597151304
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 1,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.03688677956661639,
+        0.04231892474091432,
+        0.031097821256805352
+      ],
+      "mean_rank_score": 0.03676784185477869,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11191231612344966,
+        0.037783375314861464,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2783386212864148,
+        0.0818639798488665,
+        0.007524858908895459
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 1,
+      "variant": 2,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.12243618044306746,
+        0.028020239544844373,
+        0.06080861110562727
+      ],
+      "mean_rank_score": 0.0704216770311797,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14190943178540524,
+        0.0654911838790932,
+        0.05106154259607632
+      ],
+      "student_signal_fraction_by_fold": [
+        0.29679838477069515,
+        0.1200671704450042,
+        0.08304219295888202
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 1,
+      "variant": 3,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "atr14",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.11985016507505865,
+        0.026059809297859962,
+        0.07831121018169851
+      ],
+      "mean_rank_score": 0.07474039485153904,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14738967406980097,
+        0.05289672544080604,
+        0.04971781779091642
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2988174214017883,
+        0.10663308144416457,
+        0.07632356893308251
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 1,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.036738888043800974,
+        0.03198555381683682,
+        0.04856884912635202
+      ],
+      "mean_rank_score": 0.03909776366232994,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0504759157773291,
+        0.02644836272040302,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.0,
+        0.0041981528127623844,
+        0.0
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 1,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.023867286867373744,
+        0.033383337501638605,
+        0.05279330089174383
+      ],
+      "mean_rank_score": 0.03668130842025206,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.05162965099509662,
+        0.04114189756507137,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.005768676088837612,
+        0.06297229219143577,
+        0.002149959688255845
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 1,
+      "variant": 6,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.10656824083486613,
+        0.013197246286028502,
+        0.0386483239016524
+      ],
+      "mean_rank_score": 0.05280460367418235,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09258725122584367,
+        0.03610411418975651,
+        0.040311744154797095
+      ],
+      "student_signal_fraction_by_fold": [
+        0.11479665416786848,
+        0.03904282115869018,
+        0.029561945713517872
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 1,
+      "variant": 7,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "atr14"
+      ],
+      "fold_rank_scores": [
+        0.10790718665539674,
+        0.022155825205616445,
+        0.035892933715778355
+      ],
+      "mean_rank_score": 0.05531864852559718,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11104701471012403,
+        0.04324097397145256,
+        0.04595538833646869
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1577732910297087,
+        0.0764063811922754,
+        0.04353668368718087
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 1,
+      "variant": 8,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "atr14",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.06123871428786873,
+        0.05605267953417101,
+        0.05079385931816224
+      ],
+      "mean_rank_score": 0.05602841771340066,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10527833862128641,
+        0.04072208228379513,
+        0.04219295888202096
+      ],
+      "student_signal_fraction_by_fold": [
+        0.19094317854052495,
+        0.05583543240973971,
+        0.026337006181134104
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 1,
+      "variant": 9,
+      "model": "random_forest",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "atr14",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.06002898619708734,
+        0.08071235155168686,
+        0.0409946097858175
+      ],
+      "mean_rank_score": 0.06057864917819724,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12662244014998558,
+        0.0927791771620487,
+        0.08196721311475409
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2362272858379002,
+        0.21788413098236775,
+        0.19672131147540983
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 2,
+      "variant": 0,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "prior20_position",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.10460305272839576,
+        -0.014123957136587408,
+        0.07155847288569431
+      ],
+      "mean_rank_score": 0.05401252282583422,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09316411883472743,
+        0.0491183879093199,
+        0.048105348024724534
+      ],
+      "student_signal_fraction_by_fold": [
+        0.13181424862993943,
+        0.09949622166246852,
+        0.02553077129803816
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 2,
+      "variant": 1,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.08882892667563042,
+        -0.00026131740289575545,
+        0.07098721767814051
+      ],
+      "mean_rank_score": 0.05318494231695839,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11075858090568215,
+        0.06591099916036944,
+        0.05106154259607632
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16815690798961638,
+        0.15407220822837953,
+        0.03439935501209352
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 2,
+      "variant": 2,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_confirmed",
+        "resistance_confirmed",
+        "support_missing",
+        "resistance_missing",
+        "range_position"
+      ],
+      "fold_rank_scores": [
+        0.09530618301350761,
+        -0.06629251021970874,
+        0.05405107275250582
+      ],
+      "mean_rank_score": 0.027688248515434898,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11652725699451975,
+        0.05877413937867338,
+        0.04622413329750067
+      ],
+      "student_signal_fraction_by_fold": [
+        0.18027112777617538,
+        0.13685978169605373,
+        0.0333243751679656
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 2,
+      "variant": 3,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "prior20_position",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "relative_volume",
+        "volume_ratio20",
+        "volume_missing",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.09842144958602568,
+        -0.029410846561951337,
+        0.06987598223798694
+      ],
+      "mean_rank_score": 0.04629552842068709,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08739544274588981,
+        0.05709487825356843,
+        0.04676162321956463
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1173925584078454,
+        0.12426532325776658,
+        0.02902445579145391
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 2,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "session_open",
+        "session_midday",
+        "session_close"
+      ],
+      "fold_rank_scores": [
+        0.034191408983339694,
+        -0.00871233162567921,
+        0.03169603317638474
+      ],
+      "mean_rank_score": 0.019058370178015076,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08104989904816845,
+        0.04659949622166247,
+        0.06288632088148348
+      ],
+      "student_signal_fraction_by_fold": [
+        0.11652725699451975,
+        0.08228379513014274,
+        0.1139478634775598
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 2,
+      "variant": 5,
+      "model": "random_forest",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "prior20_position",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.06862685507540077,
+        0.01980419858761001,
+        0.08741201941559196
+      ],
+      "mean_rank_score": 0.05861435769286758,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12835304297663686,
+        0.10495382031905962,
+        0.10722923945176029
+      ],
+      "student_signal_fraction_by_fold": [
+        0.24632246899336602,
+        0.3354324097397145,
+        0.2846009137328675
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 2,
+      "variant": 6,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "prior20_position",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.07775998800817904,
+        0.0210397034225245,
+        0.07543051031064237
+      ],
+      "mean_rank_score": 0.058076733913781965,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12719930775886934,
+        0.05499580184718724,
+        0.04703036818059662
+      ],
+      "student_signal_fraction_by_fold": [
+        0.3025670608595327,
+        0.10453400503778337,
+        0.027411986025262028
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 2,
+      "variant": 7,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.07833431458174636,
+        0.027778914967097508,
+        0.06543051866779678
+      ],
+      "mean_rank_score": 0.057181249405546884,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11450822036342659,
+        0.056255247691015954,
+        0.04595538833646869
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2541101817132968,
+        0.10873215785054575,
+        0.027411986025262028
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 2,
+      "variant": 8,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "prior20_position",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.11522530500829045,
+        -0.026395165139824622,
+        0.07716782917437845
+      ],
+      "mean_rank_score": 0.05533265634761476,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10498990481684453,
+        0.05919395465994962,
+        0.04058048911582908
+      ],
+      "student_signal_fraction_by_fold": [
+        0.14017882895875397,
+        0.1431570109151973,
+        0.010481053480247245
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 2,
+      "variant": 9,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r5_atr",
+        "prior20_position",
+        "close_loc",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.09268794094611865,
+        -0.023771826038832888,
+        0.08247327675415622
+      ],
+      "mean_rank_score": 0.050463130553814,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10614364003461206,
+        0.05415617128463476,
+        0.059123891427035745
+      ],
+      "student_signal_fraction_by_fold": [
+        0.18315546582059417,
+        0.12804366078925272,
+        0.06691749529696318
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "bar_range_atr"
+      ],
+      "fold_rank_scores": [
+        0.038471886593506074,
+        0.038418999317654655,
+        0.06321552846542522
+      ],
+      "mean_rank_score": 0.04670213812552865,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09720219209691376,
+        0.02686817800167926,
+        0.054823972050524056
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2543986155177387,
+        0.020570948782535684,
+        0.06611126041386724
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "bar_range_atr"
+      ],
+      "fold_rank_scores": [
+        0.03833438340388939,
+        0.038488338784989445,
+        0.06330979106479094
+      ],
+      "mean_rank_score": 0.046710837751223255,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09749062590135564,
+        0.02686817800167926,
+        0.054823972050524056
+      ],
+      "student_signal_fraction_by_fold": [
+        0.25324488029997116,
+        0.020570948782535684,
+        0.06611126041386724
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 2,
+      "model": "ridge",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "bar_range_atr"
+      ],
+      "fold_rank_scores": [
+        0.03704362219062335,
+        0.03892555611537189,
+        0.06413891406260905
+      ],
+      "mean_rank_score": 0.046702697456201425,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09662532448803,
+        0.02686817800167926,
+        0.05455522708949207
+      ],
+      "student_signal_fraction_by_fold": [
+        0.24718777040669165,
+        0.018471872376154493,
+        0.06557377049180328
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 3,
+      "model": "extra_trees",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr"
+      ],
+      "fold_rank_scores": [
+        0.004993615223806421,
+        0.0670452614045681,
+        0.051673595609583636
+      ],
+      "mean_rank_score": 0.04123749074598605,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.05480242284395731,
+        0.0327455919395466,
+        0.048642837946788496
+      ],
+      "student_signal_fraction_by_fold": [
+        0.04730314392846842,
+        0.03232577665827036,
+        0.06234883095941951
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr"
+      ],
+      "fold_rank_scores": [
+        -0.014881838640869111,
+        0.061454154196850845,
+        0.01928294921140073
+      ],
+      "mean_rank_score": 0.02195175492246082,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.07383905393712142,
+        0.0491183879093199,
+        0.08572964256920183
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16152293048745314,
+        0.12384550797649034,
+        0.20532115022843322
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr"
+      ],
+      "fold_rank_scores": [
+        -0.018457270701367642,
+        0.04536057554094115,
+        0.019926444230026662
+      ],
+      "mean_rank_score": 0.015609916356533393,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.07614652437265648,
+        0.05037783375314862,
+        0.05589895189465197
+      ],
+      "student_signal_fraction_by_fold": [
+        0.15863859244303433,
+        0.12468513853904283,
+        0.09110454178984144
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 6,
+      "model": "random_forest",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "bar_range_atr"
+      ],
+      "fold_rank_scores": [
+        -0.05851584363928626,
+        0.0580736368921665,
+        -0.03184457651566465
+      ],
+      "mean_rank_score": -0.010762261087594803,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.07499278915488895,
+        0.06675062972292191,
+        0.10669174952969632
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16527256994519757,
+        0.16960537363560033,
+        0.34238108035474335
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 7,
+      "model": "random_forest",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "bar_range_atr"
+      ],
+      "fold_rank_scores": [
+        -0.04304301320777491,
+        0.05795622569269923,
+        -0.011096743651876328
+      ],
+      "mean_rank_score": 0.0012721562776826633,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09777905970579752,
+        0.12678421494542402,
+        0.10158559527008869
+      ],
+      "student_signal_fraction_by_fold": [
+        0.22209402942024806,
+        0.3610411418975651,
+        0.319537758667025
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 8,
+      "model": "extra_trees",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "atr14",
+        "bar_range_atr",
+        "prior8_range_atr"
+      ],
+      "fold_rank_scores": [
+        -0.03431000006614896,
+        0.07146796878562495,
+        0.0005906623444366828
+      ],
+      "mean_rank_score": 0.012582877021304223,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.06864724545716758,
+        0.05877413937867338,
+        0.06449879064767536
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1173925584078454,
+        0.12678421494542402,
+        0.14324106423004568
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 3,
+      "variant": 9,
+      "model": "random_forest",
+      "features": [
+        "session_open",
+        "session_midday",
+        "session_close",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "relative_volume",
+        "volume_missing",
+        "volume_ratio20",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "close_loc",
+        "bar_range_atr",
+        "prior8_range_atr"
+      ],
+      "fold_rank_scores": [
+        -0.022248846310547726,
+        0.06039997460919572,
+        -0.022865741276655055
+      ],
+      "mean_rank_score": 0.005095129007330977,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08681857513700605,
+        0.15113350125944586,
+        0.11744154797097554
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20017306028266513,
+        0.38371116708648195,
+        0.37463047567858104
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r3_atr",
+        "r8_atr"
+      ],
+      "fold_rank_scores": [
+        0.04696983433031048,
+        0.0527201476991969,
+        0.04626099007591715
+      ],
+      "mean_rank_score": 0.0486503240351415,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09287568503028555,
+        0.0327455919395466,
+        0.03843052942757323
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1871935390827805,
+        0.05499580184718724,
+        0.0064498790647675355
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.061383589761586824,
+        0.04646124676410781,
+        0.04038249782262684
+      ],
+      "mean_rank_score": 0.04940911144944049,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0862417075281223,
+        0.05289672544080604,
+        0.04058048911582908
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1886357081049899,
+        0.10201511335012595,
+        0.02123085192152647
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 2,
+      "model": "extra_trees",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r3_atr",
+        "r8_atr"
+      ],
+      "fold_rank_scores": [
+        0.03621236079498025,
+        0.05141045515991977,
+        0.045222348259296816
+      ],
+      "mean_rank_score": 0.04428172140473228,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0504759157773291,
+        0.02644836272040302,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 3,
+      "model": "extra_trees",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r3_atr",
+        "r8_atr",
+        "prior20_position",
+        "close_loc"
+      ],
+      "fold_rank_scores": [
+        0.036510155179460546,
+        0.04185841488534237,
+        0.03322846273897582
+      ],
+      "mean_rank_score": 0.03719901093459291,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0504759157773291,
+        0.0272879932829555,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.0008653014133256418,
+        0.005037783375314861,
+        0.0
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "velocity_atr",
+        "acceleration_atr"
+      ],
+      "fold_rank_scores": [
+        0.03274772617964302,
+        0.027818793592007535,
+        0.04141824462534096
+      ],
+      "mean_rank_score": 0.03399492146566384,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.052783386212864145,
+        0.028967254408060455,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.012402653591000866,
+        0.025608732157850547,
+        0.0002687449610319806
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "volume_ratio20",
+        "relative_volume"
+      ],
+      "fold_rank_scores": [
+        0.03405724187434183,
+        0.03490006190332281,
+        0.033987105527803894
+      ],
+      "mean_rank_score": 0.03431480310182284,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.05422555523507355,
+        0.03442485306465155,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.01903663109316412,
+        0.038623005877413935,
+        0.0002687449610319806
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 6,
+      "model": "random_forest",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r5_atr",
+        "r16_atr",
+        "trend_strength",
+        "ema_spread_atr"
+      ],
+      "fold_rank_scores": [
+        0.05762717851660405,
+        0.010164297278940932,
+        0.035363003169382665
+      ],
+      "mean_rank_score": 0.034384826321642546,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10931641188347274,
+        0.0743073047858942,
+        0.08438591776404192
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20767233919815403,
+        0.21032745591939547,
+        0.19618382155334588
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 7,
+      "model": "random_forest",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "prior20_position",
+        "range_position",
+        "relative_volume"
+      ],
+      "fold_rank_scores": [
+        0.07436607376070781,
+        0.01207106285883942,
+        0.04809812531619763
+      ],
+      "mean_rank_score": 0.04484508731191495,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.13469858667435824,
+        0.12258606213266163,
+        0.07981725342649826
+      ],
+      "student_signal_fraction_by_fold": [
+        0.24920680703778483,
+        0.3623005877413938,
+        0.20773985487772104
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 8,
+      "model": "extra_trees",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "prior20_position",
+        "close_loc",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.05423438670224451,
+        0.014147186905672002,
+        0.03673151913055531
+      ],
+      "mean_rank_score": 0.03503769757949061,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08883761176809922,
+        0.049958018471872374,
+        0.04971781779091642
+      ],
+      "student_signal_fraction_by_fold": [
+        0.12431496971445054,
+        0.10243492863140219,
+        0.026068261220102123
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 4,
+      "variant": 9,
+      "model": "ridge",
+      "features": [
+        "log1p_atr14_ticks",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "bar_body_atr",
+        "r3_atr",
+        "r8_atr",
+        "minute_sin",
+        "minute_cos",
+        "weekday",
+        "session_open",
+        "session_midday",
+        "session_close"
+      ],
+      "fold_rank_scores": [
+        0.042859009724932715,
+        0.029618443687298518,
+        0.05866805507717448
+      ],
+      "mean_rank_score": 0.043715169496468566,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11796942601672916,
+        0.028967254408060455,
+        0.051330287557108306
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2760311508508797,
+        0.03904282115869018,
+        0.060736361193227624
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr"
+      ],
+      "fold_rank_scores": [
+        0.11763276258108632,
+        -0.04417382479452621,
+        0.027111337957103805
+      ],
+      "mean_rank_score": 0.03352342524788798,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.13037207960773003,
+        0.05373635600335852,
+        0.048642837946788496
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2079607730025959,
+        0.1070528967254408,
+        0.07309862940069874
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr"
+      ],
+      "fold_rank_scores": [
+        0.11633228424397173,
+        -0.0457137629108221,
+        0.02521011058855683
+      ],
+      "mean_rank_score": 0.03194287730723549,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12056533025670609,
+        0.0491183879093199,
+        0.04568664337543671
+      ],
+      "student_signal_fraction_by_fold": [
+        0.18084799538505913,
+        0.08984047019311503,
+        0.06288632088148348
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 2,
+      "model": "ridge",
+      "features": [
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "range_position"
+      ],
+      "fold_rank_scores": [
+        0.07974715210801267,
+        -0.04862780484371389,
+        0.059328170081527035
+      ],
+      "mean_rank_score": 0.030149172448608607,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10873954427458898,
+        0.05751469353484467,
+        0.04541789841440473
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16383040092298817,
+        0.13056255247691015,
+        0.030368180596613812
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 3,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "ema_spread_atr",
+        "rsi_centered",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.09196922904544247,
+        0.018500733557847822,
+        0.029137272302833767
+      ],
+      "mean_rank_score": 0.04653574496870802,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10498990481684453,
+        0.05751469353484467,
+        0.04004299919376512
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2451687337755985,
+        0.11712846347607053,
+        0.017737167428110722
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 4,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "ema_spread_atr",
+        "rsi_centered",
+        "range_position",
+        "relative_volume",
+        "log1p_atr14_ticks",
+        "session_open",
+        "session_midday",
+        "session_close"
+      ],
+      "fold_rank_scores": [
+        0.06006944032432095,
+        0.01226308722279535,
+        0.0362166625466464
+      ],
+      "mean_rank_score": 0.03618306336458757,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11220074992789154,
+        0.04743912678421495,
+        0.043805428648212845
+      ],
+      "student_signal_fraction_by_fold": [
+        0.26362849725987886,
+        0.09445843828715365,
+        0.04837409298575652
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 5,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "ema_spread_atr",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "relative_volume",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.06846272949405995,
+        0.05111503306941226,
+        0.0556978736832366
+      ],
+      "mean_rank_score": 0.05842521208223627,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08970291318142486,
+        0.04450041981528128,
+        0.04326793872614888
+      ],
+      "student_signal_fraction_by_fold": [
+        0.14364003461205654,
+        0.0675902602854744,
+        0.02391830153184628
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 5,
+      "variant": 6,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.006124079994012904,
+        0.032082113621868705,
+        0.006831157222282478
+      ],
+      "mean_rank_score": 0.015012450279388028,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.06807037784828382,
+        0.0327455919395466,
+        0.03843052942757323
+      ],
+      "student_signal_fraction_by_fold": [
+        0.07556965676377271,
+        0.03526448362720403,
+        0.0034936844934157483
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 7,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "velocity_atr",
+        "ema_spread_atr",
+        "bar_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.06858923831390545,
+        0.04130717570570343,
+        0.02643887942653684
+      ],
+      "mean_rank_score": 0.04544509781538191,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.06951254687049323,
+        0.03946263643996641,
+        0.03735554958344531
+      ],
+      "student_signal_fraction_by_fold": [
+        0.09287568503028555,
+        0.06297229219143577,
+        0.005643644181671593
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 8,
+      "model": "extra_trees",
+      "features": [
+        "velocity_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "range_position",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.11897365774275401,
+        -0.023474242763856457,
+        0.05981911077683022
+      ],
+      "mean_rank_score": 0.051772841918575924,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11421978655898471,
+        0.041561712846347604,
+        0.042999193765116905
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16902220940294202,
+        0.08984047019311503,
+        0.03171190540177372
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 5,
+      "variant": 9,
+      "model": "random_forest",
+      "features": [
+        "velocity_atr",
+        "ema_spread_atr",
+        "relative_volume",
+        "log1p_atr14_ticks",
+        "session_open",
+        "session_midday",
+        "session_close"
+      ],
+      "fold_rank_scores": [
+        0.02503294200897147,
+        0.012806362462834099,
+        0.03520936016849054
+      ],
+      "mean_rank_score": 0.0243495548800987,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11393135275454283,
+        0.09235936188077246,
+        0.08331093791991401
+      ],
+      "student_signal_fraction_by_fold": [
+        0.23795788866455148,
+        0.26448362720403024,
+        0.18167159365761892
+      ],
+      "current_paper_api_feature_parity": true,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 6,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.12799984795613903,
+        0.041656615117824404,
+        0.06728145346651729
+      ],
+      "mean_rank_score": 0.07897930551349357,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14017882895875397,
+        0.06339210747271201,
+        0.04783660306369256
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2601672916065763,
+        0.11167086481947942,
+        0.07148615963450686
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 6,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.12950865342807,
+        0.037977609413475694,
+        0.06616614791397994
+      ],
+      "mean_rank_score": 0.07788413691850854,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.13844822613210267,
+        0.061293031066330814,
+        0.047299113141628595
+      ],
+      "student_signal_fraction_by_fold": [
+        0.25757138736659935,
+        0.10579345088161209,
+        0.07282988443966676
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 6,
+      "variant": 2,
+      "model": "ridge",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.12806403471853273,
+        0.032336389734742746,
+        0.06263067797704908
+      ],
+      "mean_rank_score": 0.07434370081010817,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.1306605134121719,
+        0.05373635600335852,
+        0.04783660306369256
+      ],
+      "student_signal_fraction_by_fold": [
+        0.23074704355350448,
+        0.09235936188077246,
+        0.07148615963450686
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 6,
+      "variant": 3,
+      "model": "ridge",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks",
+        "relative_volume",
+        "volume_ratio20",
+        "volume_missing"
+      ],
+      "fold_rank_scores": [
+        0.1309368283569975,
+        0.040278383432978945,
+        0.06087547712446974
+      ],
+      "mean_rank_score": 0.07736356297148206,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.13873665993654458,
+        0.061712846347607056,
+        0.04756785810266057
+      ],
+      "student_signal_fraction_by_fold": [
+        0.25728295356215747,
+        0.10579345088161209,
+        0.07417360924482666
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 6,
+      "variant": 4,
+      "model": "ridge",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_confirmed",
+        "resistance_confirmed"
+      ],
+      "fold_rank_scores": [
+        0.11079617230349885,
+        0.032950052166524135,
+        0.07449788594598604
+      ],
+      "mean_rank_score": 0.07274803680533636,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.13383328526103258,
+        0.0600335852225021,
+        0.04703036818059662
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2616094606287857,
+        0.11460957178841309,
+        0.07390486428379468
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 6,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.10668537188890853,
+        -0.018125684956156435,
+        0.05019075900177815
+      ],
+      "mean_rank_score": 0.04625014864484341,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11970002884338045,
+        0.037783375314861464,
+        0.04219295888202096
+      ],
+      "student_signal_fraction_by_fold": [
+        0.18229016440726853,
+        0.05079764903442485,
+        0.03171190540177372
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 6,
+      "variant": 6,
+      "model": "extra_trees",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks",
+        "relative_volume",
+        "volume_ratio20",
+        "volume_missing"
+      ],
+      "fold_rank_scores": [
+        0.09167207176310267,
+        0.014097715869478826,
+        0.01721654676538637
+      ],
+      "mean_rank_score": 0.04099544479932262,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10325930199019324,
+        0.03946263643996641,
+        0.046492878258532655
+      ],
+      "student_signal_fraction_by_fold": [
+        0.15431208537640612,
+        0.08312342569269521,
+        0.04568664337543671
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 6,
+      "variant": 7,
+      "model": "extra_trees",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_confirmed",
+        "resistance_confirmed"
+      ],
+      "fold_rank_scores": [
+        0.08021641616972564,
+        0.006406742208648305,
+        0.049285393706170626
+      ],
+      "mean_rank_score": 0.045302850694848185,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10614364003461206,
+        0.04575986565910999,
+        0.04595538833646869
+      ],
+      "student_signal_fraction_by_fold": [
+        0.15950389385635996,
+        0.0818639798488665,
+        0.04971781779091642
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 6,
+      "variant": 8,
+      "model": "random_forest",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks",
+        "minute_sin",
+        "minute_cos",
+        "session_open",
+        "session_midday",
+        "session_close"
+      ],
+      "fold_rank_scores": [
+        0.04927373638404079,
+        0.08362474524156076,
+        0.01688447396457193
+      ],
+      "mean_rank_score": 0.04992765186339116,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12085376406114796,
+        0.10957178841309824,
+        0.0666487503359312
+      ],
+      "student_signal_fraction_by_fold": [
+        0.21632535333141045,
+        0.26406381192275397,
+        0.14727223864552538
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 6,
+      "variant": 9,
+      "model": "extra_trees",
+      "features": [
+        "r3_atr",
+        "r5_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "log1p_atr14_ticks",
+        "relative_volume",
+        "volume_ratio20",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "range_position",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.06842388354959447,
+        0.010941787198985461,
+        0.02976469913285382
+      ],
+      "mean_rank_score": 0.03637678996047792,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10556677242572829,
+        0.04617968094038623,
+        0.051599032518140284
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16873377559850014,
+        0.08942065491183879,
+        0.05025530771298038
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.042889826384665146,
+        0.04961583375706996,
+        0.04198935605547954
+      ],
+      "mean_rank_score": 0.044831672065738216,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.09864436111912316,
+        0.03190596137699412,
+        0.03923676431066918
+      ],
+      "student_signal_fraction_by_fold": [
+        0.22036342659359676,
+        0.07388748950461797,
+        0.009137328675087342
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "range_position",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.083642699641619,
+        0.021102397758912896,
+        0.07251006461379349
+      ],
+      "mean_rank_score": 0.05908505400477513,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11566195558119412,
+        0.0491183879093199,
+        0.04246170384305294
+      ],
+      "student_signal_fraction_by_fold": [
+        0.25209114508220365,
+        0.09109991603694374,
+        0.02123085192152647
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 7,
+      "variant": 2,
+      "model": "extra_trees",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.03540738310528242,
+        0.05509608236123488,
+        0.03968492895805076
+      ],
+      "mean_rank_score": 0.04339613147485602,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0504759157773291,
+        0.02644836272040302,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 3,
+      "model": "extra_trees",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "r1_atr",
+        "r3_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.04296478390257685,
+        0.0418532270523152,
+        0.037358285824889835
+      ],
+      "mean_rank_score": 0.0407254322599273,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0504759157773291,
+        0.02644836272040302,
+        0.038161784466541254
+      ],
+      "student_signal_fraction_by_fold": [
+        0.00028843380444188056,
+        0.0025188916876574307,
+        0.0
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "range_position",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_confirmed",
+        "resistance_confirmed",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.1027095329652017,
+        -0.02207263281553171,
+        0.07824038285182158
+      ],
+      "mean_rank_score": 0.052959094333830524,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08941447937698298,
+        0.04743912678421495,
+        0.048642837946788496
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1277761753677531,
+        0.09361880772460117,
+        0.03171190540177372
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "r3_atr",
+        "r8_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.09801894289335282,
+        -0.011339736791109712,
+        0.032298295424052735
+      ],
+      "mean_rank_score": 0.03965916717543195,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10729737525237958,
+        0.039882451721242655,
+        0.04541789841440473
+      ],
+      "student_signal_fraction_by_fold": [
+        0.14796654167868475,
+        0.07052896725440806,
+        0.046492878258532655
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 6,
+      "model": "random_forest",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.02974609628567786,
+        0.042600097746229124,
+        0.03913137330695952
+      ],
+      "mean_rank_score": 0.037159189112955494,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08162676665705221,
+        0.11418975650713686,
+        0.08089223327062618
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1070089414479377,
+        0.3022670025188917,
+        0.18758398280032249
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 7,
+      "model": "random_forest",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "range_position",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "volume_ratio20",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.051963640937668636,
+        -0.00536163862914291,
+        0.07568558385921553
+      ],
+      "mean_rank_score": 0.04076252872258042,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11075858090568215,
+        0.08354324097397145,
+        0.10937919914001612
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20161522930487452,
+        0.2762384550797649,
+        0.27143241064230045
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 8,
+      "model": "random_forest",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "prior8_range_atr",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "relative_volume",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.004060736961794334,
+        0.020397407440521195,
+        0.041114473699794735
+      ],
+      "mean_rank_score": 0.021857539367370088,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08595327372368042,
+        0.11376994122586062,
+        0.08707336737436173
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1456590712431497,
+        0.3396305625524769,
+        0.21150228433216878
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 7,
+      "variant": 9,
+      "model": "random_forest",
+      "features": [
+        "close_loc",
+        "bar_body_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "range_position",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "minute_sin",
+        "minute_cos",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.0259497977600521,
+        0.03760115903767695,
+        0.03450352523614944
+      ],
+      "mean_rank_score": 0.03268482734462616,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.1202768964522642,
+        0.12720403022670027,
+        0.11287288363343187
+      ],
+      "student_signal_fraction_by_fold": [
+        0.22930487453129506,
+        0.37825356842989083,
+        0.2953507121741467
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.13215583920049254,
+        0.03724523536921493,
+        0.06218232019520324
+      ],
+      "mean_rank_score": 0.0771944649216369,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.1396019613498702,
+        0.058354324097397145,
+        0.04918032786885246
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2578598211710412,
+        0.10201511335012595,
+        0.07605482397205053
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 8,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "range_position",
+        "prior20_position",
+        "prior8_range_atr",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "rsi_centered",
+        "r3_atr"
+      ],
+      "fold_rank_scores": [
+        0.0636617326861354,
+        -0.036431189753519506,
+        0.022442019416178963
+      ],
+      "mean_rank_score": 0.016557520782931618,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10902797807903086,
+        0.05961376994122586,
+        0.04622413329750067
+      ],
+      "student_signal_fraction_by_fold": [
+        0.16700317277184887,
+        0.13685978169605373,
+        0.03843052942757323
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 2,
+      "model": "extra_trees",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "r8_atr",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.11615029456855601,
+        -0.024346068812514807,
+        0.048945836570124836
+      ],
+      "mean_rank_score": 0.04691668744205535,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10383616959907702,
+        0.03484466834592779,
+        0.04353668368718087
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1499855783097779,
+        0.0600335852225021,
+        0.03305563020693362
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 3,
+      "model": "extra_trees",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "r8_atr",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.1203825952728439,
+        -0.010278010625489225,
+        0.055505119816110754
+      ],
+      "mean_rank_score": 0.05520323482115514,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10498990481684453,
+        0.044920235096557515,
+        0.04461166353130879
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1574848572252668,
+        0.08060453400503778,
+        0.039505509271701156
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "r8_atr",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.11812970425245611,
+        -0.01523389631872343,
+        0.058417798956977185
+      ],
+      "mean_rank_score": 0.05377120229690329,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11537352177675224,
+        0.06381192275398824,
+        0.0499865627519484
+      ],
+      "student_signal_fraction_by_fold": [
+        0.17190654744736084,
+        0.15323257766582704,
+        0.060736361193227624
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "r8_atr",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.11407377303969912,
+        -0.022858805106528525,
+        0.040189772160694845
+      ],
+      "mean_rank_score": 0.04380158003128848,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10816267666570523,
+        0.053316540722082285,
+        0.046492878258532655
+      ],
+      "student_signal_fraction_by_fold": [
+        0.15633112200749927,
+        0.1376994122586062,
+        0.04783660306369256
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 6,
+      "model": "random_forest",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "r8_atr",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.09494204179608334,
+        0.025448829222277477,
+        0.04470652448263297
+      ],
+      "mean_rank_score": 0.055032465166997925,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12287280069224113,
+        0.08312342569269521,
+        0.06315506584251546
+      ],
+      "student_signal_fraction_by_fold": [
+        0.21372944909143352,
+        0.21662468513853905,
+        0.11367911851652782
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 8,
+      "variant": 7,
+      "model": "random_forest",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "r8_atr",
+        "prior8_range_atr",
+        "log1p_atr14_ticks"
+      ],
+      "fold_rank_scores": [
+        0.07496884248103475,
+        0.01799158777458105,
+        0.0436370176713544
+      ],
+      "mean_rank_score": 0.0455324826423234,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10931641188347274,
+        0.09739714525608732,
+        0.07417360924482666
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20103836169599076,
+        0.26448362720403024,
+        0.18274657350174683
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 8,
+      "model": "extra_trees",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "r3_atr",
+        "r16_atr",
+        "r32_atr",
+        "range_position",
+        "prior20_position",
+        "prior8_range_atr",
+        "bar_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.0693554202114332,
+        -0.013440848260807181,
+        0.0456876019768538
+      ],
+      "mean_rank_score": 0.033867391309159944,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11364291895010095,
+        0.04408060453400504,
+        0.04407417360924483
+      ],
+      "student_signal_fraction_by_fold": [
+        0.1828670320161523,
+        0.08228379513014274,
+        0.03493684493415748
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 8,
+      "variant": 9,
+      "model": "ridge",
+      "features": [
+        "trend_strength",
+        "ema_spread_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "rsi_centered",
+        "range_position",
+        "prior20_position",
+        "prior8_range_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "log1p_atr14_ticks",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.11286059069313352,
+        0.028094382662950557,
+        0.07789605472904178
+      ],
+      "mean_rank_score": 0.07295034269504196,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14017882895875397,
+        0.055415617128463476,
+        0.045149153453372746
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2846841649841361,
+        0.09361880772460117,
+        0.051330287557108306
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 9,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr"
+      ],
+      "fold_rank_scores": [
+        0.05015253230456624,
+        -0.014738674946712894,
+        -0.005602971444454444
+      ],
+      "mean_rank_score": 0.009936961971132967,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08306893567926162,
+        0.06339210747271201,
+        0.04273044880408492
+      ],
+      "student_signal_fraction_by_fold": [
+        0.09143351600807614,
+        0.12300587741393787,
+        0.02123085192152647
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength"
+      ],
+      "fold_rank_scores": [
+        0.11592271091206802,
+        -0.02737855571592356,
+        0.04833754432903759
+      ],
+      "mean_rank_score": 0.045627233175060684,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12662244014998558,
+        0.05079764903442485,
+        0.04676162321956463
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20248053071820019,
+        0.09403862300587741,
+        0.06476753560870734
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 2,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "rsi_centered",
+        "prior20_position",
+        "range_position"
+      ],
+      "fold_rank_scores": [
+        0.07593102557380016,
+        -0.05444648209899154,
+        -0.013600411741748357
+      ],
+      "mean_rank_score": 0.002628043911020087,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08393423709258725,
+        0.06507136859781697,
+        0.042999193765116905
+      ],
+      "student_signal_fraction_by_fold": [
+        0.09027978079030863,
+        0.14063811922753988,
+        0.01612469766191884
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 3,
+      "model": "ridge",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "ema_spread_atr",
+        "trend_strength",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.10927366930606491,
+        0.01022599080759664,
+        0.05569435806790151
+      ],
+      "mean_rank_score": 0.05839800606052103,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.115950389385636,
+        0.056255247691015954,
+        0.04783660306369256
+      ],
+      "student_signal_fraction_by_fold": [
+        0.18690510527833862,
+        0.11670864819479429,
+        0.07417360924482666
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 9,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "prior20_position",
+        "prior8_range_atr"
+      ],
+      "fold_rank_scores": [
+        0.028339777598061545,
+        -0.007305733251728495,
+        -0.027774016570288926
+      ],
+      "mean_rank_score": -0.002246657407985292,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.06720507643495818,
+        0.05037783375314862,
+        0.04461166353130879
+      ],
+      "student_signal_fraction_by_fold": [
+        0.052494952408422266,
+        0.0709487825356843,
+        0.02096210696049449
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.0838117724255641,
+        -0.04026105916917227,
+        0.004969722716418079
+      ],
+      "mean_rank_score": 0.016173478657603307,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12546870493221807,
+        0.04534005037783375,
+        0.047299113141628595
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20276896452264206,
+        0.07598656591099916,
+        0.04837409298575652
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 6,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "velocity_atr",
+        "trend_strength",
+        "rsi_centered",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.03833726551782375,
+        0.03239120084102274,
+        0.054831159831105244
+      ],
+      "mean_rank_score": 0.041853208729983916,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0833573694837035,
+        0.037783375314861464,
+        0.043805428648212845
+      ],
+      "student_signal_fraction_by_fold": [
+        0.11941159503893857,
+        0.053316540722082285,
+        0.021768341843590434
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 7,
+      "model": "random_forest",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "trend_strength",
+        "prior20_position"
+      ],
+      "fold_rank_scores": [
+        0.08599814130131797,
+        -0.018085504260612534,
+        0.02025205421120585
+      ],
+      "mean_rank_score": 0.029388230417303762,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.15431208537640612,
+        0.0764063811922754,
+        0.05724267669981188
+      ],
+      "student_signal_fraction_by_fold": [
+        0.3241995961926738,
+        0.16204869857262805,
+        0.10669174952969632
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 8,
+      "model": "random_forest",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "acceleration_atr",
+        "ema_spread_atr",
+        "rsi_centered",
+        "prior8_range_atr",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.0424394558726774,
+        -0.011252430260322653,
+        -0.022099072170624585
+      ],
+      "mean_rank_score": 0.0030293178139100528,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.12950677819440437,
+        0.07724601175482787,
+        0.054823972050524056
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2748774156331122,
+        0.21452560873215784,
+        0.0583176565439398
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 9,
+      "variant": 9,
+      "model": "extra_trees",
+      "features": [
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "r32_atr",
+        "bar_body_atr",
+        "close_loc",
+        "range_position",
+        "prior20_position",
+        "volume_ratio20",
+        "session_open",
+        "session_close"
+      ],
+      "fold_rank_scores": [
+        0.025061838347289214,
+        -0.05005353017789951,
+        0.05848992450549491
+      ],
+      "mean_rank_score": 0.01116607755829487,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.0504759157773291,
+        0.056255247691015954,
+        0.04219295888202096
+      ],
+      "student_signal_fraction_by_fold": [
+        0.001442169022209403,
+        0.11880772460117549,
+        0.01236226820747111
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 10,
+      "variant": 0,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.10386011903767778,
+        0.016414860063944922,
+        0.05887540014319531
+      ],
+      "mean_rank_score": 0.05971679308160601,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14738967406980097,
+        0.05961376994122586,
+        0.04971781779091642
+      ],
+      "student_signal_fraction_by_fold": [
+        0.34958177098355925,
+        0.14063811922753988,
+        0.07847352862133836
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 10,
+      "variant": 1,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.09959906664122936,
+        0.011280508233919719,
+        0.06420051337844099
+      ],
+      "mean_rank_score": 0.058360029417863356,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14162099798096336,
+        0.05247691015952981,
+        0.04756785810266057
+      ],
+      "student_signal_fraction_by_fold": [
+        0.29074127487741563,
+        0.10537363560033586,
+        0.06638000537489921
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 10,
+      "variant": 2,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r5_atr",
+        "r16_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.10688594955780603,
+        0.029023884129799664,
+        0.06404130269596608
+      ],
+      "mean_rank_score": 0.06665037879452393,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.14335160080761467,
+        0.06717044500419815,
+        0.05106154259607632
+      ],
+      "student_signal_fraction_by_fold": [
+        0.3267955004326507,
+        0.13895885810243494,
+        0.08411717280300994
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 10,
+      "variant": 3,
+      "model": "ridge",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r5_atr",
+        "r16_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.10861656090219782,
+        0.01751187171776368,
+        0.06377918628004625
+      ],
+      "mean_rank_score": 0.06330253963333592,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.142486299394289,
+        0.05793450881612091,
+        0.0499865627519484
+      ],
+      "student_signal_fraction_by_fold": [
+        0.3120853764061148,
+        0.11293031066330815,
+        0.07847352862133836
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": true
+    },
+    {
+      "searcher": 10,
+      "variant": 4,
+      "model": "extra_trees",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.04005871599742421,
+        -0.007462028665251804,
+        0.07560204056362746
+      ],
+      "mean_rank_score": 0.03606624263193329,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.06893567926160946,
+        0.04869857262804366,
+        0.06288632088148348
+      ],
+      "student_signal_fraction_by_fold": [
+        0.09604845687914623,
+        0.10285474391267842,
+        0.09486697124428917
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 10,
+      "variant": 5,
+      "model": "extra_trees",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.055484790322034086,
+        -0.002637720445180323,
+        0.079485664743455
+      ],
+      "mean_rank_score": 0.044110911540102916,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.08826074415921546,
+        0.0491183879093199,
+        0.06342381080354743
+      ],
+      "student_signal_fraction_by_fold": [
+        0.14969714450533603,
+        0.1343408900083963,
+        0.11126041386723999
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 10,
+      "variant": 6,
+      "model": "extra_trees",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.055352676577673635,
+        -0.021592088108865447,
+        0.07180319344351976
+      ],
+      "mean_rank_score": 0.03518792730410932,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.10556677242572829,
+        0.04827875734676742,
+        0.06638000537489921
+      ],
+      "student_signal_fraction_by_fold": [
+        0.20709547158927027,
+        0.13811922753988246,
+        0.1083042192958882
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 10,
+      "variant": 7,
+      "model": "random_forest",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.037778242347599994,
+        0.056711861995873296,
+        0.012348119840916494
+      ],
+      "mean_rank_score": 0.035612741394796595,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.13844822613210267,
+        0.09529806884970612,
+        0.07014243482934696
+      ],
+      "student_signal_fraction_by_fold": [
+        0.3293914046726276,
+        0.26238455079764905,
+        0.17468422467078742
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 10,
+      "variant": 8,
+      "model": "random_forest",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "volume_missing",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "support_missing",
+        "resistance_missing",
+        "support_confirmed",
+        "resistance_confirmed",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r3_atr",
+        "r8_atr",
+        "r16_atr",
+        "bar_body_atr",
+        "bar_range_atr",
+        "close_loc",
+        "prior20_position",
+        "prior8_range_atr",
+        "volume_ratio20",
+        "minute_sin",
+        "minute_cos"
+      ],
+      "fold_rank_scores": [
+        0.04772125562751944,
+        0.03650492661883146,
+        0.04098305715281852
+      ],
+      "mean_rank_score": 0.041736413133056476,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.11796942601672916,
+        0.0927791771620487,
+        0.10024187046492879
+      ],
+      "student_signal_fraction_by_fold": [
+        0.2526680126910874,
+        0.25398824517212426,
+        0.2749260951357162
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    },
+    {
+      "searcher": 10,
+      "variant": 9,
+      "model": "extra_trees",
+      "features": [
+        "velocity_atr",
+        "acceleration_atr",
+        "trend_strength",
+        "ema_spread_atr",
+        "rsi_centered",
+        "relative_volume",
+        "support_distance_atr",
+        "resistance_distance_atr",
+        "range_position",
+        "session_open",
+        "session_midday",
+        "session_close",
+        "log1p_atr14_ticks",
+        "r1_atr",
+        "r5_atr",
+        "r16_atr",
+        "bar_range_atr",
+        "prior20_position",
+        "volume_ratio20"
+      ],
+      "fold_rank_scores": [
+        0.05274474461021017,
+        -0.00994699316135952,
+        0.07345595537564868
+      ],
+      "mean_rank_score": 0.03875123560816644,
+      "oracle_positive_fraction_by_fold": [
+        0.9495240842226709,
+        0.9735516372795969,
+        0.9618382155334587
+      ],
+      "oracle_imitation_fraction_by_fold": [
+        0.06922411306605133,
+        0.036943744752308987,
+        0.05751142166084386
+      ],
+      "student_signal_fraction_by_fold": [
+        0.055667724257282954,
+        0.0600335852225021,
+        0.08304219295888202
+      ],
+      "current_paper_api_feature_parity": false,
+      "rank_gate_pass": false
+    }
+  ]
+}

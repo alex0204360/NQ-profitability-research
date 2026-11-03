@@ -1,0 +1,28 @@
+{
+  "tester": "test_08",
+  "searcher": "search_08",
+  "status": "complete_selection_only",
+  "frozen_proposal_verified": true,
+  "variants_scored": 10,
+  "selection_folds_scored": 3,
+  "best_variant": "v00",
+  "best_mean_rank_score": 0.07719,
+  "best_fold_rank_scores": [0.13216, 0.03725, 0.06218],
+  "variants_passing_family_rank_gate": 3,
+  "best_current_paper_api_feature_parity": false,
+  "current_paper_api_parity_count": 0,
+  "best_oracle_imitation_fraction_by_fold": [0.140, 0.058, 0.049],
+  "best_student_signal_fraction_by_fold": [0.258, 0.102, 0.076],
+  "oracle_positive_fraction_by_fold": [0.950, 0.974, 0.962],
+  "causality_check": "All proposal features are in the frozen causal pool. Tester loads source parts 1-4, truncates at October 1, constructs completed-bar states, and derives eight target values only from matured, contiguous future bars. Future values are labels only.",
+  "limitations": [
+    "Rank score is not realized profit or independent confirmation.",
+    "The oracle's near-universal positive action rate is hindsight opportunity, not a causal trading edge.",
+    "Best variant uses OHLCV-derived features absent from the current 18-field paper API; a matched live adapter is required before paper use.",
+    "Trade-level gap contribution, occupancy, cost stress replay, and concentration await one globally selected holdout evaluation.",
+    "Yahoo contract, roll, and minute timestamp convention remain unverified."
+  ],
+  "holdout_opened": false,
+  "sealed_2025_access": false,
+  "broker_orders": 0
+}

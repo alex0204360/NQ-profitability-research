@@ -1,0 +1,66 @@
+{
+  "id": "search_08",
+  "hypothesis": "The same local momentum can mean continuation in an established trend or reversal near a mature range boundary. Compare compact linear trend/range states with shallow and moderately deep trees that can learn the interaction, while avoiding a high-capacity hindsight imitator.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "acceleration_atr", "r3_atr", "r8_atr", "r16_atr", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 10.0}
+    },
+    {
+      "id": "v01",
+      "features": ["range_position", "prior20_position", "prior8_range_atr", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "rsi_centered", "r3_atr"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v02",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "rsi_centered", "range_position", "prior20_position", "r8_atr", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 320, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v03",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "rsi_centered", "range_position", "prior20_position", "r8_atr", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v04",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "rsi_centered", "range_position", "prior20_position", "r8_atr", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v05",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "rsi_centered", "range_position", "prior20_position", "r8_atr", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 6, "min_samples_leaf": 40, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v06",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "rsi_centered", "range_position", "prior20_position", "r8_atr", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v07",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "rsi_centered", "range_position", "prior20_position", "r8_atr", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v08",
+      "features": ["trend_strength", "ema_spread_atr", "r3_atr", "r16_atr", "r32_atr", "range_position", "prior20_position", "prior8_range_atr", "bar_range_atr", "volume_ratio20", "minute_sin", "minute_cos"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v09",
+      "features": ["trend_strength", "ema_spread_atr", "velocity_atr", "acceleration_atr", "rsi_centered", "range_position", "prior20_position", "prior8_range_atr", "r3_atr", "r8_atr", "r16_atr", "log1p_atr14_ticks", "minute_sin", "minute_cos"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    }
+  ]
+}

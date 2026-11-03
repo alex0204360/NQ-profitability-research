@@ -1,0 +1,66 @@
+{
+  "id": "search_02",
+  "hypothesis": "Short-term reversals may be conditionally forecastable when a completed bar stretches away from recent price and approaches a confirmed support or resistance level. Test normalized distance, range position, and confirmation flags without assuming a hindsight touch will reverse.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "prior20_position", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "support_confirmed", "resistance_confirmed", "range_position", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v01",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "prior20_position", "prior8_range_atr", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "range_position", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v02",
+      "features": ["r1_atr", "r3_atr", "bar_body_atr", "bar_range_atr", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_confirmed", "resistance_confirmed", "support_missing", "resistance_missing", "range_position"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v03",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "prior20_position", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_confirmed", "resistance_confirmed", "range_position", "relative_volume", "volume_ratio20", "volume_missing", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v04",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "prior20_position", "prior8_range_atr", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_confirmed", "resistance_confirmed", "range_position", "minute_sin", "minute_cos", "weekday", "session_open", "session_midday", "session_close"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v05",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "prior20_position", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "support_confirmed", "resistance_confirmed", "range_position", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v06",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "prior20_position", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "support_confirmed", "resistance_confirmed", "range_position", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v07",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "prior20_position", "prior8_range_atr", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "range_position", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v08",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "prior20_position", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "support_confirmed", "resistance_confirmed", "range_position", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 320, "max_features": 1.0, "bootstrap": false}
+    },
+    {
+      "id": "v09",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "prior20_position", "close_loc", "support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "support_confirmed", "resistance_confirmed", "range_position", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 7, "min_samples_leaf": 40, "max_features": 0.5, "bootstrap": false}
+    }
+  ]
+}

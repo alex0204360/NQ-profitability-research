@@ -1,0 +1,66 @@
+{
+  "id": "search_01",
+  "hypothesis": "Short-horizon momentum may matter only after normalizing by contemporaneous volatility and checking acceleration, candle shape, and session context. Ten fixed causal variants compare linear shrinkage with shallow trees; the tester must retain every losing action label and reject unstable ranking.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "bar_body_atr", "bar_range_atr", "atr14"],
+      "model": "ridge",
+      "params": {"alpha": 10.0}
+    },
+    {
+      "id": "v01",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "bar_body_atr", "bar_range_atr", "atr14"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v02",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r16_atr", "r32_atr", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "atr14"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v03",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r16_atr", "r32_atr", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "atr14", "minute_sin", "minute_cos"],
+      "model": "ridge",
+      "params": {"alpha": 300.0}
+    },
+    {
+      "id": "v04",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "bar_body_atr", "bar_range_atr", "close_loc", "atr14"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v05",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "bar_body_atr", "bar_range_atr", "close_loc", "atr14"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v06",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r16_atr", "r32_atr", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "atr14"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v07",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r16_atr", "r32_atr", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "atr14"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 6, "min_samples_leaf": 80, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v08",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "bar_body_atr", "bar_range_atr", "close_loc", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "atr14", "minute_sin", "minute_cos"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v09",
+      "features": ["r1_atr", "r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "bar_body_atr", "bar_range_atr", "close_loc", "velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "atr14", "minute_sin", "minute_cos"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    }
+  ]
+}

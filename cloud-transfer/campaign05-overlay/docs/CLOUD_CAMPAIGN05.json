@@ -1,0 +1,23 @@
+{
+  "version": "mnq-oracle-search-crosscheck-100-v1",
+  "registered": "2026-11-03 before campaign05 searcher proposals or tester outcomes",
+  "status": "fixed_100_variant_protocol",
+  "organization": "Ten search agents each author one independent candidate-family proposal with exactly ten fixed variants. Ten different test agents each audit one other agent's proposal and score its ten variants. Concurrency is staged because the cloud runtime has fewer than 20 simultaneous agent slots.",
+  "budget": {"search_agents": 10, "test_agents": 10, "variants_per_searcher": 10, "total_variants": 100},
+  "data": "Only existing 2026 September 13 to October 12 source for development. Do not read raw 2025. Do not use October 13+ uploads for selection. Source contract/roll and interval convention remain unverified.",
+  "feature_pool": "Existing 18 shared-state features plus 16 causal_features fields listed in mnq_oracle_prepare.FEATURE_NAMES. A searcher may select a subset and predeclare a reversible, causal transform; no future value, hindsight class, label, price at or after the next open, or source-correction field may be an input.",
+  "oracle": "For each matured contiguous opportunity, compute long and short stressed net action values for each fixed holding horizon 3,5,10,20 under immediate and one-bar-delayed next-open entry. The worse of the two fill timings is the robust hindsight value for each of eight actions. Choose no trade if every value is nonpositive. Oracle values are tester/training labels only, never live inference inputs.",
+  "folds": [
+    {"train_end_exclusive": "2026-09-21T00:00:00Z", "validation_start": "2026-09-21T00:00:00Z", "validation_end_exclusive": "2026-09-24T00:00:00Z"},
+    {"train_end_exclusive": "2026-09-24T00:00:00Z", "validation_start": "2026-09-24T00:00:00Z", "validation_end_exclusive": "2026-09-28T00:00:00Z"},
+    {"train_end_exclusive": "2026-09-28T00:00:00Z", "validation_start": "2026-09-28T00:00:00Z", "validation_end_exclusive": "2026-10-01T00:00:00Z"}
+  ],
+  "purge_minutes": 60,
+  "tester_checks_per_family": ["proposal and ten variants fixed before scoring", "all features computable from completed history", "oracle target matures within one contiguous segment", "all losing action alternatives retained", "prediction/label timestamp alignment", "three-fold rank score by action", "hindsight oracle versus student action gap", "both fill delays and stressed cost", "source gap and concentration sensitivity", "API feature-parity feasibility"],
+  "variant_score": "Mean of Spearman rank correlations between predicted and realized robust net for each of the eight actions, averaged across actions and then across the three fixed validation folds. Nonfinite correlation counts as -1. A tester reports every variant, including failed or no-trade variants. No replay profit is used to select variants.",
+  "selection": "After all 100 variant results, choose exactly one top-ranked variant only if each of its three fold scores is strictly positive and its overall score is greater than 0.05. Tie break by search-agent index then variant index. The global winner is fixed before one internal holdout evaluation. If none passes, reject all and do not open the holdout.",
+  "internal_holdout": "October 1–6, 2026. One evaluation of only the global winner with selected horizon frozen at signal time. This period is already opened development data, not independent confirmation. No candidate family can inspect it during search or testing.",
+  "execution": "One MNQ, next-open, fixed chosen 3/5/10/20 bar exit, position occupancy, zero-volume entry cancellation, gaps flagged, base/stress/extreme costs, 0/1-bar signal delay. An unverifiable gap-exit gain never counts as evidence of live profit.",
+  "qualification": "No model from this campaign can be live-qualified using already opened observations. Any selected candidate needs a frozen API, identical historical/live feature construction, source-audited post-freeze paper observations, at least 50 trades and 10 active sessions, positive stressed and extreme nets under both delays, positive session-bootstrap lower expectancy, and a finite risk budget before orders.",
+  "deployment": "Paper research only; no broker or live orders"
+}

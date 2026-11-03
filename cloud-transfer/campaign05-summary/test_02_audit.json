@@ -1,0 +1,23 @@
+{
+  "tester": "test_02",
+  "searcher": "search_02",
+  "status": "independent_selection_fold_audit_complete",
+  "frozen_proposal_verified": true,
+  "ten_variants_scored": true,
+  "all_features_completed_bar_causal": true,
+  "all_losing_actions_retained": true,
+  "both_fill_delays_and_stress_cost_in_teacher": true,
+  "timestamp_and_segment_maturity_checked_by_runner": true,
+  "holdout_opened": false,
+  "sealed_2025_access": false,
+  "broker_orders": 0,
+  "best_variant_by_registered_rank": "v05",
+  "best_mean_rank_score": 0.05861435769286758,
+  "best_fold_rank_scores": [0.06862685507540077, 0.01980419858761001, 0.08741201941559196],
+  "variants_meeting_family_rank_gate": ["v05", "v06", "v07"],
+  "current_paper_api_feature_parity_count": 0,
+  "oracle_positive_fraction_by_fold": [0.9495240842226709, 0.9735516372795969, 0.9618382155334587],
+  "best_student_oracle_imitation_fraction_by_fold": [0.12835304297663686, 0.10495382031905962, 0.10722923945176029],
+  "finding": "A few mean-reversion variants clear the weak internal rank screen, but the hindsight oracle labels almost every minute because it can choose among eight future paths. The best student's oracle action agreement is only about 10-13%, and no variant's extra OHLCV features are currently exposed by the paper API.",
+  "limitations": ["Rank scores are small and overlapping minute opportunities are dependent", "No replay profit or gap-exit concentration assessed at family selection stage", "September source lacks independently verified contract, roll, and minute convention", "A global winner must be selected before one internal holdout replay; this family alone is not live-qualified"]
+}

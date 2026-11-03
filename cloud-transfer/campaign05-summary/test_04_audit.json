@@ -1,0 +1,45 @@
+{
+  "tester": "test_04",
+  "searcher": "search_04",
+  "status": "independent_selection_fold_audit_complete",
+  "frozen_identity_verified": true,
+  "variants_scored": 10,
+  "mature_contiguous_oracle_actions": 8,
+  "all_losing_alternatives_retained": true,
+  "feature_causality": "All proposal features are registered completed-bar shared-state or causal OHLCV fields. The prior8 range uses only shifted historical highs/lows; the current candle fields are available after close.",
+  "timestamp_and_purge": "Runner uses source bars strictly before 2026-10-01 for selection, labels only matured same-segment 3/5/10/20-bar outcomes under both fills, and 60-minute training purges.",
+  "best_variant": "v01",
+  "best_mean_rank_score": 0.04940911144944049,
+  "best_fold_rank_scores": [
+    0.061383589761586824,
+    0.04646124676410781,
+    0.04038249782262684
+  ],
+  "family_variants_meeting_registered_gate": 0,
+  "oracle_positive_fraction_by_fold": [
+    0.9495240842226709,
+    0.9735516372795969,
+    0.9618382155334587
+  ],
+  "best_oracle_imitation_fraction_by_fold": [
+    0.0862417075281223,
+    0.05289672544080604,
+    0.04058048911582908
+  ],
+  "best_student_signal_fraction_by_fold": [
+    0.1886357081049899,
+    0.10201511335012595,
+    0.02123085192152647
+  ],
+  "current_paper_api_parity_variant_count": 0,
+  "gap_and_concentration_sensitivity": "Deferred: registered selection stage does not replay positions or score trade profit; any eventual global winner must pass the one-time holdout gap/occupancy and concentration audit.",
+  "limitations": [
+    "Scores from overlapping minute opportunities are descriptive, not independent-trade significance tests.",
+    "Hindsight best action/exit depends on future prices and cannot be a live chart input.",
+    "Source contract, roll and timestamp convention remain unverified.",
+    "No strategy profitability is established by this family."
+  ],
+  "holdout_opened": false,
+  "sealed_2025_access": false,
+  "broker_orders": 0
+}

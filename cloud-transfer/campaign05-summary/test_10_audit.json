@@ -1,0 +1,37 @@
+{
+  "searcher": "search_10",
+  "independent_tester": "test_10",
+  "status": "complete_selection_only",
+  "frozen_identity": {
+    "proposal_hash_verified": true,
+    "runner_hash_verified": true,
+    "plan_hash_verified": true,
+    "variants_scored": 10,
+    "expected_variants": 10
+  },
+  "best_variant": {
+    "id": "v02",
+    "mean_eight_action_rank_score": 0.0667,
+    "fold_scores_rounded": [0.1069, 0.0290, 0.0640],
+    "internal_rank_gate_passed": true,
+    "exact_hindsight_oracle_action_match_fraction_rounded": [0.143, 0.067, 0.051],
+    "student_signal_fraction_rounded": [0.327, 0.139, 0.084]
+  },
+  "family_gate_pass_count": 4,
+  "current_18_feature_paper_api_parity_count": 0,
+  "oracle_positive_action_fraction_rounded": [0.950, 0.974, 0.962],
+  "checks": {
+    "features_from_completed_history_only": true,
+    "oracle_targets_training_or_test_labels_only": true,
+    "all_eight_action_alternatives_and_losers_retained": true,
+    "targets_require_full_contiguous_future_and_maturity_before_fold_end": true,
+    "training_purged_60_minutes_before_validation": true,
+    "student_predictions_use_only_feature_bank": true,
+    "october_1_to_6_holdout_scored": false,
+    "gap_exit_profit_tested": false,
+    "source_contract_and_roll_independently_verified": false,
+    "broker_orders_submitted": false
+  },
+  "finding": "Four broad-feature variants pass the prespecified internal rank gate, but none can be queried through the current 18-feature paper API without implementing the same expanded causal feature builder. The best student's exact action agreement with hindsight is only 5–14% by fold. Positive oracle actions on 95–97% of eligible minutes are hindsight opportunity, not obtainable live accuracy. Replay profitability, gap concentration, and the reserved holdout remain untested pending global selection.",
+  "limitation": "The oracle selects the best of eight fixed direction/horizon alternatives after outcomes mature; it is not a literal oracle over every possible exit path. The historical Yahoo contract identity, roll rule, and minute convention remain unverified."
+}

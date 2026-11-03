@@ -1,0 +1,27 @@
+{
+  "tester": "test_05",
+  "proposal": "search_05",
+  "status": "complete_selection_only",
+  "variant_count": 10,
+  "proposal_hash_matches_frozen_manifest": true,
+  "plan_and_runner_hashes_verified_by_runner": true,
+  "holdout_opened": false,
+  "causal_feature_check": "All ten variants use the registered completed-bar feature pool; no future price, oracle value, or hindsight winner is an input.",
+  "target_check": "Runner derives all eight action values from contiguous matured 3/5/10/20-bar futures and subtracts $6 stressed round-trip cost from the worse of immediate and delayed fill. Losing alternatives remain in the target matrix.",
+  "alignment_check": "Three purged chronological folds; fitted and scored arrays share the same boolean candle masks.",
+  "best_variant": "v05",
+  "best_mean_rank_score": 0.05842521208223627,
+  "best_fold_rank_scores": [0.06846272949405995, 0.05111503306941226, 0.0556978736832366],
+  "variants_passing_family_selection_gate": 1,
+  "current_paper_api_feature_parity_variants": 8,
+  "best_variant_current_feature_parity": true,
+  "best_variant_student_signal_fraction_by_fold": [0.14364003461205654, 0.0675902602854744, 0.02391830153184628],
+  "best_variant_hindsight_oracle_imitation_fraction_by_fold": [0.08970291318142486, 0.04450041981528128, 0.04326793872614888],
+  "best_variant_hindsight_oracle_positive_fraction_by_fold": [0.9495240842226709, 0.9735516372795969, 0.9618382155334587],
+  "limitations": [
+    "Very low hindsight-oracle imitation despite a small positive rank score; oracle acts with future information and is not a live benchmark.",
+    "No trade replay, gap-exit profit sensitivity, session concentration, or live API model artifact is produced at this selection stage.",
+    "The proposed feature set is in the current paper feature schema, but API parity still needs model serialization and a live decision-path check.",
+    "Existing source contract, roll, and timestamp conventions are not independently verified; no qualification or profitability claim follows."
+  ]
+}

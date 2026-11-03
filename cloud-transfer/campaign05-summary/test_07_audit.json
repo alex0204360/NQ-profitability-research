@@ -1,0 +1,42 @@
+{
+  "tester": "test_07",
+  "searcher": "search_07",
+  "status": "independent_selection_fold_audit_complete",
+  "frozen_proposal_verified": true,
+  "ten_variants_scored": true,
+  "all_features_completed_bar_causal": true,
+  "all_losing_actions_retained": true,
+  "both_fill_delays_and_stress_cost_in_teacher": true,
+  "timestamp_and_segment_maturity_checked_by_runner": true,
+  "holdout_opened": false,
+  "sealed_2025_access": false,
+  "broker_orders": 0,
+  "best_variant_by_registered_rank": "v01",
+  "best_mean_rank_score": 0.05908505400477513,
+  "best_fold_rank_scores": [
+    0.083642699641619,
+    0.021102397758912896,
+    0.07251006461379349
+  ],
+  "variants_meeting_family_rank_gate": [
+    "v01"
+  ],
+  "current_paper_api_feature_parity_count": 0,
+  "oracle_positive_fraction_by_fold": [
+    0.9495240842226709,
+    0.9735516372795969,
+    0.9618382155334587
+  ],
+  "best_student_oracle_imitation_fraction_by_fold": [
+    0.11566195558119412,
+    0.0491183879093199,
+    0.04246170384305294
+  ],
+  "finding": "The price-geometry ridge variant v01 clears the weak internal rank screen in all three selection folds, but agreement with the hindsight best action falls from about 12% to 4%. All variants require causal OHLCV features outside the current 18-feature paper API; none is live ready.",
+  "limitations": [
+    "Overlapping minute labels are dependent; small rank scores are not profitability evidence",
+    "No trade replay, gap-profit concentration, or one-time holdout assessed at family stage",
+    "The Yahoo source contract, roll, and interval convention remain unverified",
+    "No candidate may be promoted before global selection, execution stress, API parity, and new prospective confirmation"
+  ]
+}

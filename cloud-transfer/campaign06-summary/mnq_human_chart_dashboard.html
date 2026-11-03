@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MNQ chart-reading research dashboard</title><style>
+:root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+body{margin:0;background:#0b1220;color:#eaf2ff}main{max-width:1200px;margin:auto;padding:30px 22px 70px}
+h1{font-size:clamp(2rem,4vw,3.2rem)}h2{margin-top:35px}p{color:#bdd0e8;line-height:1.6;max-width:970px}
+.eyebrow{color:#75caff;text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0}
+.card{background:#15243b;border:1px solid #2e4767;border-radius:14px;padding:17px}
+.card strong{font-size:1.7rem;display:block}.card span{font-size:.9rem;color:#a9bfdc}
+.warning{padding:16px;background:#30231d;border-left:4px solid #ffb35c;border-radius:8px;color:#ffe1bd}
+.flow{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.step{flex:1;min-width:180px;background:#15243b;border:1px solid #2e4767;padding:14px;border-radius:12px}
+.step b{display:block;color:#75caff}.step small{color:#b9cce4;line-height:1.5}
+.tablewrap{overflow:auto;border:1px solid #2e4767;border-radius:12px}table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #29405e;white-space:nowrap}th{background:#1b2e49;color:#d1e7ff}
+tr:hover{background:#17273f}.chart{max-width:100%;border-radius:12px;border:1px solid #2e4767}
+.small{font-size:.88rem;color:#9db1ce}a{color:#82d6ff}</style></head><body><main>
+<div class="eyebrow">Fixed chart policy · November 3, 2026</div><h1>Can support, resistance, and trendlines improve MNQ trades?</h1>
+<p>This experiment translates familiar chart reading into rules you can inspect: confirmed support/resistance, a trendline through two confirmed pivots, a retest candle, and a payoff-aware win-probability gate learned only from earlier sessions. Every entry is placed at the next observed open.</p>
+<div class="grid"><div class="card"><strong>0</strong><span>Probability-qualified setups</span></div>
+<div class="card"><strong>$0.00</strong><span>Primary gated net · no trades</span></div>
+<div class="card"><strong>-$511.50</strong><span>Ungated October 13–29 stress net</span></div>
+<div class="card"><strong>+$480.00</strong><span>Ungated newer two-session stress net</span></div></div>
+<div class="warning"><b>Live-trading status: blocked.</b> The probability gate abstained everywhere; the ungated rule lost across the longer 14-session upload. The newer positive two-session result is too short to qualify. Contract/roll identity remains unverified, and no broker orders were sent.</div>
+<h2>How the chart rule thinks</h2><div class="flow">
+<div class="step"><b>1 · Plot completed candles</b><small>Build EMA trend, ATR, and nearest confirmed support/resistance. Confirm a pivot only after two later candles close.</small></div>
+<div class="step"><b>2 · Wait for a retest</b><small>Price touches a horizontal level or projected two-pivot trendline within 0.25 ATR, then closes back in the trend direction.</small></div>
+<div class="step"><b>3 · Price the risk</b><small>Use earlier matured examples to estimate win probability, mean win, mean loss, and the breakeven probability after stressed costs and fill delay.</small></div>
+<div class="step"><b>4 · Enter or abstain</b><small>Trade only if the conservative probability bound beats breakeven and historical mean net is positive. Here, every setup abstained.</small></div></div>
+<h2>What earlier examples taught the probability gate</h2><div class="tablewrap"><table><thead><tr><th>Setup</th><th>Examples</th><th>Wins</th><th>Posterior P(win)</th><th>Conservative P(win)</th><th>Breakeven P</th><th>Mean robust net</th><th>Decision</th></tr></thead><tbody><tr><td>horizontal_long</td><td>73</td><td>39</td><td>53.2%</td><td>46.0%</td><td>50.0%</td><td>+$1.86</td><td>abstain</td></tr><tr><td>horizontal_short</td><td>56</td><td>17</td><td>31.7%</td><td>24.1%</td><td>59.2%</td><td>-$17.03</td><td>abstain</td></tr><tr><td>trendline_long</td><td>19</td><td>1</td><td>13.0%</td><td>5.1%</td><td>48.1%</td><td>-$30.18</td><td>abstain</td></tr><tr><td>trendline_short</td><td>13</td><td>4</td><td>35.3%</td><td>21.0%</td><td>58.8%</td><td>-$13.77</td><td>abstain</td></tr></tbody></table></div>
+<p class="small">Robust net uses the worse of immediate and one-bar-delayed fills at a fixed ten-bar exit, after $6 stressed round-trip cost. The conservative probability is the 10th percentile of a Beta(2,2) posterior. Small samples and unequal win/loss sizes matter.</p>
+<h2>Replay across fixed development windows</h2><div class="tablewrap"><table><thead><tr><th>Source window</th><th>Sessions</th><th>Policy</th><th>Trades</th><th>Immediate stress net</th><th>Delayed stress net</th><th>Bootstrap lower expectancy</th><th>Gap exits</th></tr></thead><tbody><tr><td>original_oct01_12</td><td>8</td><td>gated_fixed10</td><td>0</td><td>$0.00</td><td>$0.00</td><td>n/a</td><td>0</td></tr><tr><td>original_oct01_12</td><td>8</td><td>raw_fixed10</td><td>56</td><td>+$317.50</td><td>+$318.00</td><td>-$9.92</td><td>2</td></tr><tr><td>original_oct01_12</td><td>8</td><td>gated_atr_bracket</td><td>0</td><td>$0.00</td><td>$0.00</td><td>n/a</td><td>0</td></tr><tr><td>upload_oct13_29</td><td>14</td><td>gated_fixed10</td><td>0</td><td>$0.00</td><td>$0.00</td><td>n/a</td><td>0</td></tr><tr><td>upload_oct13_29</td><td>14</td><td>raw_fixed10</td><td>104</td><td>-$511.50</td><td>-$574.50</td><td>-$17.95</td><td>2</td></tr><tr><td>upload_oct13_29</td><td>14</td><td>gated_atr_bracket</td><td>0</td><td>$0.00</td><td>$0.00</td><td>n/a</td><td>0</td></tr><tr><td>upload_oct30_nov02</td><td>2</td><td>gated_fixed10</td><td>0</td><td>$0.00</td><td>$0.00</td><td>n/a</td><td>0</td></tr><tr><td>upload_oct30_nov02</td><td>2</td><td>raw_fixed10</td><td>17</td><td>+$480.00</td><td>+$464.00</td><td>+$26.50</td><td>0</td></tr><tr><td>upload_oct30_nov02</td><td>2</td><td>gated_atr_bracket</td><td>0</td><td>$0.00</td><td>$0.00</td><td>n/a</td><td>0</td></tr></tbody></table></div>
+<p>The raw setup is a descriptive control with no probability gate. The gated ATR bracket is a registered secondary exit sensitivity; it also abstained because no entry passed. All source windows were already inspected in prior research, so none is fresh confirmation. The unchanged $8 gate made +$196.50 immediate / -$1,250 delayed on the 14-session October upload; this human-style raw rule was worse there.</p>
+
+<h2>What this says about predicting a chart</h2><p>A trendline is a summary of past prices, not a physical path the market must follow. A support touch can precede either a bounce or a break. Historical future bars can teach the probabilities of those outcomes; they cannot reveal which one a live chart will take. This run made that uncertainty explicit and abstained when the conservative probability did not beat the observed payoff threshold.</p>
+<p class="small">Reproducible aggregate: <code>mnq_human_chart_summary.json</code>. Private candles and trade journals are not embedded in the published dashboard. Raw 2025 remained sealed.</p>
+</main></body></html>

@@ -1,0 +1,23 @@
+{
+  "version": "mnq-human-chart-structure-v1",
+  "registered": "2026-11-03 before setup counts, payoff estimates, or campaign06 replay",
+  "question": "Do causal chart-reading rules for confirmed support/resistance and two-pivot trendline retests produce positive MNQ expectancy after costs and fill delay?",
+  "hypotheses": ["horizontal_confirmed_level_retest", "two_confirmed_pivot_trendline_retest"],
+  "training": {"source": "hash-verified original September 13–October 12 2026 candles only", "maturity_cutoff_exclusive": "2026-09-30T23:00:00Z", "training_period_end_exclusive": "2026-10-01T00:00:00Z", "purge_minutes": 60, "label": "One MNQ, ten-bar fixed exit, gross next-open to tenth-bar close for immediate and one-bar-delayed fills, $6 stressed round-trip cost. Robust net is the minimum of both timing outcomes. Gapped/unmatured futures are excluded."},
+  "causal_structure": "The existing JS market-state bridge supplies EMA spread, ATR, trend strength, and nearest confirmed support/resistance. A separate causal two-pivot line is formed only after a pivot has two completed candles on both sides; each contiguous segment resets pivot memory. No future pivot is available at entry.",
+  "horizontal_rule": "Long when EMA spread >0, trend strength >=0.12, nearest confirmed support exists, candle low touches within +/-0.25 ATR of support, candle closes >=0.10 ATR above support with green body, and resistance is at least 0.75 ATR away. Short mirrors at confirmed resistance, bearish EMA, red body, and support >=0.75 ATR away. Reject conflicts.",
+  "trendline_rule": "Long when two latest confirmed pivot lows form a rising line: later pivot 5..90 bars after earlier, latest pivot <=90 bars old, 10-bar rise between 0.05 and 1.0 ATR; current low touches within +/-0.25 ATR of projected line, green candle closes >=line+0.10 ATR and <=line+0.75 ATR, EMA up, trend strength >=0.12. Short mirrors two falling pivot highs. Reject conflicts.",
+  "probability_gate": "For each setup and side separately, use all eligible earlier training occurrences. Beta(2,2) posterior on robust net >0. Require at least 20 mature examples, posterior 10th-percentile win probability above empirical breakeven probability mean_loss/(mean_win+mean_loss), and empirical mean robust net >0. If both setups fire on the same side, choose the larger empirical mean robust net, tie horizontal. If directions conflict, abstain. No threshold fit on evaluation windows.",
+  "registered_controls": ["No-trade $0", "Raw setup without probability gate, otherwise identical next-open ten-bar execution", "Same gated entry with existing one-ATR stop, 1.5-ATR target, 30-bar maximum exit as a secondary exit sensitivity, not a tunable choice"],
+  "evaluation_windows": [
+    {"id": "original_oct01_12", "start": "2026-10-01T00:00:00Z", "end_exclusive": "2026-10-12T14:20:00Z", "source": "original 2026 files; already opened development evidence"},
+    {"id": "upload_oct13_29", "start": "2026-10-13T00:00:00Z", "end_exclusive": "2026-10-30T00:00:00Z", "source": "fresh01 upload-only normalized CSV; already opened and overlap-conflicted"},
+    {"id": "upload_oct30_nov02", "start": "2026-10-30T00:00:00Z", "end_exclusive": "2026-11-02T20:54:00Z", "source": "cloud_fresh03_lineage upload-only normalized CSV; already opened development evidence"}
+  ],
+  "execution": "Existing causal-v2 replay with previous completed-candle volume and next-open entry. Fixed ten-bar primary exit; 0/1-bar signal delay; base/stress/extreme costs. Secondary ATR bracket uses the existing replay. Position occupancy, gaps, cancelled signals, drawdown, and session-bootstrap lower expectancy are reported. Positive gap-exit P&L is not evidence of executable profit.",
+  "selection": "The probability-gated fixed-ten rule is primary and is evaluated in all windows without modification. No parameter or hypothesis selection from opened windows. Raw and bracket controls are descriptive only.",
+  "screen": "For each source-audited window, >=50 trades and >=10 active sessions, positive stressed net for immediate and one-bar delayed fills, positive extreme net, and positive session-bootstrap lower expectancy; no success claim from a shorter window. Then freeze and collect later untouched confirmation.",
+  "risk": "User specified no numerical max drawdown. Report realized and bar-close drawdown; live risk qualification remains open.",
+  "seal": "Raw 2025 unopened",
+  "deployment": "Research/paper explanation only; no broker or live orders"
+}

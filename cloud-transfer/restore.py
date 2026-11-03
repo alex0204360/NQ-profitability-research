@@ -7,6 +7,10 @@ from pathlib import Path
 
 here = Path(__file__).resolve().parent
 workspace = Path("/workspace")
+if (here / 'latest_snapshot_index.json').exists():
+    from restore_latest import restore
+    restore()
+    raise SystemExit(0)
 index = json.loads((here / "transfer_index.json").read_text(encoding="utf-8"))
 assert index["version"] == 1 and not index["sealed_2025_raw_included"]
 targets = {"mnq-oracle-code.zip": workspace,

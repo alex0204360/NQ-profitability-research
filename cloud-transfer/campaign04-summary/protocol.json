@@ -1,0 +1,72 @@
+{
+  "version": "mnq-robust-teacher-100-trial-v1",
+  "registered": "2026-11-03 before campaign04 fits or scored predictions",
+  "status": "fixed_search_plan",
+  "question": "Can a bounded 100-configuration search learn robust, cost-adjusted dual-delay action values from the existing causal 18-feature state on earlier 2026 data?",
+  "trial_budget": 100,
+  "trial_generation": "Enumerate the Cartesian product in the runner, shuffle with numpy default_rng seed 20261103, take the first 100 unique configurations. Do not add or edit trials after results.",
+  "model_family": "ExtraTreesRegressor multi-output, random_state 20261103, n_jobs 1",
+  "grid": {
+    "n_estimators": [
+      24,
+      40
+    ],
+    "max_depth": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "min_samples_leaf": [
+      40,
+      80,
+      160,
+      320
+    ],
+    "max_features": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "bootstrap": [
+      false,
+      true
+    ]
+  },
+  "teacher": "At each completed minute, predict cost-adjusted long and short ten-bar net values. Each value is the worse of next-open and one-bar-delayed next-open fill, both with $6 round-trip stress cost. Only full, contiguous horizons matured before a purged cutoff qualify. All losing actions remain targets.",
+  "features": "The 18 existing causal opportunity features only; teacher values, future candles, source gaps, and hindsight winner class are never model inputs.",
+  "purge_minutes": 60,
+  "selection_folds": [
+    {
+      "train_end_exclusive": "2026-09-21T00:00:00Z",
+      "validation_start": "2026-09-21T00:00:00Z",
+      "validation_end_exclusive": "2026-09-24T00:00:00Z"
+    },
+    {
+      "train_end_exclusive": "2026-09-24T00:00:00Z",
+      "validation_start": "2026-09-24T00:00:00Z",
+      "validation_end_exclusive": "2026-09-28T00:00:00Z"
+    },
+    {
+      "train_end_exclusive": "2026-09-28T00:00:00Z",
+      "validation_start": "2026-09-28T00:00:00Z",
+      "validation_end_exclusive": "2026-10-01T00:00:00Z"
+    }
+  ],
+  "selection": "For each trial and fold compute Spearman rank correlation separately for long and short robust net; fold score is their mean and trial score is the mean of three fold scores. Select the top score only if all three fold scores are strictly positive and overall score exceeds 0.05. Tie break by lower trial index. Do not use replay profit for selection.",
+  "internal_holdout": {
+    "train_end_exclusive": "2026-10-01T00:00:00Z",
+    "start": "2026-10-01T00:00:00Z",
+    "end_exclusive": "2026-10-07T00:00:00Z",
+    "usage": "Exactly one evaluation of selected fixed model and decision rule; this older period is already opened development evidence, not independent confirmation."
+  },
+  "decision": "Long or short only when its predicted worse-fill stressed net is strictly positive and greater than the other action; otherwise abstain. No threshold tuning.",
+  "execution": "Causal next-open, fixed ten-bar exit, both immediate and delayed signal, base/stress/extreme costs, position occupancy; gap exits are flagged and cannot count as proof of profitability.",
+  "screen": "Exploratory pass requires >=50 trades and >=10 active sessions, positive stressed net for both fill delays, positive extreme net for both, and positive session-bootstrap lower expectancy. This short internal holdout may be incapable of satisfying the session requirement.",
+  "comparison": "No-trade and unchanged frozen $8 gate where a same-window baseline is available; no baseline refit.",
+  "confirmation": "No confirmation from any already opened 2026 window. Freeze full policy, then acquire source-audited post-freeze observations before any paper/live qualification.",
+  "risk": "No numerical maximum drawdown was provided. Report drawdown; no live risk qualification until a finite budget and operational loss controls exist.",
+  "seal": "Do not read raw 2025 data",
+  "deployment": "Paper research only; no broker or live orders"
+}

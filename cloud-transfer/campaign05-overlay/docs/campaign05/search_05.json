@@ -1,0 +1,66 @@
+{
+  "id": "search_05",
+  "hypothesis": "Simple regularized action-value models over compact, causal state groups may transfer across sessions better than deep trees. Favor feature groups that the existing completed-bar API already computes; two variants test whether short normalized returns add information.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr"],
+      "model": "ridge",
+      "params": {"alpha": 10.0}
+    },
+    {
+      "id": "v01",
+      "features": ["velocity_atr", "acceleration_atr", "trend_strength", "ema_spread_atr"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v02",
+      "features": ["support_distance_atr", "resistance_distance_atr", "support_missing", "resistance_missing", "range_position"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v03",
+      "features": ["velocity_atr", "ema_spread_atr", "rsi_centered", "range_position", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 300.0}
+    },
+    {
+      "id": "v04",
+      "features": ["velocity_atr", "ema_spread_atr", "rsi_centered", "range_position", "relative_volume", "log1p_atr14_ticks", "session_open", "session_midday", "session_close"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v05",
+      "features": ["velocity_atr", "acceleration_atr", "ema_spread_atr", "support_distance_atr", "resistance_distance_atr", "relative_volume", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 3000.0}
+    },
+    {
+      "id": "v06",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "bar_body_atr", "bar_range_atr", "volume_ratio20", "minute_sin", "minute_cos"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v07",
+      "features": ["r1_atr", "r3_atr", "r8_atr", "velocity_atr", "ema_spread_atr", "bar_range_atr", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 3000.0}
+    },
+    {
+      "id": "v08",
+      "features": ["velocity_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "relative_volume", "range_position", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 320, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v09",
+      "features": ["velocity_atr", "ema_spread_atr", "relative_volume", "log1p_atr14_ticks", "session_open", "session_midday", "session_close"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "search_06",
+  "hypothesis": "A one-bar fill delay can erase signals driven by the just-closed candle. Predict robust action values from slower, completed-history trend persistence and market context (3- to 32-bar returns, EMA spread, RSI, structure, volume, and session), without the most recent one-bar return or candle body. The variants test whether that slower information survives both fill timings; all action alternatives, including losses, remain teacher targets.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 10.0}
+    },
+    {
+      "id": "v01",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v02",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v03",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks", "relative_volume", "volume_ratio20", "volume_missing"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v04",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks", "support_distance_atr", "resistance_distance_atr", "support_confirmed", "resistance_confirmed"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v05",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v06",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks", "relative_volume", "volume_ratio20", "volume_missing"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v07",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks", "support_distance_atr", "resistance_distance_atr", "support_confirmed", "resistance_confirmed"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v08",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks", "minute_sin", "minute_cos", "session_open", "session_midday", "session_close"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v09",
+      "features": ["r3_atr", "r5_atr", "r8_atr", "r16_atr", "r32_atr", "trend_strength", "ema_spread_atr", "rsi_centered", "log1p_atr14_ticks", "relative_volume", "volume_ratio20", "support_distance_atr", "resistance_distance_atr", "range_position", "minute_sin", "minute_cos"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 7, "min_samples_leaf": 320, "max_features": 1.0, "bootstrap": true}
+    }
+  ]
+}

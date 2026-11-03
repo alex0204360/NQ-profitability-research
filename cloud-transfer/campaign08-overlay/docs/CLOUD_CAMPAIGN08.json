@@ -1,0 +1,20 @@
+{
+  "version": "mnq-signal-persistence-diffusion-v1",
+  "registered": "2026-11-03 before campaign08 signal counts, probability calibration, or replay",
+  "question": "Can control-theory persistence and a past-only drift-diffusion cost probability make the frozen $8 gate more robust to one-bar delay?",
+  "frozen_entry": "Unchanged $8 gate action and readiness from fresh02 forecasts and cloud_fresh03_lineage decisions; no refit, threshold change, or new data splice. Reconstruct and exactly match frozen baseline replay before evaluating filters.",
+  "candidate_persistence": "Keep an $8 gate action only when the immediately previous completed bar was contiguous, ready, and had the same nonzero $8 gate action. This is a two-bar hysteresis/debounce rule. Never use the next candle to confirm the current decision.",
+  "candidate_diffusion": "For each gate action, require 32 contiguous completed closes ending at the signal bar. From their 31 one-minute differences compute sample mean mu and sample standard deviation s (ddof=1). Model the future ten-minute price sum with mean 10*mu and predictive variance s^2*(10+100/31), including uncertainty in estimated drift. Approximate stressed profitability by P(side*future_move > 3 index points) using the normal CDF; keep only finite s>0 and p>0.60. This is an assumption-driven forecast, not a calibrated probability claim.",
+  "primary_combination": "Keep the gate action only if both persistence and diffusion rules pass at the completed signal bar. Also report each rule alone as registered controls; do not choose by observed P&L.",
+  "probability_diagnostic": "On matured, contiguous evaluation opportunities with a frozen gate signal, compare diffusion p with whether the actual next-open to tenth-bar-close directional MNQ gross exceeded the $6 stressed round trip. Report Brier score and base-rate Brier control. This is not an independent calibration set and does not tune p>0.60.",
+  "evaluation_windows": [
+    {"id": "upload_oct13_29", "start": "2026-10-13T00:00:00Z", "end_exclusive": "2026-10-30T00:00:00Z", "source": "fresh01 normalized upload only"},
+    {"id": "upload_oct30_nov02", "start": "2026-10-30T00:00:00Z", "end_exclusive": "2026-11-02T20:54:00Z", "source": "cloud_fresh03_lineage normalized upload only"}
+  ],
+  "execution": "One MNQ contract, existing causal-v2 previous-bar-volume next-open fill and fixed ten-bar exit. Both immediate and one-bar-delayed signals; base/stress/extreme costs, occupancy, drawdown, session bootstrap, gap exits. Filtered signals and reasons stay private.",
+  "comparison": "Identical-source unchanged $8 gate and no-trade $0. A candidate must improve stressed net under both delays and retain enough independent trade/session support, not just benefit from a few trades.",
+  "screen": "At least 50 trades and ten active sessions on a source-audited window, positive stressed and extreme net under both fill timings, positive session-bootstrap lower expectancy, no dependence on unresolved gap exits, and later untouched confirmation. Already opened 2026 windows are development evidence only.",
+  "risk": "No finite maximum drawdown provided; report it and leave live risk gate open.",
+  "seal": "Raw 2025 unopened",
+  "deployment": "Research only; no broker or live orders"
+}

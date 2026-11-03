@@ -1,0 +1,192 @@
+{
+  "status": "not_ready",
+  "selected_candidate": null,
+  "campaign": "CLOUD_CAMPAIGN01",
+  "research_result_sha256": "2ef4d0eed248c1ebc333213f254683850e8e8c93d18760b9470d9bf56e423572",
+  "baseline_result_sha256": "b5c07d763f056f43afbb2efe18d3e55938fe0b9fe9ea3a22d293858ff8c1aa12",
+  "rows": [
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 0,
+      "cost": "base",
+      "trades": 181,
+      "net_usd": -1470.0,
+      "expectancy_usd": -8.121546961325967,
+      "drawdown_usd": 2117.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 0,
+      "cost": "stress",
+      "trades": 181,
+      "net_usd": -1832.0,
+      "expectancy_usd": -10.121546961325967,
+      "drawdown_usd": 2433.0,
+      "bootstrap_lower_usd": -19.938647264713506
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 0,
+      "cost": "extreme",
+      "trades": 181,
+      "net_usd": -2556.0,
+      "expectancy_usd": -14.121546961325967,
+      "drawdown_usd": 3065.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 1,
+      "cost": "base",
+      "trades": 181,
+      "net_usd": -1306.5,
+      "expectancy_usd": -7.218232044198895,
+      "drawdown_usd": 1875.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 1,
+      "cost": "stress",
+      "trades": 181,
+      "net_usd": -1668.5,
+      "expectancy_usd": -9.218232044198896,
+      "drawdown_usd": 2148.5,
+      "bootstrap_lower_usd": -20.10776816502463
+    },
+    {
+      "policy": "ridge_dual_delay",
+      "delay": 1,
+      "cost": "extreme",
+      "trades": 181,
+      "net_usd": -2392.5,
+      "expectancy_usd": -13.218232044198896,
+      "drawdown_usd": 2745.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 0,
+      "cost": "base",
+      "trades": 301,
+      "net_usd": -235.0,
+      "expectancy_usd": -0.7807308970099668,
+      "drawdown_usd": 1607.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 0,
+      "cost": "stress",
+      "trades": 301,
+      "net_usd": -837.0,
+      "expectancy_usd": -2.780730897009967,
+      "drawdown_usd": 1956.0,
+      "bootstrap_lower_usd": -12.223850781172956
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 0,
+      "cost": "extreme",
+      "trades": 301,
+      "net_usd": -2041.0,
+      "expectancy_usd": -6.780730897009967,
+      "drawdown_usd": 2912.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 1,
+      "cost": "base",
+      "trades": 301,
+      "net_usd": -207.0,
+      "expectancy_usd": -0.6877076411960132,
+      "drawdown_usd": 1531.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 1,
+      "cost": "stress",
+      "trades": 301,
+      "net_usd": -809.0,
+      "expectancy_usd": -2.6877076411960132,
+      "drawdown_usd": 1797.5,
+      "bootstrap_lower_usd": -11.674204237218477
+    },
+    {
+      "policy": "extra_trees_dual_delay",
+      "delay": 1,
+      "cost": "extreme",
+      "trades": 301,
+      "net_usd": -2013.0,
+      "expectancy_usd": -6.687707641196013,
+      "drawdown_usd": 2691.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_$8_gate",
+      "delay": 0,
+      "cost": "base",
+      "trades": 133,
+      "net_usd": 462.5,
+      "expectancy_usd": 3.4774436090225564,
+      "drawdown_usd": 718.5,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_$8_gate",
+      "delay": 0,
+      "cost": "stress",
+      "trades": 133,
+      "net_usd": 196.5,
+      "expectancy_usd": 1.4774436090225564,
+      "drawdown_usd": 816.5,
+      "bootstrap_lower_usd": -8.722888735062664
+    },
+    {
+      "policy": "unchanged_$8_gate",
+      "delay": 0,
+      "cost": "extreme",
+      "trades": 133,
+      "net_usd": -335.5,
+      "expectancy_usd": -2.5225563909774436,
+      "drawdown_usd": 1015.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_$8_gate",
+      "delay": 1,
+      "cost": "base",
+      "trades": 133,
+      "net_usd": -984.0,
+      "expectancy_usd": -7.398496240601504,
+      "drawdown_usd": 1411.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_$8_gate",
+      "delay": 1,
+      "cost": "stress",
+      "trades": 133,
+      "net_usd": -1250.0,
+      "expectancy_usd": -9.398496240601503,
+      "drawdown_usd": 1657.0,
+      "bootstrap_lower_usd": null
+    },
+    {
+      "policy": "unchanged_$8_gate",
+      "delay": 1,
+      "cost": "extreme",
+      "trades": 133,
+      "net_usd": -1782.0,
+      "expectancy_usd": -13.398496240601503,
+      "drawdown_usd": 2163.0,
+      "bootstrap_lower_usd": null
+    }
+  ],
+  "confirmation": "not_run",
+  "paper_operation": "not_run",
+  "sealed_2025_access": false
+}

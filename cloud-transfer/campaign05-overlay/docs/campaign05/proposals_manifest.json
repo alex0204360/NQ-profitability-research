@@ -1,0 +1,17 @@
+{
+  "plan_sha256": "6eba0e39f39e63a6d388b8ebfb1dc5adb3db65f616f438f9f3698db94a77facd",
+  "runner_sha256": "c5f8b72bdd51a4308e1eb158a65b884d0ddaa0fe6ffd72bc186942761ba42c66",
+  "proposals": {
+    "search_01.json": "0b418f6d3c23b667dfec0fba08326db6b4e0c46f8a96061b6f17920b4a505ad3",
+    "search_02.json": "8504f07db7c7514c5f8c814765e01d1d100018969146a0a0b082846e5346ab04",
+    "search_03.json": "3efe2fe14f5792f22e8484909ae81130ae7ccbfe3ba1258e45fcd8c5f3762aa4",
+    "search_04.json": "b5aaeff4f7a5f2eb10903c52258f101a8410add747113846ec82774762cf7208",
+    "search_05.json": "2179958b3593d821ff9e87c0268a88e300e04d3e5a658030cb1f98c5dd187cbd",
+    "search_06.json": "fa83367001d5066bc8032a7d3e763b36f5ebc105569c7bd8ec48b0a455abf1b4",
+    "search_07.json": "de80a47209cc2129ace76d414b12cf391e35e404be3b56bbf18cbfa9f2a0578e",
+    "search_08.json": "5ddcc9b161fa4623482348d0b39640d40b4de820f7f241ea785c90545dad059f",
+    "search_09.json": "a70a96504b42201eb2986442d4fbe0bd372efd056c9688533aab246d906cf075",
+    "search_10.json": "09b6d834bfd7ba74e5ca29089b5340a099fff4bd04476cd91cda2c2e2cf1d06b"
+  },
+  "status": "frozen_before_tester_scoring"
+}

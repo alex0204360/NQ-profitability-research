@@ -1,0 +1,9 @@
+# MNQ oracle-to-student dashboard and 100-variant campaign
+
+Ten search agents fixed ten variants each. Ten independent testers scored all 100 against hindsight labels for long/short entries and 3/5/10/20-bar exits. The selected Ridge model passed the three-fold rank screen, then lost on its one-time internal development holdout: **-$384.50** stressed immediate and **-$435.00** stressed one-bar delayed, over 45 trades. It remains research-only and was not connected to a broker.
+
+Open `campaign05-summary/mnq_oracle_teaching_dashboard.html` for the user-facing results dashboard and `campaign05-summary/mnq_campaign05_summary.json` for every variant's aggregate score. The independent tester audit summaries are in the same directory. A local private dashboard with the exact first-signal Ridge feature contributions and realized oracle outcome is at `/workspace/outputs/mnq_oracle_teaching_dashboard_PRIVATE.html`; it is intentionally excluded from Git with row-level results and the research-only model.
+
+After restoring the original transfer and earlier overlays, copy `campaign05-overlay/` into `/workspace/mnq-oracle-code/`. The fixed proposal manifest hashes the plan, tester runner, and all ten proposals. Rerunning the historical tester requires an empty private output directory, and the internal holdout runner refuses a second evaluation. The dashboard generator `python -m tools.cloud_campaign05_report` rebuilds local HTML and aggregate JSON from the frozen private results.
+
+The full method and limitations are in `campaign05-overlay/docs/CLOUD_CAMPAIGN05_RESULT.md`. The oracle's future prices were training/test labels only. The student received completed-bar features and cannot know the future on a live chart. The chosen model lost across base, stressed, and extreme costs; it has no current paper API feature parity, no independent confirmation, and no agreed finite risk budget. Raw 2025 remained sealed and no orders were sent.

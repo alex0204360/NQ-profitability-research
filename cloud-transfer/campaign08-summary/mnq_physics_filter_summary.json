@@ -1,0 +1,357 @@
+{
+  "status": "rejected_development",
+  "windows": [
+    {
+      "id": "upload_oct13_29",
+      "observed_sessions": 14,
+      "signal_counts": {
+        "unchanged_8_gate": 455,
+        "persistent_2bar": 277,
+        "diffusion_p60": 334,
+        "persistent_and_diffusion": 229
+      },
+      "probability_diagnostic": {
+        "count": 450,
+        "brier": 0.4076187888190901,
+        "base_rate_brier": 0.23909135802469134,
+        "observed_positive_rate": 0.39555555555555555,
+        "mean_predicted_probability": 0.638625798150027,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 56,
+            "mean_predicted": 0.10407523348070556,
+            "observed_positive_rate": 0.5357142857142857
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 46,
+            "mean_predicted": 0.2906575272512816,
+            "observed_positive_rate": 0.5434782608695652
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 18,
+            "mean_predicted": 0.4765969995027793,
+            "observed_positive_rate": 0.3888888888888889
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 177,
+            "mean_predicted": 0.7241191288864136,
+            "observed_positive_rate": 0.3502824858757062
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 153,
+            "mean_predicted": 0.8590543662424082,
+            "observed_positive_rate": 0.35294117647058826
+          }
+        ]
+      },
+      "entries": [
+        {
+          "candidate": "unchanged_8_gate",
+          "delay": 0,
+          "trades": 133,
+          "base_net": 462.5,
+          "stress_net": 196.5,
+          "extreme_net": -335.5,
+          "stress_drawdown_usd": 816.5,
+          "stress_drawdown_pct_account": 3.266,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -8.722888735062664
+        },
+        {
+          "candidate": "unchanged_8_gate",
+          "delay": 1,
+          "trades": 133,
+          "base_net": -984.0,
+          "stress_net": -1250.0,
+          "extreme_net": -1782.0,
+          "stress_drawdown_usd": 1657.0,
+          "stress_drawdown_pct_account": 6.628,
+          "exceeds_1500_reference": true,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -18.238302594725994
+        },
+        {
+          "candidate": "persistent_2bar",
+          "delay": 0,
+          "trades": 79,
+          "base_net": -1990.0,
+          "stress_net": -2148.0,
+          "extreme_net": -2464.0,
+          "stress_drawdown_usd": 2251.0,
+          "stress_drawdown_pct_account": 9.004,
+          "exceeds_1500_reference": true,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -44.039067982456146
+        },
+        {
+          "candidate": "persistent_2bar",
+          "delay": 1,
+          "trades": 79,
+          "base_net": -2158.0,
+          "stress_net": -2316.0,
+          "extreme_net": -2632.0,
+          "stress_drawdown_usd": 2450.0,
+          "stress_drawdown_pct_account": 9.8,
+          "exceeds_1500_reference": true,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -44.93514985014985
+        },
+        {
+          "candidate": "diffusion_p60",
+          "delay": 0,
+          "trades": 85,
+          "base_net": -965.5,
+          "stress_net": -1135.5,
+          "extreme_net": -1475.5,
+          "stress_drawdown_usd": 1385.0,
+          "stress_drawdown_pct_account": 5.54,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -25.55885708286674
+        },
+        {
+          "candidate": "diffusion_p60",
+          "delay": 1,
+          "trades": 85,
+          "base_net": -1740.0,
+          "stress_net": -1910.0,
+          "extreme_net": -2250.0,
+          "stress_drawdown_usd": 2094.5,
+          "stress_drawdown_pct_account": 8.378,
+          "exceeds_1500_reference": true,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -37.230530675332915
+        },
+        {
+          "candidate": "persistent_and_diffusion",
+          "delay": 0,
+          "trades": 65,
+          "base_net": -1669.5,
+          "stress_net": -1799.5,
+          "extreme_net": -2059.5,
+          "stress_drawdown_usd": 1902.5,
+          "stress_drawdown_pct_account": 7.61,
+          "exceeds_1500_reference": true,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -44.246249999999996
+        },
+        {
+          "candidate": "persistent_and_diffusion",
+          "delay": 1,
+          "trades": 65,
+          "base_net": -1776.5,
+          "stress_net": -1906.5,
+          "extreme_net": -2166.5,
+          "stress_drawdown_usd": 2040.5,
+          "stress_drawdown_pct_account": 8.162,
+          "exceeds_1500_reference": true,
+          "gap_exits": 0,
+          "active_sessions": 14,
+          "bootstrap_lower_usd_per_trade": -43.8691899710704
+        }
+      ]
+    },
+    {
+      "id": "upload_oct30_nov02",
+      "observed_sessions": 2,
+      "signal_counts": {
+        "unchanged_8_gate": 133,
+        "persistent_2bar": 93,
+        "diffusion_p60": 89,
+        "persistent_and_diffusion": 65
+      },
+      "probability_diagnostic": {
+        "count": 129,
+        "brier": 0.3191933090642862,
+        "base_rate_brier": 0.23363980530016223,
+        "observed_positive_rate": 0.37209302325581395,
+        "mean_predicted_probability": 0.5607452443743061,
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.2,
+            "count": 26,
+            "mean_predicted": 0.1343785471209834,
+            "observed_positive_rate": 0.23076923076923078
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.4,
+            "count": 15,
+            "mean_predicted": 0.2646532623655679,
+            "observed_positive_rate": 0.4666666666666667
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.6,
+            "count": 3,
+            "mean_predicted": 0.464396576130717,
+            "observed_positive_rate": 0.3333333333333333
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.8,
+            "count": 70,
+            "mean_predicted": 0.7310388456481965,
+            "observed_positive_rate": 0.44285714285714284
+          },
+          {
+            "lower": 0.8,
+            "upper": 1.0,
+            "count": 15,
+            "mean_predicted": 0.8204390959926982,
+            "observed_positive_rate": 0.2
+          }
+        ]
+      },
+      "entries": [
+        {
+          "candidate": "unchanged_8_gate",
+          "delay": 0,
+          "trades": 28,
+          "base_net": 485.0,
+          "stress_net": 429.0,
+          "extreme_net": 317.0,
+          "stress_drawdown_usd": 271.0,
+          "stress_drawdown_pct_account": 1.084,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": 3.9444444444444446
+        },
+        {
+          "candidate": "unchanged_8_gate",
+          "delay": 1,
+          "trades": 28,
+          "base_net": 315.5,
+          "stress_net": 259.5,
+          "extreme_net": 147.5,
+          "stress_drawdown_usd": 273.5,
+          "stress_drawdown_pct_account": 1.094,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": 8.342105263157896
+        },
+        {
+          "candidate": "persistent_2bar",
+          "delay": 0,
+          "trades": 21,
+          "base_net": -165.5,
+          "stress_net": -207.5,
+          "extreme_net": -291.5,
+          "stress_drawdown_usd": 436.5,
+          "stress_drawdown_pct_account": 1.746,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": -16.4375
+        },
+        {
+          "candidate": "persistent_2bar",
+          "delay": 1,
+          "trades": 21,
+          "base_net": -424.0,
+          "stress_net": -466.0,
+          "extreme_net": -550.0,
+          "stress_drawdown_usd": 598.0,
+          "stress_drawdown_pct_account": 2.392,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": -42.8125
+        },
+        {
+          "candidate": "diffusion_p60",
+          "delay": 0,
+          "trades": 19,
+          "base_net": 307.5,
+          "stress_net": 269.5,
+          "extreme_net": 193.5,
+          "stress_drawdown_usd": 292.0,
+          "stress_drawdown_pct_account": 1.168,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": 13.9375
+        },
+        {
+          "candidate": "diffusion_p60",
+          "delay": 1,
+          "trades": 19,
+          "base_net": 271.0,
+          "stress_net": 233.0,
+          "extreme_net": 157.0,
+          "stress_drawdown_usd": 288.5,
+          "stress_drawdown_pct_account": 1.154,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": 9.272727272727273
+        },
+        {
+          "candidate": "persistent_and_diffusion",
+          "delay": 0,
+          "trades": 14,
+          "base_net": -23.5,
+          "stress_net": -51.5,
+          "extreme_net": -107.5,
+          "stress_drawdown_usd": 348.5,
+          "stress_drawdown_pct_account": 1.394,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": -11.916666666666666
+        },
+        {
+          "candidate": "persistent_and_diffusion",
+          "delay": 1,
+          "trades": 14,
+          "base_net": -216.0,
+          "stress_net": -244.0,
+          "extreme_net": -300.0,
+          "stress_drawdown_usd": 478.5,
+          "stress_drawdown_pct_account": 1.914,
+          "exceeds_1500_reference": false,
+          "gap_exits": 0,
+          "active_sessions": 2,
+          "bootstrap_lower_usd_per_trade": -42.333333333333336
+        }
+      ]
+    }
+  ],
+  "account_reference": {
+    "starting_equity_usd": 25000.0,
+    "maximum_drawdown_reference_usd": 1500.0,
+    "reference_pct_equity": 6.0,
+    "firm_rule_verified": false
+  },
+  "result": "The past-only normal drift/diffusion probabilities were overconfident and less calibrated than a constant base-rate forecast; persistence and diffusion filters lost more than the unchanged $8 gate on the 14-session window. No candidate promoted.",
+  "limitations": [
+    "Pre-registered before the user supplied the $1,500 account drawdown reference",
+    "Bar-close research drawdown is not a verified firm's trailing-drawdown rule",
+    "Already opened Yahoo-labeled development data with unverified contract/roll/timestamp identity",
+    "No untouched confirmation or live feed"
+  ],
+  "live_authorized": false,
+  "broker_orders": 0,
+  "sealed_2025_access": false
+}

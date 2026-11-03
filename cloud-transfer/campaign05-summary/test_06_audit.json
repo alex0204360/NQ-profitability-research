@@ -1,0 +1,27 @@
+{
+  "tester": "test_06",
+  "proposal": "search_06",
+  "status": "complete_selection_only",
+  "frozen_hashes_verified": true,
+  "variants_scored": 10,
+  "validation_folds": 3,
+  "checks": {
+    "causal_completed_bar_features": "pass; all proposal fields are in the registered shared-state or causal OHLCV pool, with no future/teacher field",
+    "oracle_label_integrity": "pass by frozen runner; all eight long/short horizon alternatives retain wins and losses, require both fill delays, $6 stressed cost, and full contiguous maturity",
+    "timestamp_separation": "pass by frozen runner; train targets mature before a 60-minute-purged cutoff and validation labels mature within each fold end",
+    "paper_api_parity": "fail for all 10 variants; normalized return and other causal OHLCV fields are not in the current 18-feature paper API",
+    "gap_trade_sensitivity": "deferred until one global candidate is selected for causal holdout replay",
+    "profitability_and_concentration": "not measured during rank-based selection"
+  },
+  "best_variant": "v00",
+  "best_mean_rank_score": 0.0790,
+  "best_fold_rank_scores": [0.1280, 0.0417, 0.0673],
+  "variants_passing_internal_rank_gate": 5,
+  "best_variant_oracle_positive_fraction_by_fold": [0.950, 0.974, 0.962],
+  "best_variant_exact_oracle_imitation_fraction_by_fold": [0.140, 0.063, 0.048],
+  "best_variant_student_signal_fraction_by_fold": [0.260, 0.112, 0.071],
+  "interpretation": "A positive rank score is only a development diagnostic; low exact oracle imitation and missing API parity prevent any live claim. The oracle sees future paths only as labels.",
+  "holdout_opened": false,
+  "sealed_2025_access": false,
+  "broker_orders": 0
+}

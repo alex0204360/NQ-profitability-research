@@ -1,0 +1,66 @@
+{
+  "id": "search_07",
+  "hypothesis": "Price-action geometry at the completed candle may condition whether an apparent move continues or reverses. Close location, body and full range, position within prior ranges, and confirmed support or resistance are causal summaries available before the next open. Ten fixed variants compare compact geometry with trend, volume, and session context; they test learnable action values rather than using a hindsight winner as an input.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v01",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "range_position", "support_distance_atr", "resistance_distance_atr", "log1p_atr14_ticks"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v02",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v03",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "prior8_range_atr", "r1_atr", "r3_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v04",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "range_position", "support_distance_atr", "resistance_distance_atr", "support_confirmed", "resistance_confirmed", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v05",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "prior8_range_atr", "r3_atr", "r8_atr", "trend_strength", "ema_spread_atr", "log1p_atr14_ticks"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 6, "min_samples_leaf": 40, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v06",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "prior8_range_atr", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v07",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "range_position", "support_distance_atr", "resistance_distance_atr", "volume_ratio20", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v08",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "prior8_range_atr", "r1_atr", "r3_atr", "r8_atr", "relative_volume", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 6, "min_samples_leaf": 40, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v09",
+      "features": ["close_loc", "bar_body_atr", "bar_range_atr", "prior20_position", "range_position", "support_distance_atr", "resistance_distance_atr", "minute_sin", "minute_cos", "session_open", "session_midday", "session_close", "log1p_atr14_ticks"],
+      "model": "random_forest",
+      "params": {"n_estimators": 24, "max_depth": 5, "min_samples_leaf": 160, "max_features": 1.0, "bootstrap": true}
+    }
+  ]
+}

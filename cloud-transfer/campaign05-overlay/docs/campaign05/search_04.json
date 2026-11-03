@@ -1,0 +1,66 @@
+{
+  "id": "search_04",
+  "hypothesis": "Causal volatility and range context may separate breakout from exhaustion: prior eight-bar range relative to ATR, the just-completed bar range and body, recent normalized returns, and current ATR are available before any next-open entry. The ten variants test compact versus expanded context and linear versus shallow nonlinear value estimation; no future price or hindsight class is a feature.",
+  "variants": [
+    {
+      "id": "v00",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r3_atr", "r8_atr"],
+      "model": "ridge",
+      "params": {"alpha": 100.0}
+    },
+    {
+      "id": "v01",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "volume_ratio20"],
+      "model": "ridge",
+      "params": {"alpha": 1000.0}
+    },
+    {
+      "id": "v02",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r3_atr", "r8_atr"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 3, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v03",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r3_atr", "r8_atr", "prior20_position", "close_loc"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 4, "min_samples_leaf": 160, "max_features": 0.75, "bootstrap": false}
+    },
+    {
+      "id": "v04",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r1_atr", "r3_atr", "r8_atr", "r16_atr", "velocity_atr", "acceleration_atr"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v05",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r1_atr", "r3_atr", "r8_atr", "r16_atr", "volume_ratio20", "relative_volume"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v06",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r5_atr", "r16_atr", "trend_strength", "ema_spread_atr"],
+      "model": "random_forest",
+      "params": {"n_estimators": 24, "max_depth": 4, "min_samples_leaf": 80, "max_features": 0.75, "bootstrap": true}
+    },
+    {
+      "id": "v07",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r8_atr", "r16_atr", "r32_atr", "prior20_position", "range_position", "relative_volume"],
+      "model": "random_forest",
+      "params": {"n_estimators": 40, "max_depth": 5, "min_samples_leaf": 160, "max_features": 0.5, "bootstrap": true}
+    },
+    {
+      "id": "v08",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r1_atr", "r3_atr", "r8_atr", "r16_atr", "r32_atr", "prior20_position", "close_loc", "volume_ratio20"],
+      "model": "extra_trees",
+      "params": {"n_estimators": 24, "max_depth": 6, "min_samples_leaf": 40, "max_features": 0.5, "bootstrap": false}
+    },
+    {
+      "id": "v09",
+      "features": ["log1p_atr14_ticks", "prior8_range_atr", "bar_range_atr", "bar_body_atr", "r3_atr", "r8_atr", "minute_sin", "minute_cos", "weekday", "session_open", "session_midday", "session_close"],
+      "model": "ridge",
+      "params": {"alpha": 10.0}
+    }
+  ]
+}

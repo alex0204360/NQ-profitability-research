@@ -1,0 +1,116 @@
+{
+  "classification": "forensic_sensitivity_not_a_tradable_filter",
+  "source_gap": {
+    "previous_bar_start": "2026-10-30T18:53:00+00:00",
+    "next_observed_bar_start": "2026-10-30T19:03:00+00:00",
+    "missing_minutes": 9
+  },
+  "cases": [
+    {
+      "trades": 133,
+      "reported_net_usd": 196.5,
+      "gap_trades": 0,
+      "gap_trade_net_usd": 0,
+      "net_excluding_gap_trades_usd": 196.5,
+      "top_one_trade_usd": 368.0,
+      "top_five_trades_usd": 1178.5,
+      "median_trade_usd": -7.5,
+      "label": "Earlier $8 baseline",
+      "run": "fresh02",
+      "journal": "gate8_delay0_stress"
+    },
+    {
+      "trades": 133,
+      "reported_net_usd": -1250.0,
+      "gap_trades": 0,
+      "gap_trade_net_usd": 0,
+      "net_excluding_gap_trades_usd": -1250.0,
+      "top_one_trade_usd": 221.5,
+      "top_five_trades_usd": 923.5,
+      "median_trade_usd": -13.5,
+      "label": "Earlier $8 delayed",
+      "run": "fresh02",
+      "journal": "gate8_delay1_stress"
+    },
+    {
+      "trades": 28,
+      "reported_net_usd": 429.0,
+      "gap_trades": 0,
+      "gap_trade_net_usd": 0,
+      "net_excluding_gap_trades_usd": 429.0,
+      "top_one_trade_usd": 164.5,
+      "top_five_trades_usd": 528.5,
+      "median_trade_usd": 6.0,
+      "label": "Newer $8 baseline",
+      "run": "cloud_fresh03_lineage",
+      "journal": "unchanged_8_gate_delay0_stress"
+    },
+    {
+      "trades": 28,
+      "reported_net_usd": 259.5,
+      "gap_trades": 0,
+      "gap_trade_net_usd": 0,
+      "net_excluding_gap_trades_usd": 259.5,
+      "top_one_trade_usd": 146.5,
+      "top_five_trades_usd": 523.5,
+      "median_trade_usd": 13.75,
+      "label": "Newer $8 delayed",
+      "run": "cloud_fresh03_lineage",
+      "journal": "unchanged_8_gate_delay1_stress"
+    },
+    {
+      "trades": 63,
+      "reported_net_usd": 1091.0,
+      "gap_trades": 1,
+      "gap_trade_net_usd": 2647.0,
+      "net_excluding_gap_trades_usd": -1556.0,
+      "top_one_trade_usd": 2647.0,
+      "top_five_trades_usd": 3126.5,
+      "median_trade_usd": -19.5,
+      "label": "Newer tree immediate",
+      "run": "cloud_fresh03_lineage",
+      "journal": "extra_trees_dual_delay_delay0_stress"
+    },
+    {
+      "trades": 61,
+      "reported_net_usd": -1342.0,
+      "gap_trades": 0,
+      "gap_trade_net_usd": 0,
+      "net_excluding_gap_trades_usd": -1342.0,
+      "top_one_trade_usd": 189.0,
+      "top_five_trades_usd": 669.5,
+      "median_trade_usd": -26.5,
+      "label": "Newer tree delayed",
+      "run": "cloud_fresh03_lineage",
+      "journal": "extra_trees_dual_delay_delay1_stress"
+    },
+    {
+      "trades": 66,
+      "reported_net_usd": 1379.0,
+      "gap_trades": 4,
+      "gap_trade_net_usd": 2921.0,
+      "net_excluding_gap_trades_usd": -1542.0,
+      "top_one_trade_usd": 2647.0,
+      "top_five_trades_usd": 3383.0,
+      "median_trade_usd": -18.0,
+      "label": "Newer exit student immediate",
+      "run": "cloud_campaign02",
+      "journal": "fresh03_oct30_nov02_delay0_stress"
+    },
+    {
+      "trades": 65,
+      "reported_net_usd": -1349.5,
+      "gap_trades": 3,
+      "gap_trade_net_usd": 258.0,
+      "net_excluding_gap_trades_usd": -1607.5,
+      "top_one_trade_usd": 205.0,
+      "top_five_trades_usd": 819.0,
+      "median_trade_usd": -15.0,
+      "label": "Newer exit student delayed",
+      "run": "cloud_campaign02",
+      "journal": "fresh03_oct30_nov02_delay1_stress"
+    }
+  ],
+  "sealed_2025_access": false,
+  "interpretation": "Removing a gap trade is a sensitivity calculation, not an entry rule. A future qualification gate must require zero unresolved-gap fills or independently verified executable prices."
+}

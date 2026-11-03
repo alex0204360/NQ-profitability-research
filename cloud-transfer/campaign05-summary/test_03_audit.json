@@ -1,0 +1,37 @@
+{
+  "tester": "test_03",
+  "searcher": "search_03",
+  "status": "audited_selection_only",
+  "proposal_sha256": "3efe2fe14f5792f22e8484909ae81130ae7ccbfe3ba1258e45fcd8c5f3762aa4",
+  "proposal_frozen_and_hash_matched": true,
+  "variants_scored": 10,
+  "best_variant": "v01",
+  "best_mean_rank_score": 0.046710837751223255,
+  "best_fold_rank_scores": [
+    0.03833438340388939,
+    0.038488338784989445,
+    0.06330979106479094
+  ],
+  "passes_fixed_selection_gate": false,
+  "current_paper_api_parity_variants": 0,
+  "oracle_positive_fraction_by_fold": [
+    0.9495240842226709,
+    0.9735516372795969,
+    0.9618382155334587
+  ],
+  "oracle_imitation_fraction_by_fold": [
+    0.09749062590135564,
+    0.02686817800167926,
+    0.054823972050524056
+  ],
+  "causality_review": "All selected fields are from completed-bar shared state or causal_features; fixed runner separates future-bar oracle labels from input matrix and purges training before each validation fold.",
+  "gap_review": "Oracle labels require the complete 20-bar horizon in one contiguous segment; this selection-only test has no replay trade-gap or profit-concentration result.",
+  "limitations": [
+    "Exact source contract/roll and minute convention remain unverified",
+    "No current paper API parity because all ten variants use new causal_features fields",
+    "Hindsight oracle success is not forecastability",
+    "Holdout remains unopened; no trade P&L or live qualification"
+  ],
+  "holdout_opened": false,
+  "broker_orders": 0
+}

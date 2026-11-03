@@ -1,0 +1,60 @@
+{
+  "status": "independently_checked_selection_only",
+  "searcher": "search_09",
+  "tester": "test_09",
+  "proposal_hash_verified": true,
+  "plan_and_runner_hashes_verified": true,
+  "variant_count": 10,
+  "causal_feature_pool_verified": true,
+  "oracle_labels_use_mature_contiguous_paths_only": true,
+  "both_delays_and_six_usd_stress_cost_in_oracle": true,
+  "all_losing_action_values_retained": true,
+  "fold_rows": [
+    {
+      "train": 5392,
+      "validation": 3467
+    },
+    {
+      "train": 8877,
+      "validation": 2382
+    },
+    {
+      "train": 11285,
+      "validation": 3721
+    }
+  ],
+  "best_variant": "v03",
+  "best_mean_rank_score": 0.05839800606052103,
+  "best_fold_rank_scores": [
+    0.10927366930606491,
+    0.01022599080759664,
+    0.05569435806790151
+  ],
+  "family_rank_gate_pass_count": 1,
+  "oracle_positive_fraction_by_fold": [
+    0.9495240842226709,
+    0.9735516372795969,
+    0.9618382155334587
+  ],
+  "best_oracle_imitation_fraction_by_fold": [
+    0.115950389385636,
+    0.056255247691015954,
+    0.04783660306369256
+  ],
+  "best_student_signal_fraction_by_fold": [
+    0.18690510527833862,
+    0.11670864819479429,
+    0.07417360924482666
+  ],
+  "current_paper_api_parity_variant_count": 0,
+  "holdout_opened": false,
+  "sealed_2025_access": false,
+  "broker_orders": 0,
+  "limitations": [
+    "Family rank gate is exploratory; no trade-level replay or profitability check yet.",
+    "Every search_09 variant uses at least one causal feature absent from the current 18-feature paper API; adapter parity is required.",
+    "The Yahoo contract, roll, and minute timestamp convention are unverified.",
+    "Hindsight oracle action on about 95-97% of opportunities is not a live-available signal.",
+    "Trade-level gap profits and concentration must be audited after a single global selection."
+  ]
+}

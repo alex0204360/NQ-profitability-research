@@ -1,0 +1,21 @@
+# Cloud campaign 01: dual-delay value students
+
+Status: **reject both; no selected candidate**. This is development evidence on the already inspected October 13–29, 2026 upload, not an untouched confirmation or a paper trading result. The registered plan is [CLOUD_CAMPAIGN01.json](CLOUD_CAMPAIGN01.json). Private run artifacts are in `/workspace/mnq-private-results/cloud_campaign01_retry2` with a SHA-256 manifest. The unchanged baseline remains in `fresh02` and was independently reproduced by `gate8_iteration01`.
+
+The strongest unresolved failure was the $8 gate's collapse under one-bar delay. Two fixed hypotheses predicted gross ten-bar value for both immediate and one-bar-delayed entry from the same 18 causal state features: a linear ridge model and a nonlinear extra-trees model. Both used all 20,504 matured, eligible prior opportunities, including losing outcomes, with a 60-minute purge before October 7. The long or short decision required both predicted gross values to exceed the $6 stressed round-trip cost in that direction. No teacher label or future outcome entered the features. The fixed causal-v2 replay used previous completed-candle volume for next-open eligibility.
+
+| Policy | Stress net, immediate | Stress net, delayed | Extreme net, immediate | Trades | Stress lower net/trade, immediate | Immediate bar-close drawdown |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Unchanged $8 gate | +$196.50 | -$1,250.00 | -$335.50 | 133 | Below zero | See `fresh02/results.json` |
+| Ridge dual-delay | -$1,832.00 | -$1,668.50 | -$2,556.00 | 181 | -$19.94 | $2,433.00 |
+| Extra trees dual-delay | -$837.00 | -$809.00 | -$2,041.00 | 301 | -$12.22 | $1,956.00 |
+
+Both students fail the registered stress and extreme profitability screens and have negative session-bootstrap lower expectancy bounds. The tree model is less negative than ridge, but it does not beat the unchanged $8 gate under immediate stressed fills. Its largest positive day under immediate stress was +$1,011.50 while total net was -$837, which also illustrates unstable session concentration. Neither student is retained for confirmation. No more threshold or model mutations will be run on this opened upload.
+
+The first attempt, `cloud_campaign01`, stopped before fitting because its generic manifest checker rejected the deliberately blocked `fresh01` audit. The correction verifies every listed hash while preserving its blocked status. `cloud_campaign01_retry1` completed. A second run, `cloud_campaign01_retry2`, followed an import/lint-only correction and reproduced all attempt metrics exactly; it is the canonical run. The runner, plan, execution and state source hashes are recorded. Two target/decision tests and the relevant decision-service tests pass.
+
+The original source conflict remains: two of 701 overlapping October 12 candles differ between old and uploaded feeds. The upload alone supplies the development evaluation. Source instrument, roll and timestamp conventions have not been independently certified. Raw 2025 remains sealed. The user specified no maximum drawdown; consequently the primary goal's agreed-risk-limit condition is still unmet. There is no fresh chronological confirmation and no real-time paper result.
+
+Next bounded campaign: reconcile the two conflicting minutes against contract-specific source records; freeze the feed and interval-start convention; collect new post-freeze observations; then register at most two genuinely distinct approaches for an untouched prospective comparison. An execution-aware holding/exit objective is a reasonable hypothesis, but its numeric gates and risk policy must be frozen before those observations are evaluated. The local paper API can record causal proposals and reference next opens when a new feed is supplied; it does not place orders or establish fills.
+
+Follow-up on November 2: Yahoo's public one-minute MNQ chart endpoints on both `query1.finance.yahoo.com` and `query2.finance.yahoo.com` returned HTTP 429. No new bars were obtained or evaluated. The append-only CSV paper-feed adapter was added and tested with synthetic bars, including prefix mutation and next-open reference checks. A source-audited new MNQ feed is still required for prospective operation.

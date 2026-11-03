@@ -1,0 +1,18 @@
+{
+  "version": "mnq-eight-gate-structure-confluence-v1",
+  "registered": "2026-11-03 before overlap counts or confluence replay",
+  "question": "Can a recent causal chart retest confirm the frozen $8 entry model and improve its stressed net and one-bar-delay robustness?",
+  "primary_candidate": "Take the unchanged $8 gate action only if a raw, ungated horizontal support/resistance or confirmed two-pivot trendline retest gave the same side on the current or previous two completed bars. All three bars must be in the same contiguous segment. If no same-side confluence, abstain. No model refit, probability recalibration, threshold change, or exit change.",
+  "lineage": "Use fresh02 frozen forecasts for upload October 13–29; action is sign(prediction_usd) only when ready and absolute prediction_usd >8. Use cloud_fresh03_lineage frozen unchanged_8_gate_decisions for October 30–November 2. Verify source and result manifests. Reconstruct baseline replay and require exact agreement with the frozen $8 stress ledgers before evaluating confluence.",
+  "chart_context": "Exactly the already registered campaign06 raw chart_setups: EMA-aligned horizontal confirmed-level retest or causal two-pivot trendline retest. Its probability gate is not applied because that gate abstained on all setups. No future chart levels or outcomes enter the filter.",
+  "windows": [
+    {"id": "upload_oct13_29", "start": "2026-10-13T00:00:00Z", "end_exclusive": "2026-10-30T00:00:00Z", "source": "fresh01 normalized upload only"},
+    {"id": "upload_oct30_nov02", "start": "2026-10-30T00:00:00Z", "end_exclusive": "2026-11-02T20:54:00Z", "source": "cloud_fresh03_lineage normalized upload only"}
+  ],
+  "execution": "Same causal-v2 MNQ next-open fixed ten-bar replay as the unchanged gate. Report immediate and one-bar delayed signals with base, stress, extreme costs; position occupancy, gap exits, drawdown, and session-bootstrap lower expectancy. Filtered signals are saved privately with causal reasons.",
+  "comparison": "Frozen unchanged $8 gate on each identical source window, and no-trade $0. A confluence signal must beat baseline under stress immediate and delayed, not merely show a small positive two-session result.",
+  "screen": "At least 50 trades and 10 active sessions, positive stress and extreme net under both fill timings, positive session-bootstrap lower expectancy, no profit dependence on unresolved gap exits, then freeze for later untouched source-audited confirmation. These already inspected windows cannot qualify a policy live.",
+  "risk": "No finite maximum drawdown provided; report it and leave live risk gate open.",
+  "seal": "Do not read raw 2025 data",
+  "deployment": "Research only, no broker or live orders"
+}

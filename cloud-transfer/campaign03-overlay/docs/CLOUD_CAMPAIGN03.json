@@ -1,0 +1,20 @@
+{
+  "version": "mnq-frozen-entry-causal-bracket-v1",
+  "registered": "2026-11-02 before bracket-exit profit evaluation",
+  "hypothesis": "A causal ATR stop/target with a 30-bar time cap may improve the unchanged $8 entry policy's payoff distribution relative to its fixed ten-bar exit.",
+  "fit_budget": 0,
+  "entry": "Exactly the existing frozen $8 gate, unchanged model, coefficient, readiness and threshold; no entry refit or filter",
+  "candidate_exit": "Existing causal-v2 atr1_target1.5_time30: stop at one ATR, target at 1.5 ATR, both at least one index point, and time cap 30 bars. Stop wins ambiguous same-bar stop/target collision; opening gaps execute conservatively.",
+  "control_exit": "Existing causal-v2 time10 on identical signals and windows",
+  "windows": [{"name": "fresh02_oct13_29", "start": "2026-10-13T00:00:00Z", "end_exclusive": "2026-10-30T00:00:00Z", "source": "fresh01 normalized upload"}, {"name": "fresh03_oct30_nov02", "start": "2026-10-30T00:00:00Z", "end_exclusive": "2026-11-02T20:34:00Z", "source": "fresh03 normalized upload; 30-bar tail buffer"}],
+  "delays_bars": [0, 1],
+  "costs": {"base": {"commission_per_side": 1.5, "slippage_ticks_per_side": 1}, "stress": {"commission_per_side": 2.0, "slippage_ticks_per_side": 2}, "extreme": {"commission_per_side": 3.0, "slippage_ticks_per_side": 4}},
+  "evaluations": 24,
+  "screen": {"minimum_trades": 50, "minimum_active_sessions": 10, "stress_and_extreme_net_positive_both_delays": true, "session_bootstrap_lower_stress_expectancy_positive": true, "stress_net_must_exceed_control_on_supported_window": true},
+  "selection": "No production selection from already inspected windows; retain or reject as development evidence only",
+  "source_limits": "Upload files disagree at two overlap minutes and have no independently verified contract/roll metadata; never splice them",
+  "risk": "Report drawdown; user specified no maximum, so risk qualification remains open",
+  "confirmation": "Later source-audited untouched observations and prospective paper operation required",
+  "sealed_2025_access": false,
+  "orders_submitted": 0
+}

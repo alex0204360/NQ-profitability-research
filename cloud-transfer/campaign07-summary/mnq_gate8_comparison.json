@@ -1,0 +1,279 @@
+{
+  "status": "exploratory_comparison",
+  "windows": [
+    {
+      "id": "upload_oct13_29",
+      "observed_sessions": 14,
+      "gate_signals": 455,
+      "confluence_signals": 6,
+      "rows": [
+        {
+          "label": "Unchanged $8 gate",
+          "origin": "frozen baseline",
+          "immediate": {
+            "trades": 133,
+            "net": 196.5,
+            "drawdown": 816.5,
+            "gap_exits": 0,
+            "active_sessions": 14,
+            "lower_expectancy": -8.722888735062664
+          },
+          "delayed": {
+            "trades": 133,
+            "net": -1250.0,
+            "drawdown": 1657.0,
+            "gap_exits": 0,
+            "active_sessions": 14,
+            "lower_expectancy": -18.238302594725994
+          }
+        },
+        {
+          "label": "$8 + chart confluence",
+          "origin": "fixed candidate",
+          "immediate": {
+            "trades": 2,
+            "net": 91.0,
+            "drawdown": 69.5,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": 2.0
+          },
+          "delayed": {
+            "trades": 2,
+            "net": 50.0,
+            "drawdown": 75.5,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": -20.0
+          }
+        },
+        {
+          "label": "Human chart retests, raw",
+          "origin": "ungated control",
+          "immediate": {
+            "trades": 104,
+            "net": -511.5,
+            "drawdown": 1071.0,
+            "gap_exits": 2,
+            "active_sessions": 14,
+            "lower_expectancy": -17.949603346092108
+          },
+          "delayed": {
+            "trades": 104,
+            "net": -574.5,
+            "drawdown": 1095.0,
+            "gap_exits": 2,
+            "active_sessions": 14,
+            "lower_expectancy": -16.33648808740292
+          }
+        },
+        {
+          "label": "Tree action-value student",
+          "origin": "prior student",
+          "immediate": {
+            "trades": 301,
+            "net": -837.0,
+            "drawdown": 1956.0,
+            "gap_exits": 0,
+            "active_sessions": 14,
+            "lower_expectancy": -12.223850781172956
+          },
+          "delayed": {
+            "trades": 301,
+            "net": -809.0,
+            "drawdown": 1797.5,
+            "gap_exits": 0,
+            "active_sessions": 14,
+            "lower_expectancy": -11.674204237218477
+          }
+        },
+        {
+          "label": "Ridge action-value student",
+          "origin": "prior student",
+          "immediate": {
+            "trades": 181,
+            "net": -1832.0,
+            "drawdown": 2433.0,
+            "gap_exits": 2,
+            "active_sessions": 14,
+            "lower_expectancy": -19.938647264713506
+          },
+          "delayed": {
+            "trades": 181,
+            "net": -1668.5,
+            "drawdown": 2148.5,
+            "gap_exits": 2,
+            "active_sessions": 14,
+            "lower_expectancy": -20.10776816502463
+          }
+        },
+        {
+          "label": "Multi-horizon exit student",
+          "origin": "prior student",
+          "immediate": {
+            "trades": 378,
+            "net": -4385.5,
+            "drawdown": 5938.0,
+            "gap_exits": 11,
+            "active_sessions": 14,
+            "lower_expectancy": -21.886396039251938
+          },
+          "delayed": {
+            "trades": 378,
+            "net": -4030.5,
+            "drawdown": 5496.0,
+            "gap_exits": 11,
+            "active_sessions": 14,
+            "lower_expectancy": -19.88351599753884
+          }
+        },
+        {
+          "label": "$8 + ATR bracket exit",
+          "origin": "prior exit control",
+          "immediate": {
+            "trades": 192,
+            "net": -882.5,
+            "drawdown": 1276.5,
+            "gap_exits": 1,
+            "active_sessions": 14,
+            "lower_expectancy": -10.158739837398373
+          },
+          "delayed": {
+            "trades": 217,
+            "net": -1396.5,
+            "drawdown": 1697.5,
+            "gap_exits": 1,
+            "active_sessions": 14,
+            "lower_expectancy": -11.76599120294599
+          }
+        }
+      ]
+    },
+    {
+      "id": "upload_oct30_nov02",
+      "observed_sessions": 2,
+      "gate_signals": 133,
+      "confluence_signals": 4,
+      "rows": [
+        {
+          "label": "Unchanged $8 gate",
+          "origin": "frozen baseline",
+          "immediate": {
+            "trades": 28,
+            "net": 429.0,
+            "drawdown": 271.0,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": 3.9444444444444446
+          },
+          "delayed": {
+            "trades": 28,
+            "net": 259.5,
+            "drawdown": 273.5,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": 8.342105263157896
+          }
+        },
+        {
+          "label": "$8 + chart confluence",
+          "origin": "fixed candidate",
+          "immediate": {
+            "trades": 2,
+            "net": 107.0,
+            "drawdown": 107.0,
+            "gap_exits": 0,
+            "active_sessions": 1,
+            "lower_expectancy": 53.5
+          },
+          "delayed": {
+            "trades": 2,
+            "net": 77.5,
+            "drawdown": 121.5,
+            "gap_exits": 0,
+            "active_sessions": 1,
+            "lower_expectancy": 38.75
+          }
+        },
+        {
+          "label": "Human chart retests, raw",
+          "origin": "ungated control",
+          "immediate": {
+            "trades": 17,
+            "net": 480.0,
+            "drawdown": 215.0,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": 26.5
+          },
+          "delayed": {
+            "trades": 17,
+            "net": 464.0,
+            "drawdown": 227.5,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": 23.8
+          }
+        },
+        {
+          "label": "Tree action-value student",
+          "origin": "gap-dependent prior student",
+          "immediate": {
+            "trades": 63,
+            "net": 1091.0,
+            "drawdown": 1082.0,
+            "gap_exits": 1,
+            "active_sessions": 2,
+            "lower_expectancy": -24.766666666666666
+          },
+          "delayed": {
+            "trades": 61,
+            "net": -1342.0,
+            "drawdown": 1782.5,
+            "gap_exits": 0,
+            "active_sessions": 2,
+            "lower_expectancy": -27.67241379310345
+          }
+        },
+        {
+          "label": "Multi-horizon exit student",
+          "origin": "gap-dependent prior student",
+          "immediate": {
+            "trades": 66,
+            "net": 1379.0,
+            "drawdown": 1173.5,
+            "gap_exits": 4,
+            "active_sessions": 2,
+            "lower_expectancy": -33.464285714285715
+          },
+          "delayed": {
+            "trades": 65,
+            "net": -1349.5,
+            "drawdown": 1907.0,
+            "gap_exits": 3,
+            "active_sessions": 2,
+            "lower_expectancy": -32.32142857142857
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": "The $8 gate is the highest reported stressed immediate net among the shown October 13\u201329 strategies, but lost $1,250 with one-bar delay and is not live-qualified. The chart confluence made money on only two filled trades per window and does not beat the baseline's total immediate net. Newer high student nets depend on unresolved gap fills.",
+  "gap_sensitivity": {
+    "newer_tree_immediate_reported_net": 1091.0,
+    "newer_tree_gap_trade_net": 2647.0,
+    "newer_tree_net_without_gap_trade": -1556.0,
+    "newer_exit_student_immediate_reported_net": 1379.0,
+    "newer_exit_student_gap_trade_net": 2921.0,
+    "newer_exit_student_net_without_gap_trades": -1542.0
+  },
+  "limitations": [
+    "Already inspected 2026 development windows",
+    "Unknown exact Yahoo contract/roll and minute convention",
+    "No finite live loss budget",
+    "No untouched confirmation or continuously audited paper feed"
+  ],
+  "live_authorized": false,
+  "broker_orders": 0,
+  "sealed_2025_access": false
+}

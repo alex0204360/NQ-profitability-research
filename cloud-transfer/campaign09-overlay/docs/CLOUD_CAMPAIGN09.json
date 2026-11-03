@@ -1,0 +1,27 @@
+{
+  "version": "mnq-self-supervised-temporal-path-v1",
+  "registered": "2026-11-03 before campaign09 encoder/model fits or evaluation outcomes",
+  "audit_obstacle": "Existing 18-feature snapshot action-value students showed near-zero rank on later observations. The original Yahoo-labeled source has 28,311 complete minute-aligned candles, one rejected partial row, 75 interruptions, and no independently verified contract/roll identity. Test whether a causal path representation adds predictive information before trading-policy optimization.",
+  "question": "Does a self-supervised compressed 32-minute price/volume path improve robust ten-bar MNQ action-value prediction over the same 18-feature Ridge model and yield incremental net value versus unchanged baselines?",
+  "encoder": "At bar i, require 33 contiguous completed closes and 32 completed volumes. Use the most recent 32 close-to-close changes divided by current causal ATR14, plus 32 log1p(volume) values centered by their current 32-bar mean. No future bar or target enters the path. Fit StandardScaler then PCA(n_components=8, random_state=20261103) on eligible training rows only. Freeze encoder for all later windows.",
+  "students": [
+    {"id": "snapshot_ridge", "input": "Existing 18 causal features", "model": "StandardScaler plus multi-output Ridge(alpha=100)"},
+    {"id": "path_pca_ridge", "input": "Same 18 features concatenated with eight frozen self-supervised PCA coordinates", "model": "StandardScaler plus multi-output Ridge(alpha=100)"}
+  ],
+  "teacher": "Both models train on identical eligible rows and two outputs: stressed net for long and short at a fixed ten-bar close, each defined as the worse of immediate and one-bar-delayed next-open entry after $6 round-trip cost. All losing alternatives stay in training. Future prices are labels only.",
+  "training": {"source": "Hash-verified original 2026 September 13–October 12 candles only", "end_exclusive": "2026-10-01T00:00:00Z", "target_maturity_cutoff_exclusive": "2026-09-30T23:00:00Z", "purge_minutes": 60},
+  "fixed_development_windows": [
+    {"id": "original_oct01_06", "start": "2026-10-01T00:00:00Z", "end_exclusive": "2026-10-07T00:00:00Z", "source": "original 2026, previously opened"},
+    {"id": "original_oct07_12", "start": "2026-10-07T00:00:00Z", "end_exclusive": "2026-10-12T14:20:00Z", "source": "original 2026, previously opened"},
+    {"id": "upload_oct13_29", "start": "2026-10-13T00:00:00Z", "end_exclusive": "2026-10-30T00:00:00Z", "source": "fresh01 upload-only, previously opened and overlap-conflicted"},
+    {"id": "upload_oct30_nov02", "start": "2026-10-30T00:00:00Z", "end_exclusive": "2026-11-02T20:54:00Z", "source": "cloud_fresh03_lineage upload-only, previously opened"}
+  ],
+  "prediction_score": "Mean Spearman rank correlation over long and short robust net targets on fully matured, contiguous, ready opportunities. Also report mean absolute error and R2 by action. Same rows for both models. Overlapping minute outcomes are dependent, so do not treat counts as independent trades.",
+  "fixed_decision": "For either Ridge student, enter the action with the larger predicted robust stressed net only if it is strictly above zero; otherwise abstain. One MNQ contract, fixed ten-bar exit. No threshold, exit, or size tuning after results.",
+  "execution": "Existing causal-v2 next-open replay with previous completed-candle volume, position occupancy, base/stress/extreme costs, immediate and one-bar-delayed signals, gap and drawdown audit. Compare no-trade control and unchanged $8 gate on identical upload-only windows. Do not apply the frozen $8 model to original dates that overlap its fit period.",
+  "incremental_screen": "Path representation must exceed snapshot Ridge mean rank by at least 0.02 and have positive rank on each original October development window; its stressed delayed net must be positive and exceed snapshot Ridge and unchanged $8 gate on both upload-only windows. Require >=50 trades, >=10 active sessions, positive extreme net and session-bootstrap lower expectancy, and research bar-close drawdown below $1,500 under both fill timings. These opened windows cannot confer live qualification.",
+  "risk": "Model a $25,000 account with a $1,500 maximum permitted firm drawdown reference (6%). Report one-contract bar-close drawdown and percentage; this is not a verified firm's trailing-drawdown mechanic. No per-trade hard loss bound exists for a time exit, so do not claim account-survival qualification.",
+  "selection": "Exactly two fixed model fits and one encoder fit. No architecture, component-count, alpha, threshold, or horizon changes after results. Rejected candidates remain in the ledger.",
+  "seal": "Never open raw 2025 data",
+  "deployment": "Research/paper explanation only; no broker or live orders"
+}

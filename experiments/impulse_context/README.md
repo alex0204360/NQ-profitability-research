@@ -1,0 +1,13 @@
+# NQ impulse context experiment
+
+Decision: freeze v08 as the research candidate and keep the execution allocation in cash. A paired five-session circular block bootstrap over 520 eligible weekday dates gives v08 minus v06 +$14.27 per date (95% percentile interval −$11.98 to +$43.22). Versus the dispersion control the difference is +$13.11 (−$3.87 to +$34.35). The sample permits a zero incremental effect. The calendar filter uses wall-clock hours and continuity rather than a verified holiday schedule. Source roll rules, minute bar fill quality, and end-stamp interpretation limit generalization.
+
+The fourteen new ReLUs in v08 recover old close levels relative to the close before the impulse by summing negative returns over successively longer windows. Their mean positive elevation can consume the overload before it reaches the trade threshold. v09 charges half the mean absolute distance, including old prices below the anchor. v09 also improves average trade economics, leaving the precise mechanism unresolved.
+
+The 226 parent trades passing the new gate averaged +$58.69 versus −$12.81 for the 481 rejected. Skipping positions freed slots for 19 additional v08 entries. Normalized two-minute impulse medians were nearly identical for winning and losing v08 trades (3.13 and 3.16). Median first-minute moves after entry were +3 and −2.5 points. That separation includes part of the outcome itself and cannot justify an entry rule. Top five trades contributed 42.3% of net. The hindsight control reuses eligible neighbors within each date/hour and matches only amplitude; it is descriptive. No separate MNQ tape or untouched validation used.
+
+## Reproduce
+
+Use Python with numpy and pandas. Download the CSV archive at https://www.kaggle.com/api/v1/datasets/download/tgtanalytics/nq-futures-1min-bar-2022-2025 and extract it outside Git. Run `python construct.py`, then `OPENBLAS_NUM_THREADS=1 python replay.py /path/to/Dataset_NQ_1min_2022_2025.csv`. The loader checks the repository manifest hash and selects pre-2025 prices before numerical conversion. The original scaler, readout gain, and order simulator were unavailable in the attachments. This reconstructed daytime-only experiment has its own benchmark. All reported P&Ls are hypothetical, one NQ contract; drawdown is measured at closed trades. results.json and audit.json contain the corrected replay. Weights are checked against independent closed-form expressions on all eligible feature rows.
+
+Before independent testing, verify contract rolls and timestamp semantics, pin an execution calendar and the fill model, and identify data with documented non-exposure. Keep both the candidate and the decision to remain flat frozen in the interim.

@@ -18,3 +18,13 @@ def forecast(g):
                 +0.30*progress.clip(-3,3)-0.22*travel.clip(0,5)
                 -0.70*wick.clip(0,2)-0.85).clip(lower=0)
     return scale*(evidence(1,ceiling)-evidence(-1,floor))
+
+def compression_forecast(g):
+    """Require a breakout from contracting auctions, before the breakout starts."""
+    width=g.high-g.low
+    recent=width.shift(2).rolling(4).mean()
+    earlier=width.shift(6).rolling(10).mean()
+    # At 2/3 of prior width, pass the original forecast at full strength.
+    # Equal or expanding width means no stored compression.
+    gate=(3*(1-recent/earlier.replace(0,np.nan))).clip(0,1)
+    return forecast(g)*gate

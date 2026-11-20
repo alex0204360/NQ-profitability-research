@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from brain import forecast
+from brain import forecast, compression_forecast
 
 here=Path(__file__).resolve().parent
 with tempfile.TemporaryDirectory() as tmp:
@@ -35,7 +35,8 @@ for name in ('v06','v08','v09'):
 for name,signal in [('cash',frame.scale*0),('periodic',frame.scale*0+1),
                     ('two_up',frame.two_up.astype(float)),('auction',score)]:
     evaluate(name,signal)
-# ROUND_TWO
+contracted=pd.concat([compression_forecast(g) for _,g in bars.groupby(segments)]).reindex(frame.index)
+evaluate("auction_compression",contracted)
 rng=np.random.default_rng(6721)
 n=len(calendar)
 idx=((rng.integers(n,size=(5000,(n+4)//5,1))+np.arange(5))%n).reshape(5000,-1)[:,:n]

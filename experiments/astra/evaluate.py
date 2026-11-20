@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from brain import forecast, compression_forecast
+from brain import forecast, compression_forecast, rejection_forecast
 
 here=Path(__file__).resolve().parent
 with tempfile.TemporaryDirectory() as tmp:
@@ -37,10 +37,13 @@ for name,signal in [('cash',frame.scale*0),('periodic',frame.scale*0+1),
     evaluate(name,signal)
 contracted=pd.concat([compression_forecast(g) for _,g in bars.groupby(segments)]).reindex(frame.index)
 evaluate("auction_compression",contracted)
+failed=pd.concat([rejection_forecast(g) for _,g in bars.groupby(segments)]).reindex(frame.index)
+evaluate("rejection",failed)
+evaluate("cost_aware_momentum",0.25*frame.impulse*frame.scale)
 rng=np.random.default_rng(6721)
 n=len(calendar)
 idx=((rng.integers(n,size=(5000,(n+4)//5,1))+np.arange(5))%n).reshape(5000,-1)[:,:n]
-for name in [k for k in daily if k.startswith('auction')]:
+for name in [k for k in daily if k.startswith('auction') or k=='rejection']:
     results[name]['daily_delta_vs']={}
     for ref in daily:
         delta=(daily[name]-daily[ref]).to_numpy()

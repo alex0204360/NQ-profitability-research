@@ -28,3 +28,17 @@ def compression_forecast(g):
     # Equal or expanding width means no stored compression.
     gate=(3*(1-recent/earlier.replace(0,np.nan))).clip(0,1)
     return forecast(g)*gate
+
+def rejection_forecast(g):
+    """Four-minute return after a failed excursion and confirming close."""
+    h,l,c=g.high,g.low,g.close
+    scale=(h-l).rolling(14).mean().shift(2).replace(0,np.nan)
+    def detector(direction,edge,extreme):
+        penetration=direction*(edge-extreme.shift())/scale
+        reclaim=direction*(c.shift()-edge)/scale
+        confirm=direction*(c-c.shift())/scale
+        # Weakest stage controls confidence; all three must exceed noise.
+        stages=np.minimum(np.minimum(0.8*penetration,1.2*reclaim),confirm)
+        return (stages-0.25).clip(0,1.5)
+    return scale*(detector(1,l.shift(2).rolling(12).min(),l)
+                  -detector(-1,h.shift(2).rolling(12).max(),h))

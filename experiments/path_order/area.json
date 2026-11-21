@@ -1,0 +1,16 @@
+{
+  "name": "area",
+  "input": ["effort_memory", "motion_memory", "effort", "motion"],
+  "left": [[1,0,0,0],[0,1,0,0]],
+  "right": [[0,0,0,1],[0,0,1,0]],
+  "memory": [[0.875,0,0.125,0],[0,0.875,0,0.125]],
+  "pair_memory": [[0.875,0,1,0],[0,0.875,0,1]],
+  "readout": [1,-1],
+  "symmetric_control": [1,1],
+  "trend_control": [0,8],
+  "range_and_volume_decay": 0.96875,
+  "effort_clip_octaves": 1,
+  "motion_clip_ranges": 2,
+  "warmup_bars": 32,
+  "tick": 0.25
+}

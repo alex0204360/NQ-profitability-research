@@ -14,16 +14,20 @@ from data import FIELDS
 SYMBOL = "MNQZ26.CME"
 START = datetime(2026, 11, 16, tzinfo=UTC)
 END = datetime(2026, 11, 21, tzinfo=UTC)
-QUERY = urlencode(dict(period1=int(START.timestamp()), period2=int(END.timestamp()),
-                       interval="1m", includePrePost="true"))
-URL = f"https://query1.finance.yahoo.com/v8/finance/chart/{SYMBOL}?{QUERY}"
+WINDOWS = {"november": (START, END),
+           "extension1": (datetime(2026,11,3,tzinfo=UTC), datetime(2026,11,7,tzinfo=UTC)),
+           "extension2": (datetime(2026,11,9,tzinfo=UTC), datetime(2026,11,14,tzinfo=UTC))}
 
 
-def capture(directory):
+def capture(directory, window="november"):
+    start, end = WINDOWS[window]
+    query = urlencode(dict(period1=int(start.timestamp()), period2=int(end.timestamp()),
+                           interval="1m", includePrePost="true"))
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{SYMBOL}?{query}"
     directory.mkdir(parents=True, exist_ok=True)
     path = directory / "chart.json"
     if not path.exists():
-        with urlopen(Request(URL, headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as response:
+        with urlopen(Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as response:
             payload = response.read()
         with path.open("xb") as f:
             f.write(payload)
@@ -42,8 +46,12 @@ def capture(directory):
     writer = csv.writer(buf, lineterminator="\n")
     writer.writerow(["timestamp_utc", *FIELDS])
     dropped = []
+    outside = []
     for row in zip(stamps, *(quotes[k] for k in FIELDS), strict=True):
         stamp = datetime.fromtimestamp(row[0], UTC)
+        if window != "november" and not start <= stamp < end:
+            outside.append(stamp.isoformat())
+            continue
         if any(x is None for x in row[1:]):
             dropped.append(stamp.isoformat())
             continue
@@ -56,9 +64,9 @@ def capture(directory):
     else:
         with csv_path.open("xb") as f:
             f.write(csv_bytes)
-    return dict(url=URL, symbol=SYMBOL, source_sha256=hashlib.sha256(raw).hexdigest(),
+    return dict(url=url, symbol=SYMBOL, source_sha256=hashlib.sha256(raw).hexdigest(),
                 csv_sha256=hashlib.sha256(csv_bytes).hexdigest(), source_rows=len(stamps),
-                dropped_incomplete=len(dropped), omitted_utc=dropped,
+                ignored_outside_request=outside, dropped_incomplete=len(dropped), omitted_utc=dropped,
                 metadata={k: meta.get(k) for k in ("symbol","exchangeName","instrumentType","currency",
                           "exchangeTimezoneName","dataGranularity","contractSymbol","expirationDate")})
 
@@ -66,5 +74,6 @@ def capture(directory):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("directory", type=Path)
+    parser.add_argument("--window", choices=list(WINDOWS), default="november")
     args = parser.parse_args()
-    print(json.dumps(capture(args.directory), indent=2))
+    print(json.dumps(capture(args.directory, args.window), indent=2))

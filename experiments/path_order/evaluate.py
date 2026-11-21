@@ -119,9 +119,16 @@ if __name__ == "__main__":
     src = p.add_mutually_exclusive_group(required=True)
     src.add_argument("--discovery", type=Path)
     src.add_argument("--november", type=Path, help="frozen private CSV from capture.py")
+    src.add_argument("--extension", type=Path, nargs=2, help="two registered private extension CSVs in time order")
     p.add_argument("--models", nargs="+", default=["area"])
     p.add_argument("--out", required=True, type=Path)
     args = p.parse_args()
-    bars = (discovery(args.discovery) if args.discovery else
-            regular_hours(pd.read_csv(args.november), "2026-11-16", "2026-11-20"))
+    if args.discovery:
+        bars = discovery(args.discovery)
+    elif args.extension:
+        bounds = [("2026-11-03", "2026-11-06"), ("2026-11-09", "2026-11-13")]
+        bars = pd.concat([regular_hours(pd.read_csv(path), *dates)
+                          for path, dates in zip(args.extension, bounds, strict=True)])
+    else:
+        bars = regular_hours(pd.read_csv(args.november), "2026-11-16", "2026-11-20")
     evaluate(bars, args.models, args.out)

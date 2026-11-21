@@ -1,0 +1,563 @@
+{
+  "bars": 7796,
+  "dates": [
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09"
+  ],
+  "off_tick_ohlc_rows": 0,
+  "zero_volume_bars": 4,
+  "forward": {
+    "area": {
+      "1": {
+        "all": {
+          "n": 5249,
+          "mean_signed_points": 0.06877500476281197
+        },
+        "effort_first_dominant": {
+          "n": 3470,
+          "mean_signed_points": 0.09495677233429395
+        },
+        "motion_first_dominant": {
+          "n": 1779,
+          "mean_signed_points": 0.01770657672849916
+        },
+        "agrees_with_trend": {
+          "n": 1362,
+          "mean_signed_points": 0.18520558002936857
+        },
+        "opposes_trend": {
+          "n": 3887,
+          "mean_signed_points": 0.027977874967841522
+        }
+      },
+      "8": {
+        "all": {
+          "n": 5110,
+          "mean_signed_points": -0.25528375733855185
+        },
+        "effort_first_dominant": {
+          "n": 3403,
+          "mean_signed_points": 0.24287393476344402
+        },
+        "motion_first_dominant": {
+          "n": 1707,
+          "mean_signed_points": -1.248388986526069
+        },
+        "agrees_with_trend": {
+          "n": 1314,
+          "mean_signed_points": -1.6375570776255708
+        },
+        "opposes_trend": {
+          "n": 3796,
+          "mean_signed_points": 0.223195468914647
+        }
+      },
+      "24": {
+        "all": {
+          "n": 4836,
+          "mean_signed_points": 1.077129859387924
+        },
+        "effort_first_dominant": {
+          "n": 3269,
+          "mean_signed_points": 1.1582288161517285
+        },
+        "motion_first_dominant": {
+          "n": 1567,
+          "mean_signed_points": 0.9079451180599872
+        },
+        "agrees_with_trend": {
+          "n": 1232,
+          "mean_signed_points": 0.07366071428571429
+        },
+        "opposes_trend": {
+          "n": 3604,
+          "mean_signed_points": 1.4201581576026636
+        }
+      }
+    }
+  },
+  "replays": {
+    "delay0_cost3": {
+      "area": {
+        "trades": 695,
+        "net": -1917.5,
+        "gross": 167.5,
+        "expectancy": -2.758992805755396,
+        "median_net": 7.0,
+        "drawdown": 2471.5,
+        "net_without_best_day": -2405.5,
+        "net_without_gap_trades": -1672.5,
+        "gap_trades": 4,
+        "median_minutes": 5.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 354,
+            "net": -709.5
+          },
+          "short": {
+            "trades": 341,
+            "net": -1208.0
+          }
+        },
+        "matched_trend_net": -1376.5,
+        "direction_delta_vs_matched": {
+          "mean_usd_per_day": -27.05,
+          "block95": [
+            -100.75,
+            54.004999999999924
+          ]
+        },
+        "daily_delta": {
+          "cash": {
+            "mean_usd_per_day": -95.875,
+            "block95": [
+              -181.025,
+              8.554374999999936
+            ]
+          },
+          "symmetric": {
+            "mean_usd_per_day": -89.375,
+            "block95": [
+              -264.425,
+              86.42937499999994
+            ]
+          },
+          "trend": {
+            "mean_usd_per_day": 86.0,
+            "block95": [
+              -4.8774999999999995,
+              175.6
+            ]
+          }
+        }
+      },
+      "symmetric": {
+        "trades": 525,
+        "net": -130.0,
+        "gross": 1445.0,
+        "expectancy": -0.24761904761904763,
+        "median_net": 10.5,
+        "drawdown": 2094.5,
+        "net_without_best_day": -958.5,
+        "net_without_gap_trades": 136.5,
+        "gap_trades": 3,
+        "median_minutes": 6.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 259,
+            "net": -75.5
+          },
+          "short": {
+            "trades": 266,
+            "net": -54.5
+          }
+        }
+      },
+      "trend": {
+        "trades": 842,
+        "net": -3637.5,
+        "gross": -1111.5,
+        "expectancy": -4.3200712589073635,
+        "median_net": -14.0,
+        "drawdown": 4250.5,
+        "net_without_best_day": -4048.0,
+        "net_without_gap_trades": -3834.5,
+        "gap_trades": 4,
+        "median_minutes": 4.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 430,
+            "net": -1670.5
+          },
+          "short": {
+            "trades": 412,
+            "net": -1967.0
+          }
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "net": 0.0,
+        "gross": 0.0,
+        "expectancy": null,
+        "median_net": null,
+        "drawdown": 0.0,
+        "net_without_best_day": 0.0,
+        "net_without_gap_trades": 0.0,
+        "gap_trades": 0,
+        "median_minutes": null,
+        "active_days": 0,
+        "by_side": {}
+      }
+    },
+    "delay0_cost6": {
+      "area": {
+        "trades": 695,
+        "net": -4002.5,
+        "gross": 167.5,
+        "expectancy": -5.758992805755396,
+        "median_net": 4.0,
+        "drawdown": 4349.5,
+        "net_without_best_day": -4373.5,
+        "net_without_gap_trades": -3745.5,
+        "gap_trades": 4,
+        "median_minutes": 5.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 354,
+            "net": -1771.5
+          },
+          "short": {
+            "trades": 341,
+            "net": -2231.0
+          }
+        },
+        "matched_trend_net": -3461.5,
+        "direction_delta_vs_matched": {
+          "mean_usd_per_day": -27.05,
+          "block95": [
+            -100.75,
+            54.004999999999924
+          ]
+        },
+        "daily_delta": {
+          "cash": {
+            "mean_usd_per_day": -200.125,
+            "block95": [
+              -284.60062500000004,
+              -96.08875000000016
+            ]
+          },
+          "symmetric": {
+            "mean_usd_per_day": -114.875,
+            "block95": [
+              -287.65,
+              58.66562499999977
+            ]
+          },
+          "trend": {
+            "mean_usd_per_day": 108.05,
+            "block95": [
+              14.749375,
+              202.375
+            ]
+          }
+        }
+      },
+      "symmetric": {
+        "trades": 525,
+        "net": -1705.0,
+        "gross": 1445.0,
+        "expectancy": -3.2476190476190476,
+        "median_net": 7.5,
+        "drawdown": 2931.5,
+        "net_without_best_day": -2443.5,
+        "net_without_gap_trades": -1429.5,
+        "gap_trades": 3,
+        "median_minutes": 6.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 259,
+            "net": -852.5
+          },
+          "short": {
+            "trades": 266,
+            "net": -852.5
+          }
+        }
+      },
+      "trend": {
+        "trades": 842,
+        "net": -6163.5,
+        "gross": -1111.5,
+        "expectancy": -7.3200712589073635,
+        "median_net": -17.0,
+        "drawdown": 6649.0,
+        "net_without_best_day": -6487.0,
+        "net_without_gap_trades": -6348.5,
+        "gap_trades": 4,
+        "median_minutes": 4.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 430,
+            "net": -2960.5
+          },
+          "short": {
+            "trades": 412,
+            "net": -3203.0
+          }
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "net": 0.0,
+        "gross": 0.0,
+        "expectancy": null,
+        "median_net": null,
+        "drawdown": 0.0,
+        "net_without_best_day": 0.0,
+        "net_without_gap_trades": 0.0,
+        "gap_trades": 0,
+        "median_minutes": null,
+        "active_days": 0,
+        "by_side": {}
+      }
+    },
+    "delay1_cost3": {
+      "area": {
+        "trades": 597,
+        "net": -1310.5,
+        "gross": 480.5,
+        "expectancy": -2.195142378559464,
+        "median_net": 3.0,
+        "drawdown": 2124.0,
+        "net_without_best_day": -1725.0,
+        "net_without_gap_trades": -1086.0,
+        "gap_trades": 2,
+        "median_minutes": 5.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 308,
+            "net": -440.5
+          },
+          "short": {
+            "trades": 289,
+            "net": -870.0
+          }
+        },
+        "matched_trend_net": -2427.5,
+        "direction_delta_vs_matched": {
+          "mean_usd_per_day": 55.85,
+          "block95": [
+            -165.30125,
+            242.25249999999997
+          ]
+        },
+        "daily_delta": {
+          "cash": {
+            "mean_usd_per_day": -65.525,
+            "block95": [
+              -196.255,
+              53.65
+            ]
+          },
+          "symmetric": {
+            "mean_usd_per_day": -56.0,
+            "block95": [
+              -202.509375,
+              93.18499999999985
+            ]
+          },
+          "trend": {
+            "mean_usd_per_day": 188.1,
+            "block95": [
+              -127.4,
+              510.425625
+            ]
+          }
+        }
+      },
+      "symmetric": {
+        "trades": 476,
+        "net": -190.5,
+        "gross": 1237.5,
+        "expectancy": -0.40021008403361347,
+        "median_net": 6.5,
+        "drawdown": 1448.5,
+        "net_without_best_day": -994.5,
+        "net_without_gap_trades": 115.5,
+        "gap_trades": 4,
+        "median_minutes": 7.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 236,
+            "net": 537.5
+          },
+          "short": {
+            "trades": 240,
+            "net": -728.0
+          }
+        }
+      },
+      "trend": {
+        "trades": 698,
+        "net": -5072.5,
+        "gross": -2978.5,
+        "expectancy": -7.267191977077364,
+        "median_net": -12.5,
+        "drawdown": 5815.0,
+        "net_without_best_day": -5648.0,
+        "net_without_gap_trades": -5269.0,
+        "gap_trades": 3,
+        "median_minutes": 5.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 356,
+            "net": -2228.0
+          },
+          "short": {
+            "trades": 342,
+            "net": -2844.5
+          }
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "net": 0.0,
+        "gross": 0.0,
+        "expectancy": null,
+        "median_net": null,
+        "drawdown": 0.0,
+        "net_without_best_day": 0.0,
+        "net_without_gap_trades": 0.0,
+        "gap_trades": 0,
+        "median_minutes": null,
+        "active_days": 0,
+        "by_side": {}
+      }
+    },
+    "delay1_cost6": {
+      "area": {
+        "trades": 597,
+        "net": -3101.5,
+        "gross": 480.5,
+        "expectancy": -5.195142378559464,
+        "median_net": 0.0,
+        "drawdown": 3462.5,
+        "net_without_best_day": -3405.0,
+        "net_without_gap_trades": -2871.0,
+        "gap_trades": 2,
+        "median_minutes": 5.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 308,
+            "net": -1364.5
+          },
+          "short": {
+            "trades": 289,
+            "net": -1737.0
+          }
+        },
+        "matched_trend_net": -4218.5,
+        "direction_delta_vs_matched": {
+          "mean_usd_per_day": 55.85,
+          "block95": [
+            -165.30125,
+            242.25249999999997
+          ]
+        },
+        "daily_delta": {
+          "cash": {
+            "mean_usd_per_day": -155.075,
+            "block95": [
+              -284.97812500000003,
+              -35.995000000000076
+            ]
+          },
+          "symmetric": {
+            "mean_usd_per_day": -74.15,
+            "block95": [
+              -221.65312500000002,
+              76.90312499999996
+            ]
+          },
+          "trend": {
+            "mean_usd_per_day": 203.25,
+            "block95": [
+              -114.464375,
+              529.0624999999998
+            ]
+          }
+        }
+      },
+      "symmetric": {
+        "trades": 476,
+        "net": -1618.5,
+        "gross": 1237.5,
+        "expectancy": -3.4002100840336134,
+        "median_net": 3.5,
+        "drawdown": 2522.0,
+        "net_without_best_day": -2344.5,
+        "net_without_gap_trades": -1300.5,
+        "gap_trades": 4,
+        "median_minutes": 7.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 236,
+            "net": -170.5
+          },
+          "short": {
+            "trades": 240,
+            "net": -1448.0
+          }
+        }
+      },
+      "trend": {
+        "trades": 698,
+        "net": -7166.5,
+        "gross": -2978.5,
+        "expectancy": -10.267191977077363,
+        "median_net": -15.5,
+        "drawdown": 7816.0,
+        "net_without_best_day": -7646.0,
+        "net_without_gap_trades": -7354.0,
+        "gap_trades": 3,
+        "median_minutes": 5.0,
+        "active_days": 20,
+        "by_side": {
+          "long": {
+            "trades": 356,
+            "net": -3296.0
+          },
+          "short": {
+            "trades": 342,
+            "net": -3870.5
+          }
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "net": 0.0,
+        "gross": 0.0,
+        "expectancy": null,
+        "median_net": null,
+        "drawdown": 0.0,
+        "net_without_best_day": 0.0,
+        "net_without_gap_trades": 0.0,
+        "gap_trades": 0,
+        "median_minutes": null,
+        "active_days": 0,
+        "by_side": {}
+      }
+    }
+  }
+}

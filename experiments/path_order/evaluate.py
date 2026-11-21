@@ -58,6 +58,10 @@ def forward_labels(bars, a, model):
                   "motion_first_dominant": sample.effort_first.abs() < sample.motion_first.abs(),
                   "agrees_with_trend": sample.score * sample.trend > 0,
                   "opposes_trend": sample.score * sample.trend < 0}
+        if "stock" in a.columns:
+            # These groups describe reservoir activations; ordering-branch diagnostics
+            # belong only to the original network.
+            groups = {k: v for k, v in groups.items() if "dominant" not in k}
         result[h] = {key: {"n": int(mask.sum()), "mean_signed_points": float(aligned[mask].mean())
                            if mask.sum() else None} for key, mask in groups.items()}
     return result
@@ -97,12 +101,14 @@ def evaluate(bars, models, directory):
                     matched_days = paired_trades.groupby(trades.exit_time.dt.date).sum().reindex(calendar, fill_value=0)
                     summaries[name]["direction_delta_vs_matched"] = paired(matched_days, 0.)
                     if cost == 3:
-                        fields = [name, "scale", "effort", "motion", "effort_first", "motion_first", "trend"]
+                        internal = (["charge", "stock", "signed_release"] if "stock" in a
+                                    else ["effort_first", "motion_first"])
+                        fields = [name, "scale", "effort", "motion", *internal, "trend"]
                         output = pd.concat([trades, a[fields], matched.rename("matched_trend_net")], axis=1)
                         output.to_csv(directory / f"{name}-delay{delay}.csv", index=False, float_format="%.9g")
             for name in states:
                 summaries[name]["daily_delta"] = {k: paired(daily[name], daily[k])
-                    for k in ["cash", "symmetric", "trend"]}
+                    for k in ["cash", "symmetric", "trend", "area", "volume_control"] if k in daily and k != name}
             pd.DataFrame(daily).to_csv(directory / f"{scenario}-daily.csv", index_label="et_date")
             results["replays"][scenario] = summaries
     (directory / "results.json").write_text(json.dumps(results, indent=2, allow_nan=False) + "\n")

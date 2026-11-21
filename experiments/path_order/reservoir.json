@@ -1,0 +1,14 @@
+{
+  "name": "reservoir",
+  "base_encoder": "area",
+  "phase_input": ["effort_octaves","motion_ranges"],
+  "rectifier": [[0,1],[0,-1],[0,1],[0,-1]],
+  "rectifier_bias": [0,0,-1,-1],
+  "charge": [1,-1,-1],
+  "charge_control": [1,0,0],
+  "routing_input": ["one","positive_motion","negative_motion","overflow_positive","overflow_negative"],
+  "routing": [[1,-1,-1,1,1],[0,1,-1,-1,1]],
+  "state_input": ["undischarged_stock","signed_release","old_forecast","new_charge"],
+  "state": [[0.875,0,0,1],[0,0.875,0.875,0]],
+  "readout": [0,1]
+}

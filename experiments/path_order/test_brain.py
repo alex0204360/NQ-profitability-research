@@ -35,3 +35,26 @@ def test_area_equals_explicit_ordered_pairs():
     def read(x):
         return np.array(cfg["readout"]) @ ((left @ x) * (right @ x))
     assert read([0.125, 0, 0, 1]) == -read([0, 0.125, 1, 0]) == 0.125
+
+
+def test_stock_conservation_and_no_same_bar_release():
+    from brain import transport
+    cfg = weights("reservoir")
+    fake = pd.DataFrame({"age":[1, 2, 3, 4], "effort":[1, 0, 0, 0], "motion":[0, .25, -1, 1]})
+    charge, stock, signed, forecast = transport(fake, cfg, np.array(cfg["charge"])).T
+    np.testing.assert_allclose(charge, [1, 0, 0, 0])
+    np.testing.assert_allclose(signed, [0, .25, -.75*.875, 0])
+    np.testing.assert_allclose(stock, [1, .75*.875, 0, 0])
+    assert np.abs(signed).sum() <= 1
+    assert forecast[0] == 0
+
+
+def test_stock_prefix_mirror_and_reset():
+    b = sample()
+    for m in ["reservoir", "volume_control"]:
+        a = activations(b, m)
+        pd.testing.assert_frame_equal(a.iloc[:57], activations(b.iloc[:57], m))
+        after_gap = activations(b.drop(b.index[49]), m)
+        pd.testing.assert_frame_equal(after_gap.iloc[49:], activations(b.iloc[50:], m), check_freq=False)
+        mirrored = b.assign(close=200-b.close, high=200-b.low, low=200-b.high)
+        np.testing.assert_allclose(a[m], -activations(mirrored, m)[m], atol=1e-12, equal_nan=True)

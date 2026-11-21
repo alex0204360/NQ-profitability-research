@@ -1,0 +1,39 @@
+{
+  "status": "unscored",
+  "candidate": "reservoir",
+  "registered_after": "November 3\u201320 temporal replays",
+  "sessions": {
+    "2026-11-23": "MNQZ26",
+    "2026-11-24": "MNQZ26",
+    "2026-11-25": "MNQZ26",
+    "2026-11-30": "MNQZ26",
+    "2026-12-01": "MNQZ26",
+    "2026-12-02": "MNQZ26",
+    "2026-12-03": "MNQZ26",
+    "2026-12-04": "MNQZ26",
+    "2026-12-07": "MNQZ26",
+    "2026-12-08": "MNQZ26",
+    "2026-12-09": "MNQZ26",
+    "2026-12-10": "MNQZ26",
+    "2026-12-11": "MNQZ26",
+    "2026-12-14": "MNQH27",
+    "2026-12-15": "MNQH27",
+    "2026-12-16": "MNQH27",
+    "2026-12-17": "MNQH27",
+    "2026-12-18": "MNQH27",
+    "2026-12-21": "MNQH27",
+    "2026-12-22": "MNQH27"
+  },
+  "source": "Individual unadjusted MNQ contracts, actual exchange IDs mapped to canonical symbols, audited volume, UTC bar-start convention and correction log. Cross-check fills and transaction costs against executable evidence. Capture privately.",
+  "selection": "All 20 named full daytime sessions. Exclude the Thanksgiving holiday and shortened Friday from the outset. Switch at the open of December 14. No state crosses sessions. Reject an incomplete panel for qualification, preserve diagnostic output.",
+  "hurdle": "One frozen test. At $6 round trip each delay must have at least 50 trades, positive net, and strictly positive lower endpoints versus cash, leaky momentum and the volume-only ablation in paired five-session circular block intervals. Require complete grid, on-tick prices, audited source and fills. Separately screen marked drawdown below $1500 at both delays under the historical firm budget; exact firm rules require their own reconciliation. No deployment implied by passing.",
+  "frozen_files": {
+    "area.json": "5575c03486f535942eabd3f23f3bbeb47c71a5aa98623210a1eb6f1e120fcb3f",
+    "reservoir.json": "e2443ef282cfda548a9116db0a80bfeebe9c9a94113e36ac27e4a30964b6388c",
+    "brain.py": "e143e8cfbed6333e5820a661bef55d5c41ec502df722d533d93782d6f68f906e",
+    "execution.py": "721b56e662e81fdaa85797d94211cbce941da5175d9c9e94f33401137c30c0c3",
+    "data.py": "5211ec786f3368436690ead564f7b9eda3a886a9608d50afd79f990d52bf62d6",
+    "evaluate.py": "274fbf65161ab83a98801fa9f3881ce3a70037476ec64aa9731ce858b94acd6f",
+    "prospective.py": "47c6f141ba9ec3872d24970d2a9ddc20b7515ca4ec735dc715c033255d9fbd83"
+  }
+}

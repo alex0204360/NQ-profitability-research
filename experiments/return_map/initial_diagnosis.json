@@ -1,0 +1,25 @@
+{
+  "panel": "discovery",
+  "bars": 7796,
+  "total_deposits": 1162,
+  "total_departures": 1134,
+  "first_returns": 775,
+  "first_returns_across_anchor": 228,
+  "live_bars": 990,
+  "immediate": {
+    "trades": 220,
+    "signed_move_on_signal_bar_nonpositive": 215,
+    "direction_extinguished_by_next_close": 75,
+    "net": 554.0,
+    "drawdown": 244.0,
+    "median_minutes": 2.0
+  },
+  "delayed": {
+    "trades": 207,
+    "signed_move_on_signal_bar_nonpositive": 204,
+    "direction_extinguished_by_next_close": 71,
+    "net": 229.0,
+    "drawdown": 447.5,
+    "median_minutes": 2.0
+  }
+}

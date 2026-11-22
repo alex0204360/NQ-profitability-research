@@ -1,0 +1,13 @@
+{
+  "background_inherited": "path_order/area.json",
+  "charge_inputs": ["effort", "positive_motion", "negative_motion"],
+  "charge": [1, -1, -1],
+  "geometry_inputs": ["oriented_close_in_seed_ranges", "one"],
+  "surfaces": [[1, -1], [-1, 0.5], [1, 0]],
+  "departure_ranges": 1,
+  "age_limit_bars": 32,
+  "equal_mass": 0.25,
+  "target_inputs": ["oriented_close_in_seed_ranges", "one"],
+  "target": [-1, 1],
+  "mass_floor": 1
+}

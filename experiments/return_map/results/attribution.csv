@@ -1,0 +1,7 @@
+panel,model,bars,deposits,departures,contacts,crossed_at_contact,confirmations,immediate_trades,stale_at_next_close,matched_trades,same_trade_immediate_gross,entry_delay_effect_usd,exit_delay_effect_usd,same_trade_both_late_gross
+discovery,return_map,7796,1162,1134,775,228,252,220,75,218,1163.0,-271.5,-18.0,873.5
+discovery,confirmed,7796,1162,1134,775,228,252,91,31,91,574.0,-332.5,20.0,261.5
+extension,return_map,3510,268,255,154,45,55,67,24,67,494.5,-67.5,-431.0,-4.0
+extension,confirmed,3510,268,255,154,45,55,26,9,26,91.0,175.5,-34.0,232.5
+november,return_map,1950,117,115,84,30,18,29,19,29,-154.0,-38.5,-65.0,-257.5
+november,confirmed,1950,117,115,84,30,18,8,6,8,76.5,-113.5,-2.0,-39.0

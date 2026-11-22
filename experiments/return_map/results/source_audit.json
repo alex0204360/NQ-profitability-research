@@ -1,0 +1,538 @@
+{
+  "discovery": {
+    "identity": "exact_receipt",
+    "source_commit": "8336fe8",
+    "files": [
+      {
+        "path": "MNQ_Yahoo_1m_20260913_20261012_part01.csv",
+        "sha256": "3430116d80a7e4e2b9e2b2ed34315dc5255d2433620b737c96055556312176f2"
+      },
+      {
+        "path": "MNQ_Yahoo_1m_20260913_20261012_part02.csv",
+        "sha256": "a7a64421e57fa8142a7c07f4415c719981c7d6020d50c068749806a0aff3eb34"
+      },
+      {
+        "path": "MNQ_Yahoo_1m_20260913_20261012_part03.csv",
+        "sha256": "514249caa15cc110b289c5c48b2c8afa44c1d602d2174e5b7c393bf67a4c4a4b"
+      },
+      {
+        "path": "MNQ_Yahoo_1m_20260913_20261012_part04.csv",
+        "sha256": "a218f1228416cd191d38d1841e66a75b2eb677f87448f42b8f9a120388816933"
+      },
+      {
+        "path": "MNQ_Yahoo_1m_20260913_20261012_part05.csv",
+        "sha256": "b2777b42a4ef96037c868e4664e9142aac8ecb010abf4e4e65d2b59b6a28bff6"
+      },
+      {
+        "path": "MNQ_Yahoo_1m_20260913_20261012_part06.csv",
+        "sha256": "bcf54e4b620996c1f4c28cda92f442f473573e042319c9eb9e1e810dc15a1114"
+      }
+    ],
+    "dates": [
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09"
+    ],
+    "regular_hours_bars": 7796,
+    "reservoir_reproduction": {
+      "delay0_cost3": {
+        "archived": {
+          "trades": 206,
+          "gross": 388.5,
+          "net": -229.5,
+          "drawdown": 1954.5
+        },
+        "actual": {
+          "trades": 206,
+          "gross": 388.5,
+          "net": -229.5,
+          "drawdown": 1954.5
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": 0.0,
+          "net": 0.0,
+          "drawdown": 0.0
+        },
+        "daily_exact_match": true,
+        "ledger": {
+          "actual_trades": 206,
+          "archived_trades": 206,
+          "exact_matching_trade_rows": 206,
+          "exact_ledger_match": true
+        },
+        "exact_reproduction": true
+      },
+      "delay0_cost6": {
+        "archived": {
+          "trades": 206,
+          "gross": 388.5,
+          "net": -847.5,
+          "drawdown": 2269.0
+        },
+        "actual": {
+          "trades": 206,
+          "gross": 388.5,
+          "net": -847.5,
+          "drawdown": 2269.0
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": 0.0,
+          "net": 0.0,
+          "drawdown": 0.0
+        },
+        "daily_exact_match": true,
+        "ledger": null,
+        "exact_reproduction": true
+      },
+      "delay1_cost3": {
+        "archived": {
+          "trades": 188,
+          "gross": -281.0,
+          "net": -845.0,
+          "drawdown": 2661.5
+        },
+        "actual": {
+          "trades": 188,
+          "gross": -281.0,
+          "net": -845.0,
+          "drawdown": 2661.5
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": 0.0,
+          "net": 0.0,
+          "drawdown": 0.0
+        },
+        "daily_exact_match": true,
+        "ledger": {
+          "actual_trades": 188,
+          "archived_trades": 188,
+          "exact_matching_trade_rows": 188,
+          "exact_ledger_match": true
+        },
+        "exact_reproduction": true
+      },
+      "delay1_cost6": {
+        "archived": {
+          "trades": 188,
+          "gross": -281.0,
+          "net": -1409.0,
+          "drawdown": 2976.5
+        },
+        "actual": {
+          "trades": 188,
+          "gross": -281.0,
+          "net": -1409.0,
+          "drawdown": 2976.5
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": 0.0,
+          "net": 0.0,
+          "drawdown": 0.0
+        },
+        "daily_exact_match": true,
+        "ledger": null,
+        "exact_reproduction": true
+      }
+    }
+  },
+  "extension1": {
+    "window": "extension1",
+    "path": "extension1/bars.csv",
+    "csv_sha256": "7075895d804ccbd0c075b9873f505fb1635453160e9907807a5d20e1c0588dc3",
+    "receipt_csv_sha256": "6f6cba11096d18858dd7261f5a776a349fcc68da7da5152c9e8a4a1410486fea",
+    "receipt_source_sha256": "34641aedf506dca7917db507a5a681d9ebd7ae448d584da93414bbc65c6281bd",
+    "receipt_url": "https://query1.finance.yahoo.com/v8/finance/chart/MNQZ26.CME?period1=1793664000&period2=1794009600&interval=1m&includePrePost=true",
+    "identity": "reissued",
+    "dates": [
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06"
+    ],
+    "regular_hours_bars": 1560
+  },
+  "extension2": {
+    "window": "extension2",
+    "path": "extension2/bars.csv",
+    "csv_sha256": "2ae01b6cc21b1acee76c42679e52a74eb3e26129283a52eabb9e37762699d45b",
+    "receipt_csv_sha256": "accab795467c2dd7021943fe6ee39067fb33897111e2d8e91183fcbdaefeec08",
+    "receipt_source_sha256": "d4a5bc7508a12f1e813806f52baca46a24b5c5f18a1739cf4fce6aff8d928ce3",
+    "receipt_url": "https://query1.finance.yahoo.com/v8/finance/chart/MNQZ26.CME?period1=1794182400&period2=1794614400&interval=1m&includePrePost=true",
+    "identity": "reissued",
+    "dates": [
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13"
+    ],
+    "regular_hours_bars": 1950
+  },
+  "november": {
+    "window": "november",
+    "path": "november/bars.csv",
+    "csv_sha256": "77617fd542ace63e7ab60e081280a980489ed7ee06bf516925096b114fdd128d",
+    "receipt_csv_sha256": "bfb38cf17c6b1e6b3c86fecdd8c5291001246771f77772226feca7261957938f",
+    "receipt_source_sha256": "e2b8fc6710bffbfd882cc5cabce848a3418b7ccd821e4d010458f7536f9f5ba9",
+    "receipt_url": "https://query1.finance.yahoo.com/v8/finance/chart/MNQZ26.CME?period1=1794787200&period2=1795219200&interval=1m&includePrePost=true",
+    "identity": "reissued",
+    "dates": [
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20"
+    ],
+    "regular_hours_bars": 1950
+  },
+  "reservoir_reproduction": {
+    "extension": {
+      "delay0_cost3": {
+        "archived": {
+          "trades": 68,
+          "gross": 1653.5,
+          "net": 1449.5,
+          "drawdown": 865.0
+        },
+        "actual": {
+          "trades": 68,
+          "gross": 1575.0,
+          "net": 1371.0,
+          "drawdown": 1026.0
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": -78.5,
+          "net": -78.5,
+          "drawdown": 161.0
+        },
+        "daily_exact_match": false,
+        "ledger": {
+          "actual_trades": 68,
+          "archived_trades": 68,
+          "exact_matching_trade_rows": 4,
+          "exact_ledger_match": false
+        },
+        "exact_reproduction": false
+      },
+      "delay0_cost6": {
+        "archived": {
+          "trades": 68,
+          "gross": 1653.5,
+          "net": 1245.5,
+          "drawdown": 874.0
+        },
+        "actual": {
+          "trades": 68,
+          "gross": 1575.0,
+          "net": 1167.0,
+          "drawdown": 1044.0
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": -78.5,
+          "net": -78.5,
+          "drawdown": 170.0
+        },
+        "daily_exact_match": false,
+        "ledger": null,
+        "exact_reproduction": false
+      },
+      "delay1_cost3": {
+        "archived": {
+          "trades": 64,
+          "gross": 1280.0,
+          "net": 1088.0,
+          "drawdown": 964.5
+        },
+        "actual": {
+          "trades": 64,
+          "gross": 946.5,
+          "net": 754.5,
+          "drawdown": 1057.0
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": -333.5,
+          "net": -333.5,
+          "drawdown": 92.5
+        },
+        "daily_exact_match": false,
+        "ledger": {
+          "actual_trades": 64,
+          "archived_trades": 64,
+          "exact_matching_trade_rows": 1,
+          "exact_ledger_match": false
+        },
+        "exact_reproduction": false
+      },
+      "delay1_cost6": {
+        "archived": {
+          "trades": 64,
+          "gross": 1280.0,
+          "net": 896.0,
+          "drawdown": 973.5
+        },
+        "actual": {
+          "trades": 64,
+          "gross": 946.5,
+          "net": 562.5,
+          "drawdown": 1075.0
+        },
+        "actual_minus_archived": {
+          "trades": 0,
+          "gross": -333.5,
+          "net": -333.5,
+          "drawdown": 101.5
+        },
+        "daily_exact_match": false,
+        "ledger": null,
+        "exact_reproduction": false
+      }
+    },
+    "november": {
+      "delay0_cost3": {
+        "archived": {
+          "trades": 25,
+          "gross": 1017.0,
+          "net": 942.0,
+          "drawdown": 1691.5
+        },
+        "actual": {
+          "trades": 26,
+          "gross": 770.5,
+          "net": 692.5,
+          "drawdown": 1683.5
+        },
+        "actual_minus_archived": {
+          "trades": 1,
+          "gross": -246.5,
+          "net": -249.5,
+          "drawdown": -8.0
+        },
+        "daily_exact_match": false,
+        "ledger": {
+          "actual_trades": 26,
+          "archived_trades": 25,
+          "exact_matching_trade_rows": 1,
+          "exact_ledger_match": false
+        },
+        "exact_reproduction": false
+      },
+      "delay0_cost6": {
+        "archived": {
+          "trades": 25,
+          "gross": 1017.0,
+          "net": 867.0,
+          "drawdown": 1727.5
+        },
+        "actual": {
+          "trades": 26,
+          "gross": 770.5,
+          "net": 614.5,
+          "drawdown": 1703.5
+        },
+        "actual_minus_archived": {
+          "trades": 1,
+          "gross": -246.5,
+          "net": -252.5,
+          "drawdown": -24.0
+        },
+        "daily_exact_match": false,
+        "ledger": null,
+        "exact_reproduction": false
+      },
+      "delay1_cost3": {
+        "archived": {
+          "trades": 25,
+          "gross": 1158.0,
+          "net": 1083.0,
+          "drawdown": 1850.5
+        },
+        "actual": {
+          "trades": 26,
+          "gross": 876.0,
+          "net": 798.0,
+          "drawdown": 1870.5
+        },
+        "actual_minus_archived": {
+          "trades": 1,
+          "gross": -282.0,
+          "net": -285.0,
+          "drawdown": 20.0
+        },
+        "daily_exact_match": false,
+        "ledger": {
+          "actual_trades": 26,
+          "archived_trades": 25,
+          "exact_matching_trade_rows": 2,
+          "exact_ledger_match": false
+        },
+        "exact_reproduction": false
+      },
+      "delay1_cost6": {
+        "archived": {
+          "trades": 25,
+          "gross": 1158.0,
+          "net": 1008.0,
+          "drawdown": 1868.5
+        },
+        "actual": {
+          "trades": 26,
+          "gross": 876.0,
+          "net": 720.0,
+          "drawdown": 1888.5
+        },
+        "actual_minus_archived": {
+          "trades": 1,
+          "gross": -282.0,
+          "net": -288.0,
+          "drawdown": 20.0
+        },
+        "daily_exact_match": false,
+        "ledger": null,
+        "exact_reproduction": false
+      }
+    }
+  },
+  "november_identity": "reissued",
+  "reproduction_interpretation": "Reissued vendor tape differs from frozen archive; temporal re-score only, not archive replication",
+  "panels": {
+    "discovery": {
+      "regular_hours_bars": 7796,
+      "dates": [
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09"
+      ]
+    },
+    "extension": {
+      "regular_hours_bars": 3510,
+      "dates": [
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ]
+    },
+    "november": {
+      "regular_hours_bars": 1950,
+      "dates": [
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20"
+      ]
+    },
+    "november_all": {
+      "regular_hours_bars": 5460,
+      "dates": [
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20"
+      ]
+    },
+    "combined34": {
+      "regular_hours_bars": 13256,
+      "dates": [
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20"
+      ]
+    }
+  },
+  "new_head_source": "circuit.encode; decision-time states only",
+  "execution_source": "experiments/path_order/execution.py",
+  "execution_sha256": "721b56e662e81fdaa85797d94211cbce941da5175d9c9e94f33401137c30c0c3",
+  "scoring_files_sha256": {
+    "circuit.py": "345d541aea8d3face543cd618f0970159686676713957fae7a5f885fefd15235",
+    "weights.json": "da28b2ce98648e408809b88797f84b5c4fa5c57c35c757469209814747d572aa",
+    "score.py": "2dac44a1d96554521e6a56490ddccf15c19d55ff092ad22dfd2a228ced711277"
+  }
+}

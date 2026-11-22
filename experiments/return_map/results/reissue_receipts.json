@@ -1,0 +1,23 @@
+{
+  "retrieved_utc_date": "2026-11-22",
+  "provider": "Yahoo chart, MNQZ26.CME",
+  "request_urls": "Same URL for each corresponding capture in source_audit.json",
+  "normalization": "Exclude timestamps outside the exact registered request, incomplete quotes and off-minute rows. Score only regular hours. Raw source hashes refer to full HTTP response bodies.",
+  "windows": {
+    "extension1": {
+      "http": 200, "source_sha256": "5506e12cfe65111e22038b73b8c77435493458877666a9ac39cec58ef3eb951d",
+      "bounded_csv_sha256": "7075895d804ccbd0c075b9873f505fb1635453160e9907807a5d20e1c0588dc3",
+      "csv_rows": 5420, "daytime_rows": 1560, "incomplete": 336, "outside_request": 1
+    },
+    "extension2": {
+      "http": 200, "source_sha256": "f1a3f43f66d791f41de4d15ccb7ced62b8c6113e54be7032a184615bb8a4b52e",
+      "bounded_csv_sha256": "2ae01b6cc21b1acee76c42679e52a74eb3e26129283a52eabb9e37762699d45b",
+      "csv_rows": 6791, "daytime_rows": 1950, "incomplete": 404, "outside_request": 1
+    },
+    "november": {
+      "http": 200, "source_sha256": "a9e4f770b3dd7190e84e2d1282e4e4fbb2467f5db53f0a4939a3e466ce8d2c22",
+      "bounded_csv_sha256": "77617fd542ace63e7ab60e081280a980489ed7ee06bf516925096b114fdd128d",
+      "csv_rows": 6799, "daytime_rows": 1950, "incomplete": 276, "outside_request": 0, "trailing_off_minute": 1
+    }
+  }
+}

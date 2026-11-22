@@ -9,5 +9,7 @@
   "equal_mass": 0.25,
   "target_inputs": ["oriented_close_in_seed_ranges", "one"],
   "target": [-1, 1],
+  "confirmation_inputs": ["oriented_close", "previous_oriented_close"],
+  "confirmation": [1, -1],
   "mass_floor": 1
 }

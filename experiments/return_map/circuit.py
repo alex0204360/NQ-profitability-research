@@ -24,6 +24,9 @@ def trace(closes, encoded, cfg):
     width = np.ones(size)
     side = np.zeros(size)
     mass = np.zeros(size)
+    confirmed = np.zeros(size, dtype=bool)
+    previous_oriented = np.zeros(size)
+    turn_weights = np.array(cfg["confirmation"])
     charge_weights = np.array(cfg["charge"])
     surfaces = np.array(cfg["surfaces"])
     target_weights = np.array(cfg["target"])
@@ -31,8 +34,10 @@ def trace(closes, encoded, cfg):
     for i, (close, fields) in enumerate(zip(closes, encoded.itertuples(), strict=True)):
         if fields.age == 1:
             phase.fill(0)
+            confirmed.fill(False)
         slot = i % size
         phase[slot] = 0
+        confirmed[slot] = False
         offset = (close - anchor) / width
         oriented = side * offset
         coordinates = np.stack([oriented, np.ones(size)])
@@ -47,6 +52,10 @@ def trace(closes, encoded, cfg):
         phase[departed] = 2
 
         active = phase == 3
+        outbound = turn_weights @ np.stack([oriented, previous_oriented]) > 0
+        new_confirmations = live & active & ~confirmed & outbound
+        confirmed |= new_confirmations
+        previous_oriented = oriented
         residual = side * width * (target_weights @ coordinates)
         active_mass = mass * active
         equal = cfg["equal_mass"] * active
@@ -61,10 +70,13 @@ def trace(closes, encoded, cfg):
         eligible = fields.age >= 32
         rows.append((charge, int(departed.sum()), int(touch.sum()), int((touch & (on_original_side < 0)).sum()),
                      int(active.sum()), active_mass.sum(), readout(active_mass) if eligible else np.nan,
-                     readout(equal) if eligible else np.nan))
+                     readout(equal) if eligible else np.nan, int(new_confirmations.sum()),
+                     int((active & confirmed).sum()), readout(active_mass * confirmed) if eligible else np.nan,
+                     readout(equal * confirmed) if eligible else np.nan))
     return pd.DataFrame(rows, index=encoded.index, columns=[
         "charge", "departures", "contacts", "crossed_at_contact", "live_sites",
-        "live_mass", "return_map", "equal_mass"])
+        "live_mass", "return_map", "equal_mass", "confirmations", "confirmed_sites",
+        "confirmed", "confirmed_equal"])
 
 
 def encode(bars):

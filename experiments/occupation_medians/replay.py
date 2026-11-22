@@ -40,7 +40,7 @@ def run(days):
     events = []
     for day, bars in sorted(days.items()):
         for start in range(0, 371, 20):
-            if any(i not in bars for i in range(start, start+19)):
+            if any(i not in bars for i in range(start, start+12)):
                 continue
             window = [bars[i] for i in range(start,start+12)]
             volumes = [r['volume'] for r in window]
@@ -56,10 +56,16 @@ def run(days):
                                ('toward_time', (int(t>close)-int(t<close)) * abs(vote))]:
                 for delay in (0,1):
                     entry = start+12+delay
-                    price = bars[entry]['open']
-                    marks = [side*2*(bars[i]['close']-price) for i in range(entry,entry+5)]
-                    gross = side*2*(bars[entry+5]['open']-price)
-                    events.append(dict(day=day,start=start,head=head,side=side,delay=delay,
+                    # Missing scheduled opens cancel that order. An occupied position
+                    # exits at the first observed open at or after its deadline.
+                    filled_side = side if entry in bars else 0
+                    exit_minute = next((i for i in range(entry+5,390) if i in bars), None)
+                    if exit_minute is None and filled_side:
+                        raise ValueError('missing liquidation price')
+                    price = bars[entry]['open'] if filled_side else 0
+                    marks = [filled_side*2*(bars[i]['close']-price) for i in range(entry,exit_minute or entry) if i in bars]
+                    gross = filled_side*2*(bars[exit_minute]['open']-price) if filled_side else 0
+                    events.append(dict(day=day,start=start,head=head,side=filled_side,delay=delay,
                                        time_median=t,volume_median=v,unit=unit,marks=marks,gross=gross))
     return events
 

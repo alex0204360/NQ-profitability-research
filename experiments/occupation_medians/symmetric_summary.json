@@ -1,0 +1,362 @@
+[
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": 229.0,
+    "drawdown": 550.5
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": 449.5,
+    "drawdown": 197.5
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -220.5,
+    "drawdown": 502.0
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": 151.0,
+    "drawdown": 580.5
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": 395.5,
+    "drawdown": 218.5
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -244.5,
+    "drawdown": 517.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": 218.0,
+    "drawdown": 473.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": 304.0,
+    "drawdown": 237.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -86.0,
+    "drawdown": 413.5
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": 140.0,
+    "drawdown": 504.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": 250.0,
+    "drawdown": 258.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -110.0,
+    "drawdown": 428.5
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -385.0,
+    "drawdown": 708.0
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -557.5,
+    "drawdown": 708.0
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 172.5,
+    "drawdown": 210.5
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -463.0,
+    "drawdown": 751.0
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -611.5,
+    "drawdown": 751.0
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 148.5,
+    "drawdown": 214.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -374.0,
+    "drawdown": 509.5
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -412.0,
+    "drawdown": 509.5
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 38.0,
+    "drawdown": 286.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -452.0,
+    "drawdown": 556.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -466.0,
+    "drawdown": 556.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 14.0,
+    "drawdown": 289.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -24.0,
+    "drawdown": 599.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -196.5,
+    "drawdown": 599.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 172.5,
+    "drawdown": 210.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -102.0,
+    "drawdown": 615.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -250.5,
+    "drawdown": 615.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 148.5,
+    "drawdown": 214.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -206.0,
+    "drawdown": 507.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -244.0,
+    "drawdown": 507.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 38.0,
+    "drawdown": 286.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 26,
+    "net": -284.0,
+    "drawdown": 525.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 18,
+    "net": -298.0,
+    "drawdown": 525.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 14.0,
+    "drawdown": 289.0
+  }
+]

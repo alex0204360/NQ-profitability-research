@@ -1,0 +1,47 @@
+{
+  "output": "/tmp/exposed.csv",
+  "rows": 13256,
+  "sessions": 34,
+  "sha256": "5a670be6a46d7460f8a8946ead90aa20582ffea0e09d0554f46aadb9c7907083",
+  "provenance": [
+    {
+      "source": "gh:8336fe8:data/mnq_oracle_2026/MNQ_Yahoo_1m_20260913_20261012_part01.csv",
+      "sha256": "3430116d80a7e4e2b9e2b2ed34315dc5255d2433620b737c96055556312176f2"
+    },
+    {
+      "source": "gh:8336fe8:data/mnq_oracle_2026/MNQ_Yahoo_1m_20260913_20261012_part02.csv",
+      "sha256": "a7a64421e57fa8142a7c07f4415c719981c7d6020d50c068749806a0aff3eb34"
+    },
+    {
+      "source": "gh:8336fe8:data/mnq_oracle_2026/MNQ_Yahoo_1m_20260913_20261012_part03.csv",
+      "sha256": "514249caa15cc110b289c5c48b2c8afa44c1d602d2174e5b7c393bf67a4c4a4b"
+    },
+    {
+      "source": "gh:8336fe8:data/mnq_oracle_2026/MNQ_Yahoo_1m_20260913_20261012_part04.csv",
+      "sha256": "a218f1228416cd191d38d1841e66a75b2eb677f87448f42b8f9a120388816933"
+    },
+    {
+      "source": "gh:8336fe8:data/mnq_oracle_2026/MNQ_Yahoo_1m_20260913_20261012_part05.csv",
+      "sha256": "b2777b42a4ef96037c868e4664e9142aac8ecb010abf4e4e65d2b59b6a28bff6"
+    },
+    {
+      "source": "gh:8336fe8:data/mnq_oracle_2026/MNQ_Yahoo_1m_20260913_20261012_part06.csv",
+      "sha256": "bcf54e4b620996c1f4c28cda92f442f473573e042319c9eb9e1e810dc15a1114"
+    },
+    {
+      "source": "Yahoo Chart API 2026-11-03..2026-11-06",
+      "source_sha256": "d77b5479407aa05be06b36faf82d06b2094201a1c20cfe14a8fed76661df7d25",
+      "reissued": true
+    },
+    {
+      "source": "Yahoo Chart API 2026-11-09..2026-11-13",
+      "source_sha256": "758cc39fe58a81caaa0aa2f2e754f1679df3c7aac32e914be2727a9df73b4c2e",
+      "reissued": true
+    },
+    {
+      "source": "Yahoo Chart API 2026-11-16..2026-11-20",
+      "source_sha256": "c81a3940f12a0857654723100153d03f6e5f241e9e37a75318827e8ac9862fb8",
+      "reissued": true
+    }
+  ]
+}

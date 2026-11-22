@@ -1,0 +1,362 @@
+[
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": 455.0,
+    "drawdown": 348.0
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": 488.0,
+    "drawdown": 272.0
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -33.0,
+    "drawdown": 348.0
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": 374.0,
+    "drawdown": 357.0
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": 431.0,
+    "drawdown": 296.0
+  },
+  {
+    "head": "mass",
+    "delay": 0,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -57.0,
+    "drawdown": 357.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": 319.5,
+    "drawdown": 319.5
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": 301.0,
+    "drawdown": 319.5
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 18.5,
+    "drawdown": 307.0
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": 238.5,
+    "drawdown": 343.5
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": 244.0,
+    "drawdown": 343.5
+  },
+  {
+    "head": "mass",
+    "delay": 1,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -5.5,
+    "drawdown": 316.0
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -617.0,
+    "drawdown": 779.5
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -602.0,
+    "drawdown": 648.0
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -15.0,
+    "drawdown": 210.5
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -698.0,
+    "drawdown": 845.5
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -659.0,
+    "drawdown": 699.5
+  },
+  {
+    "head": "reverse",
+    "delay": 0,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -39.0,
+    "drawdown": 214.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -481.5,
+    "drawdown": 561.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -415.0,
+    "drawdown": 515.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -66.5,
+    "drawdown": 286.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -562.5,
+    "drawdown": 606.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -472.0,
+    "drawdown": 527.0
+  },
+  {
+    "head": "reverse",
+    "delay": 1,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -90.5,
+    "drawdown": 289.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -227.0,
+    "drawdown": 662.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -312.0,
+    "drawdown": 644.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 85.0,
+    "drawdown": 210.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -308.0,
+    "drawdown": 701.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -369.0,
+    "drawdown": 671.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 0,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": 61.0,
+    "drawdown": 214.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 3,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -295.5,
+    "drawdown": 511.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 3,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -278.0,
+    "drawdown": 511.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 3,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -17.5,
+    "drawdown": 286.0
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 6,
+    "panel": "all",
+    "slots": 642,
+    "trades": 27,
+    "net": -376.5,
+    "drawdown": 558.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 6,
+    "panel": "early",
+    "slots": 376,
+    "trades": 19,
+    "net": -335.0,
+    "drawdown": 530.5
+  },
+  {
+    "head": "toward_time",
+    "delay": 1,
+    "cost": 6,
+    "panel": "nov",
+    "slots": 266,
+    "trades": 8,
+    "net": -41.5,
+    "drawdown": 289.0
+  }
+]

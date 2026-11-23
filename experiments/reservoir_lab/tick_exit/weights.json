@@ -1,0 +1,9 @@
+{
+  "name": "tick_exit",
+  "input": "frozen reservoir forecast in index points",
+  "hidden_weight": [[1], [1], [-1], [-1]],
+  "hidden_bias": [-0.25, -0.5, -0.25, -0.5],
+  "activation": "relu",
+  "readout_weight": [[2, -1, -2, 1]],
+  "readout_bias": [0]
+}

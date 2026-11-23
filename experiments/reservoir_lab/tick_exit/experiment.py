@@ -9,6 +9,9 @@ import pandas as pd
 
 from neuron import tick_exit
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "return_to_anchor"))
+from model import anchor_state
+
 HERE = Path(__file__).resolve().parent
 CORE = HERE.parents[1] / "path_order"
 sys.path.insert(0, str(CORE / "workbench"))
@@ -56,13 +59,16 @@ def metrics(trades, daily_marks):
                 profitable_sessions=sum(float(m.iloc[-1])>0 for m in daily_marks))
 
 
-def render(charts, target):
+def render(charts, target, model):
+    title = "Tick exit" if model == "tick_exit" else "Return to anchor"
+    description = ("Four ReLUs zero forecasts within one tick and copy forecasts of two ticks or more."
+                   if model == "tick_exit" else "A one-range favorable move arms a latch. A return to the starting close retires that direction until the raw sign changes.")
     # Reuse the frozen offline viewer. Its second trade layer displays this candidate.
     page = (CORE/"workbench/viewer.html").read_text()
     for old, new in [
-        (">Guarded</button>", ">Tick exit</button>"),
-        ("MNQ Reservoir Replay", "MNQ Reservoir · Tick Exit Study"),
-        ("The plot shows the forecast", "Tick exit adds four ReLUs that zero evidence within one tick and copy forecasts of two ticks or more. The selected model supplies the forecast"),
+        (">Guarded</button>", f">{title}</button>"),
+        ("MNQ Reservoir Replay", f"MNQ Reservoir · {title}"),
+        ("The plot shows the forecast", f"{description} The selected model supplies the forecast"),
         ("let sessionIndex = sessions.length - 1;", 'let sessionIndex = sessions.findIndex(s => s.date === "2026-11-19");'),
         ("return current()?.bars || [];", 'return current()?.[mode === "guard" ? "editedBars" : "bars"] || [];'),
     ]:
@@ -73,7 +79,7 @@ def render(charts, target):
     target.write_text(page.replace("__REPLAY_DATA__",payload))
 
 
-def run(scratch, out):
+def run(scratch, out, model):
     verify_brain()
     out.mkdir(parents=True, exist_ok=True)
     charts, days, trades, marks = [], [], {}, {}
@@ -81,7 +87,12 @@ def run(scratch, out):
         for day,b in bars.groupby(bars.index.date):
             date = str(day)
             a = activations(b,"reservoir")
-            edited = tick_exit(a.reservoir)
+            if model == "return_to_anchor":
+                state = anchor_state(a.reservoir, b.close, a.scale)
+                edited = state.score.rename(model)
+            else:
+                edited = tick_exit(a.reservoir)
+                state = pd.DataFrame(index=b.index)
             chart = {"date":date,"lock":None}
             day_stats = {"date":date,"panel":panel}
             for name,s,layer,bars_key in [("original",a.reservoir,"base","bars"),("candidate",edited,"guard","editedBars")]:
@@ -94,7 +105,7 @@ def run(scratch, out):
                 day_stats[name] = float(m.iloc[-1])
             if date == FOCUS:
                 trace = b.join(a[["reservoir","scale","stock","charge","signed_release"]]).join(edited)
-                trace.to_csv(out/"nov19-trace.csv", index_label="bar_start_et")
+                trace.join(state.drop(columns="score", errors="ignore")).to_csv(out/"nov19-trace.csv", index_label="bar_start_et")
             days.append(day_stats)
             charts.append(chart)
         ref = pd.read_csv(CORE/panel/"reservoir-delay0.csv")
@@ -119,12 +130,13 @@ def run(scratch, out):
         pd.concat([trades[name,d["date"]] for d in days]).to_csv(out/f"{name}-trades.csv",index=False)
     pd.DataFrame(days).to_csv(out/"daily.csv",index=False)
     (out/"results.json").write_text(json.dumps(results,indent=2,allow_nan=False)+"\n")
-    render(charts,out/"comparison.html")
+    render(charts,out/"comparison.html", model)
 
 
 if __name__ == "__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("scratch",type=Path)
     parser.add_argument("out",type=Path)
+    parser.add_argument("--model", choices=["tick_exit","return_to_anchor"],default="tick_exit")
     args=parser.parse_args()
-    run(args.scratch,args.out)
+    run(args.scratch,args.out,args.model)

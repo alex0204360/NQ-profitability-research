@@ -1,0 +1,10 @@
+{
+  "horizon_minutes":4,
+  "usual_update":[0.75,0.25],
+  "surprise_rows":[[1,-1,0],[1,0,-1]],
+  "recovery_rows":[[1,-0.5],[1,-1]],
+  "break_row":[-1,0],
+  "hold_readout":[0.413818359375,-1],
+  "volume_base":2,
+  "price_control_volume":1
+}

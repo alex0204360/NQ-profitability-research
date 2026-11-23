@@ -1,0 +1,15 @@
+{
+  "horizon_minutes": 4,
+  "reference_decay": 0.875,
+  "adverse_memory_weights": [0.75, 0.25],
+  "impact_input": ["adverse_ranges", "usual_adverse_ranges", "current_volume_times_usual_impact"],
+  "surprise_weights": [[1, -1, 0], [1, 0, -1]],
+  "surprise_bias": [0, 0],
+  "coincidence": "min(relu(x0), relu(x1))",
+  "debt_input": ["old_debt_points", "previous_shock_points", "current_favorable_points"],
+  "debt_weights": [0.75, 1, -1],
+  "hold_input": ["position_side_times_raw_forecast_points", "unrecovered_debt_points"],
+  "hold_weights": [0.413818359375, -2.05078125],
+  "volume_base": 2,
+  "price_control_volume": 1
+}

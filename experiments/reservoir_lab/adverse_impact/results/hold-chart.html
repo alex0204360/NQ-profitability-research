@@ -107,7 +107,7 @@ canvas.dragging{cursor:grabbing}
 <canvas id="chart" tabindex="0" aria-label="Candlestick and forecast chart. Use left and right arrows to inspect bars." aria-describedby="chart-hint"></canvas>
 <p class="hint">Modeled next-open fills · $6 round trip per MNQ contract</p>
 <p class="hint" id="chart-hint">Drag to pan · Scroll to zoom · Click a marker or ledger row to inspect the trade · [ / ] change sessions</p>
-<details class="neuron"><summary>How the neuron works</summary><p>Charge is the positive part of volume surprise minus the size of the close-to-close move, with each input measured against its recent baseline. Charge adds to stock. Later moves release some of that stock in the direction of the move. A move of one recent range or more spends the entire available stock, and each portion can be spent only once. Each minute carries forward 7/8 of the unspent stock and 7/8 of the prior directional state. The plot shows the forecast in MNQ points. Stock, charge, and signed release are internal values.</p><p>The original forecast is unchanged across modes. The edited hold value appears only at completed bars while a position is open. Hold value is an experimental four-minute score relative to the held side. Positive favors continuing either a long or a short. Zero or negative requests an exit at the next open. The 0 line is the hold exit threshold. The dashed ±1.5 lines are the original entry thresholds.</p></details>
+<details class="neuron"><summary>How the neuron works</summary><p>Charge is the positive part of volume surprise minus the size of the close-to-close move, with each input measured against its recent baseline. Charge adds to stock. Later moves release some of that stock in the direction of the move. A move of one recent range or more spends the entire available stock, and each portion can be spent only once. Each minute carries forward 7/8 of the unspent stock and 7/8 of the prior directional state. The plot shows the forecast in MNQ points. Stock, charge, and signed release are internal values.</p><p>A growing adverse move leaves a pending shock. The next bar's recovery pays it down; unrecovered points reduce hold value.</p><p>The original forecast is unchanged across modes. The edited hold value appears only at completed bars while a position is open. Hold value is an experimental four-minute score relative to the held side. Positive favors continuing either a long or a short. Zero or negative requests an exit at the next open. The 0 line is the hold exit threshold. The dashed ±1.5 lines are the original entry thresholds.</p></details>
 </section>
 <aside class="panel" aria-label="Trade ledger">
 <div class="side-head"><h2>Trade ledger</h2><div class="stats" id="summary"></div></div>
@@ -139,7 +139,7 @@ const time = minute => Number.isFinite(minute)
 const reasons = {hold:"Hold exit",signal:"Forecast exit",time:"Scheduled flatten",gap:"Data gap","daily loss":"Daily loss guard"};
 const clamp = (value,min,max) => Math.max(min,Math.min(max,value));
 let sessionIndex = sessions.length - 1;
-let mode = "original";
+let mode = "fixed_volume";
 let selected = null;
 let start = 0, end = 0, windowLeft = 0, windowRight = 0;
 let hover = null, hoverBar = null, drag = null;

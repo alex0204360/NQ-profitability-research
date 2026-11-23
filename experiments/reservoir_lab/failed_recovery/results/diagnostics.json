@@ -1,0 +1,98 @@
+{
+  "incremental_volume_usd_per_day": {
+    "earlier20": {
+      "fixed": {
+        "mean_usd_per_day": 3.8,
+        "block95": [
+          -1.9,
+          13.651874999999974
+        ]
+      },
+      "full": {
+        "mean_usd_per_day": -1.125,
+        "block95": [
+          -8.750625,
+          4.925
+        ]
+      }
+    },
+    "all_november": {
+      "fixed": {
+        "mean_usd_per_day": 37.642857142857146,
+        "block95": [
+          1.8214285714285714,
+          81.60714285714286
+        ]
+      },
+      "full": {
+        "mean_usd_per_day": 35.285714285714285,
+        "block95": [
+          1.8214285714285714,
+          74.53571428571429
+        ]
+      }
+    },
+    "november_other13": {
+      "fixed": {
+        "mean_usd_per_day": 40.53846153846154,
+        "block95": [
+          1.9615384615384615,
+          91.07692307692308
+        ]
+      },
+      "full": {
+        "mean_usd_per_day": 38.0,
+        "block95": [
+          1.9615384615384615,
+          86.0
+        ]
+      }
+    }
+  },
+  "hold_labels": {
+    "all_november": {
+      "volume_exit": {
+        "observations": 64,
+        "mean_score": -33.16138965581645,
+        "mean_realized_signed_points": 0.68359375
+      },
+      "volume_hold": {
+        "observations": 2616,
+        "mean_score": 0.7792895113937556,
+        "mean_realized_signed_points": 1.4688455657492354
+      },
+      "price_exit": {
+        "observations": 66,
+        "mean_score": -33.10697922448924,
+        "mean_realized_signed_points": 1.231060606060606
+      },
+      "price_hold": {
+        "observations": 2614,
+        "mean_score": 0.7798787500574224,
+        "mean_realized_signed_points": 1.4556235654169856
+      }
+    },
+    "earlier20": {
+      "volume_exit": {
+        "observations": 54,
+        "mean_score": -14.970346915107461,
+        "mean_realized_signed_points": 1.6157407407407407
+      },
+      "volume_hold": {
+        "observations": 3730,
+        "mean_score": 1.079158185948005,
+        "mean_realized_signed_points": 0.039142091152815014
+      },
+      "price_exit": {
+        "observations": 56,
+        "mean_score": -14.860592430802969,
+        "mean_realized_signed_points": 2.4955357142857144
+      },
+      "price_hold": {
+        "observations": 3728,
+        "mean_score": 1.0799502350577315,
+        "mean_realized_signed_points": 0.025080472103004292
+      }
+    }
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "panels": {
+    "earlier20": {
+      "original": {
+        "trades": 206,
+        "net": -847.5,
+        "net_per_trade": -4.114077669902913,
+        "marked_drawdown": 2269.0,
+        "gap_exits": 4,
+        "profitable_sessions": 6
+      },
+      "fixed_volume": {
+        "trades": 206,
+        "net": -427.0,
+        "net_per_trade": -2.0728155339805827,
+        "marked_drawdown": 1746.5,
+        "gap_exits": 1,
+        "profitable_sessions": 8,
+        "attribution": {
+          "original_losers": {
+            "count": 127,
+            "improved_usd": 1062.5,
+            "damaged_usd": 208.5,
+            "net_delta": 854.0
+          },
+          "original_winners": {
+            "count": 79,
+            "improved_usd": 367.0,
+            "damaged_usd": 800.5,
+            "net_delta": -433.5
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "fixed_price": {
+        "trades": 206,
+        "net": -503.0,
+        "net_per_trade": -2.441747572815534,
+        "marked_drawdown": 1741.0,
+        "gap_exits": 1,
+        "profitable_sessions": 7,
+        "attribution": {
+          "original_losers": {
+            "count": 127,
+            "improved_usd": 1011.5,
+            "damaged_usd": 208.5,
+            "net_delta": 803.0
+          },
+          "original_winners": {
+            "count": 79,
+            "improved_usd": 367.0,
+            "damaged_usd": 825.5,
+            "net_delta": -458.5
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "full_volume": {
+        "trades": 232,
+        "net": -877.5,
+        "net_per_trade": -3.7823275862068964,
+        "marked_drawdown": 2057.0,
+        "gap_exits": 1,
+        "profitable_sessions": 6,
+        "attribution": {
+          "shared": 198,
+          "shared_delta": 525.5,
+          "missed": 8,
+          "missed_original_net": -82.5,
+          "extra_friction": 156.0,
+          "reentries": {
+            "count": 26,
+            "gross": -565.5,
+            "costs": 156.0,
+            "net": -721.5
+          },
+          "other_added": {
+            "count": 8,
+            "gross": 131.5,
+            "costs": 48.0,
+            "net": 83.5
+          },
+          "gross_delta": 126.0
+        }
+      },
+      "full_price": {
+        "trades": 231,
+        "net": -855.0,
+        "net_per_trade": -3.7012987012987013,
+        "marked_drawdown": 2071.5,
+        "gap_exits": 1,
+        "profitable_sessions": 5,
+        "attribution": {
+          "shared": 198,
+          "shared_delta": 449.5,
+          "missed": 8,
+          "missed_original_net": -82.5,
+          "extra_friction": 150.0,
+          "reentries": {
+            "count": 25,
+            "gross": -473.0,
+            "costs": 150.0,
+            "net": -623.0
+          },
+          "other_added": {
+            "count": 8,
+            "gross": 131.5,
+            "costs": 48.0,
+            "net": 83.5
+          },
+          "gross_delta": 142.5
+        }
+      }
+    },
+    "nov19": {
+      "original": {
+        "trades": 3,
+        "net": -126.5,
+        "net_per_trade": -42.166666666666664,
+        "marked_drawdown": 1526.5,
+        "gap_exits": 0,
+        "profitable_sessions": 0
+      },
+      "fixed_volume": {
+        "trades": 3,
+        "net": -78.5,
+        "net_per_trade": -26.166666666666668,
+        "marked_drawdown": 379.5,
+        "gap_exits": 0,
+        "profitable_sessions": 0,
+        "attribution": {
+          "original_losers": {
+            "count": 1,
+            "improved_usd": 436.5,
+            "damaged_usd": -0.0,
+            "net_delta": 436.5
+          },
+          "original_winners": {
+            "count": 2,
+            "improved_usd": 0.0,
+            "damaged_usd": 388.5,
+            "net_delta": -388.5
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "fixed_price": {
+        "trades": 3,
+        "net": -78.5,
+        "net_per_trade": -26.166666666666668,
+        "marked_drawdown": 379.5,
+        "gap_exits": 0,
+        "profitable_sessions": 0,
+        "attribution": {
+          "original_losers": {
+            "count": 1,
+            "improved_usd": 436.5,
+            "damaged_usd": -0.0,
+            "net_delta": 436.5
+          },
+          "original_winners": {
+            "count": 2,
+            "improved_usd": 0.0,
+            "damaged_usd": 388.5,
+            "net_delta": -388.5
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "full_volume": {
+        "trades": 8,
+        "net": -383.0,
+        "net_per_trade": -47.875,
+        "marked_drawdown": 1094.0,
+        "gap_exits": 0,
+        "profitable_sessions": 0,
+        "attribution": {
+          "shared": 3,
+          "shared_delta": 48.0,
+          "missed": 0,
+          "missed_original_net": 0.0,
+          "extra_friction": 30.0,
+          "reentries": {
+            "count": 5,
+            "gross": -274.5,
+            "costs": 30.0,
+            "net": -304.5
+          },
+          "other_added": {
+            "count": 0,
+            "gross": 0.0,
+            "costs": 0.0,
+            "net": 0.0
+          },
+          "gross_delta": -226.5
+        }
+      },
+      "full_price": {
+        "trades": 8,
+        "net": -383.0,
+        "net_per_trade": -47.875,
+        "marked_drawdown": 1094.0,
+        "gap_exits": 0,
+        "profitable_sessions": 0,
+        "attribution": {
+          "shared": 3,
+          "shared_delta": 48.0,
+          "missed": 0,
+          "missed_original_net": 0.0,
+          "extra_friction": 30.0,
+          "reentries": {
+            "count": 5,
+            "gross": -274.5,
+            "costs": 30.0,
+            "net": -304.5
+          },
+          "other_added": {
+            "count": 0,
+            "gross": 0.0,
+            "costs": 0.0,
+            "net": 0.0
+          },
+          "gross_delta": -226.5
+        }
+      }
+    },
+    "november_other13": {
+      "original": {
+        "trades": 90,
+        "net": 2239.0,
+        "net_per_trade": 24.877777777777776,
+        "marked_drawdown": 995.0,
+        "gap_exits": 0,
+        "profitable_sessions": 9
+      },
+      "fixed_volume": {
+        "trades": 90,
+        "net": 908.0,
+        "net_per_trade": 10.088888888888889,
+        "marked_drawdown": 941.5,
+        "gap_exits": 0,
+        "profitable_sessions": 6,
+        "attribution": {
+          "original_losers": {
+            "count": 45,
+            "improved_usd": 1402.5,
+            "damaged_usd": 228.0,
+            "net_delta": 1174.5
+          },
+          "original_winners": {
+            "count": 45,
+            "improved_usd": 465.5,
+            "damaged_usd": 2971.0,
+            "net_delta": -2505.5
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "fixed_price": {
+        "trades": 90,
+        "net": 381.0,
+        "net_per_trade": 4.233333333333333,
+        "marked_drawdown": 1002.5,
+        "gap_exits": 0,
+        "profitable_sessions": 5,
+        "attribution": {
+          "original_losers": {
+            "count": 45,
+            "improved_usd": 1377.0,
+            "damaged_usd": 228.0,
+            "net_delta": 1149.0
+          },
+          "original_winners": {
+            "count": 45,
+            "improved_usd": 284.5,
+            "damaged_usd": 3291.5,
+            "net_delta": -3007.0
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "full_volume": {
+        "trades": 114,
+        "net": 1808.0,
+        "net_per_trade": 15.859649122807017,
+        "marked_drawdown": 824.5,
+        "gap_exits": 0,
+        "profitable_sessions": 8,
+        "attribution": {
+          "shared": 84,
+          "shared_delta": -1280.0,
+          "missed": 6,
+          "missed_original_net": 235.0,
+          "extra_friction": 144.0,
+          "reentries": {
+            "count": 24,
+            "gross": 893.0,
+            "costs": 144.0,
+            "net": 749.0
+          },
+          "other_added": {
+            "count": 6,
+            "gross": 371.0,
+            "costs": 36.0,
+            "net": 335.0
+          },
+          "gross_delta": -287.0
+        }
+      },
+      "full_price": {
+        "trades": 114,
+        "net": 1314.0,
+        "net_per_trade": 11.526315789473685,
+        "marked_drawdown": 873.0,
+        "gap_exits": 0,
+        "profitable_sessions": 8,
+        "attribution": {
+          "shared": 83,
+          "shared_delta": -1647.0,
+          "missed": 7,
+          "missed_original_net": 758.0,
+          "extra_friction": 144.0,
+          "reentries": {
+            "count": 24,
+            "gross": 887.0,
+            "costs": 144.0,
+            "net": 743.0
+          },
+          "other_added": {
+            "count": 7,
+            "gross": 779.0,
+            "costs": 42.0,
+            "net": 737.0
+          },
+          "gross_delta": -781.0
+        }
+      }
+    },
+    "all_november": {
+      "original": {
+        "trades": 93,
+        "net": 2112.5,
+        "net_per_trade": 22.71505376344086,
+        "marked_drawdown": 1727.5,
+        "gap_exits": 0,
+        "profitable_sessions": 9
+      },
+      "fixed_volume": {
+        "trades": 93,
+        "net": 829.5,
+        "net_per_trade": 8.919354838709678,
+        "marked_drawdown": 941.5,
+        "gap_exits": 0,
+        "profitable_sessions": 6,
+        "attribution": {
+          "original_losers": {
+            "count": 46,
+            "improved_usd": 1839.0,
+            "damaged_usd": 228.0,
+            "net_delta": 1611.0
+          },
+          "original_winners": {
+            "count": 47,
+            "improved_usd": 465.5,
+            "damaged_usd": 3359.5,
+            "net_delta": -2894.0
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "fixed_price": {
+        "trades": 93,
+        "net": 302.5,
+        "net_per_trade": 3.252688172043011,
+        "marked_drawdown": 1081.0,
+        "gap_exits": 0,
+        "profitable_sessions": 5,
+        "attribution": {
+          "original_losers": {
+            "count": 46,
+            "improved_usd": 1813.5,
+            "damaged_usd": 228.0,
+            "net_delta": 1585.5
+          },
+          "original_winners": {
+            "count": 47,
+            "improved_usd": 284.5,
+            "damaged_usd": 3680.0,
+            "net_delta": -3395.5
+          },
+          "original_flat": {
+            "count": 0,
+            "improved_usd": 0.0,
+            "damaged_usd": -0.0,
+            "net_delta": 0.0
+          }
+        }
+      },
+      "full_volume": {
+        "trades": 122,
+        "net": 1425.0,
+        "net_per_trade": 11.680327868852459,
+        "marked_drawdown": 1157.0,
+        "gap_exits": 0,
+        "profitable_sessions": 8,
+        "attribution": {
+          "shared": 87,
+          "shared_delta": -1232.0,
+          "missed": 6,
+          "missed_original_net": 235.0,
+          "extra_friction": 174.0,
+          "reentries": {
+            "count": 29,
+            "gross": 618.5,
+            "costs": 174.0,
+            "net": 444.5
+          },
+          "other_added": {
+            "count": 6,
+            "gross": 371.0,
+            "costs": 36.0,
+            "net": 335.0
+          },
+          "gross_delta": -513.5
+        }
+      },
+      "full_price": {
+        "trades": 122,
+        "net": 931.0,
+        "net_per_trade": 7.631147540983607,
+        "marked_drawdown": 1338.0,
+        "gap_exits": 0,
+        "profitable_sessions": 8,
+        "attribution": {
+          "shared": 86,
+          "shared_delta": -1599.0,
+          "missed": 7,
+          "missed_original_net": 758.0,
+          "extra_friction": 174.0,
+          "reentries": {
+            "count": 29,
+            "gross": 612.5,
+            "costs": 174.0,
+            "net": 438.5
+          },
+          "other_added": {
+            "count": 7,
+            "gross": 779.0,
+            "costs": 42.0,
+            "net": 737.0
+          },
+          "gross_delta": -1007.5
+        }
+      }
+    }
+  },
+  "extremes": {
+    "improvement": {
+      "date": "2026-11-19",
+      "entry": 645,
+      "side": "long",
+      "original_exit": 722,
+      "edited_exit": 649,
+      "original_net": -564.0,
+      "edited_net": -127.5,
+      "delta": 436.5
+    },
+    "damaged_winner": {
+      "date": "2026-11-10",
+      "entry": 618,
+      "side": "short",
+      "original_exit": 747,
+      "edited_exit": 633,
+      "original_net": 662.0,
+      "edited_net": -6.0,
+      "delta": -668.0
+    }
+  }
+}

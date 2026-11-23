@@ -177,8 +177,11 @@ function forecastPanel(visible) {
 """
 
 
-def render(sessions, extremes, target):
+def render(sessions, extremes, target, model="adverse_impact"):
     """Write a portable document using the existing Reservoir replay canvas and ledger."""
+    title = "Reservoir Failed Recovery" if model == "failed_recovery" else "Reservoir Adverse Impact"
+    mechanism = ("A growing adverse move sets a price memory. After a halfway recovery, a break through the remembered close produces one exit pulse."
+                 if model == "failed_recovery" else "A growing adverse move leaves a pending shock. The next bar's recovery pays it down; unrecovered points reduce hold value.")
     source = VIEWER.read_text(encoding="utf-8")
 
     def replace(old, new):
@@ -192,17 +195,17 @@ def render(sessions, extremes, target):
         end = source.index(after, start + len(first))
         replace(source[start:end], content)
 
-    replace("<title>MNQ · Reservoir Replay</title>", "<title>MNQ · Reservoir Adverse Impact</title>")
-    replace("<h1>MNQ Reservoir Replay</h1>", "<h1>Reservoir Adverse Impact</h1>")
+    replace("<title>MNQ · Reservoir Replay</title>", f"<title>MNQ · {title}</title>")
+    replace("<h1>MNQ Reservoir Replay</h1>", f"<h1>{title}</h1>")
     replace("</style>", IMPACT_CSS + "</style>")
     replace_section('  <div class="group" aria-label="Replay variant">',
                     '  <div class="group zoom"', MODE_CONTROLS)
     replace('<div class="legend">', EXTREME_CONTROLS + '<div class="legend">')
     replace_section('  <span class="forecast">━ Forecast (pts)', '\n</div>', '  ' + IMPACT_LEGEND)
-    replace("</details>", """<p>The original forecast is unchanged across modes. The edited hold value appears only at completed bars while a position is open. Hold value is an experimental four-minute score relative to the held side. Positive favors continuing either a long or a short. Zero or negative requests an exit at the next open. The 0 line is the hold exit threshold. The dashed ±1.5 lines are the original entry thresholds.</p></details>""")
+    replace("</details>", "<p>" + mechanism + "</p>" + """<p>The original forecast is unchanged across modes. The edited hold value appears only at completed bars while a position is open. Hold value is an experimental four-minute score relative to the held side. Positive favors continuing either a long or a short. Zero or negative requests an exit at the next open. The 0 line is the hold exit threshold. The dashed ±1.5 lines are the original entry thresholds.</p></details>""")
     replace('const sessions = JSON.parse($("replay-data").textContent).sessions;',
             'const {sessions,extremes} = JSON.parse($("replay-data").textContent);')
-    replace('let mode = "base";', 'let mode = "original";')
+    replace('let mode = "base";', 'let mode = "fixed_volume";')
     replace('const reasons = {signal:', 'const reasons = {hold:"Hold exit",signal:')
     replace('return current()?.[mode] || [];', 'return current()?.layers?.[mode]?.trades || [];')
     replace('function current() {', IMPACT_SCRIPT + '\nfunction current() {')

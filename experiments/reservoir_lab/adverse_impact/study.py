@@ -83,7 +83,11 @@ def numbers(s):
     return [None if pd.isna(x) else float(x) for x in s]
 
 
-def run(scratch,out):
+def run(scratch,out,model="adverse_impact"):
+    compute = directional_state
+    if model == "failed_recovery":
+        sys.path.insert(0,str(HERE.parent))
+        from failed_recovery.circuit import directional_state as compute
     out.mkdir(exist_ok=True,parents=True)
     verify_brain()
     states, results, equity, charts = {}, {}, {}, {}
@@ -103,7 +107,7 @@ def run(scratch,out):
             for ctrl in CONTROLS:
                 for side in [1,-1]:
                     col = "long" if side==1 else "short"
-                    state=directional_state(b,a,side,with_volume=(ctrl=="volume"))
+                    state=compute(b,a,side,with_volume=(ctrl=="volume"))
                     heads[ctrl,side]=state.hold
                     trace=trace.join(state.add_prefix(f"{ctrl}_{col}_"))
             states[day]=(b,a.reservoir,heads)
@@ -159,12 +163,13 @@ def run(scratch,out):
     pd.DataFrame([dict(date=d,mode=m,net=equity[d,m].iloc[-1],trades=len(results[d,m]))
                   for d in states for m in modes]).to_csv(out/"daily.csv",index=False)
     (out/"results.json").write_text(json.dumps(dict(panels=report,extremes=extremes),indent=2,allow_nan=False)+"\n")
-    render(list(charts.values()),extremes,out/"hold-chart.html")
+    render(list(charts.values()),extremes,out/"hold-chart.html",model)
 
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("scratch",type=Path)
     p.add_argument("output",type=Path)
+    p.add_argument("--model", choices=["adverse_impact","failed_recovery"],default="adverse_impact")
     args=p.parse_args()
-    run(args.scratch,args.output)
+    run(args.scratch,args.output,args.model)

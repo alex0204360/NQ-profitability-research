@@ -1,0 +1,138 @@
+{
+  "discovery": {
+    "original": {
+      "trades": 206,
+      "net": -847.5,
+      "net_per_trade": -4.114077669902913,
+      "marked_drawdown": 2269.0,
+      "gap_exits": 4,
+      "profitable_sessions": 6
+    },
+    "candidate": {
+      "trades": 231,
+      "net": -215.5,
+      "net_per_trade": -0.9329004329004329,
+      "marked_drawdown": 1861.5,
+      "gap_exits": 2,
+      "profitable_sessions": 8
+    },
+    "attribution": {
+      "common": 198,
+      "earlier_on_original_winners": {
+        "count": 26,
+        "net_delta": -507.0
+      },
+      "earlier_on_original_nonwinners": {
+        "count": 38,
+        "net_delta": 1413.5
+      },
+      "common_net_delta": 906.5,
+      "original_only": 8,
+      "original_only_net": -187.0,
+      "candidate_only": 33,
+      "candidate_only_net": -461.5
+    }
+  },
+  "november": {
+    "original": {
+      "trades": 93,
+      "net": 2112.5,
+      "net_per_trade": 22.71505376344086,
+      "marked_drawdown": 1727.5,
+      "gap_exits": 0,
+      "profitable_sessions": 9
+    },
+    "candidate": {
+      "trades": 110,
+      "net": 37.5,
+      "net_per_trade": 0.3409090909090909,
+      "marked_drawdown": 1303.5,
+      "gap_exits": 0,
+      "profitable_sessions": 7
+    },
+    "attribution": {
+      "common": 83,
+      "earlier_on_original_winners": {
+        "count": 24,
+        "net_delta": -3377.0
+      },
+      "earlier_on_original_nonwinners": {
+        "count": 15,
+        "net_delta": 1439.0
+      },
+      "common_net_delta": -1938.0,
+      "original_only": 10,
+      "original_only_net": 587.0,
+      "candidate_only": 27,
+      "candidate_only_net": 450.0
+    }
+  },
+  "november_except_focus": {
+    "original": {
+      "trades": 90,
+      "net": 2239.0,
+      "net_per_trade": 24.877777777777776,
+      "marked_drawdown": 995.0,
+      "gap_exits": 0,
+      "profitable_sessions": 9
+    },
+    "candidate": {
+      "trades": 103,
+      "net": 112.5,
+      "net_per_trade": 1.0922330097087378,
+      "marked_drawdown": 967.0,
+      "gap_exits": 0,
+      "profitable_sessions": 7
+    },
+    "attribution": {
+      "common": 80,
+      "earlier_on_original_winners": {
+        "count": 23,
+        "net_delta": -2822.5
+      },
+      "earlier_on_original_nonwinners": {
+        "count": 14,
+        "net_delta": 714.5
+      },
+      "common_net_delta": -2108.0,
+      "original_only": 10,
+      "original_only_net": 587.0,
+      "candidate_only": 23,
+      "candidate_only_net": 568.5
+    }
+  },
+  "focus": {
+    "original": {
+      "trades": 3,
+      "net": -126.5,
+      "net_per_trade": -42.166666666666664,
+      "marked_drawdown": 1526.5,
+      "gap_exits": 0,
+      "profitable_sessions": 0
+    },
+    "candidate": {
+      "trades": 7,
+      "net": -75.0,
+      "net_per_trade": -10.714285714285714,
+      "marked_drawdown": 1031.5,
+      "gap_exits": 0,
+      "profitable_sessions": 0
+    },
+    "attribution": {
+      "common": 3,
+      "earlier_on_original_winners": {
+        "count": 1,
+        "net_delta": -554.5
+      },
+      "earlier_on_original_nonwinners": {
+        "count": 1,
+        "net_delta": 724.5
+      },
+      "common_net_delta": 170.0,
+      "original_only": 0,
+      "original_only_net": 0.0,
+      "candidate_only": 4,
+      "candidate_only_net": -118.5
+    }
+  }
+}

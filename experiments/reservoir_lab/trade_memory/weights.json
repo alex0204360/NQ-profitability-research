@@ -1,0 +1,10 @@
+{
+  "parent": "2d30c9c5",
+  "retention": 0.875,
+  "flat_reset_weights": [[0, 0], [0, 0]],
+  "shadow_state_weights": [[0.875, 0, 0, 1], [0, 0.875, 0.875, 0]],
+  "shadow_state_inputs": ["retained_stock", "signed_release", "previous_forecast", "charge"],
+  "gate_readout": "min(side * raw_points, side * shadow_points) > hurdle",
+  "hurdle": 1.5,
+  "local_pulse_readout": [0.413818359375, -1]
+}

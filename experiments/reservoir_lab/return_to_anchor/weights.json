@@ -1,0 +1,11 @@
+{
+  "input": ["marked_progress_in_initial_ranges", "negated_progress_in_initial_ranges"],
+  "comparison_weights": [[1,0],[0,1]],
+  "comparison_bias": [-1,0],
+  "comparison_activation": "step_ge_zero",
+  "latch_input": ["old_armed","favorable","at_or_behind_anchor","old_retired"],
+  "latch_weights": [[1,1,0,0],[1,0,1,0],[0,0,0,1]],
+  "latch_bias": [-0.5,-1.5,-0.5],
+  "output": "raw * (1 - max(failed_now, previously_retired))",
+  "anchor_hurdle_points": 1.5
+}

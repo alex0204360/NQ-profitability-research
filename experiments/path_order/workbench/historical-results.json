@@ -1,0 +1,860 @@
+{
+  "panels": {
+    "discovery": {
+      "base": {
+        "trades": 206,
+        "net": -847.5,
+        "drawdown": 2269.0,
+        "worst_day": -438.5,
+        "gap_exits": 4,
+        "cutoff_exits": 18
+      },
+      "guard": {
+        "trades": 199,
+        "net": -918.0,
+        "drawdown": 2339.5,
+        "worst_day": -509.0,
+        "gap_exits": 4,
+        "cutoff_exits": 17
+      }
+    },
+    "november-extension": {
+      "base": {
+        "trades": 68,
+        "net": 1245.5,
+        "drawdown": 874.0,
+        "worst_day": -493.5,
+        "gap_exits": 0,
+        "cutoff_exits": 7
+      },
+      "guard": {
+        "trades": 65,
+        "net": 1208.5,
+        "drawdown": 874.0,
+        "worst_day": -530.5,
+        "gap_exits": 0,
+        "cutoff_exits": 6
+      }
+    },
+    "november": {
+      "base": {
+        "trades": 25,
+        "net": 867.0,
+        "drawdown": 1727.5,
+        "worst_day": -131.5,
+        "gap_exits": 0,
+        "cutoff_exits": 5
+      },
+      "guard": {
+        "trades": 25,
+        "net": 478.5,
+        "drawdown": 1510.0,
+        "worst_day": -515.0,
+        "gap_exits": 0,
+        "cutoff_exits": 4
+      }
+    },
+    "november_combined": {
+      "base": {
+        "trades": 93,
+        "net": 2112.5,
+        "drawdown": 1727.5,
+        "worst_day": -493.5,
+        "gap_exits": 0,
+        "cutoff_exits": 12
+      },
+      "guard": {
+        "trades": 90,
+        "net": 1687.0,
+        "drawdown": 1510.0,
+        "worst_day": -530.5,
+        "gap_exits": 0,
+        "cutoff_exits": 10
+      }
+    }
+  },
+  "sessions": [
+    {
+      "date": "2026-09-14",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 11,
+        "net": -170.0,
+        "drawdown": 235.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-14T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 11,
+        "net": -170.0,
+        "drawdown": 235.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-14T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-15",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": -3.0,
+        "drawdown": 183.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-15T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": -3.0,
+        "drawdown": 183.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-15T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-16",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": 226.0,
+        "drawdown": 364.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-16T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": 226.0,
+        "drawdown": 364.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-16T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-17",
+      "bars": 389,
+      "missing_daytime_minutes": 1,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 16,
+        "net": -102.5,
+        "drawdown": 292.0,
+        "cutoff_exits": 1,
+        "gap_exits": 1,
+        "last_exit": "2026-09-17T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 16,
+        "net": -102.5,
+        "drawdown": 292.0,
+        "cutoff_exits": 1,
+        "gap_exits": 1,
+        "last_exit": "2026-09-17T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-18",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 5,
+        "net": -34.5,
+        "drawdown": 128.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-18T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 5,
+        "net": -34.5,
+        "drawdown": 128.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-18T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-21",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 12,
+        "net": -302.0,
+        "drawdown": 353.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-21T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 12,
+        "net": -302.0,
+        "drawdown": 353.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-21T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-22",
+      "bars": 389,
+      "missing_daytime_minutes": 1,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 20,
+        "net": 1.5,
+        "drawdown": 181.0,
+        "cutoff_exits": 1,
+        "gap_exits": 1,
+        "last_exit": "2026-09-22T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 20,
+        "net": 1.5,
+        "drawdown": 181.0,
+        "cutoff_exits": 1,
+        "gap_exits": 1,
+        "last_exit": "2026-09-22T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-23",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": "2026-09-23T10:58:00-04:00",
+      "base": {
+        "trades": 10,
+        "net": -438.5,
+        "drawdown": 562.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-23T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 3,
+        "net": -509.0,
+        "drawdown": 509.0,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-09-23T10:58:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-24",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 7,
+        "net": -59.0,
+        "drawdown": 267.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-24T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 7,
+        "net": -59.0,
+        "drawdown": 267.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-24T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-25",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 13,
+        "net": -370.5,
+        "drawdown": 700.5,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-09-25T15:53:00-04:00"
+      },
+      "guard": {
+        "trades": 13,
+        "net": -370.5,
+        "drawdown": 700.5,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-09-25T15:53:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-28",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 12,
+        "net": -316.0,
+        "drawdown": 529.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-28T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 12,
+        "net": -316.0,
+        "drawdown": 529.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-28T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-29",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 7,
+        "net": -90.5,
+        "drawdown": 304.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-29T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 7,
+        "net": -90.5,
+        "drawdown": 304.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-29T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-09-30",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 12,
+        "net": 115.5,
+        "drawdown": 227.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-30T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 12,
+        "net": 115.5,
+        "drawdown": 227.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-09-30T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-01",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": 460.5,
+        "drawdown": 353.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-01T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": 460.5,
+        "drawdown": 353.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-01T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-02",
+      "bars": 389,
+      "missing_daytime_minutes": 1,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 12,
+        "net": -325.5,
+        "drawdown": 420.5,
+        "cutoff_exits": 0,
+        "gap_exits": 1,
+        "last_exit": "2026-10-02T15:41:00-04:00"
+      },
+      "guard": {
+        "trades": 12,
+        "net": -325.5,
+        "drawdown": 420.5,
+        "cutoff_exits": 0,
+        "gap_exits": 1,
+        "last_exit": "2026-10-02T15:41:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-05",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 9,
+        "net": -261.5,
+        "drawdown": 306.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-05T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 9,
+        "net": -261.5,
+        "drawdown": 306.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-05T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-06",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": 308.5,
+        "drawdown": 151.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-06T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": 308.5,
+        "drawdown": 151.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-06T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-07",
+      "bars": 389,
+      "missing_daytime_minutes": 1,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 12,
+        "net": -55.0,
+        "drawdown": 195.0,
+        "cutoff_exits": 1,
+        "gap_exits": 1,
+        "last_exit": "2026-10-07T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 12,
+        "net": -55.0,
+        "drawdown": 195.0,
+        "cutoff_exits": 1,
+        "gap_exits": 1,
+        "last_exit": "2026-10-07T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-08",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 9,
+        "net": 715.0,
+        "drawdown": 289.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-08T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 9,
+        "net": 715.0,
+        "drawdown": 289.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-08T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-10-09",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 7,
+        "net": -146.0,
+        "drawdown": 262.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-09T15:55:00-04:00"
+      },
+      "guard": {
+        "trades": 7,
+        "net": -146.0,
+        "drawdown": 262.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-10-09T15:55:00-04:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-03",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": "2026-11-03T14:31:00-05:00",
+      "base": {
+        "trades": 10,
+        "net": -493.5,
+        "drawdown": 578.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-03T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 7,
+        "net": -530.5,
+        "drawdown": 530.5,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-11-03T14:31:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-04",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 6,
+        "net": 274.0,
+        "drawdown": 434.5,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-11-04T15:48:00-05:00"
+      },
+      "guard": {
+        "trades": 6,
+        "net": 274.0,
+        "drawdown": 434.5,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-11-04T15:48:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-05",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": 200.5,
+        "drawdown": 874.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-05T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": 200.5,
+        "drawdown": 874.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-05T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-06",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 6,
+        "net": 194.5,
+        "drawdown": 308.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-06T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 6,
+        "net": 194.5,
+        "drawdown": 308.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-06T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-09",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 12,
+        "net": 433.0,
+        "drawdown": 341.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-09T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 12,
+        "net": 433.0,
+        "drawdown": 341.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-09T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-10",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": 888.5,
+        "drawdown": 372.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-10T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": 888.5,
+        "drawdown": 372.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-10T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-11",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 6,
+        "net": -200.5,
+        "drawdown": 232.0,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-11-11T15:54:00-05:00"
+      },
+      "guard": {
+        "trades": 6,
+        "net": -200.5,
+        "drawdown": 232.0,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-11-11T15:54:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-12",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 8,
+        "net": 67.0,
+        "drawdown": 278.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-12T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 8,
+        "net": 67.0,
+        "drawdown": 278.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-12T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-13",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 4,
+        "net": -118.0,
+        "drawdown": 251.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-13T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 4,
+        "net": -118.0,
+        "drawdown": 251.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-13T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-16",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 6,
+        "net": 342.0,
+        "drawdown": 272.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-16T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 6,
+        "net": 342.0,
+        "drawdown": 272.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-16T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-17",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 6,
+        "net": 184.0,
+        "drawdown": 969.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-17T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 6,
+        "net": 184.0,
+        "drawdown": 969.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-17T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-18",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 4,
+        "net": -131.5,
+        "drawdown": 851.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-18T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 4,
+        "net": -131.5,
+        "drawdown": 851.0,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-18T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-19",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": "2026-11-19T12:21:00-05:00",
+      "base": {
+        "trades": 3,
+        "net": -126.5,
+        "drawdown": 1526.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-19T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 3,
+        "net": -515.0,
+        "drawdown": 1024.5,
+        "cutoff_exits": 0,
+        "gap_exits": 0,
+        "last_exit": "2026-11-19T12:21:00-05:00"
+      },
+      "cash_net": 0.0
+    },
+    {
+      "date": "2026-11-20",
+      "bars": 390,
+      "missing_daytime_minutes": 0,
+      "loss_trigger_close": null,
+      "base": {
+        "trades": 6,
+        "net": 599.0,
+        "drawdown": 542.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-20T15:55:00-05:00"
+      },
+      "guard": {
+        "trades": 6,
+        "net": 599.0,
+        "drawdown": 542.5,
+        "cutoff_exits": 1,
+        "gap_exits": 0,
+        "last_exit": "2026-11-20T15:55:00-05:00"
+      },
+      "cash_net": 0.0
+    }
+  ]
+}

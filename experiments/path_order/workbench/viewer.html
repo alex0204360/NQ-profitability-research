@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MNQ · Reservoir Replay</title>
+<style>
+:root{color-scheme:dark;--page:#0b1119;--panel:#111b28;--chart:#0d1621;--line:#273648;--text:#e0e9f4;--muted:#a0b2c8;--teal:#5de0bc;--red:#ff8b9c;--gold:#ffd080;--blue:#8fb8ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--text);font:14px system-ui,sans-serif}
+main{max-width:1800px;margin:auto;padding:24px clamp(12px,3vw,42px)}
+header,.toolbar,.legend,.stats{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px}
+header{justify-content:space-between;margin-bottom:23px}
+h1,h2,p{margin:0}
+h1{font-size:clamp(23px,3vw,32px);letter-spacing:-.045em}
+h2{font-size:15px}
+.eyebrow{font:600 11px ui-monospace,monospace;letter-spacing:.13em;color:var(--teal);text-transform:uppercase;margin-bottom:5px}
+.timezone,.hint,.legend,.stats span,.metric-label,.reason{color:var(--muted)}
+.timezone,.stats,.mono,#readout,#ledger{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-variant-numeric:tabular-nums}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(275px,330px);gap:14px;align-items:start}
+.panel{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.toolbar{padding:13px;border-bottom:1px solid var(--line)}
+.group{display:flex;align-items:center;gap:5px}
+.group.zoom{margin-left:auto}
+button,select{border:1px solid var(--line);border-radius:6px;background:#172436;color:var(--text);font:inherit;padding:7px 10px;min-height:35px}
+button{cursor:pointer}
+button:hover,select:hover{border-color:var(--blue)}
+button:focus-visible,select:focus-visible,canvas:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+button[aria-pressed=true]{background:#203c42;border-color:#467975;color:#b9ffef}
+button:disabled{opacity:.35;cursor:default}
+.legend{padding:9px 13px;font-size:12px;border-bottom:1px solid var(--line)}
+.rise,.long,.pos{color:var(--teal)}
+.fall,.short,.neg{color:var(--red)}
+.exit,.guard{color:var(--gold)}
+.forecast{color:var(--blue)}
+#readout{padding:8px 13px;height:50px;overflow:auto;line-height:1.5;font-size:11px;background:var(--chart);color:var(--muted)}
+#readout b{color:var(--text);font-weight:500}
+canvas{width:100%;height:clamp(360px,60vh,660px);background:var(--chart);display:block;touch-action:pan-y;cursor:crosshair}
+canvas.dragging{cursor:grabbing}
+.hint{padding:9px 13px;font-size:12px}
+.neuron{padding:11px 13px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.neuron summary{cursor:pointer;color:var(--text)}
+.neuron p{margin-top:9px;max-width:78ch;line-height:1.6}
+.side-head{padding:15px;border-bottom:1px solid var(--line)}
+.stats{font-size:12px;margin-top:8px}
+#detail{border-bottom:1px solid var(--line);padding:15px;min-height:110px}
+.detail-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;font-size:12px;margin-top:11px}
+.metric-label{display:block;font-size:11px;margin-bottom:3px}
+.reason{font-size:12px;margin-top:9px}
+#ledger{max-height:clamp(260px,46vh,580px);overflow:auto}
+.ledger-head,.trade{display:grid;grid-template-columns:46px 1fr 1fr 74px;gap:6px;align-items:center;padding:8px 12px;width:100%;font:inherit;text-align:left}
+.ledger-head{font-size:11px;color:var(--muted);position:sticky;top:0;background:#142131;z-index:1}
+.trade{background:transparent;border:0;border-bottom:1px solid #1d2b3b;border-radius:0;font-size:11px}
+.trade:hover,.trade[aria-pressed=true]{background:#203748}
+.trade>:last-child,.ledger-head>:last-child{text-align:right}
+.empty{padding:14px;color:var(--muted);font:13px system-ui,sans-serif}
+@media(max-width:940px){.layout{grid-template-columns:minmax(0,1fr)}#ledger{max-height:330px}}
+@media(max-width:500px){main{padding-top:14px}.toolbar,.legend{gap:6px;padding:8px}.group.zoom{margin-left:0}header{margin-bottom:13px}button,select{padding:5px 7px}#readout{height:83px}}
+</style>
+<main>
+<header>
+<div><p class="eyebrow">Path Order Research</p><h1>MNQ Reservoir Replay</h1></div>
+<p class="timezone">1-minute bars · New York time</p>
+</header>
+<div class="layout">
+<section class="panel" aria-label="Session chart">
+<div class="toolbar">
+  <div class="group">
+    <button id="previous" type="button" aria-label="Previous session" title="Previous session [">‹</button>
+    <select id="session" aria-label="Session"></select>
+    <button id="next" type="button" aria-label="Next session" title="Next session ]">›</button>
+  </div>
+  <div class="group" aria-label="Replay variant">
+    <button id="base" type="button" aria-pressed="true">Reference</button>
+    <button id="guard" type="button" aria-pressed="false">Guarded</button>
+  </div>
+  <div class="group zoom" aria-label="Chart navigation">
+    <button id="out" type="button" aria-label="Zoom out">−</button>
+    <button id="in" type="button" aria-label="Zoom in">+</button>
+    <button id="reset" type="button">Reset view</button>
+  </div>
+</div>
+<div class="legend">
+  <span class="long">▲ Long entry</span><span class="short">▼ Short entry</span><span class="exit">◆ Exit</span>
+  <span class="forecast">━ Forecast (pts)</span><span>┄ Entry thresholds (±1.5)</span><span class="guard" id="lock-legend" hidden>┆ Guard lock bar</span>
+</div>
+<div id="readout" aria-label="Bar data"></div>
+<canvas id="chart" tabindex="0" aria-label="Candlestick and forecast chart. Use left and right arrows to inspect bars." aria-describedby="chart-hint"></canvas>
+<p class="hint">Modeled next-open fills · $6 round trip per MNQ contract</p>
+<p class="hint" id="chart-hint">Drag to pan · Scroll to zoom · Click a marker or ledger row to inspect the trade · [ / ] change sessions</p>
+<details class="neuron"><summary>How the neuron works</summary><p>Charge is the positive part of volume surprise minus the size of the close-to-close move, with each input measured against its recent baseline. Charge adds to stock. Later moves release some of that stock in the direction of the move. A move of one recent range or more spends the entire available stock, and each portion can be spent only once. Each minute carries forward 7/8 of the unspent stock and 7/8 of the prior directional state. The plot shows the forecast in MNQ points. Stock, charge, and signed release are internal values.</p></details>
+</section>
+<aside class="panel" aria-label="Trade ledger">
+<div class="side-head"><h2>Trade ledger</h2><div class="stats" id="summary"></div></div>
+<div id="detail" aria-live="polite"></div>
+<div id="ledger"></div>
+</aside>
+</div>
+</main>
+<script id="replay-data" type="application/json">__REPLAY_DATA__</script>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const sessions = JSON.parse($("replay-data").textContent).sessions;
+const canvas = $("chart");
+const ctx = canvas.getContext("2d");
+const colors = {
+  grid:"#243347", muted:"#98aec6", text:"#dfe9f4", blue:"#8fb8ff",
+  up:"#5de0bc", down:"#ff8b9c", gold:"#ffd080", focus:"#e5edf7",
+};
+const currency = new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",signDisplay:"exceptZero"});
+const prices = new Intl.NumberFormat("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
+const price = value => prices.format(value);
+const number = value => Number.isFinite(value) ? value.toFixed(2) : "—";
+const points = value => Number.isFinite(value) ? number(value) + " pts" : "—";
+const cutoff = 15*60+55;
+const time = minute => Number.isFinite(minute)
+  ? String(Math.floor(minute/60)).padStart(2,"0") + ":" + String(minute%60).padStart(2,"0")
+  : "—";
+const reasons = {signal:"Forecast exit",time:"Scheduled flatten",gap:"Data gap","daily loss":"Daily loss guard"};
+const clamp = (value,min,max) => Math.max(min,Math.min(max,value));
+let sessionIndex = sessions.length - 1;
+let mode = "base";
+let selected = null;
+let start = 0, end = 0, windowLeft = 0, windowRight = 0;
+let hover = null, hoverBar = null, drag = null;
+let markerTargets = [], plot = null;
+let width = 0, height = 0;
+
+function current() {
+  return sessions[sessionIndex];
+}
+function trades() {
+  return current()?.[mode] || [];
+}
+function bars() {
+  return current()?.bars || [];
+}
+function showBar(bar) {
+  if (!bar) {
+    $("readout").textContent = "Hover over a candle or use the arrow keys to inspect a bar.";
+    return;
+  }
+  $("readout").innerHTML = `<b>${time(bar[0])} ET</b> &nbsp; O <b>${price(bar[1])}</b> &nbsp; H <b>${price(bar[2])}</b> &nbsp; L <b>${price(bar[3])}</b> &nbsp; C <b>${price(bar[4])}</b> &nbsp; Vol <b>${bar[5].toLocaleString("en-US")}</b> &nbsp; Forecast <b>${points(bar[6])}</b> &nbsp; Stock <b>${number(bar[7])}</b> &nbsp; Charge <b>${number(bar[8])}</b> &nbsp; Release <b>${number(bar[9])}</b>`;
+}
+function setWindow(left,right) {
+  const span = clamp(right-left,Math.min(12,end-start),end-start);
+  windowLeft = clamp(left,start,end-span);
+  windowRight = windowLeft + span;
+}
+function resetView() {
+  start = (bars()[0]?.[0] ?? 570) - .5;
+  end = (bars().at(-1)?.[0] ?? 959) + .5;
+  setWindow(start,end);
+  hover = hoverBar = null;
+  draw();
+}
+function changeSession(index) {
+  if (index < 0 || index >= sessions.length) return;
+  sessionIndex = index;
+  selected = null;
+  $("session").value = index;
+  $("previous").disabled = index === 0;
+  $("next").disabled = index === sessions.length - 1;
+  renderLedger();
+  resetView();
+}
+function changeMode(next) {
+  if (mode === next) return;
+  mode = next;
+  selected = null;
+  renderLedger();
+  draw();
+}
+function renderLedger() {
+  $("base").setAttribute("aria-pressed",String(mode === "base"));
+  $("guard").setAttribute("aria-pressed",String(mode === "guard"));
+  $("lock-legend").hidden = !(mode === "guard" && Number.isFinite(current()?.lock));
+  const net = trades().reduce((sum,trade) => sum + trade.net,0);
+  $("summary").innerHTML = `<span>${trades().length} trades</span><strong class="${net < 0 ? "neg" : "pos"}">${currency.format(net)} net</strong>`;
+  $("ledger").replaceChildren();
+  if (!trades().length) {
+    $("ledger").innerHTML = '<p class="empty">No trades in this session.</p>';
+  } else {
+    const heading = document.createElement("div");
+    heading.className = "ledger-head";
+    heading.innerHTML = "<span>Side</span><span>Entry</span><span>Exit</span><span>Net USD</span>";
+    $("ledger").append(heading);
+    trades().forEach((trade,index) => {
+      const row = document.createElement("button");
+      row.className = "trade";
+      row.type = "button";
+      row.dataset.index = index;
+      row.setAttribute("aria-pressed","false");
+      row.innerHTML = `<span class="${trade.side === "long" ? "long" : "short"}">${trade.side === "long" ? "Long" : "Short"}</span><span>${time(trade.entry)}</span><span>${time(trade.exit)}</span><span class="${trade.net < 0 ? "neg" : "pos"}">${currency.format(trade.net)}</span>`;
+      row.onclick = () => selectTrade(index);
+      $("ledger").append(row);
+    });
+  }
+  showDetail();
+}
+function showDetail() {
+  const trade = trades()[selected];
+  if (!trade) {
+    $("detail").innerHTML = '<p class="reason">Select a trade to see its fills and exit reason.</p>';
+    return;
+  }
+  const side = trade.side === "long" ? "Long" : "Short";
+  const signalBar = bars().find(bar => bar[0] === trade.signal);
+  $("detail").innerHTML = `<div class="detail-top"><strong class="${side.toLowerCase()}">${side} · Trade ${selected + 1}</strong><strong class="mono ${trade.net < 0 ? "neg" : "pos"}">${currency.format(trade.net)}</strong></div>
+  <div class="detail-grid mono">
+    <span><span class="metric-label">Entry fill</span>${time(trade.entry)} · ${price(trade.ep)}</span>
+    <span><span class="metric-label">Exit fill</span>${time(trade.exit)} · ${price(trade.xp)}</span>
+    <span><span class="metric-label">Decision time</span>${time(trade.signal+1)} ET</span>
+    <span><span class="metric-label">Duration</span>${trade.exit-trade.entry} min</span>
+    <span><span class="metric-label">Decision forecast</span>${points(signalBar?.[6])}</span>
+    <span><span class="metric-label">Stock</span>${number(signalBar?.[7])}</span>
+    <span><span class="metric-label">Charge</span>${number(signalBar?.[8])}</span>
+    <span><span class="metric-label">Signed release</span>${number(signalBar?.[9])}</span>
+  </div><p class="reason"></p>`;
+  $("detail").querySelector(".reason").textContent = "Exit reason · " + (reasons[trade.reason] || trade.reason || "—");
+}
+function selectTrade(index) {
+  selected = index;
+  showDetail();
+  $("ledger").querySelectorAll(".trade").forEach((row,i) =>
+    row.setAttribute("aria-pressed",String(i === selected)));
+  $("ledger").querySelector(`[data-index="${index}"]`)?.scrollIntoView({block:"nearest",behavior:"instant",container:"nearest"});
+  const trade = trades()[index];
+  if (trade.entry < windowLeft || trade.exit > windowRight) {
+    const span = Math.max(windowRight-windowLeft,trade.exit-trade.entry+16);
+    const middle = (trade.entry+trade.exit)/2;
+    setWindow(middle-span/2,middle+span/2);
+  }
+  draw();
+}
+
+function line(x1,y1,x2,y2,color,dash=[]) {
+  ctx.strokeStyle = color;
+  ctx.setLineDash(dash);
+  ctx.beginPath();
+  ctx.moveTo(x1,y1);
+  ctx.lineTo(x2,y2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
+function label(value,x,y,color=colors.muted,align="left") {
+  ctx.fillStyle = color;
+  ctx.textAlign = align;
+  ctx.fillText(value,x,y);
+}
+function bounds() {
+  const rect = canvas.getBoundingClientRect();
+  width = rect.width;
+  height = rect.height;
+  const ratio = window.devicePixelRatio || 1;
+  const pixelWidth = Math.round(width*ratio), pixelHeight = Math.round(height*ratio);
+  if (canvas.width !== pixelWidth || canvas.height !== pixelHeight) {
+    canvas.width = pixelWidth;
+    canvas.height = pixelHeight;
+  }
+  ctx.setTransform(ratio,0,0,ratio,0,0);
+  ctx.clearRect(0,0,width,height);
+  ctx.font = "11px ui-monospace, monospace";
+  ctx.lineWidth = 1;
+  plot = {left:12,right:width-74,top:24,split:Math.round(height*.70),bottom:height-25};
+  plot.forecastTop = plot.split+20;
+}
+function xAt(minute) {
+  return plot.left + (minute-windowLeft)/(windowRight-windowLeft)*(plot.right-plot.left);
+}
+function minuteAt(x) {
+  return windowLeft + (x-plot.left)/(plot.right-plot.left)*(windowRight-windowLeft);
+}
+function tickStep(raw) {
+  const power = 10 ** Math.floor(Math.log10(raw));
+  return ([1,2,2.5,5,10].find(step => step >= raw/power) || 10) * power;
+}
+function priceGrid(low,high,yAt) {
+  const step = tickStep((high-low)/Math.max(3,Math.floor((plot.split-plot.top)/40)));
+  for (let p = Math.ceil(low/step)*step; p <= high; p += step) {
+    const y = yAt(p);
+    line(plot.left,y,plot.right,y,colors.grid);
+    label(price(p),plot.right+7,y+4);
+  }
+}
+function timeGrid() {
+  if (windowRight > cutoff) {
+    const left = clamp(xAt(cutoff),plot.left,plot.right);
+    ctx.fillStyle = "#ffd08012";
+    ctx.fillRect(left,plot.top,plot.right-left,plot.bottom-plot.top);
+  }
+  line(plot.left,plot.split,plot.right,plot.split,colors.grid);
+  line(plot.left,plot.bottom,plot.right,plot.bottom,colors.grid);
+  const minutes = windowRight-windowLeft;
+  const target = minutes/Math.max(1,Math.floor((plot.right-plot.left)/68));
+  const step = [1,2,5,10,15,30,60,120,240].find(value => value >= target) || 360;
+  for (let minute = Math.ceil(windowLeft/step)*step; minute <= windowRight; minute += step) {
+    const x = xAt(minute);
+    line(x,plot.top,x,plot.bottom,colors.grid);
+    label(time(minute),clamp(x,plot.left+16,plot.right-16),height-7,colors.muted,"center");
+  }
+  label("ET",plot.right+7,height-7);
+  label("MNQ PRICE",plot.left,15);
+  if (cutoff >= windowLeft && cutoff <= windowRight) {
+    const x = xAt(cutoff);
+    line(x,plot.top,x,plot.bottom,colors.gold,[3,4]);
+    label("15:55 ET cutoff",clamp(x+52,plot.left+198,plot.right),15,colors.gold,"right");
+  }
+}
+function forecastPanel(visible) {
+  const limit = Math.max(2, ...visible.filter(bar => Number.isFinite(bar[6])).map(bar => Math.abs(bar[6])*1.12));
+  const yAt = points => plot.forecastTop + (limit-points)/(2*limit)*(plot.bottom-plot.forecastTop);
+  label("FORECAST (PTS)",plot.left,plot.split+14);
+  const thresholdLabelGap = yAt(0)-yAt(1.5);
+  for (const level of [1.5,0,-1.5]) {
+    const y = yAt(level);
+    line(plot.left,y,plot.right,y,level ? "#52617a" : colors.grid,level ? [4,4] : []);
+    if (level ? thresholdLabelGap >= 8 : thresholdLabelGap < 8 || thresholdLabelGap >= 13) {
+      label(level > 0 ? "+1.5" : level === 0 ? "0" : "−1.5",plot.right+7,y+4);
+    }
+  }
+  ctx.strokeStyle = colors.blue;
+  ctx.beginPath();
+  let previous = null;
+  for (const bar of visible) {
+    if (!Number.isFinite(bar[6])) {
+      previous = null;
+      continue;
+    }
+    const x = xAt(bar[0]), y = yAt(bar[6]);
+    if (previous === bar[0]-1) ctx.lineTo(x,y);
+    else {
+      ctx.moveTo(x,y);
+      ctx.lineTo(x+.5,y);
+    }
+    previous = bar[0];
+  }
+  ctx.stroke();
+  return yAt;
+}
+function glyph(x,y,side,isExit,active) {
+  const size = active ? 7 : 5;
+  const direction = side === "long" ? -1 : 1;
+  ctx.beginPath();
+  if (isExit) {
+    ctx.moveTo(x,y-size);ctx.lineTo(x+size,y);ctx.lineTo(x,y+size);ctx.lineTo(x-size,y);
+  } else {
+    ctx.moveTo(x,y+size*direction);ctx.lineTo(x+size,y-size*direction);ctx.lineTo(x-size,y-size*direction);
+  }
+  ctx.closePath();
+  ctx.fillStyle = isExit ? colors.gold : side === "long" ? colors.up : colors.down;
+  ctx.fill();
+  ctx.strokeStyle = active ? "#fcfeff" : "#0d1621";
+  ctx.stroke();
+}
+function tradeMarkers(yAt) {
+  markerTargets = [];
+  const active = trades()[selected];
+  if (active) {
+    const entry = xAt(active.entry), exit = xAt(active.exit);
+    const left = clamp(entry,plot.left,plot.right), right = clamp(exit,plot.left,plot.right);
+    ctx.fillStyle = active.side === "long" ? "#5de0bc18" : "#ff8b9c18";
+    ctx.fillRect(left,plot.top,right-left,plot.split-plot.top);
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(plot.left,plot.top,plot.right-plot.left,plot.split-plot.top);
+    ctx.clip();
+    line(entry,yAt(active.ep),exit,yAt(active.xp),active.side === "long" ? colors.up : colors.down,[4,3]);
+    ctx.restore();
+  }
+  const order = trades().map((_,index) => index).filter(index => index !== selected);
+  if (active) order.push(selected);
+  for (const index of order) {
+    const trade = trades()[index];
+    for (const isExit of [false,true]) {
+      const minute = isExit ? trade.exit : trade.entry;
+      if (minute < windowLeft || minute > windowRight) continue;
+      const x = xAt(minute);
+      const fill = yAt(isExit ? trade.xp : trade.ep);
+      const offset = isExit || trade.side === "short" ? -13 : 13;
+      const y = clamp(fill+offset,plot.top+7,plot.split-8);
+      line(x,fill,x,y,colors.muted);
+      glyph(x,y,trade.side,isExit,index === selected);
+      markerTargets.push({x,y,index});
+    }
+  }
+}
+function draw() {
+  bounds();
+  showBar(hoverBar);
+  if (plot.right <= plot.left) return;
+  const visible = bars().filter(bar => bar[0] >= windowLeft && bar[0] <= windowRight);
+  markerTargets = [];
+  timeGrid();
+  if (!visible.length) {
+    label("No bars in this view",width/2,height/2,colors.text,"center");
+    return;
+  }
+  const minimum = Math.min(...visible.map(bar => bar[3]));
+  const maximum = Math.max(...visible.map(bar => bar[2]));
+  const padding = Math.max(.5,(maximum-minimum)*.09);
+  const low = minimum-padding, high = maximum+padding;
+  const yAt = value => plot.top+(high-value)/(high-low)*(plot.split-plot.top);
+  priceGrid(low,high,yAt);
+  const forecastY = forecastPanel(visible);
+  const lock = current()?.lock;
+  if (mode === "guard" && Number.isFinite(lock) && lock >= windowLeft && lock <= windowRight) {
+    const x = xAt(lock);
+    line(x,plot.top,x,plot.bottom,colors.gold,[4,4]);
+    label("Lock bar " + time(lock),clamp(x+5,plot.left,plot.right-100),plot.top+12,colors.gold);
+  }
+  const candleWidth = clamp((plot.right-plot.left)/(windowRight-windowLeft)*.68,1,14);
+  for (const bar of visible) {
+    const [minute,open,high,low,close] = bar;
+    const x = xAt(minute), color = close >= open ? colors.up : colors.down;
+    line(x,yAt(high),x,yAt(low),color);
+    ctx.fillStyle = color;
+    ctx.fillRect(x-candleWidth/2,yAt(Math.max(open,close)),candleWidth,Math.max(1,Math.abs(yAt(open)-yAt(close))));
+  }
+  tradeMarkers(yAt);
+  if (hoverBar && hoverBar[0] >= windowLeft && hoverBar[0] <= windowRight) {
+    const x = xAt(hoverBar[0]);
+    line(x,plot.top,x,plot.bottom,colors.focus,[3,4]);
+    if (hover && hover.y >= plot.top && hover.y <= plot.split) {
+      line(plot.left,hover.y,plot.right,hover.y,colors.focus,[3,4]);
+    }
+    if (Number.isFinite(hoverBar[6])) {
+      ctx.fillStyle = colors.blue;
+      ctx.beginPath();
+      ctx.arc(x,forecastY(hoverBar[6]),3,0,2*Math.PI);
+      ctx.fill();
+    }
+    const tag = clamp(x-19,plot.left,plot.right-38);
+    ctx.fillStyle = "#35557a";
+    ctx.fillRect(tag,plot.bottom+1,38,19);
+    label(time(hoverBar[0]),tag+19,plot.bottom+14,colors.text,"center");
+  }
+}
+function chartPosition(event) {
+  const rect = canvas.getBoundingClientRect();
+  return {x:event.clientX-rect.left,y:event.clientY-rect.top};
+}
+function nearestBar(minute) {
+  return bars().reduce((best,bar) => !best || Math.abs(bar[0]-minute) < Math.abs(best[0]-minute) ? bar : best,null);
+}
+function updateHover(position) {
+  hover = position;
+  hoverBar = position.x >= plot.left && position.x <= plot.right && position.y >= plot.top && position.y <= plot.bottom
+    ? nearestBar(minuteAt(position.x)) : null;
+  draw();
+}
+function zoom(factor,anchor=(windowLeft+windowRight)/2) {
+  setWindow(anchor+(windowLeft-anchor)*factor,anchor+(windowRight-anchor)*factor);
+  draw();
+}
+canvas.addEventListener("wheel",event => {
+  if (!plot || !bars().length) return;
+  event.preventDefault();
+  const x = clamp(chartPosition(event).x,plot.left,plot.right);
+  zoom(event.deltaY < 0 ? .83 : 1.2,minuteAt(x));
+},{passive:false});
+canvas.addEventListener("pointerdown",event => {
+  if (event.button !== 0 || !plot) return;
+  const {x} = chartPosition(event);
+  drag = {x,left:windowLeft,right:windowRight,moved:false};
+  canvas.setPointerCapture(event.pointerId);
+});
+canvas.addEventListener("pointermove",event => {
+  const position = chartPosition(event);
+  if (drag && (drag.moved || Math.abs(position.x-drag.x)>4)) {
+    drag.moved = true;
+    canvas.classList.add("dragging");
+    const shift = (drag.x-position.x)/(plot.right-plot.left)*(drag.right-drag.left);
+    setWindow(drag.left+shift,drag.right+shift);
+  }
+  updateHover(position);
+});
+canvas.addEventListener("pointerup",event => {
+  if (!drag) return;
+  if (!drag.moved) {
+    const {x,y} = chartPosition(event);
+    const matches = markerTargets.map(marker => ({...marker,distance:Math.hypot(marker.x-x,marker.y-y)}))
+      .filter(marker => marker.distance <= 11)
+      .sort((a,b) => Number(b.index === selected)-Number(a.index === selected) || a.distance-b.distance);
+    if (matches.length) selectTrade(matches[0].index);
+  }
+  drag = null;
+  canvas.classList.remove("dragging");
+});
+canvas.addEventListener("pointercancel",() => {
+  drag = null;
+  canvas.classList.remove("dragging");
+});
+canvas.addEventListener("pointerleave",() => {
+  if (drag) return;
+  hover = hoverBar = null;
+  draw();
+});
+canvas.addEventListener("keydown",event => {
+  const direction = {ArrowLeft:-1,ArrowRight:1}[event.key];
+  if (!direction || !bars().length) return;
+  event.preventDefault();
+  const index = hoverBar ? bars().indexOf(hoverBar) : bars().indexOf(nearestBar((windowLeft+windowRight)/2))-direction;
+  hoverBar = bars()[clamp(index+direction,0,bars().length-1)];
+  hover = null;
+  const span = windowRight-windowLeft;
+  if (hoverBar[0] < windowLeft) setWindow(hoverBar[0]-.5,hoverBar[0]-.5+span);
+  if (hoverBar[0] > windowRight) setWindow(hoverBar[0]+.5-span,hoverBar[0]+.5);
+  draw();
+});
+document.addEventListener("keydown",event => {
+  if (event.altKey || event.ctrlKey || event.metaKey || event.target.tagName === "SELECT") return;
+  if (event.key === "[") changeSession(sessionIndex-1);
+  if (event.key === "]") changeSession(sessionIndex+1);
+});
+sessions.forEach((session,index) => $("session").add(new Option(session.date,index)));
+$("session").onchange = event => changeSession(Number(event.target.value));
+$("previous").onclick = () => changeSession(sessionIndex-1);
+$("next").onclick = () => changeSession(sessionIndex+1);
+$("base").onclick = () => changeMode("base");
+$("guard").onclick = () => changeMode("guard");
+$("out").onclick = () => zoom(1.5);
+$("in").onclick = () => zoom(2/3);
+$("reset").onclick = resetView;
+if (sessions.length) changeSession(sessionIndex);
+else {
+  $("previous").disabled = $("next").disabled = $("session").disabled = true;
+  renderLedger();
+  resetView();
+}
+new ResizeObserver(draw).observe(canvas);
+</script>
+</html>

@@ -1,0 +1,6 @@
+{
+  "decay": 0.875,
+  "sided_input": [[1], [-1]],
+  "entry_readout": [[1, -1, 0], [-1, 0, -1]],
+  "hurdle_points": 1.5
+}

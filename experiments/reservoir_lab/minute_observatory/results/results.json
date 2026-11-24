@@ -1,0 +1,183 @@
+{
+  "earlier20": {
+    "original": {
+      "one": {
+        "trades": 206,
+        "net": -847.5,
+        "net_per_trade": -4.114077669902913,
+        "marked_drawdown": 2269.0,
+        "gap_exits": 4,
+        "profitable_sessions": 6
+      },
+      "two": {
+        "trades": 206,
+        "net": -1695.0,
+        "net_per_trade": -8.228155339805825,
+        "marked_drawdown": 4538.0,
+        "gap_exits": 4,
+        "profitable_sessions": 6
+      }
+    },
+    "corroborated": {
+      "one": {
+        "trades": 67,
+        "net": -334.5,
+        "net_per_trade": -4.992537313432836,
+        "marked_drawdown": 1642.5,
+        "gap_exits": 1,
+        "profitable_sessions": 7
+      },
+      "two": {
+        "trades": 67,
+        "net": -669.0,
+        "net_per_trade": -9.985074626865671,
+        "marked_drawdown": 3285.0,
+        "gap_exits": 1,
+        "profitable_sessions": 7
+      }
+    },
+    "effects": {
+      "shared": 9,
+      "skipped": 197,
+      "skipped_net": -704.5,
+      "added": 58,
+      "added_net": -191.5
+    }
+  },
+  "november14": {
+    "original": {
+      "one": {
+        "trades": 93,
+        "net": 2112.5,
+        "net_per_trade": 22.71505376344086,
+        "marked_drawdown": 1727.5,
+        "gap_exits": 0,
+        "profitable_sessions": 9
+      },
+      "two": {
+        "trades": 93,
+        "net": 4225.0,
+        "net_per_trade": 45.43010752688172,
+        "marked_drawdown": 3455.0,
+        "gap_exits": 0,
+        "profitable_sessions": 9
+      }
+    },
+    "corroborated": {
+      "one": {
+        "trades": 36,
+        "net": 165.5,
+        "net_per_trade": 4.597222222222222,
+        "marked_drawdown": 1678.5,
+        "gap_exits": 0,
+        "profitable_sessions": 5
+      },
+      "two": {
+        "trades": 36,
+        "net": 331.0,
+        "net_per_trade": 9.194444444444445,
+        "marked_drawdown": 3357.0,
+        "gap_exits": 0,
+        "profitable_sessions": 5
+      }
+    },
+    "effects": {
+      "shared": 1,
+      "skipped": 92,
+      "skipped_net": 2313.5,
+      "added": 35,
+      "added_net": 366.5
+    }
+  },
+  "nov19": {
+    "original": {
+      "one": {
+        "trades": 3,
+        "net": -126.5,
+        "net_per_trade": -42.166666666666664,
+        "marked_drawdown": 1526.5,
+        "gap_exits": 0,
+        "profitable_sessions": 0
+      },
+      "two": {
+        "trades": 3,
+        "net": -253.0,
+        "net_per_trade": -84.33333333333333,
+        "marked_drawdown": 3053.0,
+        "gap_exits": 0,
+        "profitable_sessions": 0
+      }
+    },
+    "corroborated": {
+      "one": {
+        "trades": 2,
+        "net": -159.0,
+        "net_per_trade": -79.5,
+        "marked_drawdown": 1074.0,
+        "gap_exits": 0,
+        "profitable_sessions": 0
+      },
+      "two": {
+        "trades": 2,
+        "net": -318.0,
+        "net_per_trade": -159.0,
+        "marked_drawdown": 2148.0,
+        "gap_exits": 0,
+        "profitable_sessions": 0
+      }
+    },
+    "effects": {
+      "shared": 0,
+      "skipped": 3,
+      "skipped_net": -126.5,
+      "added": 2,
+      "added_net": -159.0
+    }
+  },
+  "other13": {
+    "original": {
+      "one": {
+        "trades": 90,
+        "net": 2239.0,
+        "net_per_trade": 24.877777777777776,
+        "marked_drawdown": 995.0,
+        "gap_exits": 0,
+        "profitable_sessions": 9
+      },
+      "two": {
+        "trades": 90,
+        "net": 4478.0,
+        "net_per_trade": 49.75555555555555,
+        "marked_drawdown": 1990.0,
+        "gap_exits": 0,
+        "profitable_sessions": 9
+      }
+    },
+    "corroborated": {
+      "one": {
+        "trades": 34,
+        "net": 324.5,
+        "net_per_trade": 9.544117647058824,
+        "marked_drawdown": 856.5,
+        "gap_exits": 0,
+        "profitable_sessions": 5
+      },
+      "two": {
+        "trades": 34,
+        "net": 649.0,
+        "net_per_trade": 19.08823529411765,
+        "marked_drawdown": 1713.0,
+        "gap_exits": 0,
+        "profitable_sessions": 5
+      }
+    },
+    "effects": {
+      "shared": 1,
+      "skipped": 89,
+      "skipped_net": 2440.0,
+      "added": 33,
+      "added_net": 525.5
+    }
+  },
+  "passes": false
+}

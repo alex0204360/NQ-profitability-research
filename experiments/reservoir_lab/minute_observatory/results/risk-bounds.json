@@ -1,0 +1,90 @@
+{
+  "earlier20": {
+    "original": {
+      "net": -847.5,
+      "close_dd": 2269.0,
+      "intraminute_min_dd": 2297.0,
+      "intraminute_max_dd": 2297.0
+    },
+    "confirmation": {
+      "net": -530.5,
+      "close_dd": 1942.0,
+      "intraminute_min_dd": 1966.0,
+      "intraminute_max_dd": 1966.0
+    },
+    "corroborated": {
+      "net": -334.5,
+      "close_dd": 1642.5,
+      "intraminute_min_dd": 1679.5,
+      "intraminute_max_dd": 1679.5
+    }
+  },
+  "november14": {
+    "original": {
+      "net": 2112.5,
+      "close_dd": 1727.5,
+      "intraminute_min_dd": 1803.0,
+      "intraminute_max_dd": 1803.0
+    },
+    "confirmation": {
+      "net": 2013.5,
+      "close_dd": 1245.0,
+      "intraminute_min_dd": 1304.5,
+      "intraminute_max_dd": 1304.5
+    },
+    "corroborated": {
+      "net": 165.5,
+      "close_dd": 1678.5,
+      "intraminute_min_dd": 1754.0,
+      "intraminute_max_dd": 1754.0
+    }
+  },
+  "nov19": {
+    "original": {
+      "net": -126.5,
+      "close_dd": 1526.5,
+      "intraminute_min_dd": 1594.5,
+      "intraminute_max_dd": 1594.5
+    },
+    "confirmation": {
+      "net": -362.0,
+      "close_dd": 1245.0,
+      "intraminute_min_dd": 1304.5,
+      "intraminute_max_dd": 1304.5
+    },
+    "corroborated": {
+      "net": -159.0,
+      "close_dd": 1074.0,
+      "intraminute_min_dd": 1231.0,
+      "intraminute_max_dd": 1231.0
+    }
+  },
+  "other13": {
+    "original": {
+      "net": 2239.0,
+      "close_dd": 995.0,
+      "intraminute_min_dd": 1081.0,
+      "intraminute_max_dd": 1081.0
+    },
+    "confirmation": {
+      "net": 2375.5,
+      "close_dd": 1029.5,
+      "intraminute_min_dd": 1092.0,
+      "intraminute_max_dd": 1092.0
+    },
+    "corroborated": {
+      "net": 324.5,
+      "close_dd": 856.5,
+      "intraminute_min_dd": 942.5,
+      "intraminute_max_dd": 942.5
+    }
+  },
+  "nov23": {
+    "original": {
+      "net": -645.0,
+      "close_dd": 1273.5,
+      "intraminute_min_dd": 1374.5,
+      "intraminute_max_dd": 1374.5
+    }
+  }
+}

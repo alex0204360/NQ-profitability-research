@@ -18,7 +18,7 @@ TRADE_COLUMNS = [
 ]
 
 
-def simulate(bars, raw, hold_long, hold_short, fixed_signals=None):
+def simulate(bars, raw, hold_long, hold_short, fixed_signals=None, policy=None):
     """Simulate entries and side-specific continuation exits on one NY session.
 
     All signals are known at their bar close and fill at the next contiguous
@@ -144,6 +144,11 @@ def simulate(bars, raw, hold_long, hold_short, fixed_signals=None):
         held_at_close = position is not None and not exit_open
         side = position["side"] if held_at_close else 0
         continuation = long_values[i] if side == 1 else short_values[i] if side == -1 else np.nan
+        entry_score = raw_values[i]
+        if policy is not None:
+            exited = trades[-1] if trades and trades[-1]["exit_time"] == timestamp else None
+            entry_score, continuation = policy.close_scores(
+                i, closed[i], raw_values[i], position, exited, contiguous, long_values[i], short_values[i])
         trace_values.append(continuation if side else np.nan)
 
         if held_at_close and pending is None:
@@ -158,7 +163,7 @@ def simulate(bars, raw, hold_long, hold_short, fixed_signals=None):
                     pending = {"kind": "exit", "due": due, "reason": "hold"}
         elif not held_at_close and position is None and pending is None:
             if fixed_signals is None:
-                score = raw_values[i]
+                score = entry_score
                 if np.isfinite(score) and abs(score) > ENTRY_THRESHOLD_POINTS:
                     due = timestamp + MINUTE
                     if due.time() < FLATTEN_TIME:

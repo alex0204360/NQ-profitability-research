@@ -40,7 +40,7 @@ function updatePolicy() {
   $("reset-legend").hidden = !resetsAtEntry();
 }
 function resetsAtEntry() {
-  return mode === "local" || mode === "both" || mode === "fixed_local";
+  return resetModes.includes(mode);
 }
 function memoryResetMarkers() {
   if (!resetsAtEntry()) return;
@@ -53,8 +53,10 @@ function memoryResetMarkers() {
 """
 
 
-def render(sessions, extremes, target):
-    """Write the five replay layers using the original chart and shared hold traces."""
+def render(sessions, extremes, target, *, policies=POLICIES, title="Reservoir Trade Memory",
+           default_mode="both", fixed_mode="fixed_local", reset_modes=("local", "both", "fixed_local"),
+           score_label="experimental four-minute score", explanation=None):
+    """Write the replay layers using the original chart and shared hold traces."""
     source = VIEWER.read_text(encoding="utf-8")
 
     def replace(old, new):
@@ -68,18 +70,18 @@ def render(sessions, extremes, target):
         end = source.index(after, start + len(first))
         replace(source[start:end], content)
 
-    hold_script = IMPACT_SCRIPT.replace('"fixed_volume"', '"fixed_local"')
-    replace("<title>MNQ · Reservoir Replay</title>", "<title>MNQ · Reservoir Trade Memory</title>")
-    replace("<h1>MNQ Reservoir Replay</h1>", "<h1>Reservoir Trade Memory</h1>")
+    hold_script = IMPACT_SCRIPT.replace('"fixed_volume"', json.dumps(fixed_mode))
+    replace("<title>MNQ · Reservoir Replay</title>", f"<title>MNQ · {title}</title>")
+    replace("<h1>MNQ Reservoir Replay</h1>", f"<h1>{title}</h1>")
     replace("</style>", IMPACT_CSS + STYLE + "</style>")
     replace_section('  <div class="group" aria-label="Replay variant">',
                     '  <div class="group zoom"', MODE_CONTROLS)
     replace('<div class="legend">', EXTREME_CONTROLS + '<p class="hint" id="policy" aria-live="polite"></p>\n<div class="legend">')
-    replace_section('  <span class="forecast">━ Forecast (pts)', '\n</div>', LEGEND)
-    replace("</details>", """<p>The original forecast stays the same across all five modes. Hold values appear at completed bars while a trade is open. Positive values favor continuing either a long or a short. Zero or negative values request an exit at the next open. Entry-local exit memory starts over at the entry fill. The fresh-evidence policy applies to entries and leaves the original forecast intact.</p></details>""")
+    replace_section('  <span class="forecast">━ Forecast (pts)', '\n</div>', LEGEND.replace('experimental four-minute score', score_label))
+    replace("</details>", explanation + "</details>" if explanation else """<p>The original forecast stays the same across modes. Hold values appear at completed bars while a trade is open. Positive values favor continuing either a long or a short. Zero or negative values request an exit at the next open. Entry-local exit memory starts over at the entry fill. The fresh-evidence policy applies to entries and leaves the original forecast intact.</p></details>""")
     replace('const sessions = JSON.parse($("replay-data").textContent).sessions;',
-            'const {sessions,policies,extremes} = JSON.parse($("replay-data").textContent);')
-    replace('let mode = "base";', 'let mode = "both";')
+            'const {sessions,policies,extremes,resetModes} = JSON.parse($("replay-data").textContent);')
+    replace('let mode = "base";', f'let mode = {json.dumps(default_mode)};')
     replace('const reasons = {signal:', 'const reasons = {hold:"Hold exit",signal:')
     replace('return current()?.[mode] || [];', 'return current()?.layers?.[mode]?.trades || [];')
     replace('  sessionIndex = index;', '  activeCase = null;\n  sessionIndex = index;')
@@ -104,6 +106,6 @@ def render(sessions, extremes, target):
                     '$("mode").onchange = event => changeMode(event.target.value);\n'
                     'for (const id of cases) $(id).onclick = () => jumpToCase(id);\n')
     replace("__REPLAY_DATA__", json.dumps(
-        {"sessions": sessions, "policies": POLICIES, "extremes": extremes}, separators=(",", ":"), allow_nan=False
+        {"sessions": sessions, "policies": policies, "extremes": extremes, "resetModes": reset_modes}, separators=(",", ":"), allow_nan=False
     ).replace("<", r"\u003c"))
     Path(target).write_text(source, encoding="utf-8")

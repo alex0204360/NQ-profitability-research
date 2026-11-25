@@ -46,16 +46,3 @@ def encode(b):
                 out.loc[g.index[j],["range","velocity","collision"]]=np.column_stack((scale,vel,collision))
     return out
 
-
-class Pulse:
-    def __init__(self,score):
-        self.score=score
-
-    def close_scores(self,i,close,raw,position,exited,contiguous,long_hold,short_hold):
-        score=self.score.iat[i]
-        entry=score if abs(score)>C["cost_points"] else 0.
-        hold=1.
-        if position:
-            elapsed=(self.score.index[i]-position["entry_time"])/pd.Timedelta(minutes=1)
-            hold=0. if not np.isfinite(score) or elapsed>=C["holding_bars"]-1 else 1.
-        return entry,hold

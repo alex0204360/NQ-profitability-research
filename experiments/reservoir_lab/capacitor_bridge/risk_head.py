@@ -18,6 +18,9 @@ class RiskCapacitor:
         self.log_scale=math.log(INITIAL)
         self.history=deque(maxlen=CFG["prior_window"])
 
+    def feedback(self,origin,miss):
+        self.log_scale+=CFG["log_gain"]*(float(miss)-(1-Q))
+
     def session(self,b,a):
         pending={}
         records=[]
@@ -32,7 +35,7 @@ class RiskCapacitor:
                 down=start-min(b.low.iloc[origin+1:i].min(),bar.open)
                 distance=max(up,down)
                 records.append((b.index[origin],bar.Index,up,down,distance,old,physical,rolling))
-                self.log_scale+=CFG["log_gain"]*(float(distance>old)-(1-Q))
+                self.feedback(b.index[origin],distance>old)
                 self.history.append(distance)
             band=scale*math.exp(self.log_scale)
             physical=scale*INITIAL

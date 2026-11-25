@@ -1,0 +1,7 @@
+{
+  "location": [2,-1,-1], "orient": [1,-1],
+  "flow_readout": [-1,1], "prior_decay": 0.96875,
+  "baseline_volume_half_life": 8, "cohorts": 32, "tick": 0.25,
+  "adverse_span": 1, "impact_exponent": 0.5,
+  "entry_cost_points": 3, "exit_floor_points": 0.125
+}

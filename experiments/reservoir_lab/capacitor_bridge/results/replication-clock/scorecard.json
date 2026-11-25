@@ -1,0 +1,73 @@
+{
+  "replication5": {
+    "models": {
+      "band": {
+        "n": 1750,
+        "coverage": 0.8942857142857142,
+        "mean_halfwidth": 50.434024196168274,
+        "quantile_loss": 3.633101408027067,
+        "worst_overflow": 123.61023713898518,
+        "daily_coverage_range": [
+          0.8885714285714286,
+          0.9028571428571428
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8942857142857144,
+          "block95": null
+        }
+      },
+      "physical": {
+        "n": 1750,
+        "coverage": 0.8954285714285715,
+        "mean_halfwidth": 48.90945824398629,
+        "quantile_loss": 3.535950488748985,
+        "worst_overflow": 126.86221374373622,
+        "daily_coverage_range": [
+          0.8542857142857143,
+          0.9285714285714286
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8954285714285714,
+          "block95": null
+        }
+      },
+      "rolling": {
+        "n": 1750,
+        "coverage": 0.864,
+        "mean_halfwidth": 44.54517227549397,
+        "quantile_loss": 3.4880104294513017,
+        "worst_overflow": 119.0,
+        "daily_coverage_range": [
+          0.8342857142857143,
+          0.88
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8640000000000001,
+          "block95": null
+        }
+      }
+    },
+    "risk_screen": true,
+    "improvement_over_both": false,
+    "calibration_identity_error": 4.707345624410664e-13,
+    "final_multiplier": 3.05056233088979,
+    "reserve_policy": {
+      "net": -1261.0,
+      "close_dd": 1445.0,
+      "intraminute_min_dd": 1454.0,
+      "intraminute_max_dd": 1454.0,
+      "trades": 60,
+      "expectancy": -21.016666666666666,
+      "net_9_fixed_ledger": -1441.0,
+      "without_best_day": -1562.0,
+      "unfunded_bar_closes": 638
+    },
+    "static_reserve_control": {
+      "net": -1247.5,
+      "close_dd": 1431.5,
+      "intraminute_min_dd": 1443.5,
+      "intraminute_max_dd": 1443.5,
+      "trades": 60
+    }
+  }
+}

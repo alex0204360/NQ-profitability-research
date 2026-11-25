@@ -1,0 +1,86 @@
+{
+  "revision_attribution": {
+    "first_seen": {
+      "prefix_mark": -2200.5,
+      "different_close_actions": 59,
+      "different_action_or_position": 85,
+      "first_different_close_action": "2026-11-24T10:53:00-05:00"
+    },
+    "prices_only": {
+      "prefix_mark": -2200.5,
+      "different_close_actions": 59,
+      "different_action_or_position": 85,
+      "first_different_close_action": "2026-11-24T10:53:00-05:00"
+    },
+    "volume_only": {
+      "prefix_mark": -1203.0,
+      "different_close_actions": 0,
+      "different_action_or_position": 0,
+      "first_different_close_action": null
+    },
+    "all": {
+      "prefix_mark": -1203.0,
+      "different_close_actions": 0,
+      "different_action_or_position": 0,
+      "first_different_close_action": null
+    }
+  },
+  "revisions": [
+    {
+      "bar": "2026-11-24T10:14:00-05:00",
+      "first_volume": 0.0,
+      "final_volume": 13610.0,
+      "first_range": 72.0,
+      "changed_fields": [
+        "close",
+        "volume"
+      ]
+    },
+    {
+      "bar": "2026-11-24T10:38:00-05:00",
+      "first_volume": 0.0,
+      "final_volume": 7681.0,
+      "first_range": 49.5,
+      "changed_fields": [
+        "close",
+        "volume"
+      ]
+    },
+    {
+      "bar": "2026-11-24T11:02:00-05:00",
+      "first_volume": 0.0,
+      "final_volume": 10285.0,
+      "first_range": 69.5,
+      "changed_fields": [
+        "open",
+        "close",
+        "volume"
+      ]
+    },
+    {
+      "bar": "2026-11-24T11:39:00-05:00",
+      "first_volume": 0.0,
+      "final_volume": 5063.0,
+      "first_range": 25.75,
+      "changed_fields": [
+        "open",
+        "volume"
+      ]
+    }
+  ],
+  "moving_zero_volume_first": 5,
+  "flagged_and_revised": 4,
+  "first_seen_bars": 214,
+  "after_close_bars": 390,
+  "last_seen_bar": "2026-11-24 13:03:00-05:00",
+  "saved_calls": 214,
+  "eligible_forecasts": 183,
+  "revised_final_bars": 4,
+  "vendor_exceptions": 4,
+  "changed_forecast_magnitudes": 170,
+  "changed_decision_or_position": 85,
+  "median_decision_lag_seconds": 608.852972,
+  "within_nine_seconds": 0,
+  "common_prefix_equity_first_seen": -2200.5,
+  "common_prefix_equity_after_close": -1203.0
+}

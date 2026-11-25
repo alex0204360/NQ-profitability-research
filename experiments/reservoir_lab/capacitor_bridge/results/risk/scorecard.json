@@ -1,0 +1,148 @@
+{
+  "earlier20": {
+    "models": {
+      "band": {
+        "n": 6852,
+        "coverage": 0.8998832457676591,
+        "mean_halfwidth": 41.12356102017127,
+        "quantile_loss": 3.148133799568565,
+        "worst_overflow": 169.1564499949095,
+        "daily_coverage_range": [
+          0.8857142857142857,
+          0.9233226837060703
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8999735280693747,
+          "block95": [
+            0.8975801004107714,
+            0.9023436786855317
+          ]
+        }
+      },
+      "physical": {
+        "n": 6852,
+        "coverage": 0.902656158785756,
+        "mean_halfwidth": 38.02279999128308,
+        "quantile_loss": 2.886372183790005,
+        "worst_overflow": 168.23888747910345,
+        "daily_coverage_range": [
+          0.82,
+          0.9428571428571428
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.9029073482428116,
+          "block95": [
+            0.8904122660885441,
+            0.9163024075764491
+          ]
+        }
+      },
+      "rolling": {
+        "n": 6852,
+        "coverage": 0.8604786923525978,
+        "mean_halfwidth": 35.825257486178224,
+        "quantile_loss": 3.047287720515201,
+        "worst_overflow": 166.75,
+        "daily_coverage_range": [
+          0.8057142857142857,
+          0.8945686900958466
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8606083979917845,
+          "block95": [
+            0.8525105203103605,
+            0.8695258443633044
+          ]
+        }
+      }
+    },
+    "risk_screen": false,
+    "improvement_over_both": false,
+    "calibration_identity_error": 2.1247448245276246e-12,
+    "final_multiplier": 2.632758533444478,
+    "reserve_policy": {
+      "net": -1048.0,
+      "close_dd": 1458.5,
+      "intraminute_min_dd": 1485.0,
+      "intraminute_max_dd": 1485.0,
+      "trades": 101,
+      "expectancy": -10.376237623762377,
+      "net_9_fixed_ledger": -1351.0,
+      "without_best_day": -1274.0,
+      "unfunded_bar_closes": 4201
+    }
+  },
+  "november14": {
+    "models": {
+      "band": {
+        "n": 4900,
+        "coverage": 0.8995918367346939,
+        "mean_halfwidth": 84.60404062069183,
+        "quantile_loss": 5.633329343414941,
+        "worst_overflow": 219.56794549835172,
+        "daily_coverage_range": [
+          0.8828571428571429,
+          0.9142857142857143
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8995918367346937,
+          "block95": [
+            0.896938775510204,
+            0.9018367346938775
+          ]
+        }
+      },
+      "physical": {
+        "n": 4900,
+        "coverage": 0.923469387755102,
+        "mean_halfwidth": 82.87878483569045,
+        "quantile_loss": 5.250221489050129,
+        "worst_overflow": 225.66877794898852,
+        "daily_coverage_range": [
+          0.8914285714285715,
+          0.9542857142857143
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.923469387755102,
+          "block95": [
+            0.9155102040816326,
+            0.9308163265306123
+          ]
+        }
+      },
+      "rolling": {
+        "n": 4900,
+        "coverage": 0.856734693877551,
+        "mean_halfwidth": 72.46842200235301,
+        "quantile_loss": 5.506071792072035,
+        "worst_overflow": 232.0,
+        "daily_coverage_range": [
+          0.8257142857142857,
+          0.8857142857142857
+        ],
+        "daily_coverage_block": {
+          "mean_usd_per_day": 0.8567346938775512,
+          "block95": [
+            0.8506122448979594,
+            0.863673469387755
+          ]
+        }
+      }
+    },
+    "risk_screen": false,
+    "improvement_over_both": false,
+    "calibration_identity_error": 1.262989712813578e-12,
+    "final_multiplier": 2.9212284960358676,
+    "reserve_policy": {
+      "net": 2182.5,
+      "close_dd": 1140.0,
+      "intraminute_min_dd": 1207.0,
+      "intraminute_max_dd": 1207.0,
+      "trades": 93,
+      "expectancy": 23.467741935483872,
+      "net_9_fixed_ledger": 1903.5,
+      "without_best_day": 1294.0,
+      "unfunded_bar_closes": 51
+    }
+  }
+}

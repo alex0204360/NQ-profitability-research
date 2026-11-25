@@ -1,0 +1,206 @@
+{
+  "earlier20": {
+    "original": {
+      "net": -847.5,
+      "close_dd": 2269.0,
+      "intraminute_min_dd": 2297.0,
+      "intraminute_max_dd": 2297.0,
+      "trades": 206,
+      "expectancy": -4.114077669902913,
+      "net_9": -1465.5,
+      "without_best_day": -1562.5,
+      "profitable_sessions": 6,
+      "vs_cash": {
+        "mean_usd_per_day": -42.375,
+        "block95": [
+          -166.6825,
+          68.45
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": 0.0,
+        "block95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "momentum": {
+      "net": -6163.5,
+      "close_dd": 6649.0,
+      "intraminute_min_dd": 6676.0,
+      "intraminute_max_dd": 6676.0,
+      "trades": 842,
+      "expectancy": -7.3200712589073635,
+      "net_9": -8689.5,
+      "without_best_day": -6487.0,
+      "profitable_sessions": 5,
+      "vs_cash": {
+        "mean_usd_per_day": -308.175,
+        "block95": [
+          -415.91249999999997,
+          -209.02000000000007
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": -265.8,
+        "block95": [
+          -402.935625,
+          -124.78375000000024
+        ]
+      }
+    },
+    "unloaded": {
+      "net": -767.5,
+      "close_dd": 2116.0,
+      "intraminute_min_dd": 2159.0,
+      "intraminute_max_dd": 2159.0,
+      "trades": 207,
+      "expectancy": -3.707729468599034,
+      "net_9": -1388.5,
+      "without_best_day": -1482.5,
+      "profitable_sessions": 6,
+      "vs_cash": {
+        "mean_usd_per_day": -38.375,
+        "block95": [
+          -151.700625,
+          62.357499999999895
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": 4.0,
+        "block95": [
+          -8.175,
+          21.6
+        ]
+      }
+    },
+    "loaded": {
+      "net": 294.5,
+      "close_dd": 746.0,
+      "intraminute_min_dd": 760.5,
+      "intraminute_max_dd": 760.5,
+      "trades": 296,
+      "expectancy": 0.9949324324324325,
+      "net_9": -593.5,
+      "without_best_day": -311.0,
+      "profitable_sessions": 6,
+      "vs_cash": {
+        "mean_usd_per_day": 14.725,
+        "block95": [
+          -46.527499999999996,
+          73.325
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": 57.1,
+        "block95": [
+          -42.5,
+          139.32874999999993
+        ]
+      }
+    }
+  },
+  "november14": {
+    "original": {
+      "net": 2112.5,
+      "close_dd": 1727.5,
+      "intraminute_min_dd": 1803.0,
+      "intraminute_max_dd": 1803.0,
+      "trades": 93,
+      "expectancy": 22.71505376344086,
+      "net_9": 1833.5,
+      "without_best_day": 1224.0,
+      "profitable_sessions": 9,
+      "vs_cash": {
+        "mean_usd_per_day": 150.89285714285714,
+        "block95": [
+          36.5,
+          291.89285714285717
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": 0.0,
+        "block95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "momentum": {
+      "net": -4674.5,
+      "close_dd": 5666.0,
+      "intraminute_min_dd": 5789.5,
+      "intraminute_max_dd": 5789.5,
+      "trades": 616,
+      "expectancy": -7.588474025974026,
+      "net_9": -6522.5,
+      "without_best_day": -5421.0,
+      "profitable_sessions": 4,
+      "vs_cash": {
+        "mean_usd_per_day": -333.89285714285717,
+        "block95": [
+          -606.0714285714286,
+          -75.10714285714286
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": -484.7857142857143,
+        "block95": [
+          -691.3928571428571,
+          -298.2857142857143
+        ]
+      }
+    },
+    "unloaded": {
+      "net": 1969.5,
+      "close_dd": 1732.5,
+      "intraminute_min_dd": 1808.0,
+      "intraminute_max_dd": 1808.0,
+      "trades": 96,
+      "expectancy": 20.515625,
+      "net_9": 1681.5,
+      "without_best_day": 1110.5,
+      "profitable_sessions": 9,
+      "vs_cash": {
+        "mean_usd_per_day": 140.67857142857142,
+        "block95": [
+          25.928571428571427,
+          277.42857142857144
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": -10.214285714285714,
+        "block95": [
+          -36.214285714285715,
+          9.535714285714286
+        ]
+      }
+    },
+    "loaded": {
+      "net": -671.0,
+      "close_dd": 1319.0,
+      "intraminute_min_dd": 1367.5,
+      "intraminute_max_dd": 1367.5,
+      "trades": 147,
+      "expectancy": -4.5646258503401365,
+      "net_9": -1112.0,
+      "without_best_day": -998.5,
+      "profitable_sessions": 5,
+      "vs_cash": {
+        "mean_usd_per_day": -47.92857142857143,
+        "block95": [
+          -121.03571428571429,
+          8.5
+        ]
+      },
+      "vs_original": {
+        "mean_usd_per_day": -198.82142857142858,
+        "block95": [
+          -377.17857142857144,
+          -48.57142857142857
+        ]
+      }
+    }
+  }
+}

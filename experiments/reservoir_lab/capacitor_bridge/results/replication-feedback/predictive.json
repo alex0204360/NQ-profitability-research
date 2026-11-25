@@ -1,0 +1,58 @@
+{
+  "replication5": {
+    "original": {
+      "n": 1750,
+      "logloss": 1.042386391743056,
+      "brier": 0.6405219617857408,
+      "directional_calls": 1510,
+      "directional_accuracy": 0.49337748344370863
+    },
+    "loaded": {
+      "n": 1750,
+      "logloss": 1.0093131450939394,
+      "brier": 0.6226218495016493,
+      "directional_calls": 1182,
+      "directional_accuracy": 0.49915397631133673
+    },
+    "zero": {
+      "n": 1750,
+      "logloss": 0.983928367773819,
+      "brier": 0.6038463222723331,
+      "directional_calls": 0,
+      "directional_accuracy": null
+    },
+    "fixed": {
+      "n": 1750,
+      "logloss": 0.9970221025091212,
+      "brier": 0.6150330224510452,
+      "directional_calls": 1510,
+      "directional_accuracy": 0.5019867549668874
+    },
+    "bridge": {
+      "n": 1750,
+      "logloss": 0.9905453114872775,
+      "brier": 0.6090672192391442,
+      "directional_calls": 1510,
+      "directional_accuracy": 0.5026490066225165,
+      "daily_loss_advantage_vs_original": {
+        "mean_usd_per_day": 0.05184108025577856,
+        "block95": null
+      },
+      "daily_loss_advantage_vs_fixed": {
+        "mean_usd_per_day": 0.0064767910218435755,
+        "block95": null
+      },
+      "daily_loss_advantage_vs_zero": {
+        "mean_usd_per_day": -0.0066169437134586005,
+        "block95": null
+      }
+    }
+  },
+  "identity": {
+    "groups": 25,
+    "observations": 1750,
+    "upper_bound": 1.0986122886681098,
+    "max_abs_error": 2.842170943040401e-14,
+    "max_regret": 1.0984499632399718
+  }
+}

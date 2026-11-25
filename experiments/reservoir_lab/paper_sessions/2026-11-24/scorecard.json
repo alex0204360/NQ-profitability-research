@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-24",
+  "bars": 390,
+  "missing_daytime_minutes": 0,
+  "loss_trigger_close": "2026-11-24T10:20:00-05:00",
+  "base": {
+    "trades": 17,
+    "net": -988.5,
+    "drawdown": 1352.5,
+    "cutoff_exits": 1,
+    "gap_exits": 0,
+    "last_exit": "2026-11-24T15:55:00-05:00"
+  },
+  "guard": {
+    "trades": 3,
+    "net": -524.0,
+    "drawdown": 576.5,
+    "cutoff_exits": 0,
+    "gap_exits": 0,
+    "last_exit": "2026-11-24T10:20:00-05:00"
+  },
+  "cash_net": 0.0,
+  "contract": "MNQZ26",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/MNQZ26.CME?period1=1795530600&period2=1795554000&interval=1m",
+  "source_sha256": "6a51439f960448d642bfdc4c3e941448ab74ce20957d922056b6dbda86ed7432",
+  "source_stamp": "start",
+  "fill": "next minute open proxy, $6 per round trip",
+  "contract_identity": "column or source symbol",
+  "quote_audit": "No second-resolution quote evidence supplied"
+}

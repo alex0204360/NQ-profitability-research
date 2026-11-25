@@ -9,7 +9,7 @@ import pandas as pd
 W=json.loads(Path(__file__).with_name("weights.json").read_text())
 
 
-def features(bars, mode="volume"):
+def features(bars, mode="volume", field=None):
     if mode not in ("volume","equal_volume","neutral"):
         raise ValueError("unknown cohort allocation")
     n=W["cohorts"]
@@ -23,6 +23,7 @@ def features(bars, mode="volume"):
     prior_time=None
     age=0
     rows=[]
+    cascade=[]
     for bar in bars.itertuples():
         width=bar.high-bar.low
         suspect=bar.volume==0 and width>0
@@ -35,6 +36,7 @@ def features(bars, mode="volume"):
             voltage=0.
         prior_time=bar.Index
         if suspect:
+            if field: cascade.append((0.,0.,0.,bar.close,bar.close,0.))
             rows.append((0,True,*([math.nan]*9)))
             continue
         scale=max(range_mean,W["tick"])
@@ -52,6 +54,9 @@ def features(bars, mode="volume"):
         sign=np.sign(voltage)
         paid=min(abs(voltage),max(0.,sign*(bar.close-previous)))
         voltage=retain*(voltage-sign*paid)+injection
+        if field:
+            packet=field(bar.close,previous,scale,injection,mass,used,lower,span)
+            cascade.append(packet if age+1>=n else (*packet[:-1],0.))
         slot=age%n
         loc=float(location@[bar.close,bar.high,bar.low])/max(width,W["tick"])
         mass[slot]=q*(np.full(2,.5) if mode=="neutral" else np.maximum(0.,sides*loc))
@@ -64,8 +69,11 @@ def features(bars, mode="volume"):
         volume_mean=d*volume_mean+(1-d)*v
         range_mean=d*range_mean+(1-d)*width
         previous=bar.close
-    return pd.DataFrame(rows,index=bars.index,columns=["age","suspect","normalized_volume","close_location",
+    frame=pd.DataFrame(rows,index=bars.index,columns=["age","suspect","normalized_volume","close_location",
         "forced_sell","forced_buy","impulse_pts","spent_pts","voltage","scale","score"])
+    if field:
+        frame[["seed","critical","reward","target","invalidation","event"]]=cascade
+    return frame
 
 
 class Readout:

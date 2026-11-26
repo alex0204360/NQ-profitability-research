@@ -1,0 +1,17 @@
+{
+  "entry": 27197.5,
+  "exit": 26918.5,
+  "net": -564.0,
+  "highest_held_close": 27408.75,
+  "highest_close_time": "2026-11-19T11:40:00-05:00",
+  "closetoopen_gaps_points": -7.0,
+  "summed_bodies_points": -272.0,
+  "ExitHead": {
+    "peak_evidence": 1.5185597837274027,
+    "peak_time": "2026-11-19T10:49:00-05:00"
+  },
+  "RestartHead": {
+    "peak_evidence": 7.7555204759266365,
+    "peak_time": "2026-11-19T12:01:00-05:00"
+  }
+}

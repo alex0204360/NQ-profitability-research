@@ -1,0 +1,491 @@
+{
+  "external": {
+    "original": {
+      "net": -3821.0,
+      "close_dd": 5689.5,
+      "intraminute_min_dd": 5719.5,
+      "intraminute_max_dd": 5719.5,
+      "trades": 541,
+      "expectancy": -7.062846580406655,
+      "net_at_9": -5444.0,
+      "without_best_day": -4429.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -146.01729166666667,
+        14.130416666666587
+      ],
+      "interval_vs_original": [
+        0.0,
+        0.0
+      ]
+    },
+    "fixed_volume": {
+      "net": -3948.5,
+      "close_dd": 5689.5,
+      "intraminute_min_dd": 5719.5,
+      "intraminute_max_dd": 5719.5,
+      "trades": 541,
+      "expectancy": -7.2985212569316085,
+      "net_at_9": -5571.5,
+      "without_best_day": -4556.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -147.84333333333333,
+        11.07541666666666
+      ],
+      "interval_vs_original": [
+        -6.45,
+        0.075
+      ],
+      "attribution": {
+        "original_losers": {
+          "count": 335,
+          "improved_usd": 1.5,
+          "damaged_usd": 129.0,
+          "net_delta": -127.5
+        },
+        "original_winners": {
+          "count": 205,
+          "improved_usd": 0.0,
+          "damaged_usd": -0.0,
+          "net_delta": 0.0
+        },
+        "original_flat": {
+          "count": 1,
+          "improved_usd": 0.0,
+          "damaged_usd": -0.0,
+          "net_delta": 0.0
+        }
+      }
+    },
+    "fixed_price": {
+      "net": -3928.5,
+      "close_dd": 5689.5,
+      "intraminute_min_dd": 5719.5,
+      "intraminute_max_dd": 5719.5,
+      "trades": 541,
+      "expectancy": -7.261552680221811,
+      "net_at_9": -5551.5,
+      "without_best_day": -4536.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -147.57666666666665,
+        11.347291666666585
+      ],
+      "interval_vs_original": [
+        -5.375,
+        0.0
+      ],
+      "attribution": {
+        "original_losers": {
+          "count": 335,
+          "improved_usd": 0.0,
+          "damaged_usd": 107.5,
+          "net_delta": -107.5
+        },
+        "original_winners": {
+          "count": 205,
+          "improved_usd": 0.0,
+          "damaged_usd": -0.0,
+          "net_delta": 0.0
+        },
+        "original_flat": {
+          "count": 1,
+          "improved_usd": 0.0,
+          "damaged_usd": -0.0,
+          "net_delta": 0.0
+        }
+      }
+    },
+    "fixed_restart_volume": {
+      "net": -3997.0,
+      "close_dd": 5617.0,
+      "intraminute_min_dd": 5647.0,
+      "intraminute_max_dd": 5647.0,
+      "trades": 541,
+      "expectancy": -7.388170055452865,
+      "net_at_9": -5620.0,
+      "without_best_day": -4605.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -147.78458333333333,
+        8.86812499999998
+      ],
+      "interval_vs_original": [
+        -9.475,
+        2.825
+      ],
+      "attribution": {
+        "original_losers": {
+          "count": 335,
+          "improved_usd": 112.5,
+          "damaged_usd": 139.0,
+          "net_delta": -26.5
+        },
+        "original_winners": {
+          "count": 205,
+          "improved_usd": 0.0,
+          "damaged_usd": 149.5,
+          "net_delta": -149.5
+        },
+        "original_flat": {
+          "count": 1,
+          "improved_usd": 0.0,
+          "damaged_usd": -0.0,
+          "net_delta": 0.0
+        }
+      }
+    },
+    "fixed_restart_price": {
+      "net": -4165.5,
+      "close_dd": 5785.5,
+      "intraminute_min_dd": 5815.5,
+      "intraminute_max_dd": 5815.5,
+      "trades": 541,
+      "expectancy": -7.699630314232902,
+      "net_at_9": -5788.5,
+      "without_best_day": -4773.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -149.535,
+        6.234791666666646
+      ],
+      "interval_vs_original": [
+        -13.2,
+        0.9418749999999969
+      ],
+      "attribution": {
+        "original_losers": {
+          "count": 335,
+          "improved_usd": 125.5,
+          "damaged_usd": 139.0,
+          "net_delta": -13.5
+        },
+        "original_winners": {
+          "count": 205,
+          "improved_usd": 0.0,
+          "damaged_usd": 331.0,
+          "net_delta": -331.0
+        },
+        "original_flat": {
+          "count": 1,
+          "improved_usd": 0.0,
+          "damaged_usd": -0.0,
+          "net_delta": 0.0
+        }
+      }
+    },
+    "volume": {
+      "net": -3936.5,
+      "close_dd": 5689.5,
+      "intraminute_min_dd": 5719.5,
+      "intraminute_max_dd": 5719.5,
+      "trades": 542,
+      "expectancy": -7.262915129151292,
+      "net_at_9": -5562.5,
+      "without_best_day": -4544.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -147.73375,
+        11.258749999999994
+      ],
+      "interval_vs_original": [
+        -5.85,
+        0.075
+      ],
+      "attribution": {
+        "shared": 541,
+        "shared_delta": -127.5,
+        "missed": 0,
+        "missed_original_net": 0.0,
+        "extra_friction": 6.0,
+        "reentries": {
+          "count": 1,
+          "gross": 18.0,
+          "costs": 6.0,
+          "net": 12.0
+        },
+        "other_added": {
+          "count": 0,
+          "gross": 0.0,
+          "costs": 0.0,
+          "net": 0.0
+        },
+        "gross_delta": -109.5
+      },
+      "interval_vs_control": [
+        -1.075,
+        0.075
+      ],
+      "passes": false
+    },
+    "price": {
+      "net": -3916.5,
+      "close_dd": 5689.5,
+      "intraminute_min_dd": 5719.5,
+      "intraminute_max_dd": 5719.5,
+      "trades": 542,
+      "expectancy": -7.226014760147602,
+      "net_at_9": -5542.5,
+      "without_best_day": -4524.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -147.37708333333333,
+        11.770416666666613
+      ],
+      "interval_vs_original": [
+        -4.775,
+        0.0
+      ],
+      "attribution": {
+        "shared": 541,
+        "shared_delta": -107.5,
+        "missed": 0,
+        "missed_original_net": 0.0,
+        "extra_friction": 6.0,
+        "reentries": {
+          "count": 1,
+          "gross": 18.0,
+          "costs": 6.0,
+          "net": 12.0
+        },
+        "other_added": {
+          "count": 0,
+          "gross": 0.0,
+          "costs": 0.0,
+          "net": 0.0
+        },
+        "gross_delta": -89.5
+      }
+    },
+    "restart_volume": {
+      "net": -4041.0,
+      "close_dd": 5673.0,
+      "intraminute_min_dd": 5703.0,
+      "intraminute_max_dd": 5703.0,
+      "trades": 544,
+      "expectancy": -7.428308823529412,
+      "net_at_9": -5673.0,
+      "without_best_day": -4649.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -149.00187499999998,
+        8.583333333333334
+      ],
+      "interval_vs_original": [
+        -10.025208333333333,
+        2.0166666666666666
+      ],
+      "attribution": {
+        "shared": 541,
+        "shared_delta": -176.0,
+        "missed": 0,
+        "missed_original_net": 0.0,
+        "extra_friction": 18.0,
+        "reentries": {
+          "count": 2,
+          "gross": -5.0,
+          "costs": 12.0,
+          "net": -17.0
+        },
+        "other_added": {
+          "count": 1,
+          "gross": -21.0,
+          "costs": 6.0,
+          "net": -27.0
+        },
+        "gross_delta": -202.0
+      },
+      "interval_vs_control": [
+        -0.65,
+        1.775
+      ],
+      "passes": false
+    },
+    "restart_price": {
+      "net": -4063.5,
+      "close_dd": 5695.5,
+      "intraminute_min_dd": 5725.5,
+      "intraminute_max_dd": 5725.5,
+      "trades": 545,
+      "expectancy": -7.455963302752294,
+      "net_at_9": -5698.5,
+      "without_best_day": -4671.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -148.855,
+        8.033749999999994
+      ],
+      "interval_vs_original": [
+        -10.292083333333332,
+        1.5002083333333303
+      ],
+      "attribution": {
+        "shared": 541,
+        "shared_delta": -344.5,
+        "missed": 0,
+        "missed_original_net": 0.0,
+        "extra_friction": 24.0,
+        "reentries": {
+          "count": 3,
+          "gross": 147.0,
+          "costs": 18.0,
+          "net": 129.0
+        },
+        "other_added": {
+          "count": 1,
+          "gross": -21.0,
+          "costs": 6.0,
+          "net": -27.0
+        },
+        "gross_delta": -218.5
+      }
+    },
+    "weighted": {
+      "net": -764.0,
+      "close_dd": 1179.5,
+      "intraminute_min_dd": 1224.5,
+      "intraminute_max_dd": 1224.5,
+      "trades": 61,
+      "expectancy": -12.524590163934427,
+      "net_at_9": -947.0,
+      "without_best_day": -1174.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -33.225625,
+        7.291874999999997
+      ],
+      "interval_vs_original": [
+        -23.444999999999997,
+        130.48416666666665
+      ]
+    },
+    "equal_mass": {
+      "net": -545.5,
+      "close_dd": 816.5,
+      "intraminute_min_dd": 832.0,
+      "intraminute_max_dd": 832.0,
+      "trades": 39,
+      "expectancy": -13.987179487179487,
+      "net_at_9": -662.5,
+      "without_best_day": -844.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -28.40083333333333,
+        8.858749999999993
+      ],
+      "interval_vs_original": [
+        -21.617083333333333,
+        135.31729166666665
+      ]
+    },
+    "v08_sym": {
+      "net": -678.5,
+      "close_dd": 1041.5,
+      "intraminute_min_dd": 1074.0,
+      "intraminute_max_dd": 1074.0,
+      "trades": 78,
+      "expectancy": -8.698717948717949,
+      "net_at_9": -912.5,
+      "without_best_day": -1088.5,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -31.575625,
+        8.816874999999996
+      ],
+      "interval_vs_original": [
+        -22.977083333333333,
+        132.5772916666666
+      ]
+    },
+    "auction": {
+      "net": -357.0,
+      "close_dd": 773.5,
+      "intraminute_min_dd": 804.0,
+      "intraminute_max_dd": 804.0,
+      "trades": 33,
+      "expectancy": -10.818181818181818,
+      "net_at_9": -456.0,
+      "without_best_day": -538.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -23.833541666666665,
+        9.383333333333333
+      ],
+      "interval_vs_original": [
+        -19.517083333333332,
+        138.75083333333333
+      ],
+      "interval_vs_control": [
+        -5.108333333333333,
+        5.466666666666667
+      ],
+      "passes": false,
+      "interval_vs_always_long": [
+        -62.375416666666666,
+        -0.366250000000006
+      ],
+      "interval_vs_open_only": [
+        -16.183958333333333,
+        19.92520833333333
+      ]
+    },
+    "auction_equal": {
+      "net": -344.0,
+      "close_dd": 821.0,
+      "intraminute_min_dd": 851.5,
+      "intraminute_max_dd": 851.5,
+      "trades": 32,
+      "expectancy": -10.75,
+      "net_at_9": -440.0,
+      "without_best_day": -525.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -27.001041666666666,
+        10.817291666666657
+      ],
+      "interval_vs_original": [
+        -18.127916666666664,
+        137.1804166666666
+      ]
+    },
+    "open_only": {
+      "net": -508.0,
+      "close_dd": 936.5,
+      "intraminute_min_dd": 958.0,
+      "intraminute_max_dd": 958.0,
+      "trades": 58,
+      "expectancy": -8.758620689655173,
+      "net_at_9": -682.0,
+      "without_best_day": -728.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -37.26020833333333,
+        19.633958333333325
+      ],
+      "interval_vs_original": [
+        -29.383958333333332,
+        142.36854166666666
+      ]
+    },
+    "always_long": {
+      "net": 1456.0,
+      "close_dd": 793.0,
+      "intraminute_min_dd": 834.0,
+      "intraminute_max_dd": 834.0,
+      "trades": 60,
+      "expectancy": 24.266666666666666,
+      "net_at_9": 1276.0,
+      "without_best_day": 1201.0,
+      "sessions": 60,
+      "interval_vs_cash": [
+        -0.4418749999999998,
+        47.716875
+      ],
+      "interval_vs_original": [
+        6.648541666666668,
+        173.35124999999996
+      ]
+    }
+  }
+}

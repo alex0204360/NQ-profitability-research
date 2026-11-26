@@ -1,0 +1,60 @@
+{
+  "external": {
+    "external": {
+      "always_long": 1456.0,
+      "long_on_chosen_dates": 1157.0,
+      "foregone_long_net": 299.0,
+      "changing_side": -1514.0,
+      "short_calls": 13,
+      "auction_net": -357.0
+    }
+  },
+  "discovery": {
+    "earlier20": {
+      "always_long": -283.5,
+      "long_on_chosen_dates": -520.0,
+      "foregone_long_net": 236.5,
+      "changing_side": 293.0,
+      "short_calls": 4,
+      "auction_net": -227.0
+    },
+    "nov25": {
+      "always_long": 90.0,
+      "long_on_chosen_dates": 90.0,
+      "foregone_long_net": 0.0,
+      "changing_side": 0.0,
+      "short_calls": 0,
+      "auction_net": 90.0
+    },
+    "november14": {
+      "always_long": -237.5,
+      "long_on_chosen_dates": 289.0,
+      "foregone_long_net": -526.5,
+      "changing_side": -969.0,
+      "short_calls": 5,
+      "auction_net": -680.0
+    },
+    "replication5": {
+      "always_long": -49.0,
+      "long_on_chosen_dates": 22.0,
+      "foregone_long_net": -71.0,
+      "changing_side": -134.0,
+      "short_calls": 3,
+      "auction_net": -112.0
+    }
+  },
+  "historical_NQ_transfer": {
+    "2023": {
+      "sessions": 247,
+      "points": -560.0,
+      "native_NQ_net": -14781.5,
+      "MNQ_equivalent_on_NQ_prices": -2602.0
+    },
+    "2024": {
+      "sessions": 244,
+      "points": -114.5,
+      "native_NQ_net": -5828.0,
+      "MNQ_equivalent_on_NQ_prices": -1693.0
+    }
+  }
+}

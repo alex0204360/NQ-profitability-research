@@ -1,0 +1,176 @@
+{
+  "NQ_2023": {
+    "volume_attribution": {
+      "volume": {
+        "shared": 7327,
+        "shared_delta": 1382.5,
+        "added": 1745,
+        "added_net": -11715.5,
+        "skipped": 1953,
+        "skipped_control_net": -13389.5,
+        "net_delta": 3056.5,
+        "daily_difference": {
+          "mean_usd_per_day": 12.374493927125506,
+          "block95": [
+            4.026265182186235,
+            20.88891700404858
+          ]
+        }
+      },
+      "cascade_volume": {
+        "shared": 1838,
+        "shared_delta": 57.5,
+        "added": 706,
+        "added_net": -3821.0,
+        "skipped": 1359,
+        "skipped_control_net": -9097.0,
+        "net_delta": 5333.5,
+        "daily_difference": {
+          "mean_usd_per_day": 21.59311740890688,
+          "block95": [
+            13.87419028340081,
+            29.25126518218623
+          ]
+        }
+      },
+      "pulse_weighted": {
+        "shared": 93,
+        "shared_delta": 0.0,
+        "added": 89,
+        "added_net": -539.0,
+        "skipped": 12,
+        "skipped_control_net": -4.0,
+        "net_delta": -535.0,
+        "daily_difference": {
+          "mean_usd_per_day": -2.165991902834008,
+          "block95": [
+            -4.350253036437247,
+            0.27940283400809646
+          ]
+        }
+      }
+    },
+    "native_nq": {
+      "cascade_equal_volume": {
+        "net": -54741.5,
+        "gross": -8385.0,
+        "trades": 3197,
+        "round_trip": 14.5,
+        "close_dd": 60062.25,
+        "intraminute_min_dd": 60215.0,
+        "intraminute_max_dd": 60215.0,
+        "stressed_net": -86711.5
+      },
+      "cascade_neutral": {
+        "net": -199715.5,
+        "gross": -42405.0,
+        "trades": 10849,
+        "round_trip": 14.5,
+        "close_dd": 200882.25,
+        "intraminute_min_dd": 201042.25,
+        "intraminute_max_dd": 201042.25,
+        "stressed_net": -308205.5
+      },
+      "cascade_volume": {
+        "net": -31118.0,
+        "gross": 5770.0,
+        "trades": 2544,
+        "round_trip": 14.5,
+        "close_dd": 33638.75,
+        "intraminute_min_dd": 33732.0,
+        "intraminute_max_dd": 33732.0,
+        "stressed_net": -56558.0
+      },
+      "equal_volume": {
+        "net": -162390.0,
+        "gross": -27830.0,
+        "trades": 9280,
+        "round_trip": 14.5,
+        "close_dd": 163517.75,
+        "intraminute_min_dd": 163630.5,
+        "intraminute_max_dd": 163630.5,
+        "stressed_net": -255190.0
+      },
+      "momentum": {
+        "net": -137490.5,
+        "gross": 8510.0,
+        "trades": 10069,
+        "round_trip": 14.5,
+        "close_dd": 149587.75,
+        "intraminute_min_dd": 149865.0,
+        "intraminute_max_dd": 149865.0,
+        "stressed_net": -238180.5
+      },
+      "neutral": {
+        "net": -135673.0,
+        "gross": -5840.0,
+        "trades": 8954,
+        "round_trip": 14.5,
+        "close_dd": 142178.75,
+        "intraminute_min_dd": 142706.0,
+        "intraminute_max_dd": 142706.0,
+        "stressed_net": -225213.0
+      },
+      "original": {
+        "net": -59873.5,
+        "gross": -32280.0,
+        "trades": 1903,
+        "round_trip": 14.5,
+        "close_dd": 62383.75,
+        "intraminute_min_dd": 62547.0,
+        "intraminute_max_dd": 62547.0,
+        "stressed_net": -78903.5
+      },
+      "pulse_equal_mass": {
+        "net": 1287.5,
+        "gross": 2810.0,
+        "trades": 105,
+        "round_trip": 14.5,
+        "close_dd": 3795.0,
+        "intraminute_min_dd": 4100.0,
+        "intraminute_max_dd": 4100.0,
+        "stressed_net": 237.5
+      },
+      "pulse_v08_long": {
+        "net": 456.5,
+        "gross": 1370.0,
+        "trades": 63,
+        "round_trip": 14.5,
+        "close_dd": 4680.25,
+        "intraminute_min_dd": 4812.5,
+        "intraminute_max_dd": 4812.5,
+        "stressed_net": -173.5
+      },
+      "pulse_v08_sym": {
+        "net": 3321.0,
+        "gross": 6395.0,
+        "trades": 212,
+        "round_trip": 14.5,
+        "close_dd": 6830.25,
+        "intraminute_min_dd": 7083.5,
+        "intraminute_max_dd": 7083.5,
+        "stressed_net": 1201.0
+      },
+      "pulse_weighted": {
+        "net": -559.0,
+        "gross": 2080.0,
+        "trades": 182,
+        "round_trip": 14.5,
+        "close_dd": 7973.25,
+        "intraminute_min_dd": 8195.5,
+        "intraminute_max_dd": 8195.5,
+        "stressed_net": -2379.0
+      },
+      "volume": {
+        "net": -141289.0,
+        "gross": -9745.0,
+        "trades": 9072,
+        "round_trip": 14.5,
+        "close_dd": 142416.75,
+        "intraminute_min_dd": 142529.5,
+        "intraminute_max_dd": 142529.5,
+        "stressed_net": -232009.0
+      }
+    }
+  }
+}

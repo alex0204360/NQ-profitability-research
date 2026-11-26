@@ -68,5 +68,11 @@ def run(frames,out,redesign=None):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("scratch",type=Path);p.add_argument("out",type=Path)
-    p.add_argument("--track",choices=["discovery","replication"],default="discovery")
-    args=p.parse_args();run(panels(args.scratch,args.track),args.out)
+    p.add_argument("--track",choices=["discovery","replication","transfer"],default="discovery")
+    p.add_argument("--nq",type=Path,help="hash-pinned NQ CSV for the transfer run")
+    args=p.parse_args()
+    from cascade import make
+    from transfer import load_year
+    if args.track=="transfer" and args.nq is None: p.error("--track transfer requires --nq")
+    frames=load_year(args.nq) if args.track=="transfer" else panels(args.scratch,args.track)
+    run(frames,args.out,make)

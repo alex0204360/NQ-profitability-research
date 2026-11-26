@@ -1,0 +1,52 @@
+{
+  "mode": "after-close reconstruction; no journaled calls",
+  "models": {
+    "band": {
+      "n": 350,
+      "coverage": 0.9,
+      "mean_halfwidth": 111.2839015032998,
+      "quantile_loss": 5.990449913275816,
+      "worst_overflow": 43.0064993780356,
+      "daily_coverage_range": [
+        0.9,
+        0.9
+      ],
+      "daily_coverage_block": {
+        "mean_usd_per_day": 0.9,
+        "block95": null
+      }
+    },
+    "physical": {
+      "n": 350,
+      "coverage": 0.9285714285714286,
+      "mean_halfwidth": 117.81779128180722,
+      "quantile_loss": 5.982768021682381,
+      "worst_overflow": 35.87546832670212,
+      "daily_coverage_range": [
+        0.9285714285714286,
+        0.9285714285714286
+      ],
+      "daily_coverage_block": {
+        "mean_usd_per_day": 0.9285714285714286,
+        "block95": null
+      }
+    },
+    "rolling": {
+      "n": 350,
+      "coverage": 0.8771428571428571,
+      "mean_halfwidth": 107.96958770532859,
+      "quantile_loss": 6.358298122995426,
+      "worst_overflow": 51.0,
+      "daily_coverage_range": [
+        0.8771428571428571,
+        0.8771428571428571
+      ],
+      "daily_coverage_block": {
+        "mean_usd_per_day": 0.8771428571428571,
+        "block95": null
+      }
+    }
+  },
+  "risk_screen": true,
+  "improvement_over_both": false
+}

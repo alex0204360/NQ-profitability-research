@@ -1,0 +1,106 @@
+{
+  "earlier20": {
+    "volume_attribution": {
+      "volume": {
+        "shared": 591,
+        "shared_delta": -266.0,
+        "added": 153,
+        "added_net": -1292.5,
+        "skipped": 180,
+        "skipped_control_net": -1667.0,
+        "net_delta": 108.5,
+        "daily_difference": {
+          "mean_usd_per_day": 5.425,
+          "block95": [
+            -51.95625,
+            59.87562499999999
+          ]
+        }
+      },
+      "cascade_volume": {
+        "shared": 143,
+        "shared_delta": -140.5,
+        "added": 65,
+        "added_net": -239.5,
+        "skipped": 131,
+        "skipped_control_net": -782.0,
+        "net_delta": 402.0,
+        "daily_difference": {
+          "mean_usd_per_day": 20.1,
+          "block95": [
+            -54.131875,
+            77.82624999999999
+          ]
+        }
+      },
+      "pulse_weighted": {
+        "shared": 18,
+        "shared_delta": 0.0,
+        "added": 17,
+        "added_net": 26.5,
+        "skipped": 1,
+        "skipped_control_net": -40.5,
+        "net_delta": 67.0,
+        "daily_difference": {
+          "mean_usd_per_day": 3.35,
+          "block95": [
+            -12.327499999999999,
+            23.226874999999975
+          ]
+        }
+      }
+    }
+  },
+  "november14": {
+    "volume_attribution": {
+      "volume": {
+        "shared": 539,
+        "shared_delta": 256.0,
+        "added": 78,
+        "added_net": -1491.0,
+        "skipped": 80,
+        "skipped_control_net": -882.5,
+        "net_delta": -352.5,
+        "daily_difference": {
+          "mean_usd_per_day": -25.178571428571427,
+          "block95": [
+            -78.42946428571429,
+            21.892857142857142
+          ]
+        }
+      },
+      "cascade_volume": {
+        "shared": 126,
+        "shared_delta": -88.5,
+        "added": 27,
+        "added_net": -661.5,
+        "skipped": 76,
+        "skipped_control_net": 281.5,
+        "net_delta": -1031.5,
+        "daily_difference": {
+          "mean_usd_per_day": -73.67857142857143,
+          "block95": [
+            -156.8982142857143,
+            14.785714285714286
+          ]
+        }
+      },
+      "pulse_weighted": {
+        "shared": 10,
+        "shared_delta": 0.0,
+        "added": 3,
+        "added_net": -115.5,
+        "skipped": 2,
+        "skipped_control_net": -47.0,
+        "net_delta": -68.5,
+        "daily_difference": {
+          "mean_usd_per_day": -4.892857142857143,
+          "block95": [
+            -35.92857142857143,
+            29.75
+          ]
+        }
+      }
+    }
+  }
+}

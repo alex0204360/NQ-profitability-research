@@ -1,0 +1,45 @@
+{
+  "nov25": {
+    "volume_attribution": {
+      "volume": {
+        "shared": 40,
+        "shared_delta": 34.5,
+        "added": 6,
+        "added_net": -321.5,
+        "skipped": 8,
+        "skipped_control_net": -468.0,
+        "net_delta": 181.0,
+        "daily_difference": {
+          "mean_usd_per_day": 181.0,
+          "block95": null
+        }
+      },
+      "cascade_volume": {
+        "shared": 10,
+        "shared_delta": 0.0,
+        "added": 2,
+        "added_net": -82.0,
+        "skipped": 6,
+        "skipped_control_net": -278.0,
+        "net_delta": 196.0,
+        "daily_difference": {
+          "mean_usd_per_day": 196.0,
+          "block95": null
+        }
+      },
+      "pulse_weighted": {
+        "shared": 1,
+        "shared_delta": 0.0,
+        "added": 1,
+        "added_net": -30.5,
+        "skipped": 0,
+        "skipped_control_net": 0.0,
+        "net_delta": -30.5,
+        "daily_difference": {
+          "mean_usd_per_day": -30.5,
+          "block95": null
+        }
+      }
+    }
+  }
+}

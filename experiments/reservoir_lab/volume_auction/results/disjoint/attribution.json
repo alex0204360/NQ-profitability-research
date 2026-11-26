@@ -1,0 +1,45 @@
+{
+  "replication5": {
+    "volume_attribution": {
+      "volume": {
+        "shared": 156,
+        "shared_delta": -72.5,
+        "added": 50,
+        "added_net": -202.0,
+        "skipped": 49,
+        "skipped_control_net": 108.0,
+        "net_delta": -382.5,
+        "daily_difference": {
+          "mean_usd_per_day": -76.5,
+          "block95": null
+        }
+      },
+      "cascade_volume": {
+        "shared": 38,
+        "shared_delta": -2.5,
+        "added": 12,
+        "added_net": -118.0,
+        "skipped": 29,
+        "skipped_control_net": 197.0,
+        "net_delta": -317.5,
+        "daily_difference": {
+          "mean_usd_per_day": -63.5,
+          "block95": null
+        }
+      },
+      "pulse_weighted": {
+        "shared": 3,
+        "shared_delta": 0.0,
+        "added": 3,
+        "added_net": -44.0,
+        "skipped": 0,
+        "skipped_control_net": 0.0,
+        "net_delta": -44.0,
+        "daily_difference": {
+          "mean_usd_per_day": -8.8,
+          "block95": null
+        }
+      }
+    }
+  }
+}

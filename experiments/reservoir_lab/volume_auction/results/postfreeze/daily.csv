@@ -1,0 +1,13 @@
+panel,date,model,trades,net
+nov25,2026-11-25,original,13,-220.0
+nov25,2026-11-25,momentum,52,-1039.0
+nov25,2026-11-25,volume,46,-713.0
+nov25,2026-11-25,equal_volume,48,-894.0
+nov25,2026-11-25,neutral,42,-385.0
+nov25,2026-11-25,cascade_volume,12,-287.5
+nov25,2026-11-25,cascade_equal_volume,16,-483.5
+nov25,2026-11-25,cascade_neutral,49,-1351.5
+nov25,2026-11-25,pulse_weighted,2,47.5
+nov25,2026-11-25,pulse_equal_mass,1,78.0
+nov25,2026-11-25,pulse_v08_sym,2,47.5
+nov25,2026-11-25,pulse_v08_long,1,78.0

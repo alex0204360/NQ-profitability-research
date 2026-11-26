@@ -1,0 +1,356 @@
+{
+  "earlier20": {
+    "original": {
+      "net": -847.5,
+      "close_dd": 2269.0,
+      "intraminute_min_dd": 2297.0,
+      "intraminute_max_dd": 2297.0,
+      "trades": 206,
+      "gross": 388.5,
+      "cost": 1236,
+      "expectancy": -4.114077669902913,
+      "net_at_9": -1465.5,
+      "without_best_day": -1562.5,
+      "profitable_days": 6,
+      "active_days": 20,
+      "vs_original": {
+        "mean_usd_per_day": 0.0,
+        "block95": [
+          0.0,
+          0.0
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": 241.475,
+        "block95": [
+          171.25,
+          312.85
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -42.375,
+        "block95": [
+          -166.6825,
+          68.45
+        ]
+      }
+    },
+    "momentum": {
+      "net": -6163.5,
+      "close_dd": 6649.0,
+      "intraminute_min_dd": 6676.0,
+      "intraminute_max_dd": 6676.0,
+      "trades": 842,
+      "gross": -1111.5,
+      "cost": 5052,
+      "expectancy": -7.3200712589073635,
+      "net_at_9": -8689.5,
+      "without_best_day": -6487.0,
+      "profitable_days": 5,
+      "active_days": 20,
+      "vs_original": {
+        "mean_usd_per_day": -265.8,
+        "block95": [
+          -402.935625,
+          -124.78375000000024
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": -24.325,
+        "block95": [
+          -131.53062500000001,
+          85.50062499999999
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -308.175,
+        "block95": [
+          -415.91249999999997,
+          -209.02000000000007
+        ]
+      }
+    },
+    "volume": {
+      "net": -5568.5,
+      "close_dd": 5716.5,
+      "intraminute_min_dd": 5756.0,
+      "intraminute_max_dd": 5756.0,
+      "trades": 744,
+      "gross": -1104.5,
+      "cost": 4464,
+      "expectancy": -7.484543010752688,
+      "net_at_9": -7800.5,
+      "without_best_day": -6079.0,
+      "profitable_days": 6,
+      "active_days": 20,
+      "vs_original": {
+        "mean_usd_per_day": -236.05,
+        "block95": [
+          -336.81,
+          -150.24875000000003
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": 5.425,
+        "block95": [
+          -51.95625,
+          59.87562499999999
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -278.425,
+        "block95": [
+          -445.928125,
+          -119.575
+        ]
+      }
+    },
+    "equal_volume": {
+      "net": -5677.0,
+      "close_dd": 5991.0,
+      "intraminute_min_dd": 6006.0,
+      "intraminute_max_dd": 6006.0,
+      "trades": 771,
+      "gross": -1051.0,
+      "cost": 4626,
+      "expectancy": -7.363164721141374,
+      "net_at_9": -7990.0,
+      "without_best_day": -6364.0,
+      "profitable_days": 5,
+      "active_days": 20,
+      "vs_original": {
+        "mean_usd_per_day": -241.475,
+        "block95": [
+          -312.85,
+          -171.25
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": 0.0,
+        "block95": [
+          0.0,
+          0.0
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -283.85,
+        "block95": [
+          -404.72625,
+          -175.62312500000002
+        ]
+      }
+    },
+    "neutral": {
+      "net": -4139.0,
+      "close_dd": 4652.0,
+      "intraminute_min_dd": 4681.5,
+      "intraminute_max_dd": 4681.5,
+      "trades": 728,
+      "gross": 229.0,
+      "cost": 4368,
+      "expectancy": -5.68543956043956,
+      "net_at_9": -6323.0,
+      "without_best_day": -5162.5,
+      "profitable_days": 7,
+      "active_days": 20,
+      "vs_original": {
+        "mean_usd_per_day": -164.575,
+        "block95": [
+          -284.15187499999996,
+          -53.69125000000013
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": 76.9,
+        "block95": [
+          -5.726249999999999,
+          150.5581249999999
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -206.95,
+        "block95": [
+          -377.890625,
+          -64.14187500000013
+        ]
+      }
+    }
+  },
+  "november14": {
+    "original": {
+      "net": 2112.5,
+      "close_dd": 1727.5,
+      "intraminute_min_dd": 1803.0,
+      "intraminute_max_dd": 1803.0,
+      "trades": 93,
+      "gross": 2670.5,
+      "cost": 558,
+      "expectancy": 22.71505376344086,
+      "net_at_9": 1833.5,
+      "without_best_day": 1224.0,
+      "profitable_days": 9,
+      "active_days": 14,
+      "vs_original": {
+        "mean_usd_per_day": 0.0,
+        "block95": [
+          0.0,
+          0.0
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": 283.2142857142857,
+        "block95": [
+          102.32142857142857,
+          432.07142857142856
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": 150.89285714285714,
+        "block95": [
+          36.5,
+          291.89285714285717
+        ]
+      }
+    },
+    "momentum": {
+      "net": -4674.5,
+      "close_dd": 5666.0,
+      "intraminute_min_dd": 5789.5,
+      "intraminute_max_dd": 5789.5,
+      "trades": 616,
+      "gross": -978.5,
+      "cost": 3696,
+      "expectancy": -7.588474025974026,
+      "net_at_9": -6522.5,
+      "without_best_day": -5421.0,
+      "profitable_days": 4,
+      "active_days": 14,
+      "vs_original": {
+        "mean_usd_per_day": -484.7857142857143,
+        "block95": [
+          -691.3928571428571,
+          -298.2857142857143
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": -201.57142857142858,
+        "block95": [
+          -409.42857142857144,
+          1.25
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -333.89285714285717,
+        "block95": [
+          -606.0714285714286,
+          -75.10714285714286
+        ]
+      }
+    },
+    "volume": {
+      "net": -2205.0,
+      "close_dd": 3908.0,
+      "intraminute_min_dd": 3993.0,
+      "intraminute_max_dd": 3993.0,
+      "trades": 617,
+      "gross": 1497.0,
+      "cost": 3702,
+      "expectancy": -3.5737439222042138,
+      "net_at_9": -4056.0,
+      "without_best_day": -3474.0,
+      "profitable_days": 6,
+      "active_days": 14,
+      "vs_original": {
+        "mean_usd_per_day": -308.39285714285717,
+        "block95": [
+          -480.5357142857143,
+          -117.14285714285714
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": -25.178571428571427,
+        "block95": [
+          -78.42946428571429,
+          21.892857142857142
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -157.5,
+        "block95": [
+          -380.6160714285714,
+          61.714285714285715
+        ]
+      }
+    },
+    "equal_volume": {
+      "net": -1852.5,
+      "close_dd": 3159.0,
+      "intraminute_min_dd": 3275.0,
+      "intraminute_max_dd": 3275.0,
+      "trades": 619,
+      "gross": 1861.5,
+      "cost": 3714,
+      "expectancy": -2.992730210016155,
+      "net_at_9": -3709.5,
+      "without_best_day": -3148.5,
+      "profitable_days": 7,
+      "active_days": 14,
+      "vs_original": {
+        "mean_usd_per_day": -283.2142857142857,
+        "block95": [
+          -432.07142857142856,
+          -102.32142857142857
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": 0.0,
+        "block95": [
+          0.0,
+          0.0
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -132.32142857142858,
+        "block95": [
+          -314.60714285714283,
+          50.883035714285334
+        ]
+      }
+    },
+    "neutral": {
+      "net": -2126.5,
+      "close_dd": 3554.0,
+      "intraminute_min_dd": 3646.5,
+      "intraminute_max_dd": 3646.5,
+      "trades": 543,
+      "gross": 1131.5,
+      "cost": 3258,
+      "expectancy": -3.916206261510129,
+      "net_at_9": -3755.5,
+      "without_best_day": -3048.0,
+      "profitable_days": 6,
+      "active_days": 14,
+      "vs_original": {
+        "mean_usd_per_day": -302.7857142857143,
+        "block95": [
+          -472.39285714285717,
+          -117.39285714285714
+        ]
+      },
+      "vs_equal": {
+        "mean_usd_per_day": -19.571428571428573,
+        "block95": [
+          -174.7875,
+          160.77589285714197
+        ]
+      },
+      "vs_cash": {
+        "mean_usd_per_day": -151.89285714285714,
+        "block95": [
+          -296.25,
+          2.8214285714285716
+        ]
+      }
+    }
+  }
+}

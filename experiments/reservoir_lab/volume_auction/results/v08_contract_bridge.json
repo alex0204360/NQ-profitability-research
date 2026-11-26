@@ -1,0 +1,47 @@
+{
+  "actual_NQ_contract_model": {
+    "trades": 245,
+    "gross_points": 903.75,
+    "gross_dollars": 18075.0,
+    "costs": 3552.5,
+    "net": 14522.5,
+    "expected_dollars_per_trade": 59.275510204081634,
+    "closed_dd": 4087.0,
+    "net_without_best_day": 12237.0,
+    "year_net": {
+      "2022": 141.0,
+      "2023": 4480.5,
+      "2024": 9901.0
+    }
+  },
+  "MNQ_normalization_only": {
+    "trades": 245,
+    "gross_points": 903.75,
+    "gross_dollars": 1807.5,
+    "costs": 1470.0,
+    "net": 337.5,
+    "expected_dollars_per_trade": 1.3775510204081634,
+    "closed_dd": 618.0,
+    "net_without_best_day": 113.5,
+    "year_net": {
+      "2022": 5.0,
+      "2023": -193.5,
+      "2024": 526.0
+    }
+  },
+  "MNQ_normalization_stress": {
+    "trades": 245,
+    "gross_points": 903.75,
+    "gross_dollars": 1807.5,
+    "costs": 2205.0,
+    "net": -397.5,
+    "expected_dollars_per_trade": -1.6224489795918366,
+    "closed_dd": 834.0,
+    "net_without_best_day": -618.5,
+    "year_net": {
+      "2022": -1.0,
+      "2023": -616.5,
+      "2024": 220.0
+    }
+  }
+}

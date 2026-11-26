@@ -20,6 +20,7 @@ sys.path.insert(0, str(LAB/"volume_auction"))
 from impulse import encode
 from timing import timed
 from exit_head import ExitHead, inputs
+from restart import RestartHead
 
 
 def comparison(a, b):
@@ -51,19 +52,20 @@ def evaluate(frames, out, extra=None, draw_chart=False):
                         a[["reservoir","stock","charge","signed_release"]].to_numpy(), strict=True)]
                 chart["layers"]["original"] = {"trades":ledger(original), "hold":[None]*len(b)}
             for fixed in (True, False):
-                for volume in (True, False):
-                    name = ("fixed_" if fixed else "") + ("volume" if volume else "price")
-                    head = ExitHead(features, volume)
-                    t, m, h = simulate(b, raw, raw, -raw, signals if fixed else None, head)
-                    if fixed:
-                        pd.testing.assert_frame_equal(original[["entry_time","side","entry"]], t[["entry_time","side","entry"]],check_dtype=False)
-                        assert (t.exit_time <= original.exit_time).all()
-                    assert t.net_usd.sum() == m.iat[-1]
-                    rows[name] = classify(t, raw)
-                    if draw_chart:
-                        chart["layers"][name] = {"trades":ledger(t), "hold":numbers(h)}
-                    if name=="fixed_volume":
-                        events.extend((panel,b.index[i],side,e,*cells) for i,side,e,*cells in head.activations)
+                for prefix, cls in (("", ExitHead), ("restart_", RestartHead)):
+                    for volume in (True, False):
+                        name = ("fixed_" if fixed else "") + prefix + ("volume" if volume else "price")
+                        head = cls(features, volume)
+                        t, m, h = simulate(b, raw, raw, -raw, signals if fixed else None, head)
+                        if fixed:
+                            pd.testing.assert_frame_equal(original[["entry_time","side","entry"]], t[["entry_time","side","entry"]],check_dtype=False)
+                            assert (t.exit_time <= original.exit_time).all()
+                        assert t.net_usd.sum() == m.iat[-1]
+                        rows[name] = classify(t, raw)
+                        if draw_chart:
+                            chart["layers"][name] = {"trades":ledger(t), "hold":numbers(h)}
+                        if name in ("fixed_volume","fixed_restart_volume"):
+                            events.extend((panel,name,b.index[i],side,e,*cells) for i,side,e,*cells in head.activations)
             impulse = encode(b)
             for name in ("weighted","equal_mass","v08_sym"):
                 rows[name], _ = timed(b, impulse[name])
@@ -76,7 +78,7 @@ def evaluate(frames, out, extra=None, draw_chart=False):
                 daily.append(dict(panel=panel,date=str(date),model=name,net=float(t.net_usd.sum()),trades=len(t)))
             if draw_chart:
                 charts.append(chart)
-                examples.append(match(original, rows["fixed_volume"]))
+                examples.append(match(original, rows["fixed_restart_volume"]))
         groups = {panel:frame}
         if panel=="november14":
             mask = frame.index.strftime("%Y-%m-%d")=="2026-11-19"
@@ -84,7 +86,7 @@ def evaluate(frames, out, extra=None, draw_chart=False):
         for group, bars in groups.items():
             report[group] = {}
             dates = set(map(str,bars.index.date))
-            trade_rows = {name:pd.concat(parts,ignore_index=True) for name,parts in day_trades.items()}
+            trade_rows = {name:pd.concat([t for t in parts if len(t)],ignore_index=True) if any(map(len,parts)) else parts[0] for name,parts in day_trades.items()}
             trade_rows = {name:t[t.entry_time.isin(bars.index)] for name,t in trade_rows.items()}
             day = pd.DataFrame(daily).query("panel==@panel and date in @dates").pivot(index="date",columns="model",values="net")
             base = trade_rows["original"]
@@ -94,29 +96,38 @@ def evaluate(frames, out, extra=None, draw_chart=False):
                 stats.update(trades=len(t), expectancy=net/len(t) if len(t) else None, net_at_9=net-3*len(t),
                              without_best_day=net-day[name].max(), sessions=len(day),interval_vs_cash=comparison(day[name],0),
                              interval_vs_original=comparison(day[name],day.original))
-                if name in ("fixed_price","fixed_volume"):
+                if name.startswith("fixed_"):
                     stats["attribution"] = fixed_stats(match(base,t))
-                if name in ("volume","price"):
+                if name in ("volume","price","restart_volume","restart_price"):
                     stats["attribution"] = full_stats(match(base,t))
-                if name in ("volume","auction"):
-                    control = "price" if name=="volume" else "auction_equal"
+                if name in ("volume","restart_volume","auction"):
+                    control = {"volume":"price","restart_volume":"restart_price","auction":"auction_equal"}[name]
                     stats["interval_vs_control"] = comparison(day[name],day[control])
                     stats["passes"] = bool(len(t)>=50 and len(day)>=20 and stats["net_at_9"]>0 and stats["intraminute_max_dd"]<1500 and
                         min(stats[k][0] for k in ("interval_vs_cash","interval_vs_original","interval_vs_control"))>0)
+                    if name=="auction":
+                        for control_name in ("always_long","open_only"):
+                            interval = comparison(day[name],day[control_name])
+                            stats["interval_vs_"+control_name] = interval
+                            stats["passes"] &= interval[0]>0
                 report[group][name] = stats
     if draw_chart:
         pairs = pd.concat(examples,ignore_index=True)
         winners = pairs[pairs.net_usd_base>0]
         extremes = {"improvement":case(pairs.loc[pairs.delta.idxmax()]), "damaged_winner":case(winners.loc[winners.delta.idxmin()])}
+        if extremes["improvement"]["delta"]<=0:
+            extremes["improvement"]=None
+        if extremes["damaged_winner"]["delta"]>=0:
+            extremes["damaged_winner"]=None
         report["chart_cases"] = extremes
         modes = {key:(key.replace("_"," ").title(), "Original entries fixed." if key.startswith("fixed") else "Full strategy.") for key in charts[0]["layers"]}
-        render(charts,extremes,out/"replay.html",policies=modes,title="MNQ adverse-response evidence",default_mode="volume",
-               fixed_mode="fixed_volume",reset_modes=[m for m in modes if m!="original"],score_label="experimental stopping margin",
+        render(charts,extremes,out/"replay.html",policies=modes,title="MNQ adverse-response evidence",default_mode="restart_volume",
+               fixed_mode="fixed_restart_volume",reset_modes=[m for m in modes if m!="original"],score_label="experimental stopping margin",
                explanation="<p>Evidence cells compound adverse bar bodies. Hold value is positive while the original sign survives and adverse evidence is under eight. Case buttons compare identical entries.</p>")
     (out/"results.json").write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
     pd.DataFrame(daily).to_csv(out/"daily.csv",index=False)
     pd.concat(ledgers,ignore_index=True).to_csv(out/"trades.csv.gz",index=False,compression={"method":"gzip","mtime":0})
-    pd.DataFrame(events,columns=["panel","bar_start","side","evidence","slow","medium","fast"]).to_csv(out/"activations.csv.gz",index=False,compression={"method":"gzip","mtime":0})
+    pd.DataFrame(events,columns=["panel","model","bar_start","side","evidence","slow","medium","fast"]).to_csv(out/"activations.csv.gz",index=False,compression={"method":"gzip","mtime":0})
 
 
 if __name__=="__main__":

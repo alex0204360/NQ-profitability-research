@@ -147,6 +147,9 @@ if __name__=="__main__":
     else:
         frames=panels(args.scratch,"discovery")
         if args.extended:
-            from capture import november25
+            from known_day import november25
             frames.update(panels(args.scratch,"replication"),nov25=november25(args.scratch))
     evaluate(frames,args.out,extra,draw_chart=not args.external)
+    if args.external:
+        from synchrony import evaluate_pair
+        evaluate_pair(frames["external"],args.scratch/"response-evidence",args.out)

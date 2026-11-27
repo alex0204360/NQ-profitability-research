@@ -1,0 +1,280 @@
+{
+  "diagnostic": "exhaustive fair symmetric +/-1 paths; no market data",
+  "first_eligible_path_counts": {
+    "centered": {
+      "10": 168,
+      "12": 132,
+      "2": 1024,
+      "4": 512,
+      "6": 320,
+      "8": 224
+    },
+    "uncentered": {
+      "10": 168,
+      "12": 132,
+      "2": 1024,
+      "4": 512,
+      "6": 320,
+      "8": 224
+    }
+  },
+  "first_stop_path_counts": {
+    "centered": {
+      "10": 196,
+      "11": 164,
+      "12": 152,
+      "5": 128,
+      "6": 320,
+      "7": 224,
+      "8": 240,
+      "9": 208
+    },
+    "uncentered": {
+      "10": 160,
+      "11": 196,
+      "12": 123,
+      "4": 256,
+      "6": 256,
+      "7": 320,
+      "8": 256,
+      "9": 248
+    }
+  },
+  "gross_increment_vs_horizon_points": {
+    "centered": {
+      "denominator": 4096,
+      "mean": 0.0,
+      "sum_over_paths": 0
+    },
+    "uncentered": {
+      "denominator": 4096,
+      "mean": 0.0,
+      "sum_over_paths": 0
+    }
+  },
+  "gross_points": {
+    "centered": {
+      "mean": 0.0,
+      "sum_over_paths": 0
+    },
+    "horizon": {
+      "mean": 0.0,
+      "sum_over_paths": 0
+    },
+    "uncentered": {
+      "mean": 0.0,
+      "sum_over_paths": 0
+    }
+  },
+  "initial_scale_points": 2.0,
+  "normal_participation": 1.0,
+  "path_count": 4096,
+  "path_length": 12,
+  "prior_component_by_depth": {
+    "centered": [
+      {
+        "depth": 1,
+        "mean_prior_component": 1.5,
+        "theoretical": 1.5
+      },
+      {
+        "depth": 2,
+        "mean_prior_component": 1.125,
+        "theoretical": 1.125
+      },
+      {
+        "depth": 3,
+        "mean_prior_component": 0.84375,
+        "theoretical": 0.84375
+      },
+      {
+        "depth": 4,
+        "mean_prior_component": 0.6328125,
+        "theoretical": 0.6328125
+      },
+      {
+        "depth": 5,
+        "mean_prior_component": 0.474609375,
+        "theoretical": 0.474609375
+      },
+      {
+        "depth": 6,
+        "mean_prior_component": 0.35595703125,
+        "theoretical": 0.35595703125
+      },
+      {
+        "depth": 7,
+        "mean_prior_component": 0.2669677734375,
+        "theoretical": 0.2669677734375
+      },
+      {
+        "depth": 8,
+        "mean_prior_component": 0.200225830078125,
+        "theoretical": 0.200225830078125
+      },
+      {
+        "depth": 9,
+        "mean_prior_component": 0.15016937255859375,
+        "theoretical": 0.15016937255859375
+      },
+      {
+        "depth": 10,
+        "mean_prior_component": 0.11262702941894531,
+        "theoretical": 0.11262702941894531
+      },
+      {
+        "depth": 11,
+        "mean_prior_component": 0.08447027206420898,
+        "theoretical": 0.08447027206420898
+      },
+      {
+        "depth": 12,
+        "mean_prior_component": 0.06335270404815674,
+        "theoretical": 0.06335270404815674
+      }
+    ],
+    "uncentered": [
+      {
+        "depth": 1,
+        "mean_prior_component": 1.5,
+        "theoretical": 1.5
+      },
+      {
+        "depth": 2,
+        "mean_prior_component": 1.125,
+        "theoretical": 1.125
+      },
+      {
+        "depth": 3,
+        "mean_prior_component": 0.84375,
+        "theoretical": 0.84375
+      },
+      {
+        "depth": 4,
+        "mean_prior_component": 0.6328125,
+        "theoretical": 0.6328125
+      },
+      {
+        "depth": 5,
+        "mean_prior_component": 0.474609375,
+        "theoretical": 0.474609375
+      },
+      {
+        "depth": 6,
+        "mean_prior_component": 0.35595703125,
+        "theoretical": 0.35595703125
+      },
+      {
+        "depth": 7,
+        "mean_prior_component": 0.2669677734375,
+        "theoretical": 0.2669677734375
+      },
+      {
+        "depth": 8,
+        "mean_prior_component": 0.200225830078125,
+        "theoretical": 0.200225830078125
+      },
+      {
+        "depth": 9,
+        "mean_prior_component": 0.15016937255859375,
+        "theoretical": 0.15016937255859375
+      },
+      {
+        "depth": 10,
+        "mean_prior_component": 0.11262702941894531,
+        "theoretical": 0.11262702941894531
+      },
+      {
+        "depth": 11,
+        "mean_prior_component": 0.08447027206420898,
+        "theoretical": 0.08447027206420898
+      },
+      {
+        "depth": 12,
+        "mean_prior_component": 0.06335270404815674,
+        "theoretical": 0.06335270404815674
+      }
+    ]
+  },
+  "prior_mean_volume": 10.0,
+  "protocol": "symmetric_protocol.md",
+  "pulse_checks_by_depth": [
+    {
+      "centered_mean": 0.0,
+      "depth": 1,
+      "neutral_mean": 0.0,
+      "raw_mean": 0.0
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 2,
+      "neutral_mean": -0.125,
+      "raw_mean": -0.125
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 3,
+      "neutral_mean": -0.125,
+      "raw_mean": -0.125
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 4,
+      "neutral_mean": -0.1875,
+      "raw_mean": -0.1875
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 5,
+      "neutral_mean": -0.1875,
+      "raw_mean": -0.1875
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 6,
+      "neutral_mean": -0.21875,
+      "raw_mean": -0.21875
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 7,
+      "neutral_mean": -0.22265625,
+      "raw_mean": -0.22265625
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 8,
+      "neutral_mean": -0.2421875,
+      "raw_mean": -0.2421875
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 9,
+      "neutral_mean": -0.24609375,
+      "raw_mean": -0.24609375
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 10,
+      "neutral_mean": -0.26025390625,
+      "raw_mean": -0.26025390625
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 11,
+      "neutral_mean": -0.263427734375,
+      "raw_mean": -0.263427734375
+    },
+    {
+      "centered_mean": 0.0,
+      "depth": 12,
+      "neutral_mean": -0.2745361328125,
+      "raw_mean": -0.2745361328125
+    }
+  ],
+  "stopped_path_count": {
+    "centered": 1632,
+    "uncentered": 1815
+  },
+  "volume": 10.0
+}

@@ -1,0 +1,1178 @@
+[
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 752.0,
+    "mean_daily_usd": 18.8,
+    "interval95_daily": [
+      -71.6509375,
+      107.18874999999998
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 40,
+    "total_usd": 318.5,
+    "mean_daily_usd": 7.9625,
+    "interval95_daily": [
+      -5.4375,
+      22.975624999999994
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 40,
+    "total_usd": 117.5,
+    "mean_daily_usd": 2.9375,
+    "interval95_daily": [
+      -35.5634375,
+      37.137812499999995
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 40,
+    "total_usd": 1715.5,
+    "mean_daily_usd": 42.8875,
+    "interval95_daily": [
+      -39.427812499999995,
+      125.20124999999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 81.0,
+    "mean_daily_usd": 2.025,
+    "interval95_daily": [
+      -45.988749999999996,
+      48.3
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 40,
+    "total_usd": 141.0,
+    "mean_daily_usd": 3.525,
+    "interval95_daily": [
+      -5.825,
+      13.525
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 40,
+    "total_usd": 225.5,
+    "mean_daily_usd": 5.6375,
+    "interval95_daily": [
+      -21.275624999999998,
+      31.51312499999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 752.0,
+    "mean_daily_usd": 18.8,
+    "interval95_daily": [
+      -71.6509375,
+      107.18874999999998
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 40,
+    "total_usd": 318.5,
+    "mean_daily_usd": 7.9625,
+    "interval95_daily": [
+      -5.4375,
+      22.975624999999994
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 40,
+    "total_usd": 117.5,
+    "mean_daily_usd": 2.9375,
+    "interval95_daily": [
+      -35.5634375,
+      37.137812499999995
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 40,
+    "total_usd": 194.5,
+    "mean_daily_usd": 4.8625,
+    "interval95_daily": [
+      -81.7278125,
+      91.45062499999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": -258.0,
+    "mean_daily_usd": -6.45,
+    "interval95_daily": [
+      -54.3884375,
+      39.875
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 40,
+    "total_usd": 168.0,
+    "mean_daily_usd": 4.2,
+    "interval95_daily": [
+      -5.2125,
+      14.3125
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 40,
+    "total_usd": 48.5,
+    "mean_daily_usd": 1.2125,
+    "interval95_daily": [
+      -25.425,
+      26.81468749999997
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 752.0,
+    "mean_daily_usd": 18.8,
+    "interval95_daily": [
+      -71.6509375,
+      107.18874999999998
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 40,
+    "total_usd": 318.5,
+    "mean_daily_usd": 7.9625,
+    "interval95_daily": [
+      -5.4375,
+      22.975624999999994
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 40,
+    "total_usd": 117.5,
+    "mean_daily_usd": 2.9375,
+    "interval95_daily": [
+      -35.5634375,
+      37.137812499999995
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 40,
+    "total_usd": -1326.5,
+    "mean_daily_usd": -33.1625,
+    "interval95_daily": [
+      -124.85312499999999,
+      58.22874999999995
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": -597.0,
+    "mean_daily_usd": -14.925,
+    "interval95_daily": [
+      -62.8625,
+      31.338437499999984
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 40,
+    "total_usd": 195.0,
+    "mean_daily_usd": 4.875,
+    "interval95_daily": [
+      -4.675,
+      15.087812499999997
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 40,
+    "total_usd": -128.5,
+    "mean_daily_usd": -3.2125,
+    "interval95_daily": [
+      -29.7378125,
+      22.188124999999992
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 1014.5,
+    "mean_daily_usd": 25.3625,
+    "interval95_daily": [
+      -52.1265625,
+      103.53937499999996
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 40,
+    "total_usd": 910.5,
+    "mean_daily_usd": 22.7625,
+    "interval95_daily": [
+      5.6875,
+      42.43781249999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 40,
+    "total_usd": -188.5,
+    "mean_daily_usd": -4.7125,
+    "interval95_daily": [
+      -37.275625,
+      26.40062499999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 40,
+    "total_usd": 646.0,
+    "mean_daily_usd": 16.15,
+    "interval95_daily": [
+      -81.33906250000001,
+      108.175
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": -113.5,
+    "mean_daily_usd": -2.8375,
+    "interval95_daily": [
+      -55.0,
+      47.36343749999998
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 40,
+    "total_usd": 60.0,
+    "mean_daily_usd": 1.5,
+    "interval95_daily": [
+      -8.463125,
+      10.775312499999997
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 40,
+    "total_usd": -461.5,
+    "mean_daily_usd": -11.5375,
+    "interval95_daily": [
+      -54.6378125,
+      27.464062499999976
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 1014.5,
+    "mean_daily_usd": 25.3625,
+    "interval95_daily": [
+      -52.1265625,
+      103.53937499999996
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 40,
+    "total_usd": 910.5,
+    "mean_daily_usd": 22.7625,
+    "interval95_daily": [
+      5.6875,
+      42.43781249999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 40,
+    "total_usd": -188.5,
+    "mean_daily_usd": -4.7125,
+    "interval95_daily": [
+      -37.275625,
+      26.40062499999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 40,
+    "total_usd": -674.0,
+    "mean_daily_usd": -16.85,
+    "interval95_daily": [
+      -117.06343749999999,
+      78.81343749999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": -350.5,
+    "mean_daily_usd": -8.7625,
+    "interval95_daily": [
+      -61.375625,
+      41.938437499999985
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 40,
+    "total_usd": 72.0,
+    "mean_daily_usd": 1.8,
+    "interval95_daily": [
+      -8.0253125,
+      10.975
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 40,
+    "total_usd": -602.5,
+    "mean_daily_usd": -15.0625,
+    "interval95_daily": [
+      -58.915,
+      24.389062499999977
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": 1014.5,
+    "mean_daily_usd": 25.3625,
+    "interval95_daily": [
+      -52.1265625,
+      103.53937499999996
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 40,
+    "total_usd": 910.5,
+    "mean_daily_usd": 22.7625,
+    "interval95_daily": [
+      5.6875,
+      42.43781249999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 40,
+    "total_usd": -188.5,
+    "mean_daily_usd": -4.7125,
+    "interval95_daily": [
+      -37.275625,
+      26.40062499999999
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 40,
+    "total_usd": -1994.0,
+    "mean_daily_usd": -49.85,
+    "interval95_daily": [
+      -153.7253125,
+      48.92624999999998
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 40,
+    "total_usd": -587.5,
+    "mean_daily_usd": -14.6875,
+    "interval95_daily": [
+      -67.5534375,
+      36.65093749999998
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 40,
+    "total_usd": 84.0,
+    "mean_daily_usd": 2.1,
+    "interval95_daily": [
+      -7.5253125,
+      11.225
+    ]
+  },
+  {
+    "group": "discovery40",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 40,
+    "total_usd": -743.5,
+    "mean_daily_usd": -18.5875,
+    "interval95_daily": [
+      -63.25125,
+      21.525937499999984
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 560.5,
+    "mean_daily_usd": 9.341666666666667,
+    "interval95_daily": [
+      -39.075208333333336,
+      60.03374999999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 60,
+    "total_usd": -92.5,
+    "mean_daily_usd": -1.5416666666666667,
+    "interval95_daily": [
+      -9.108541666666666,
+      8.85041666666666
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 60,
+    "total_usd": 921.5,
+    "mean_daily_usd": 15.358333333333333,
+    "interval95_daily": [
+      -7.143124999999999,
+      37.966875
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 60,
+    "total_usd": -1844.0,
+    "mean_daily_usd": -30.733333333333334,
+    "interval95_daily": [
+      -102.04375,
+      40.25874999999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 354.0,
+    "mean_daily_usd": 5.9,
+    "interval95_daily": [
+      -32.29520833333333,
+      44.92604166666665
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 60,
+    "total_usd": -147.5,
+    "mean_daily_usd": -2.4583333333333335,
+    "interval95_daily": [
+      -9.175,
+      4.783541666666664
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 60,
+    "total_usd": 1281.0,
+    "mean_daily_usd": 21.35,
+    "interval95_daily": [
+      -7.175208333333333,
+      49.459166666666654
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 560.5,
+    "mean_daily_usd": 9.341666666666667,
+    "interval95_daily": [
+      -39.075208333333336,
+      60.03374999999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 60,
+    "total_usd": -92.5,
+    "mean_daily_usd": -1.5416666666666667,
+    "interval95_daily": [
+      -9.108541666666666,
+      8.85041666666666
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 60,
+    "total_usd": 921.5,
+    "mean_daily_usd": 15.358333333333333,
+    "interval95_daily": [
+      -7.143124999999999,
+      37.966875
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 60,
+    "total_usd": -3869.0,
+    "mean_daily_usd": -64.48333333333333,
+    "interval95_daily": [
+      -135.99333333333334,
+      6.325833333333321
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": -48.0,
+    "mean_daily_usd": -0.8,
+    "interval95_daily": [
+      -38.75020833333333,
+      38.367083333333326
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 60,
+    "total_usd": -147.5,
+    "mean_daily_usd": -2.4583333333333335,
+    "interval95_daily": [
+      -9.225208333333333,
+      4.875
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 60,
+    "total_usd": 1110.0,
+    "mean_daily_usd": 18.5,
+    "interval95_daily": [
+      -9.692083333333333,
+      46.366875
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 560.5,
+    "mean_daily_usd": 9.341666666666667,
+    "interval95_daily": [
+      -39.075208333333336,
+      60.03374999999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 60,
+    "total_usd": -92.5,
+    "mean_daily_usd": -1.5416666666666667,
+    "interval95_daily": [
+      -9.108541666666666,
+      8.85041666666666
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 60,
+    "total_usd": 921.5,
+    "mean_daily_usd": 15.358333333333333,
+    "interval95_daily": [
+      -7.143124999999999,
+      37.966875
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 60,
+    "total_usd": -5894.0,
+    "mean_daily_usd": -98.23333333333333,
+    "interval95_daily": [
+      -169.82520833333334,
+      -27.89625000000005
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": -450.0,
+    "mean_daily_usd": -7.5,
+    "interval95_daily": [
+      -45.33375,
+      31.87520833333333
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 60,
+    "total_usd": -147.5,
+    "mean_daily_usd": -2.4583333333333335,
+    "interval95_daily": [
+      -9.3,
+      4.916874999999997
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 0,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 60,
+    "total_usd": 939.0,
+    "mean_daily_usd": 15.65,
+    "interval95_daily": [
+      -12.267291666666667,
+      43.292708333333316
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 809.5,
+    "mean_daily_usd": 13.491666666666667,
+    "interval95_daily": [
+      -36.527499999999996,
+      62.75062499999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 60,
+    "total_usd": -131.0,
+    "mean_daily_usd": -2.183333333333333,
+    "interval95_daily": [
+      -7.958333333333333,
+      3.041874999999997
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 60,
+    "total_usd": 883.0,
+    "mean_daily_usd": 14.716666666666667,
+    "interval95_daily": [
+      -12.200624999999999,
+      41.534583333333316
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 60,
+    "total_usd": -686.0,
+    "mean_daily_usd": -11.433333333333334,
+    "interval95_daily": [
+      -78.71729166666667,
+      55.65145833333331
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 521.5,
+    "mean_daily_usd": 8.691666666666666,
+    "interval95_daily": [
+      -25.159375,
+      40.88333333333333
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 60,
+    "total_usd": -508.5,
+    "mean_daily_usd": -8.475,
+    "interval95_daily": [
+      -16.966874999999998,
+      -0.6664583333333364
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 3,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 60,
+    "total_usd": 795.5,
+    "mean_daily_usd": 13.258333333333333,
+    "interval95_daily": [
+      -11.825208333333332,
+      39.108333333333334
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 809.5,
+    "mean_daily_usd": 13.491666666666667,
+    "interval95_daily": [
+      -36.527499999999996,
+      62.75062499999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 60,
+    "total_usd": -131.0,
+    "mean_daily_usd": -2.183333333333333,
+    "interval95_daily": [
+      -7.958333333333333,
+      3.041874999999997
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 60,
+    "total_usd": 883.0,
+    "mean_daily_usd": 14.716666666666667,
+    "interval95_daily": [
+      -12.200624999999999,
+      41.534583333333316
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 60,
+    "total_usd": -2540.0,
+    "mean_daily_usd": -42.333333333333336,
+    "interval95_daily": [
+      -109.72625,
+      24.351041666666653
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 194.5,
+    "mean_daily_usd": 3.2416666666666667,
+    "interval95_daily": [
+      -30.73375,
+      35.559583333333315
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 60,
+    "total_usd": -517.5,
+    "mean_daily_usd": -8.625,
+    "interval95_daily": [
+      -17.175416666666667,
+      -0.7414583333333364
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 6,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 60,
+    "total_usd": 660.5,
+    "mean_daily_usd": 11.008333333333333,
+    "interval95_daily": [
+      -14.050625,
+      36.59229166666666
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": 809.5,
+    "mean_daily_usd": 13.491666666666667,
+    "interval95_daily": [
+      -36.527499999999996,
+      62.75062499999999
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_price",
+    "sessions": 60,
+    "total_usd": -131.0,
+    "mean_daily_usd": -2.183333333333333,
+    "interval95_daily": [
+      -7.958333333333333,
+      3.041874999999997
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "fixed_volume",
+    "comparator": "fixed_trail",
+    "sessions": 60,
+    "total_usd": 883.0,
+    "mean_daily_usd": 14.716666666666667,
+    "interval95_daily": [
+      -12.200624999999999,
+      41.534583333333316
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "cash",
+    "sessions": 60,
+    "total_usd": -4394.0,
+    "mean_daily_usd": -73.23333333333333,
+    "interval95_daily": [
+      -140.93333333333334,
+      -6.6783333333334065
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "original",
+    "sessions": 60,
+    "total_usd": -132.5,
+    "mean_daily_usd": -2.2083333333333335,
+    "interval95_daily": [
+      -36.30020833333333,
+      30.384583333333314
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_price",
+    "sessions": 60,
+    "total_usd": -526.5,
+    "mean_daily_usd": -8.775,
+    "interval95_daily": [
+      -17.408333333333335,
+      -0.8662500000000061
+    ]
+  },
+  {
+    "group": "external60",
+    "delay": 1,
+    "cost": 9,
+    "policy": "full_volume",
+    "comparator": "full_trail",
+    "sessions": 60,
+    "total_usd": 525.5,
+    "mean_daily_usd": 8.758333333333333,
+    "interval95_daily": [
+      -16.325208333333332,
+      34.258958333333325
+    ]
+  }
+]

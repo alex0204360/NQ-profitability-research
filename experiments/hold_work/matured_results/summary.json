@@ -1,0 +1,1194 @@
+{
+  "discovery40": {
+    "0": {
+      "dates": [
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-25"
+      ],
+      "original_trades": 394,
+      "scheduled_first_decisions": 218,
+      "labeled_first_decisions": 218,
+      "sessions_without_labels": [],
+      "mean_realized_pts": 0.28784403669724773,
+      "original_net_by_cost_usd": {
+        "3": 1634.5,
+        "6": 452.5,
+        "9": -729.5
+      },
+      "heads": {
+        "zero": {
+          "mse_pts_squared": 4782.78125,
+          "mae_pts": 41.07912844036697,
+          "mean_output_pts": 0.0,
+          "bias_pts": -0.28784403669724773,
+          "spearman": null,
+          "paired_mse_vs_controls": {
+            "constant": {
+              "mse_delta_pts_squared": -104.95887572940978,
+              "interval95_pts_squared": [
+                -286.9619487639113,
+                41.221758308203775
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -111.66685598681158,
+              "interval95_pts_squared": [
+                -295.15598802146184,
+                35.222494415227416
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": 1634.5,
+              "6": 452.5,
+              "9": -729.5
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "raw_volume": {
+          "mse_pts_squared": 5760.271552483435,
+          "mae_pts": 49.704763979888526,
+          "mean_output_pts": 30.22703564977056,
+          "bias_pts": 29.939191613073305,
+          "spearman": 0.07339371435366733,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 977.4903024834348,
+              "interval95_pts_squared": [
+                99.18931110927318,
+                2094.509391897482
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 872.531426754025,
+              "interval95_pts_squared": [
+                -144.69669643728815,
+                2094.35826738374
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 865.8234464966233,
+              "interval95_pts_squared": [
+                -154.70218964419502,
+                2089.950324768495
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": 1634.5,
+              "6": 452.5,
+              "9": -729.5
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "constant": {
+          "mse_pts_squared": 4887.74012572941,
+          "mae_pts": 41.08973976170306,
+          "mean_output_pts": -4.7302001428552,
+          "bias_pts": -5.018044179552446,
+          "spearman": -0.08276158438460494,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 104.95887572940978,
+              "interval95_pts_squared": [
+                -41.221758308203796,
+                286.9619487639112
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -6.707980257401818,
+              "interval95_pts_squared": [
+                -11.191595232635892,
+                -2.2836120353435785
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 217,
+            "changed_fills": 217,
+            "positive_effect_trades": 121,
+            "negative_effect_trades": 94,
+            "delta_usd": -188.5,
+            "net_by_cost_usd": {
+              "3": 1446.0,
+              "6": 264.0,
+              "9": -918.0
+            },
+            "positive_delta_usd": 8829.5,
+            "negative_delta_usd": -9018.0,
+            "largest_positive_trade_share": 0.08635823093040376,
+            "leave_largest_positive_trade_out_delta_usd": -951.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -2607.0,
+            "leave_largest_positive_session_out_delta_usd": -1064.5
+          }
+        },
+        "price": {
+          "mse_pts_squared": 4894.448105986811,
+          "mae_pts": 41.105872884006885,
+          "mean_output_pts": -4.817038980236836,
+          "bias_pts": -5.104883016934082,
+          "spearman": -0.0817034639180502,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 111.66685598681158,
+              "interval95_pts_squared": [
+                -35.22249441522743,
+                295.15598802146184
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 6.707980257401818,
+              "interval95_pts_squared": [
+                2.2836120353435785,
+                11.191595232635889
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 217,
+            "changed_fills": 217,
+            "positive_effect_trades": 121,
+            "negative_effect_trades": 94,
+            "delta_usd": -188.5,
+            "net_by_cost_usd": {
+              "3": 1446.0,
+              "6": 264.0,
+              "9": -918.0
+            },
+            "positive_delta_usd": 8829.5,
+            "negative_delta_usd": -9018.0,
+            "largest_positive_trade_share": 0.08635823093040376,
+            "leave_largest_positive_trade_out_delta_usd": -951.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -2607.0,
+            "leave_largest_positive_session_out_delta_usd": -1064.5
+          }
+        },
+        "interaction": {
+          "mse_pts_squared": 4902.37034971371,
+          "mae_pts": 41.131649473050174,
+          "mean_output_pts": -4.9294617424386455,
+          "bias_pts": -5.217305779135892,
+          "spearman": -0.08554848952147492,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 119.58909971370973,
+              "interval95_pts_squared": [
+                -30.281071010454337,
+                305.11501780402864
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 14.630223984299946,
+              "interval95_pts_squared": [
+                4.219063429852779,
+                29.94626916885348
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 7.922243726898127,
+              "interval95_pts_squared": [
+                0.601496746075213,
+                19.507009888241065
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 217,
+            "changed_fills": 217,
+            "positive_effect_trades": 121,
+            "negative_effect_trades": 94,
+            "delta_usd": -188.5,
+            "net_by_cost_usd": {
+              "3": 1446.0,
+              "6": 264.0,
+              "9": -918.0
+            },
+            "positive_delta_usd": 8829.5,
+            "negative_delta_usd": -9018.0,
+            "largest_positive_trade_share": 0.08635823093040376,
+            "leave_largest_positive_trade_out_delta_usd": -951.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -2607.0,
+            "leave_largest_positive_session_out_delta_usd": -1064.5
+          }
+        }
+      }
+    },
+    "1": {
+      "dates": [
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-25"
+      ],
+      "original_trades": 361,
+      "scheduled_first_decisions": 181,
+      "labeled_first_decisions": 181,
+      "sessions_without_labels": [],
+      "mean_realized_pts": -1.5441988950276244,
+      "original_net_by_cost_usd": {
+        "3": 759.5,
+        "6": -323.5,
+        "9": -1406.5
+      },
+      "heads": {
+        "zero": {
+          "mse_pts_squared": 5628.973066298343,
+          "mae_pts": 45.187845303867405,
+          "mean_output_pts": 0.0,
+          "bias_pts": 1.5441988950276244,
+          "spearman": null,
+          "paired_mse_vs_controls": {
+            "constant": {
+              "mse_delta_pts_squared": -75.2914641976715,
+              "interval95_pts_squared": [
+                -204.37742799484866,
+                13.753584252011695
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -80.96040018477136,
+              "interval95_pts_squared": [
+                -208.9689947433621,
+                12.240398888604208
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": 759.5,
+              "6": -323.5,
+              "9": -1406.5
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "raw_volume": {
+          "mse_pts_squared": 7959.664041310012,
+          "mae_pts": 57.75644829626469,
+          "mean_output_pts": 34.37657377095519,
+          "bias_pts": 35.920772665982824,
+          "spearman": -0.02054459415896487,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 2330.6909750116683,
+              "interval95_pts_squared": [
+                778.5357914293799,
+                4272.073800681037
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 2255.399510813997,
+              "interval95_pts_squared": [
+                746.3436831564798,
+                4123.442691500523
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 2249.7305748268973,
+              "interval95_pts_squared": [
+                739.7250135789255,
+                4123.453481113517
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": 759.5,
+              "6": -323.5,
+              "9": -1406.5
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "constant": {
+          "mse_pts_squared": 5704.264530496014,
+          "mae_pts": 45.41075341950431,
+          "mean_output_pts": -0.18917564943686702,
+          "bias_pts": 1.3550232455907563,
+          "spearman": -0.08152165390477696,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 75.2914641976715,
+              "interval95_pts_squared": [
+                -13.753584252011697,
+                204.37742799484863
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -5.668935987099857,
+              "interval95_pts_squared": [
+                -14.17836961443899,
+                2.909857634753341
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 89,
+            "changed_fills": 89,
+            "positive_effect_trades": 38,
+            "negative_effect_trades": 49,
+            "delta_usd": -537.5,
+            "net_by_cost_usd": {
+              "3": 222.0,
+              "6": -861.0,
+              "9": -1944.0
+            },
+            "positive_delta_usd": 2494.0,
+            "negative_delta_usd": -3031.5,
+            "largest_positive_trade_share": 0.1433440256615878,
+            "leave_largest_positive_trade_out_delta_usd": -895.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -1790.5,
+            "leave_largest_positive_session_out_delta_usd": -922.5
+          }
+        },
+        "price": {
+          "mse_pts_squared": 5709.933466483113,
+          "mae_pts": 45.49140624113869,
+          "mean_output_pts": -0.2690681510284308,
+          "bias_pts": 1.2751307439991935,
+          "spearman": -0.09697437012413136,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 80.96040018477136,
+              "interval95_pts_squared": [
+                -12.240398888604213,
+                208.96899474336195
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 5.668935987099857,
+              "interval95_pts_squared": [
+                -2.9098576347533416,
+                14.178369614438983
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 89,
+            "changed_fills": 89,
+            "positive_effect_trades": 38,
+            "negative_effect_trades": 49,
+            "delta_usd": -1087.0,
+            "net_by_cost_usd": {
+              "3": -327.5,
+              "6": -1410.5,
+              "9": -2493.5
+            },
+            "positive_delta_usd": 2494.0,
+            "negative_delta_usd": -3581.0,
+            "largest_positive_trade_share": 0.1433440256615878,
+            "leave_largest_positive_trade_out_delta_usd": -1444.5,
+            "leave_largest_five_positive_trades_out_delta_usd": -2340.0,
+            "leave_largest_positive_session_out_delta_usd": -1472.0
+          }
+        },
+        "interaction": {
+          "mse_pts_squared": 5713.9025880258805,
+          "mae_pts": 45.51599226808028,
+          "mean_output_pts": -0.4212839097030383,
+          "bias_pts": 1.1229149853245854,
+          "spearman": -0.09852864765100769,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 84.92952172753883,
+              "interval95_pts_squared": [
+                -10.913355847798382,
+                213.3011797231823
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 9.638057529867329,
+              "interval95_pts_squared": [
+                -4.612218158179593,
+                24.917241869334518
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 3.9691215427674704,
+              "interval95_pts_squared": [
+                -2.431612613808333,
+                11.378137334589162
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 95,
+            "changed_fills": 95,
+            "positive_effect_trades": 40,
+            "negative_effect_trades": 53,
+            "delta_usd": -1312.5,
+            "net_by_cost_usd": {
+              "3": -553.0,
+              "6": -1636.0,
+              "9": -2719.0
+            },
+            "positive_delta_usd": 2562.0,
+            "negative_delta_usd": -3874.5,
+            "largest_positive_trade_share": 0.13953942232630756,
+            "leave_largest_positive_trade_out_delta_usd": -1670.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -2565.5,
+            "leave_largest_positive_session_out_delta_usd": -1697.5
+          }
+        }
+      }
+    }
+  },
+  "external60": {
+    "0": {
+      "dates": [
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15"
+      ],
+      "original_trades": 541,
+      "scheduled_first_decisions": 272,
+      "labeled_first_decisions": 272,
+      "sessions_without_labels": [],
+      "mean_realized_pts": -0.24540441176470587,
+      "original_net_by_cost_usd": {
+        "3": -2198.0,
+        "6": -3821.0,
+        "9": -5444.0
+      },
+      "heads": {
+        "zero": {
+          "mse_pts_squared": 2686.2134650735293,
+          "mae_pts": 35.66452205882353,
+          "mean_output_pts": 0.0,
+          "bias_pts": 0.24540441176470587,
+          "spearman": null,
+          "paired_mse_vs_controls": {
+            "constant": {
+              "mse_delta_pts_squared": -7.245720448285293,
+              "interval95_pts_squared": [
+                -65.99839300464967,
+                52.13006154439542
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -15.554172248149378,
+              "interval95_pts_squared": [
+                -72.84229255598412,
+                40.65527688790717
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": -2198.0,
+              "6": -3821.0,
+              "9": -5444.0
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "raw_volume": {
+          "mse_pts_squared": 4106.38527332828,
+          "mae_pts": 46.15347377162987,
+          "mean_output_pts": 27.68424785564911,
+          "bias_pts": 27.929652267413818,
+          "spearman": -0.08358931936063325,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 1420.1718082547507,
+              "interval95_pts_squared": [
+                698.1239073098202,
+                2150.8986764006095
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 1412.9260878064654,
+              "interval95_pts_squared": [
+                643.2966717475097,
+                2188.4442219728917
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 1404.6176360066015,
+              "interval95_pts_squared": [
+                638.5865297484901,
+                2178.5486682957653
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": -2198.0,
+              "6": -3821.0,
+              "9": -5444.0
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "constant": {
+          "mse_pts_squared": 2693.4591855218146,
+          "mae_pts": 35.41508321857806,
+          "mean_output_pts": -2.79432819705923,
+          "bias_pts": -2.548923785294524,
+          "spearman": 0.06866264454038541,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 7.245720448285293,
+              "interval95_pts_squared": [
+                -52.13006154439545,
+                65.99839300464964
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -8.30845179986408,
+              "interval95_pts_squared": [
+                -17.12182459424322,
+                -0.04650213143565595
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 226,
+            "changed_fills": 226,
+            "positive_effect_trades": 123,
+            "negative_effect_trades": 102,
+            "delta_usd": -88.5,
+            "net_by_cost_usd": {
+              "3": -2286.5,
+              "6": -3909.5,
+              "9": -5532.5
+            },
+            "positive_delta_usd": 8305.5,
+            "negative_delta_usd": -8394.0,
+            "largest_positive_trade_share": 0.05947865872012522,
+            "leave_largest_positive_trade_out_delta_usd": -582.5,
+            "leave_largest_five_positive_trades_out_delta_usd": -1653.0,
+            "leave_largest_positive_session_out_delta_usd": -616.5
+          }
+        },
+        "price": {
+          "mse_pts_squared": 2701.7676373216786,
+          "mae_pts": 35.487970379198636,
+          "mean_output_pts": -2.672404521615102,
+          "bias_pts": -2.427000109850397,
+          "spearman": 0.062345448674926765,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 15.554172248149378,
+              "interval95_pts_squared": [
+                -40.655276887907185,
+                72.8422925559841
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 8.30845179986408,
+              "interval95_pts_squared": [
+                0.04650213143565197,
+                17.12182459424322
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 226,
+            "changed_fills": 226,
+            "positive_effect_trades": 125,
+            "negative_effect_trades": 100,
+            "delta_usd": 66.0,
+            "net_by_cost_usd": {
+              "3": -2132.0,
+              "6": -3755.0,
+              "9": -5378.0
+            },
+            "positive_delta_usd": 8483.5,
+            "negative_delta_usd": -8417.5,
+            "largest_positive_trade_share": 0.05823068309070549,
+            "leave_largest_positive_trade_out_delta_usd": -428.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -1498.5,
+            "leave_largest_positive_session_out_delta_usd": -569.5
+          }
+        },
+        "interaction": {
+          "mse_pts_squared": 2703.4582495921377,
+          "mae_pts": 35.52101344923096,
+          "mean_output_pts": -2.5570616285784484,
+          "bias_pts": -2.3116572168137424,
+          "spearman": 0.05495158342398781,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 17.244784518608146,
+              "interval95_pts_squared": [
+                -36.55622769169955,
+                72.53693233405606
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 9.999064070322849,
+              "interval95_pts_squared": [
+                -2.8501655532550534,
+                23.810454238708395
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 1.690612270458767,
+              "interval95_pts_squared": [
+                -5.932693790400881,
+                9.500247337980861
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 222,
+            "changed_fills": 222,
+            "positive_effect_trades": 122,
+            "negative_effect_trades": 99,
+            "delta_usd": 28.0,
+            "net_by_cost_usd": {
+              "3": -2170.0,
+              "6": -3793.0,
+              "9": -5416.0
+            },
+            "positive_delta_usd": 8209.0,
+            "negative_delta_usd": -8181.0,
+            "largest_positive_trade_share": 0.06017785357534414,
+            "leave_largest_positive_trade_out_delta_usd": -466.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -1536.5,
+            "leave_largest_positive_session_out_delta_usd": -607.5
+          }
+        }
+      }
+    },
+    "1": {
+      "dates": [
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15"
+      ],
+      "original_trades": 509,
+      "scheduled_first_decisions": 252,
+      "labeled_first_decisions": 252,
+      "sessions_without_labels": [],
+      "mean_realized_pts": 0.13293650793650794,
+      "original_net_by_cost_usd": {
+        "3": -1207.5,
+        "6": -2734.5,
+        "9": -4261.5
+      },
+      "heads": {
+        "zero": {
+          "mse_pts_squared": 2418.592757936508,
+          "mae_pts": 33.61904761904762,
+          "mean_output_pts": 0.0,
+          "bias_pts": -0.13293650793650794,
+          "spearman": null,
+          "paired_mse_vs_controls": {
+            "constant": {
+              "mse_delta_pts_squared": -13.476924431315148,
+              "interval95_pts_squared": [
+                -39.136426481034434,
+                13.198977163461889
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -13.73865090516672,
+              "interval95_pts_squared": [
+                -41.15409688607373,
+                16.73738826779106
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": -1207.5,
+              "6": -2734.5,
+              "9": -4261.5
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "raw_volume": {
+          "mse_pts_squared": 3450.6086297188276,
+          "mae_pts": 42.93823091286225,
+          "mean_output_pts": 27.044274747750354,
+          "bias_pts": 26.91133823981385,
+          "spearman": 0.02805933640388319,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 1032.0158717823197,
+              "interval95_pts_squared": [
+                410.01510305077574,
+                1619.323911084765
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 1018.5389473510045,
+              "interval95_pts_squared": [
+                385.50709100127017,
+                1620.1917083028468
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": 1018.2772208771527,
+              "interval95_pts_squared": [
+                397.439117535454,
+                1609.540325183264
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 0,
+            "changed_fills": 0,
+            "positive_effect_trades": 0,
+            "negative_effect_trades": 0,
+            "delta_usd": 0.0,
+            "net_by_cost_usd": {
+              "3": -1207.5,
+              "6": -2734.5,
+              "9": -4261.5
+            },
+            "positive_delta_usd": 0.0,
+            "negative_delta_usd": 0.0,
+            "largest_positive_trade_share": null,
+            "leave_largest_positive_trade_out_delta_usd": 0.0,
+            "leave_largest_five_positive_trades_out_delta_usd": 0.0,
+            "leave_largest_positive_session_out_delta_usd": 0.0
+          }
+        },
+        "constant": {
+          "mse_pts_squared": 2432.069682367823,
+          "mae_pts": 33.7134059575035,
+          "mean_output_pts": -0.6556587518523422,
+          "bias_pts": -0.7885952597888506,
+          "spearman": -0.0035045581379143497,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 13.476924431315148,
+              "interval95_pts_squared": [
+                -13.19897716346189,
+                39.13642648103443
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -0.2617264738515751,
+              "interval95_pts_squared": [
+                -17.99555446335772,
+                17.658622157752923
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 156,
+            "changed_fills": 156,
+            "positive_effect_trades": 78,
+            "negative_effect_trades": 78,
+            "delta_usd": -78.5,
+            "net_by_cost_usd": {
+              "3": -1286.0,
+              "6": -2813.0,
+              "9": -4340.0
+            },
+            "positive_delta_usd": 5357.5,
+            "negative_delta_usd": -5436.0,
+            "largest_positive_trade_share": 0.07634157722818478,
+            "leave_largest_positive_trade_out_delta_usd": -487.5,
+            "leave_largest_five_positive_trades_out_delta_usd": -1258.0,
+            "leave_largest_positive_session_out_delta_usd": -457.5
+          }
+        },
+        "price": {
+          "mse_pts_squared": 2432.3314088416746,
+          "mae_pts": 33.67926565819052,
+          "mean_output_pts": -0.2620702664081228,
+          "bias_pts": -0.3950067743446307,
+          "spearman": -0.01232500643088911,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 13.73865090516672,
+              "interval95_pts_squared": [
+                -16.73738826779107,
+                41.15409688607372
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": 0.2617264738515751,
+              "interval95_pts_squared": [
+                -17.658622157752927,
+                17.995554463357717
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 139,
+            "changed_fills": 139,
+            "positive_effect_trades": 70,
+            "negative_effect_trades": 69,
+            "delta_usd": -155.0,
+            "net_by_cost_usd": {
+              "3": -1362.5,
+              "6": -2889.5,
+              "9": -4416.5
+            },
+            "positive_delta_usd": 4542.5,
+            "negative_delta_usd": -4697.5,
+            "largest_positive_trade_share": 0.09003852504127682,
+            "leave_largest_positive_trade_out_delta_usd": -564.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -1243.0,
+            "leave_largest_positive_session_out_delta_usd": -493.5
+          }
+        },
+        "interaction": {
+          "mse_pts_squared": 2426.7987471878973,
+          "mae_pts": 33.60338339838507,
+          "mean_output_pts": 0.16747699198947885,
+          "bias_pts": 0.03454048405297065,
+          "spearman": 0.0067740293011339,
+          "paired_mse_vs_controls": {
+            "zero": {
+              "mse_delta_pts_squared": 8.205989251389362,
+              "interval95_pts_squared": [
+                -28.407027731929194,
+                42.54770432193466
+              ],
+              "valid_draws": 10000
+            },
+            "constant": {
+              "mse_delta_pts_squared": -5.270935179925782,
+              "interval95_pts_squared": [
+                -36.349436242651876,
+                22.57581048331562
+              ],
+              "valid_draws": 10000
+            },
+            "price": {
+              "mse_delta_pts_squared": -5.532661653777359,
+              "interval95_pts_squared": [
+                -20.84763833761412,
+                7.059753925933939
+              ],
+              "valid_draws": 10000
+            }
+          },
+          "policy": {
+            "alternative_chosen": 124,
+            "changed_fills": 124,
+            "positive_effect_trades": 65,
+            "negative_effect_trades": 59,
+            "delta_usd": 16.0,
+            "net_by_cost_usd": {
+              "3": -1191.5,
+              "6": -2718.5,
+              "9": -4245.5
+            },
+            "positive_delta_usd": 4288.5,
+            "negative_delta_usd": -4272.5,
+            "largest_positive_trade_share": 0.09537134196105865,
+            "leave_largest_positive_trade_out_delta_usd": -393.0,
+            "leave_largest_five_positive_trades_out_delta_usd": -1072.0,
+            "leave_largest_positive_session_out_delta_usd": -393.0
+          }
+        }
+      }
+    }
+  }
+}

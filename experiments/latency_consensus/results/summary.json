@@ -1,0 +1,1863 @@
+{
+  "discovery40": {
+    "sessions": 40,
+    "clock_eligible_signals": 731,
+    "common_labels": 729,
+    "trained_common_labels": 704,
+    "spearman": {
+      "unconditional": {
+        "realized_points_0": -0.06592729429001454,
+        "realized_points_1": -0.060697165366513386,
+        "mean_points": -0.0597362896632549
+      },
+      "geometry": {
+        "realized_points_0": -0.07228242102464683,
+        "realized_points_1": -0.07332601966648125,
+        "mean_points": -0.06894023261114154
+      },
+      "consensus": {
+        "realized_points_0": -0.08047406488591574,
+        "realized_points_1": -0.0809116088313437,
+        "mean_points": -0.07718339457637331
+      }
+    },
+    "spearman_after_warmup": {
+      "unconditional": {
+        "realized_points_0": -0.05767526433928096,
+        "realized_points_1": -0.05267460915753836,
+        "mean_points": -0.05095954990188192
+      },
+      "geometry": {
+        "realized_points_0": -0.06513452637076515,
+        "realized_points_1": -0.06604364383207949,
+        "mean_points": -0.06098901620548752
+      },
+      "consensus": {
+        "realized_points_0": -0.07356705712300476,
+        "realized_points_1": -0.07381605566760926,
+        "mean_points": -0.06948078417143604
+      }
+    },
+    "0": {
+      "unconditional": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -16.1003125,
+            18.1375
+          ],
+          "follow": [
+            -56.139375,
+            98.9446874999999
+          ]
+        }
+      },
+      "geometry": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -16.1003125,
+            18.1375
+          ],
+          "follow": [
+            -56.139375,
+            98.9446874999999
+          ]
+        }
+      },
+      "consensus": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -16.1003125,
+            18.1375
+          ],
+          "follow": [
+            -56.139375,
+            98.9446874999999
+          ]
+        },
+        "passes": false
+      },
+      "midpoint": {
+        "trades": 18,
+        "active_sessions": 9,
+        "gross_usd": 29.5,
+        "follow": 0,
+        "fade": 18,
+        "long": 8,
+        "short": 10,
+        "occupied_observed_minutes": 90,
+        "actionable_signals": 26,
+        "submitted_orders": 18,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": -24.5,
+            "expectancy_usd": -1.3611111111111112,
+            "without_best_trade_usd": -185.0,
+            "without_top_three_positive_trades_usd": -323.5,
+            "without_best_day_usd": -248.0,
+            "marked_drawdown": 281.5,
+            "intrabar_drawdown_lower": 313.0,
+            "intrabar_drawdown_upper": 313.0,
+            "marked_budget_margin": 1218.5,
+            "intrabar_upper_budget_margin": 1187.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -78.5,
+            "expectancy_usd": -4.361111111111111,
+            "without_best_trade_usd": -236.0,
+            "without_top_three_positive_trades_usd": -368.5,
+            "without_best_day_usd": -296.0,
+            "marked_drawdown": 304.5,
+            "intrabar_drawdown_lower": 340.0,
+            "intrabar_drawdown_upper": 340.0,
+            "marked_budget_margin": 1195.5,
+            "intrabar_upper_budget_margin": 1160.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -132.5,
+            "expectancy_usd": -7.361111111111111,
+            "without_best_trade_usd": -287.0,
+            "without_top_three_positive_trades_usd": -413.5,
+            "without_best_day_usd": -344.0,
+            "marked_drawdown": 331.5,
+            "intrabar_drawdown_lower": 367.0,
+            "intrabar_drawdown_upper": 367.0,
+            "marked_budget_margin": 1168.5,
+            "intrabar_upper_budget_margin": 1133.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -18.1375,
+            16.100312499999998
+          ],
+          "unconditional": [
+            -18.1375,
+            16.100312499999998
+          ],
+          "geometry": [
+            -18.1375,
+            16.100312499999998
+          ],
+          "follow": [
+            -63.463125,
+            101.11656249999994
+          ]
+        }
+      },
+      "follow": {
+        "trades": 436,
+        "active_sessions": 40,
+        "gross_usd": 1838.5,
+        "follow": 436,
+        "fade": 0,
+        "long": 217,
+        "short": 219,
+        "occupied_observed_minutes": 2180,
+        "actionable_signals": 731,
+        "submitted_orders": 436,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 530.5,
+            "expectancy_usd": 1.216743119266055,
+            "without_best_trade_usd": 280.5,
+            "without_top_three_positive_trades_usd": -91.0,
+            "without_best_day_usd": 28.5,
+            "marked_drawdown": 1026.0,
+            "intrabar_drawdown_lower": 1054.0,
+            "intrabar_drawdown_upper": 1054.0,
+            "marked_budget_margin": 474.0,
+            "intrabar_upper_budget_margin": 446.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -777.5,
+            "expectancy_usd": -1.783256880733945,
+            "without_best_trade_usd": -1024.5,
+            "without_top_three_positive_trades_usd": -1390.0,
+            "without_best_day_usd": -1252.5,
+            "marked_drawdown": 1536.0,
+            "intrabar_drawdown_lower": 1566.5,
+            "intrabar_drawdown_upper": 1566.5,
+            "marked_budget_margin": -36.0,
+            "intrabar_upper_budget_margin": -66.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -2085.5,
+            "expectancy_usd": -4.783256880733945,
+            "without_best_trade_usd": -2329.5,
+            "without_top_three_positive_trades_usd": -2689.0,
+            "without_best_day_usd": -2533.5,
+            "marked_drawdown": 2427.0,
+            "intrabar_drawdown_lower": 2457.5,
+            "intrabar_drawdown_upper": 2457.5,
+            "marked_budget_margin": -927.0,
+            "intrabar_upper_budget_margin": -957.5,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -98.94468749999999,
+            56.13937499999997
+          ],
+          "unconditional": [
+            -98.94468749999999,
+            56.13937499999997
+          ],
+          "geometry": [
+            -98.94468749999999,
+            56.13937499999997
+          ],
+          "midpoint": [
+            -101.1165625,
+            63.46312499999999
+          ]
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -16.1003125,
+            18.1375
+          ],
+          "follow": [
+            -56.139375,
+            98.9446874999999
+          ]
+        }
+      }
+    },
+    "1": {
+      "unconditional": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -24.225625,
+            3.8875
+          ],
+          "follow": [
+            -9.7378125,
+            147.0509375
+          ]
+        }
+      },
+      "geometry": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -24.225625,
+            3.8875
+          ],
+          "follow": [
+            -9.7378125,
+            147.0509375
+          ]
+        }
+      },
+      "consensus": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -24.225625,
+            3.8875
+          ],
+          "follow": [
+            -9.7378125,
+            147.0509375
+          ]
+        },
+        "passes": false
+      },
+      "midpoint": {
+        "trades": 17,
+        "active_sessions": 9,
+        "gross_usd": 414.5,
+        "follow": 0,
+        "fade": 17,
+        "long": 7,
+        "short": 10,
+        "occupied_observed_minutes": 85,
+        "actionable_signals": 26,
+        "submitted_orders": 17,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 363.5,
+            "expectancy_usd": 21.38235294117647,
+            "without_best_trade_usd": 186.0,
+            "without_top_three_positive_trades_usd": 19.5,
+            "without_best_day_usd": 147.5,
+            "marked_drawdown": 193.0,
+            "intrabar_drawdown_lower": 279.0,
+            "intrabar_drawdown_upper": 279.0,
+            "marked_budget_margin": 1307.0,
+            "intrabar_upper_budget_margin": 1221.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 312.5,
+            "expectancy_usd": 18.38235294117647,
+            "without_best_trade_usd": 138.0,
+            "without_top_three_positive_trades_usd": -22.5,
+            "without_best_day_usd": 102.5,
+            "marked_drawdown": 193.0,
+            "intrabar_drawdown_lower": 279.0,
+            "intrabar_drawdown_upper": 279.0,
+            "marked_budget_margin": 1307.0,
+            "intrabar_upper_budget_margin": 1221.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 261.5,
+            "expectancy_usd": 15.382352941176471,
+            "without_best_trade_usd": 90.0,
+            "without_top_three_positive_trades_usd": -64.5,
+            "without_best_day_usd": 57.5,
+            "marked_drawdown": 193.0,
+            "intrabar_drawdown_lower": 279.0,
+            "intrabar_drawdown_upper": 279.0,
+            "marked_budget_margin": 1307.0,
+            "intrabar_upper_budget_margin": 1221.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -3.8875,
+            24.225624999999994
+          ],
+          "unconditional": [
+            -3.8875,
+            24.225624999999994
+          ],
+          "geometry": [
+            -3.8875,
+            24.225624999999994
+          ],
+          "follow": [
+            -5.5625,
+            156.30124999999998
+          ]
+        }
+      },
+      "follow": {
+        "trades": 414,
+        "active_sessions": 40,
+        "gross_usd": 41.5,
+        "follow": 414,
+        "fade": 0,
+        "long": 207,
+        "short": 207,
+        "occupied_observed_minutes": 2070,
+        "actionable_signals": 731,
+        "submitted_orders": 414,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": -1200.5,
+            "expectancy_usd": -2.8997584541062804,
+            "without_best_trade_usd": -1428.5,
+            "without_top_three_positive_trades_usd": -1833.0,
+            "without_best_day_usd": -1514.0,
+            "marked_drawdown": 1471.0,
+            "intrabar_drawdown_lower": 1490.5,
+            "intrabar_drawdown_upper": 1490.5,
+            "marked_budget_margin": 29.0,
+            "intrabar_upper_budget_margin": 9.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -2442.5,
+            "expectancy_usd": -5.89975845410628,
+            "without_best_trade_usd": -2667.5,
+            "without_top_three_positive_trades_usd": -3066.0,
+            "without_best_day_usd": -2729.0,
+            "marked_drawdown": 2509.0,
+            "intrabar_drawdown_lower": 2533.5,
+            "intrabar_drawdown_upper": 2533.5,
+            "marked_budget_margin": -1009.0,
+            "intrabar_upper_budget_margin": -1033.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -3684.5,
+            "expectancy_usd": -8.89975845410628,
+            "without_best_trade_usd": -3906.5,
+            "without_top_three_positive_trades_usd": -4299.0,
+            "without_best_day_usd": -3944.0,
+            "marked_drawdown": 3749.5,
+            "intrabar_drawdown_lower": 3772.5,
+            "intrabar_drawdown_upper": 3772.5,
+            "marked_budget_margin": -2249.5,
+            "intrabar_upper_budget_margin": -2272.5,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -147.0509375,
+            9.737812499999997
+          ],
+          "unconditional": [
+            -147.0509375,
+            9.737812499999997
+          ],
+          "geometry": [
+            -147.0509375,
+            9.737812499999997
+          ],
+          "midpoint": [
+            -156.30125,
+            5.5625
+          ]
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            -24.225625,
+            3.8875
+          ],
+          "follow": [
+            -9.7378125,
+            147.0509375
+          ]
+        }
+      }
+    }
+  },
+  "external60": {
+    "sessions": 60,
+    "clock_eligible_signals": 1044,
+    "common_labels": 1044,
+    "trained_common_labels": 1024,
+    "spearman": {
+      "unconditional": {
+        "realized_points_0": -0.040785187388827804,
+        "realized_points_1": -0.060348570718281376,
+        "mean_points": -0.05311210478476116
+      },
+      "geometry": {
+        "realized_points_0": -0.03680106231070575,
+        "realized_points_1": -0.05784563392515398,
+        "mean_points": -0.05100522213613166
+      },
+      "consensus": {
+        "realized_points_0": -0.03880912314970857,
+        "realized_points_1": -0.05935091309467657,
+        "mean_points": -0.052683650895986416
+      }
+    },
+    "spearman_after_warmup": {
+      "unconditional": {
+        "realized_points_0": -0.0432530716801766,
+        "realized_points_1": -0.06235901319835802,
+        "mean_points": -0.05547071245705112
+      },
+      "geometry": {
+        "realized_points_0": -0.03759286496669234,
+        "realized_points_1": -0.05883542532755036,
+        "mean_points": -0.051884810700674286
+      },
+      "consensus": {
+        "realized_points_0": -0.0395770836545521,
+        "realized_points_1": -0.060171912219478436,
+        "mean_points": -0.053492000649471225
+      }
+    },
+    "0": {
+      "unconditional": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.375
+          ],
+          "follow": [
+            14.598958333333334,
+            89.07520833333334
+          ]
+        }
+      },
+      "geometry": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.375
+          ],
+          "follow": [
+            14.598958333333334,
+            89.07520833333334
+          ]
+        }
+      },
+      "consensus": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.375
+          ],
+          "follow": [
+            14.598958333333334,
+            89.07520833333334
+          ]
+        },
+        "passes": false
+      },
+      "midpoint": {
+        "trades": 2,
+        "active_sessions": 1,
+        "gross_usd": -75.5,
+        "follow": 0,
+        "fade": 2,
+        "long": 1,
+        "short": 1,
+        "occupied_observed_minutes": 10,
+        "actionable_signals": 2,
+        "submitted_orders": 2,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": -81.5,
+            "expectancy_usd": -40.75,
+            "without_best_trade_usd": -110.0,
+            "without_top_three_positive_trades_usd": -110.0,
+            "without_best_day_usd": -81.5,
+            "marked_drawdown": 188.5,
+            "intrabar_drawdown_lower": 224.5,
+            "intrabar_drawdown_upper": 224.5,
+            "marked_budget_margin": 1311.5,
+            "intrabar_upper_budget_margin": 1275.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -87.5,
+            "expectancy_usd": -43.75,
+            "without_best_trade_usd": -113.0,
+            "without_top_three_positive_trades_usd": -113.0,
+            "without_best_day_usd": -87.5,
+            "marked_drawdown": 191.5,
+            "intrabar_drawdown_lower": 227.5,
+            "intrabar_drawdown_upper": 227.5,
+            "marked_budget_margin": 1308.5,
+            "intrabar_upper_budget_margin": 1272.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -93.5,
+            "expectancy_usd": -46.75,
+            "without_best_trade_usd": -116.0,
+            "without_top_three_positive_trades_usd": -116.0,
+            "without_best_day_usd": -93.5,
+            "marked_drawdown": 194.5,
+            "intrabar_drawdown_lower": 230.5,
+            "intrabar_drawdown_upper": 230.5,
+            "marked_budget_margin": 1305.5,
+            "intrabar_upper_budget_margin": 1269.5,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -4.375,
+            0.0
+          ],
+          "unconditional": [
+            -4.375,
+            0.0
+          ],
+          "geometry": [
+            -4.375,
+            0.0
+          ],
+          "follow": [
+            12.416458333333333,
+            88.35854166666667
+          ]
+        }
+      },
+      "follow": {
+        "trades": 629,
+        "active_sessions": 60,
+        "gross_usd": 665.0,
+        "follow": 629,
+        "fade": 0,
+        "long": 297,
+        "short": 332,
+        "occupied_observed_minutes": 3145,
+        "actionable_signals": 1044,
+        "submitted_orders": 629,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": -1222.0,
+            "expectancy_usd": -1.9427662957074723,
+            "without_best_trade_usd": -1422.0,
+            "without_top_three_positive_trades_usd": -1755.5,
+            "without_best_day_usd": -1567.5,
+            "marked_drawdown": 2232.0,
+            "intrabar_drawdown_lower": 2260.0,
+            "intrabar_drawdown_upper": 2260.0,
+            "marked_budget_margin": -732.0,
+            "intrabar_upper_budget_margin": -760.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -3109.0,
+            "expectancy_usd": -4.9427662957074725,
+            "without_best_trade_usd": -3306.0,
+            "without_top_three_positive_trades_usd": -3633.5,
+            "without_best_day_usd": -3418.5,
+            "marked_drawdown": 3837.0,
+            "intrabar_drawdown_lower": 3862.5,
+            "intrabar_drawdown_upper": 3862.5,
+            "marked_budget_margin": -2337.0,
+            "intrabar_upper_budget_margin": -2362.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -4996.0,
+            "expectancy_usd": -7.9427662957074725,
+            "without_best_trade_usd": -5190.0,
+            "without_top_three_positive_trades_usd": -5511.5,
+            "without_best_day_usd": -5269.5,
+            "marked_drawdown": 5442.0,
+            "intrabar_drawdown_lower": 5473.5,
+            "intrabar_drawdown_upper": 5473.5,
+            "marked_budget_margin": -3942.0,
+            "intrabar_upper_budget_margin": -3973.5,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -89.07520833333334,
+            -14.598958333333348
+          ],
+          "unconditional": [
+            -89.07520833333334,
+            -14.598958333333348
+          ],
+          "geometry": [
+            -89.07520833333334,
+            -14.598958333333348
+          ],
+          "midpoint": [
+            -88.35854166666667,
+            -12.416458333333336
+          ]
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.375
+          ],
+          "follow": [
+            14.598958333333334,
+            89.07520833333334
+          ]
+        }
+      }
+    },
+    "1": {
+      "unconditional": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.5
+          ],
+          "follow": [
+            7.632291666666668,
+            60.258541666666666
+          ]
+        }
+      },
+      "geometry": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.5
+          ],
+          "follow": [
+            7.632291666666668,
+            60.258541666666666
+          ]
+        }
+      },
+      "consensus": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            0.0,
+            0.0
+          ],
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.5
+          ],
+          "follow": [
+            7.632291666666668,
+            60.258541666666666
+          ]
+        },
+        "passes": false
+      },
+      "midpoint": {
+        "trades": 2,
+        "active_sessions": 1,
+        "gross_usd": -78.0,
+        "follow": 0,
+        "fade": 2,
+        "long": 1,
+        "short": 1,
+        "occupied_observed_minutes": 10,
+        "actionable_signals": 2,
+        "submitted_orders": 2,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": -84.0,
+            "expectancy_usd": -42.0,
+            "without_best_trade_usd": -136.0,
+            "without_top_three_positive_trades_usd": -136.0,
+            "without_best_day_usd": -84.0,
+            "marked_drawdown": 173.0,
+            "intrabar_drawdown_lower": 202.5,
+            "intrabar_drawdown_upper": 202.5,
+            "marked_budget_margin": 1327.0,
+            "intrabar_upper_budget_margin": 1297.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -90.0,
+            "expectancy_usd": -45.0,
+            "without_best_trade_usd": -139.0,
+            "without_top_three_positive_trades_usd": -139.0,
+            "without_best_day_usd": -90.0,
+            "marked_drawdown": 177.5,
+            "intrabar_drawdown_lower": 207.0,
+            "intrabar_drawdown_upper": 207.0,
+            "marked_budget_margin": 1322.5,
+            "intrabar_upper_budget_margin": 1293.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -96.0,
+            "expectancy_usd": -48.0,
+            "without_best_trade_usd": -142.0,
+            "without_top_three_positive_trades_usd": -142.0,
+            "without_best_day_usd": -96.0,
+            "marked_drawdown": 182.0,
+            "intrabar_drawdown_lower": 211.5,
+            "intrabar_drawdown_upper": 211.5,
+            "marked_budget_margin": 1318.0,
+            "intrabar_upper_budget_margin": 1288.5,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -4.5,
+            0.0
+          ],
+          "unconditional": [
+            -4.5,
+            0.0
+          ],
+          "geometry": [
+            -4.5,
+            0.0
+          ],
+          "follow": [
+            4.05,
+            59.55020833333333
+          ]
+        }
+      },
+      "follow": {
+        "trades": 610,
+        "active_sessions": 60,
+        "gross_usd": 1591.0,
+        "follow": 610,
+        "fade": 0,
+        "long": 291,
+        "short": 319,
+        "occupied_observed_minutes": 3050,
+        "actionable_signals": 1044,
+        "submitted_orders": 610,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": -239.0,
+            "expectancy_usd": -0.3918032786885246,
+            "without_best_trade_usd": -476.0,
+            "without_top_three_positive_trades_usd": -874.5,
+            "without_best_day_usd": -662.5,
+            "marked_drawdown": 987.0,
+            "intrabar_drawdown_lower": 1026.0,
+            "intrabar_drawdown_upper": 1026.0,
+            "marked_budget_margin": 513.0,
+            "intrabar_upper_budget_margin": 474.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": -2069.0,
+            "expectancy_usd": -3.3918032786885246,
+            "without_best_trade_usd": -2303.0,
+            "without_top_three_positive_trades_usd": -2695.5,
+            "without_best_day_usd": -2459.5,
+            "marked_drawdown": 2288.0,
+            "intrabar_drawdown_lower": 2313.0,
+            "intrabar_drawdown_upper": 2313.0,
+            "marked_budget_margin": -788.0,
+            "intrabar_upper_budget_margin": -813.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": -3899.0,
+            "expectancy_usd": -6.391803278688524,
+            "without_best_trade_usd": -4130.0,
+            "without_top_three_positive_trades_usd": -4516.5,
+            "without_best_day_usd": -4256.5,
+            "marked_drawdown": 4026.5,
+            "intrabar_drawdown_lower": 4045.0,
+            "intrabar_drawdown_upper": 4045.0,
+            "marked_budget_margin": -2526.5,
+            "intrabar_upper_budget_margin": -2545.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "cash": [
+            -60.258541666666666,
+            -7.632291666666682
+          ],
+          "unconditional": [
+            -60.258541666666666,
+            -7.632291666666682
+          ],
+          "geometry": [
+            -60.258541666666666,
+            -7.632291666666682
+          ],
+          "midpoint": [
+            -59.55020833333333,
+            -4.05
+          ]
+        }
+      },
+      "cash": {
+        "trades": 0,
+        "active_sessions": 0,
+        "gross_usd": 0.0,
+        "follow": 0,
+        "fade": 0,
+        "long": 0,
+        "short": 0,
+        "occupied_observed_minutes": 0,
+        "actionable_signals": 0,
+        "submitted_orders": 0,
+        "gap_exits": 0,
+        "costs": {
+          "3": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net_usd": 0.0,
+            "expectancy_usd": null,
+            "without_best_trade_usd": 0.0,
+            "without_top_three_positive_trades_usd": 0.0,
+            "without_best_day_usd": 0.0,
+            "marked_drawdown": 0.0,
+            "intrabar_drawdown_lower": 0.0,
+            "intrabar_drawdown_upper": 0.0,
+            "marked_budget_margin": 1500.0,
+            "intrabar_upper_budget_margin": 1500.0,
+            "drawdown_budget": 1500.0
+          }
+        },
+        "cancelled_orders": 0,
+        "paired_daily_ci95_usd": {
+          "unconditional": [
+            0.0,
+            0.0
+          ],
+          "geometry": [
+            0.0,
+            0.0
+          ],
+          "midpoint": [
+            0.0,
+            4.5
+          ],
+          "follow": [
+            7.632291666666668,
+            60.258541666666666
+          ]
+        }
+      }
+    }
+  },
+  "qualifies": false
+}

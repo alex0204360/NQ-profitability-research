@@ -1,0 +1,270 @@
+{
+  "discovery40": {
+    "0": {
+      "eligible": 218,
+      "scored": 198,
+      "mean_loss_pts": 21.454545454545453,
+      "risk": {
+        "range": {
+          "pinball": 11.732379768886066,
+          "mean_q": 40.843744722293245,
+          "exceedance": 0.18181818181818182
+        },
+        "unconditional": {
+          "pinball": 11.78157610051388,
+          "mean_q": 47.07628775765575,
+          "exceedance": 0.1717171717171717
+        },
+        "conditioned": {
+          "pinball": 11.845639518906424,
+          "mean_q": 46.424384918127096,
+          "exceedance": 0.1717171717171717
+        }
+      },
+      "duration": {
+        "conditioned": {
+          "log_mse": 0.9938303595056379,
+          "median_prediction_minutes": 11.01623489344092
+        },
+        "unconditional": {
+          "log_mse": 1.015456048763605,
+          "median_prediction_minutes": 10.411673294261284
+        },
+        "diffusion": {
+          "log_mse": 1.869710059836242,
+          "median_prediction_minutes": 10.648810927076655
+        }
+      },
+      "paired": {
+        "pinball_vs_range": {
+          "difference": 0.11325975002035646,
+          "ci95": [
+            -0.21655291992706066,
+            0.46934827851993144
+          ]
+        },
+        "pinball_vs_unconditional": {
+          "difference": 0.06406341839254207,
+          "ci95": [
+            -0.10087178444950613,
+            0.32962300415174745
+          ]
+        },
+        "dse_vs_diffusion": {
+          "difference": -0.8758797003306038,
+          "ci95": [
+            -1.2522101438759876,
+            -0.5003119976116501
+          ]
+        },
+        "dse_vs_unconditional": {
+          "difference": -0.02162568925796702,
+          "ci95": [
+            -0.05480203576252196,
+            0.009640098702787106
+          ]
+        }
+      }
+    },
+    "1": {
+      "eligible": 181,
+      "scored": 161,
+      "mean_loss_pts": 24.577639751552795,
+      "risk": {
+        "range": {
+          "pinball": 12.800714580755784,
+          "mean_q": 38.86526486214631,
+          "exceedance": 0.2546583850931677
+        },
+        "unconditional": {
+          "pinball": 12.538022112107535,
+          "mean_q": 42.40349663180558,
+          "exceedance": 0.2111801242236025
+        },
+        "conditioned": {
+          "pinball": 12.72695150727847,
+          "mean_q": 41.39089615779455,
+          "exceedance": 0.21739130434782608
+        }
+      },
+      "duration": {
+        "conditioned": {
+          "log_mse": 0.9745825413279557,
+          "median_prediction_minutes": 10.666747437733425
+        },
+        "unconditional": {
+          "log_mse": 1.001277473994533,
+          "median_prediction_minutes": 9.928207836873863
+        },
+        "diffusion": {
+          "log_mse": 1.8223607382458304,
+          "median_prediction_minutes": 8.688371672588206
+        }
+      },
+      "paired": {
+        "pinball_vs_range": {
+          "difference": -0.07376307347731666,
+          "ci95": [
+            -0.35106316653365793,
+            0.17672528768908638
+          ]
+        },
+        "pinball_vs_unconditional": {
+          "difference": 0.18892939517093438,
+          "ci95": [
+            -0.13688551020413833,
+            0.6577985454194749
+          ]
+        },
+        "dse_vs_diffusion": {
+          "difference": -0.847778196917875,
+          "ci95": [
+            -1.2513265840229602,
+            -0.5436500895374707
+          ]
+        },
+        "dse_vs_unconditional": {
+          "difference": -0.026694932666577346,
+          "ci95": [
+            -0.050586027629020085,
+            -0.0004982963841515393
+          ]
+        }
+      }
+    }
+  },
+  "external60": {
+    "0": {
+      "eligible": 272,
+      "scored": 252,
+      "mean_loss_pts": 17.68452380952381,
+      "risk": {
+        "range": {
+          "pinball": 9.199867187414197,
+          "mean_q": 41.98833884953945,
+          "exceedance": 0.15079365079365079
+        },
+        "unconditional": {
+          "pinball": 9.445350897654116,
+          "mean_q": 46.80558037854403,
+          "exceedance": 0.12698412698412698
+        },
+        "conditioned": {
+          "pinball": 9.342502818019742,
+          "mean_q": 46.54349808550183,
+          "exceedance": 0.11904761904761904
+        }
+      },
+      "duration": {
+        "conditioned": {
+          "log_mse": 0.9518658760013979,
+          "median_prediction_minutes": 14.191681091716031
+        },
+        "unconditional": {
+          "log_mse": 0.9921239634897451,
+          "median_prediction_minutes": 13.269524673693414
+        },
+        "diffusion": {
+          "log_mse": 1.9599240850862891,
+          "median_prediction_minutes": 11.852367812392188
+        }
+      },
+      "paired": {
+        "pinball_vs_range": {
+          "difference": 0.14263563060554543,
+          "ci95": [
+            -0.20316160634010771,
+            0.458038716799854
+          ]
+        },
+        "pinball_vs_unconditional": {
+          "difference": -0.10284807963437337,
+          "ci95": [
+            -0.3372138439295733,
+            0.12803929399764422
+          ]
+        },
+        "dse_vs_diffusion": {
+          "difference": -1.008058209084891,
+          "ci95": [
+            -1.2654609444219918,
+            -0.7555270342405952
+          ]
+        },
+        "dse_vs_unconditional": {
+          "difference": -0.0402580874883472,
+          "ci95": [
+            -0.0679145835607678,
+            -0.011783752019162366
+          ]
+        }
+      }
+    },
+    "1": {
+      "eligible": 252,
+      "scored": 232,
+      "mean_loss_pts": 16.635775862068964,
+      "risk": {
+        "range": {
+          "pinball": 8.941310571369343,
+          "mean_q": 40.95989362709592,
+          "exceedance": 0.12931034482758622
+        },
+        "unconditional": {
+          "pinball": 9.238970652954437,
+          "mean_q": 44.31223193926075,
+          "exceedance": 0.11206896551724138
+        },
+        "conditioned": {
+          "pinball": 9.01923814492105,
+          "mean_q": 43.58531720040965,
+          "exceedance": 0.11206896551724138
+        }
+      },
+      "duration": {
+        "conditioned": {
+          "log_mse": 0.9545364550526654,
+          "median_prediction_minutes": 14.148246350645273
+        },
+        "unconditional": {
+          "log_mse": 0.9898751868857335,
+          "median_prediction_minutes": 12.975222480025923
+        },
+        "diffusion": {
+          "log_mse": 2.1344215132302264,
+          "median_prediction_minutes": 8.293268334948547
+        }
+      },
+      "paired": {
+        "pinball_vs_range": {
+          "difference": 0.0779275735517066,
+          "ci95": [
+            -0.1227792009576998,
+            0.3215862944937117
+          ]
+        },
+        "pinball_vs_unconditional": {
+          "difference": -0.21973250803338779,
+          "ci95": [
+            -0.3341993187427279,
+            -0.10632587774297676
+          ]
+        },
+        "dse_vs_diffusion": {
+          "difference": -1.1798850581775608,
+          "ci95": [
+            -1.5011838804547488,
+            -0.7967172207730826
+          ]
+        },
+        "dse_vs_unconditional": {
+          "difference": -0.035338731833068154,
+          "ci95": [
+            -0.06930709854197038,
+            -0.0024600621978654235
+          ]
+        }
+      }
+    }
+  }
+}

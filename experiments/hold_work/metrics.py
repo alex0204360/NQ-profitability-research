@@ -416,7 +416,8 @@ def analyze_directory(replay_dir, output_dir) -> dict:
         original = by_model["original"]
         scores = tuple(name for name in ("volume_score", "price_score", "trail_score") if name in traces)
         first, eligibility = first_decisions(traces)
-        all_first.append(first)
+        if panel != "discovery40":
+            all_first.append(first)
         report.setdefault(str(panel), {})[str(delay)] = {
             "delay_additional_minutes": int(delay),
             "sessions": int(tape["original"]["date"].nunique()),

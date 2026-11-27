@@ -1,0 +1,20 @@
+{
+  "discovery40": {
+    "issued": 13316,
+    "reachable": 2565,
+    "touched": 1511,
+    "reversed": 730,
+    "touched_without_close": 781,
+    "unreachable_observed_reversals": 0,
+    "numerically_close": 0
+  },
+  "external60": {
+    "issued": 19933,
+    "reachable": 3688,
+    "touched": 2211,
+    "reversed": 1096,
+    "touched_without_close": 1115,
+    "unreachable_observed_reversals": 0,
+    "numerically_close": 0
+  }
+}

@@ -330,11 +330,10 @@ def first_decisions(activations: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     original["next_open"] = original["next_executable_price"]
     eligible = original.loc[original["eligible"]]
     discretionary = eligible.loc[eligible["discretionary"]]
-    executable = discretionary.loc[
-        discretionary["next_executable_time"].str.slice(11, 16).lt("15:55")
-        & discretionary["next_open"].notna()
-    ]
-    first = executable.sort_values("bar_start").drop_duplicates(ENTRY_KEY).copy()
+    first = discretionary.sort_values("bar_start").drop_duplicates(ENTRY_KEY).copy()
+    executable = (first["next_executable_time"].str.slice(11, 16).lt("15:55")
+                  & first["next_open"].notna())
+    first.loc[~executable, "next_open"] = np.nan
     first["realized_hold_pts"] = first["side"] * (first["original_exit_price"] - first["next_open"])
     return first, {
         "original_trades": len(_keys(original)),
@@ -342,7 +341,7 @@ def first_decisions(activations: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
         "trades_eligible_with_discretion": len(_keys(discretionary)),
         "trades_with_first_decision": len(first),
         "eligible_rows_without_discretion": len(eligible) - len(discretionary),
-        "discretionary_rows_without_executable_pre_cutoff_open": len(discretionary) - len(executable),
+        "first_decisions_without_executable_pre_cutoff_open": int((~executable).sum()),
     }
 
 
@@ -397,6 +396,16 @@ def analyze_directory(replay_dir, output_dir) -> dict:
     trades = normalize_trades(raw)
     activations = pd.read_csv(replay_dir / "activations.csv.gz", low_memory=False)
     equity = pd.read_csv(replay_dir / "equity.csv.gz")
+    # Discovery archives use the same feed across their disjoint dates.
+    discovery_panels = ("earlier20", "november14", "replication5", "nov25")
+    discovery_dates = equity.loc[equity["panel"].isin(discovery_panels), ["panel", "date"]]
+    if discovery_dates["panel"].nunique() == len(discovery_panels):
+        if discovery_dates.drop_duplicates()["date"].duplicated().any():
+            raise ValueError("Discovery panels overlap")
+        def pooled(frame):
+            selected = frame.loc[frame["panel"].isin(discovery_panels)]
+            return pd.concat([frame, selected.assign(panel="discovery40")], ignore_index=True)
+        trades, activations, equity = (pooled(frame) for frame in (trades, activations, equity))
     report = {}
     all_first = []
     for (panel, delay), bar_group in equity.groupby(["panel", "delay"], sort=True):
@@ -443,7 +452,8 @@ def analyze_directory(replay_dir, output_dir) -> dict:
     pd.concat(all_first, ignore_index=True).to_csv(
         output_dir / "first-decisions.csv.gz", index=False, compression={"method": "gzip", "mtime": 0}
     )
-    chart_cases(raw, activations, equity, output_dir / "hold-value-cases.html")
+    for cost, name in ((3, "hold-value-cases.html"), (6, "hold-value-cases-cost6.html")):
+        chart_cases(raw, activations, equity, output_dir / name, cost)
     return report
 
 
@@ -487,8 +497,8 @@ def _svg_series(title, series, markers=()):
     return f"<h3>{html.escape(title)}</h3><div class=legend>{legend}</div>" + "".join(svg)
 
 
-def chart_cases(trades, activations, equity, destination):
-    """Plot fixed-volume cases at the $6 next-open reference and Nov 19."""
+def chart_cases(trades, activations, equity, destination, cost):
+    """Plot fixed-volume cases at the requested next-open cost and Nov 19."""
     import html
 
     base = trades.loc[(trades["delay"] == 0) & (trades["model"] == "original")]
@@ -496,6 +506,8 @@ def chart_cases(trades, activations, equity, destination):
     join = ["panel", "date", "trade_id"]
     paired = base.merge(volume[join + ["exit_time", "exit", "net_usd"]],
                         on=join, suffixes=("_base", "_volume"), validate="one_to_one")
+    paired["net_usd_base"] += 6 - cost
+    paired["net_usd_volume"] += 6 - cost
     paired["delta"] = paired["net_usd_volume"] - paired["net_usd_base"]
     cases = []
     saved = paired.loc[paired["delta"] > 0]
@@ -515,9 +527,9 @@ p{line-height:1.5} svg{width:100%;height:auto} svg text{font:12px system-ui;fill
 .legend{font-size:.86em;display:flex;flex-wrap:wrap;gap:16px}
 </style><h1>MNQ hold value case studies</h1>
 <p>Original reservoir and fixed-entry volume exit on replayed one-minute bars. Fills use the next
-open. P&amp;L includes $6 per round trip. Times are New York time. Hold scores use points.</p>
+open. P&amp;L includes $COST per round trip. Times are New York time. Hold scores use points.</p>
 <p>Markers show fill prices. Hover over a marker for the time and price.</p>
-"""]
+""".replace("$COST", f"${cost}")]
     for name, row in cases:
         tape = equity.loc[(equity["panel"] == row["panel"]) & (equity["date"] == row["date"])
                           & (equity["delay"] == 0) & (equity["model"] == "original")].copy()
@@ -563,7 +575,8 @@ open. P&amp;L includes $6 per round trip. Times are New York time. Hold scores u
         ):
             data = tape.loc[tape["model"] == model]
             times = pd.to_datetime(data["bar_start"], utc=True).dt.tz_convert("America/New_York")
-            lines.append((name, color, list(zip(times, data["equity_usd"]))))
+            marks = data["gross_equity_usd"] - cost * (data["completed_trades"] + data["occupancy"] / 2)
+            lines.append((name, color, list(zip(times, marks))))
         parts.append(f"<section><h2>November 19, 2026</h2>"
                      f"<p>{len(nov)} original entries in {html.escape(panel)}. This is an exposed "
                      "session selected for explanation.</p>")

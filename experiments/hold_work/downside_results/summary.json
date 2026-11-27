@@ -1,0 +1,214 @@
+{
+  "discovery40": {
+    "0": {
+      "eligible": 218,
+      "scored": 198,
+      "sessions_in_bootstrap": 36,
+      "mean_downside": 21.454545454545453,
+      "models": {
+        "constant": {
+          "pinball_pts": 12.397979797979797,
+          "exceedance": 0.23737373737373738,
+          "mean_prediction": 26.78409090909091
+        },
+        "range": {
+          "pinball_pts": 11.732379768886066,
+          "exceedance": 0.18181818181818182,
+          "mean_prediction": 40.843744722293245
+        },
+        "clock": {
+          "pinball_pts": 13.14599442404909,
+          "exceedance": 0.20202020202020202,
+          "mean_prediction": 49.62236497148482
+        },
+        "distance": {
+          "pinball_pts": 14.095767957563098,
+          "exceedance": 0.18181818181818182,
+          "mean_prediction": 51.981523734932935
+        }
+      },
+      "spearman_duration": 0.17943528057732297,
+      "paired_distance_minus_control": {
+        "constant": {
+          "mean": 1.6977881595832987,
+          "interval95": [
+            0.42052370163962977,
+            2.9755366204399807
+          ]
+        },
+        "range": {
+          "mean": 2.3633881886770314,
+          "interval95": [
+            0.9313280644007533,
+            4.725004056748576
+          ]
+        },
+        "clock": {
+          "mean": 0.9497735335140055,
+          "interval95": [
+            -0.9241147976678534,
+            3.9124919326343868
+          ]
+        }
+      }
+    },
+    "1": {
+      "eligible": 181,
+      "scored": 161,
+      "sessions_in_bootstrap": 35,
+      "mean_downside": 24.577639751552795,
+      "models": {
+        "constant": {
+          "pinball_pts": 15.06832298136646,
+          "exceedance": 0.2919254658385093,
+          "mean_prediction": 22.209627329192546
+        },
+        "range": {
+          "pinball_pts": 12.800714580755784,
+          "exceedance": 0.2546583850931677,
+          "mean_prediction": 38.86526486214631
+        },
+        "clock": {
+          "pinball_pts": 12.803586198248684,
+          "exceedance": 0.2422360248447205,
+          "mean_prediction": 43.667208384380096
+        },
+        "distance": {
+          "pinball_pts": 15.011992005664329,
+          "exceedance": 0.2422360248447205,
+          "mean_prediction": 44.12393879476989
+        }
+      },
+      "spearman_duration": 0.20225600064513521,
+      "paired_distance_minus_control": {
+        "constant": {
+          "mean": -0.056330975702129096,
+          "interval95": [
+            -2.2629284021508043,
+            2.1176470145404847
+          ]
+        },
+        "range": {
+          "mean": 2.2112774249085465,
+          "interval95": [
+            -0.4468372853683355,
+            5.8133550982435676
+          ]
+        },
+        "clock": {
+          "mean": 2.208405807415645,
+          "interval95": [
+            -0.6391599564735431,
+            6.322189359370507
+          ]
+        }
+      }
+    }
+  },
+  "external60": {
+    "0": {
+      "eligible": 272,
+      "scored": 252,
+      "sessions_in_bootstrap": 56,
+      "mean_downside": 17.68452380952381,
+      "models": {
+        "constant": {
+          "pinball_pts": 10.044444444444446,
+          "exceedance": 0.17063492063492064,
+          "mean_prediction": 34.50396825396825
+        },
+        "range": {
+          "pinball_pts": 9.199867187414197,
+          "exceedance": 0.15079365079365079,
+          "mean_prediction": 41.98833884953945
+        },
+        "clock": {
+          "pinball_pts": 9.759199939515149,
+          "exceedance": 0.1746031746031746,
+          "mean_prediction": 44.84741842383747
+        },
+        "distance": {
+          "pinball_pts": 10.333456323395247,
+          "exceedance": 0.15079365079365079,
+          "mean_prediction": 46.798324478688606
+        }
+      },
+      "spearman_duration": 0.2164135227063838,
+      "paired_distance_minus_control": {
+        "constant": {
+          "mean": 0.28901187895080194,
+          "interval95": [
+            -0.815470209169433,
+            1.4035689569812784
+          ]
+        },
+        "range": {
+          "mean": 1.133589135981049,
+          "interval95": [
+            0.10653514574875428,
+            2.2151891135370843
+          ]
+        },
+        "clock": {
+          "mean": 0.574256383880098,
+          "interval95": [
+            -0.8291870631918379,
+            2.1094404712640693
+          ]
+        }
+      }
+    },
+    "1": {
+      "eligible": 252,
+      "scored": 232,
+      "sessions_in_bootstrap": 55,
+      "mean_downside": 16.635775862068964,
+      "models": {
+        "constant": {
+          "pinball_pts": 9.493534482758621,
+          "exceedance": 0.1724137931034483,
+          "mean_prediction": 35.94073275862069
+        },
+        "range": {
+          "pinball_pts": 8.941310571369343,
+          "exceedance": 0.12931034482758622,
+          "mean_prediction": 40.95989362709592
+        },
+        "clock": {
+          "pinball_pts": 9.58501717194948,
+          "exceedance": 0.16379310344827586,
+          "mean_prediction": 42.025805659142755
+        },
+        "distance": {
+          "pinball_pts": 9.56850466682646,
+          "exceedance": 0.16379310344827586,
+          "mean_prediction": 45.30242116267353
+        }
+      },
+      "spearman_duration": 0.17229942846031296,
+      "paired_distance_minus_control": {
+        "constant": {
+          "mean": 0.07497018406783987,
+          "interval95": [
+            -1.4165723429691603,
+            1.4658042694815971
+          ]
+        },
+        "range": {
+          "mean": 0.6271940954571179,
+          "interval95": [
+            -0.5330567485916043,
+            1.7854401229114873
+          ]
+        },
+        "clock": {
+          "mean": -0.016512505123018974,
+          "interval95": [
+            -1.1049724901751257,
+            1.0594031152484986
+          ]
+        }
+      }
+    }
+  }
+}

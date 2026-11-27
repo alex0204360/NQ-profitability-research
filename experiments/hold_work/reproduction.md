@@ -11,6 +11,7 @@ python -m unittest discover -s experiments/hold_work -v
 python -m experiments.hold_work.replay market replay-out
 python -m experiments.hold_work.metrics replay-out analyzed-out
 python -m experiments.hold_work.disagreement replay-out analyzed-out
+python -m experiments.hold_work.horizon --replay replay-out --market market --out analyzed-out
 python -m experiments.hold_work.daily_uncertainty replay-out/trades.csv.gz analyzed-out/daily-intervals.json
 ```
 

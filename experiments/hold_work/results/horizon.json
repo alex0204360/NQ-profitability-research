@@ -1,0 +1,513 @@
+{
+  "description": "Post-hoc horizon diagnostic on the exposed V1 external60 panel; descriptive only.",
+  "source": "pinned /workspace/work/hold-replay V1 replay; verified public MNQ source at archived commit.",
+  "external_hashes": {
+    "MNQ.csv": "129623f45308a98a1a345473ac5fe4d03d5d53f7dd177a608d946eb3d3d6ea99",
+    "MNQ_5min.csv": "1e42bc9a8a682c19e7cd460ab003b522b8643bda23b70e5f8235633d1ccf08f4"
+  },
+  "external_source_commit": "60abd3fb6369c6ce0b6a4a65b0f2562fc96b1264",
+  "panel": "external60",
+  "included_dates": [
+    "2026-01-20",
+    "2026-01-21",
+    "2026-01-22",
+    "2026-01-23",
+    "2026-01-26",
+    "2026-01-27",
+    "2026-01-28",
+    "2026-01-29",
+    "2026-01-30",
+    "2026-02-02",
+    "2026-02-03",
+    "2026-02-04",
+    "2026-02-05",
+    "2026-02-06",
+    "2026-02-09",
+    "2026-02-10",
+    "2026-02-11",
+    "2026-02-12",
+    "2026-02-13",
+    "2026-02-17",
+    "2026-02-18",
+    "2026-02-19",
+    "2026-02-20",
+    "2026-02-23",
+    "2026-02-24",
+    "2026-02-25",
+    "2026-02-26",
+    "2026-02-27",
+    "2026-03-02",
+    "2026-03-03",
+    "2026-03-04",
+    "2026-03-05",
+    "2026-03-06",
+    "2026-03-09",
+    "2026-03-10",
+    "2026-03-11",
+    "2026-03-12",
+    "2026-03-13",
+    "2026-03-16",
+    "2026-03-17",
+    "2026-03-18",
+    "2026-03-19",
+    "2026-03-20",
+    "2026-03-23",
+    "2026-03-24",
+    "2026-03-25",
+    "2026-03-26",
+    "2026-03-27",
+    "2026-03-30",
+    "2026-03-31",
+    "2026-04-01",
+    "2026-04-02",
+    "2026-04-06",
+    "2026-04-07",
+    "2026-04-08",
+    "2026-04-09",
+    "2026-04-10",
+    "2026-04-13",
+    "2026-04-14",
+    "2026-04-15"
+  ],
+  "selection": {
+    "trade_scope": "model=original, panel=external, delays 0 and 1",
+    "first_eligible": "first row per original trade with eligible=true and discretionary=true",
+    "first_disagreement": "first eligible/discretionary row where one score is positive and the other is nonpositive, before either head had an earlier exit request",
+    "groups": {
+      "volume_holds": "volume_score>0 and price_score<=0",
+      "volume_exits": "volume_score<=0 and price_score>0"
+    },
+    "selected_before_future_prices": true,
+    "missing_data": "Exact expected timestamps only; missing next open/endpoints remain missing and are never replaced by a later observation."
+  },
+  "label": "side * (endpoint open - alternate executable open), in MNQ points.",
+  "alternate_executable_open": "one minute after signal bar for delay 0; two minutes after signal bar for delay 1.",
+  "horizons_minutes": [
+    1,
+    4,
+    8
+  ],
+  "horizon_cap": "If the original exit occurs at or before the requested endpoint, use the original exit open and timestamp.",
+  "original_exit_label": "alternate executable open to eventual frozen original exit open.",
+  "bootstrap": {
+    "method": "paired session cluster bootstrap; same sampled dates used for all delays, groups, and horizons",
+    "replicates": 10000,
+    "seed": 604,
+    "interval": "percentile 95%"
+  },
+  "replay_file_sha256": {
+    "trades.csv.gz": "c3b17ebf2451b19836e96c9359681dc0c7189305d06457724bbd7a0d97af0060",
+    "activations.csv.gz": "ba531b958c53f5533742a880b8c001bc174702e0bc43ca8f948db3e50db828c3",
+    "source.json": "adf30a5648109982c9ee1398e481a022dca4b834a63157e747aaa66d13069f67"
+  },
+  "selection_counts": {
+    "events": 603,
+    "first_eligible": 524,
+    "first_disagreement": 79,
+    "alternate_open_missing": 0
+  },
+  "summary": {
+    "0": {
+      "first_eligible": {
+        "n": 272,
+        "horizons": {
+          "1m": {
+            "mean_signed_label_points": -0.27297794117647056,
+            "valid_n": 272,
+            "capped_by_original_exit_n": 8,
+            "paired_session_bootstrap_95": {
+              "n": 272,
+              "sessions": 60,
+              "mean": -0.27297794117647056,
+              "ci95": [
+                -2.084966034941621,
+                1.5346776749492872
+              ]
+            },
+            "mean_volume_score": 27.68424785564911,
+            "mean_price_score": 23.967641492659222,
+            "spearman_volume_score_rho": 0.004304525187239695,
+            "spearman_price_score_rho": 0.032054042193341646
+          },
+          "4m": {
+            "mean_signed_label_points": 0.5514705882352942,
+            "valid_n": 272,
+            "capped_by_original_exit_n": 47,
+            "paired_session_bootstrap_95": {
+              "n": 272,
+              "sessions": 60,
+              "mean": 0.5514705882352942,
+              "ci95": [
+                -2.1144359097297936,
+                3.429729854873063
+              ]
+            },
+            "mean_volume_score": 27.68424785564911,
+            "mean_price_score": 23.967641492659222,
+            "spearman_volume_score_rho": -0.10150479067847569,
+            "spearman_price_score_rho": -0.07455255528196289
+          },
+          "8m": {
+            "mean_signed_label_points": 2.2049632352941178,
+            "valid_n": 272,
+            "capped_by_original_exit_n": 81,
+            "paired_session_bootstrap_95": {
+              "n": 272,
+              "sessions": 60,
+              "mean": 2.2049632352941178,
+              "ci95": [
+                -1.0514280913978495,
+                5.528166474491717
+              ]
+            },
+            "mean_volume_score": 27.68424785564911,
+            "mean_price_score": 23.967641492659222,
+            "spearman_volume_score_rho": -0.0631387116106774,
+            "spearman_price_score_rho": -0.025054996961810867
+          },
+          "original_exit": {
+            "mean_signed_label_points": -0.24540441176470587,
+            "valid_n": 272,
+            "capped_by_original_exit_n": null,
+            "paired_session_bootstrap_95": {
+              "n": 272,
+              "sessions": 60,
+              "mean": -0.24540441176470587,
+              "ci95": [
+                -6.449980992722928,
+                5.974932553956832
+              ]
+            },
+            "mean_volume_score": 27.68424785564911,
+            "mean_price_score": 23.967641492659222,
+            "spearman_volume_score_rho": -0.08358931936063325,
+            "spearman_price_score_rho": -0.07501651454996316
+          }
+        }
+      },
+      "volume_holds": {
+        "n": 34,
+        "horizons": {
+          "1m": {
+            "mean_signed_label_points": -2.2058823529411766,
+            "valid_n": 34,
+            "capped_by_original_exit_n": 2,
+            "paired_session_bootstrap_95": {
+              "n": 34,
+              "sessions": 29,
+              "mean": -2.2058823529411766,
+              "ci95": [
+                -6.027797619047619,
+                1.3048949864498642
+              ]
+            }
+          },
+          "4m": {
+            "mean_signed_label_points": -4.529411764705882,
+            "valid_n": 34,
+            "capped_by_original_exit_n": 9,
+            "paired_session_bootstrap_95": {
+              "n": 34,
+              "sessions": 29,
+              "mean": -4.529411764705882,
+              "ci95": [
+                -13.490770609318997,
+                2.970647853736088
+              ]
+            }
+          },
+          "8m": {
+            "mean_signed_label_points": -4.919117647058823,
+            "valid_n": 34,
+            "capped_by_original_exit_n": 11,
+            "paired_session_bootstrap_95": {
+              "n": 34,
+              "sessions": 29,
+              "mean": -4.919117647058823,
+              "ci95": [
+                -15.79707522883295,
+                5.330882352941177
+              ]
+            }
+          },
+          "original_exit": {
+            "mean_signed_label_points": -13.139705882352942,
+            "valid_n": 34,
+            "capped_by_original_exit_n": null,
+            "paired_session_bootstrap_95": {
+              "n": 34,
+              "sessions": 29,
+              "mean": -13.139705882352942,
+              "ci95": [
+                -36.82604166666667,
+                6.291741071428571
+              ]
+            }
+          }
+        }
+      },
+      "volume_exits": {
+        "n": 5,
+        "horizons": {
+          "1m": {
+            "mean_signed_label_points": 10.1,
+            "valid_n": 5,
+            "capped_by_original_exit_n": 1,
+            "paired_session_bootstrap_95": {
+              "n": 5,
+              "sessions": 5,
+              "mean": 10.1,
+              "ci95": [
+                0.25,
+                17.6
+              ]
+            }
+          },
+          "4m": {
+            "mean_signed_label_points": -0.2,
+            "valid_n": 5,
+            "capped_by_original_exit_n": 1,
+            "paired_session_bootstrap_95": {
+              "n": 5,
+              "sessions": 5,
+              "mean": -0.2,
+              "ci95": [
+                -40.65,
+                34.5
+              ]
+            }
+          },
+          "8m": {
+            "mean_signed_label_points": -2.0,
+            "valid_n": 5,
+            "capped_by_original_exit_n": 2,
+            "paired_session_bootstrap_95": {
+              "n": 5,
+              "sessions": 5,
+              "mean": -2.0,
+              "ci95": [
+                -34.166666666666664,
+                26.583333333333332
+              ]
+            }
+          },
+          "original_exit": {
+            "mean_signed_label_points": -6.95,
+            "valid_n": 5,
+            "capped_by_original_exit_n": null,
+            "paired_session_bootstrap_95": {
+              "n": 5,
+              "sessions": 5,
+              "mean": -6.95,
+              "ci95": [
+                -35.0,
+                23.75
+              ]
+            }
+          }
+        }
+      }
+    },
+    "1": {
+      "first_eligible": {
+        "n": 252,
+        "horizons": {
+          "1m": {
+            "mean_signed_label_points": -1.2380952380952381,
+            "valid_n": 252,
+            "capped_by_original_exit_n": 7,
+            "paired_session_bootstrap_95": {
+              "n": 252,
+              "sessions": 60,
+              "mean": -1.2380952380952381,
+              "ci95": [
+                -2.476191607821836,
+                -0.025080868219961843
+              ]
+            },
+            "mean_volume_score": 27.044274747750354,
+            "mean_price_score": 23.91151271831417,
+            "spearman_volume_score_rho": -0.08755442624903911,
+            "spearman_price_score_rho": -0.12833211631892855
+          },
+          "4m": {
+            "mean_signed_label_points": 1.2797619047619047,
+            "valid_n": 252,
+            "capped_by_original_exit_n": 43,
+            "paired_session_bootstrap_95": {
+              "n": 252,
+              "sessions": 60,
+              "mean": 1.2797619047619047,
+              "ci95": [
+                -1.3244147215973003,
+                4.060822641707856
+              ]
+            },
+            "mean_volume_score": 27.044274747750354,
+            "mean_price_score": 23.91151271831417,
+            "spearman_volume_score_rho": 0.05770632489644386,
+            "spearman_price_score_rho": 0.03137354447331449
+          },
+          "8m": {
+            "mean_signed_label_points": 2.1140873015873014,
+            "valid_n": 252,
+            "capped_by_original_exit_n": 76,
+            "paired_session_bootstrap_95": {
+              "n": 252,
+              "sessions": 60,
+              "mean": 2.1140873015873014,
+              "ci95": [
+                -1.3466723751444525,
+                5.825031779661017
+              ]
+            },
+            "mean_volume_score": 27.044274747750354,
+            "mean_price_score": 23.91151271831417,
+            "spearman_volume_score_rho": 0.07849603939299513,
+            "spearman_price_score_rho": 0.061112132849930154
+          },
+          "original_exit": {
+            "mean_signed_label_points": 0.13293650793650794,
+            "valid_n": 252,
+            "capped_by_original_exit_n": null,
+            "paired_session_bootstrap_95": {
+              "n": 252,
+              "sessions": 60,
+              "mean": 0.13293650793650794,
+              "ci95": [
+                -6.6162009947874605,
+                6.690164529914528
+              ]
+            },
+            "mean_volume_score": 27.044274747750354,
+            "mean_price_score": 23.91151271831417,
+            "spearman_volume_score_rho": 0.028059336403883195,
+            "spearman_price_score_rho": -0.01663043502805082
+          }
+        }
+      },
+      "volume_holds": {
+        "n": 33,
+        "horizons": {
+          "1m": {
+            "mean_signed_label_points": 1.1136363636363635,
+            "valid_n": 33,
+            "capped_by_original_exit_n": 0,
+            "paired_session_bootstrap_95": {
+              "n": 33,
+              "sessions": 27,
+              "mean": 1.1136363636363635,
+              "ci95": [
+                -2.458366935483871,
+                4.687542229729729
+              ]
+            }
+          },
+          "4m": {
+            "mean_signed_label_points": -2.4318181818181817,
+            "valid_n": 33,
+            "capped_by_original_exit_n": 5,
+            "paired_session_bootstrap_95": {
+              "n": 33,
+              "sessions": 27,
+              "mean": -2.4318181818181817,
+              "ci95": [
+                -10.86546052631579,
+                5.214333976833976
+              ]
+            }
+          },
+          "8m": {
+            "mean_signed_label_points": -3.265151515151515,
+            "valid_n": 33,
+            "capped_by_original_exit_n": 9,
+            "paired_session_bootstrap_95": {
+              "n": 33,
+              "sessions": 27,
+              "mean": -3.265151515151515,
+              "ci95": [
+                -14.091477272727273,
+                7.430291666666662
+              ]
+            }
+          },
+          "original_exit": {
+            "mean_signed_label_points": -11.863636363636363,
+            "valid_n": 33,
+            "capped_by_original_exit_n": null,
+            "paired_session_bootstrap_95": {
+              "n": 33,
+              "sessions": 27,
+              "mean": -11.863636363636363,
+              "ci95": [
+                -36.33355263157895,
+                9.615725806451607
+              ]
+            }
+          }
+        }
+      },
+      "volume_exits": {
+        "n": 7,
+        "horizons": {
+          "1m": {
+            "mean_signed_label_points": -0.6071428571428571,
+            "valid_n": 7,
+            "capped_by_original_exit_n": 1,
+            "paired_session_bootstrap_95": {
+              "n": 7,
+              "sessions": 7,
+              "mean": -0.6071428571428571,
+              "ci95": [
+                -14.55,
+                11.625
+              ]
+            }
+          },
+          "4m": {
+            "mean_signed_label_points": -15.321428571428571,
+            "valid_n": 7,
+            "capped_by_original_exit_n": 1,
+            "paired_session_bootstrap_95": {
+              "n": 7,
+              "sessions": 7,
+              "mean": -15.321428571428571,
+              "ci95": [
+                -40.583333333333336,
+                6.5
+              ]
+            }
+          },
+          "8m": {
+            "mean_signed_label_points": -5.785714285714286,
+            "valid_n": 7,
+            "capped_by_original_exit_n": 2,
+            "paired_session_bootstrap_95": {
+              "n": 7,
+              "sessions": 7,
+              "mean": -5.785714285714286,
+              "ci95": [
+                -39.1,
+                34.75
+              ]
+            }
+          },
+          "original_exit": {
+            "mean_signed_label_points": -16.464285714285715,
+            "valid_n": 7,
+            "capped_by_original_exit_n": null,
+            "paired_session_bootstrap_95": {
+              "n": 7,
+              "sessions": 7,
+              "mean": -16.464285714285715,
+              "ci95": [
+                -39.75,
+                6.0
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1502 @@
+{
+  "discovery40": {
+    "0": {
+      "crossed": {
+        "policies": {
+          "volume": {
+            "n": 441,
+            "opportunities": 694,
+            "mean_overlapping_gross": 2.0180115273775217,
+            "gross": 499.0,
+            "net": {
+              "3": -824.0,
+              "6": -2147.0,
+              "9": -3470.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2098.5,
+                "intrabar_drawdown_lower": 2123.0,
+                "intrabar_drawdown_upper": 2123.0,
+                "marked_budget_margin": -598.5,
+                "intrabar_upper_budget_margin": -623.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3287.0,
+                "intrabar_drawdown_lower": 3309.0,
+                "intrabar_drawdown_upper": 3309.0,
+                "marked_budget_margin": -1787.0,
+                "intrabar_upper_budget_margin": -1809.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4478.0,
+                "intrabar_drawdown_lower": 4497.0,
+                "intrabar_drawdown_upper": 4497.0,
+                "marked_budget_margin": -2978.0,
+                "intrabar_upper_budget_margin": -2997.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3093.0
+          },
+          "body": {
+            "n": 439,
+            "opportunities": 694,
+            "mean_overlapping_gross": 2.325648414985591,
+            "gross": 722.0,
+            "net": {
+              "3": -595.0,
+              "6": -1912.0,
+              "9": -3229.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1869.5,
+                "intrabar_drawdown_lower": 1880.0,
+                "intrabar_drawdown_upper": 1880.0,
+                "marked_budget_margin": -369.5,
+                "intrabar_upper_budget_margin": -380.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3052.0,
+                "intrabar_drawdown_lower": 3063.0,
+                "intrabar_drawdown_upper": 3063.0,
+                "marked_budget_margin": -1552.0,
+                "intrabar_upper_budget_margin": -1563.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4237.0,
+                "intrabar_drawdown_lower": 4248.0,
+                "intrabar_drawdown_upper": 4248.0,
+                "marked_budget_margin": -2737.0,
+                "intrabar_upper_budget_margin": -2748.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -2858.0
+          },
+          "long": {
+            "n": 441,
+            "opportunities": 694,
+            "mean_overlapping_gross": -4.520893371757925,
+            "gross": -2462.0,
+            "net": {
+              "3": -3785.0,
+              "6": -5108.0,
+              "9": -6431.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 4276.5,
+                "intrabar_drawdown_lower": 4323.0,
+                "intrabar_drawdown_upper": 4323.0,
+                "marked_budget_margin": -2776.5,
+                "intrabar_upper_budget_margin": -2823.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 5560.5,
+                "intrabar_drawdown_lower": 5607.0,
+                "intrabar_drawdown_upper": 5607.0,
+                "marked_budget_margin": -4060.5,
+                "intrabar_upper_budget_margin": -4107.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 6844.5,
+                "intrabar_drawdown_lower": 6891.0,
+                "intrabar_drawdown_upper": 6891.0,
+                "marked_budget_margin": -5344.5,
+                "intrabar_upper_budget_margin": -5391.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -5769.0
+          },
+          "price": {
+            "n": 962,
+            "opportunities": 1826,
+            "mean_overlapping_gross": -1.198247535596933,
+            "gross": -2650.0,
+            "net": {
+              "3": -5536.0,
+              "6": -8422.0,
+              "9": -11308.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 5925.0,
+                "intrabar_drawdown_lower": 6018.5,
+                "intrabar_drawdown_upper": 6018.5,
+                "marked_budget_margin": -4425.0,
+                "intrabar_upper_budget_margin": -4518.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 8600.0,
+                "intrabar_drawdown_lower": 8676.5,
+                "intrabar_drawdown_upper": 8676.5,
+                "marked_budget_margin": -7100.0,
+                "intrabar_upper_budget_margin": -7176.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 11479.0,
+                "intrabar_drawdown_lower": 11517.0,
+                "intrabar_drawdown_upper": 11517.0,
+                "marked_budget_margin": -9979.0,
+                "intrabar_upper_budget_margin": -10017.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -9682.5
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -53.675,
+            "interval95": [
+              -110.19031249999999,
+              10.376249999999981
+            ]
+          },
+          "price": {
+            "mean_daily": 156.875,
+            "interval95": [
+              42.470000000000006,
+              293.475
+            ]
+          },
+          "body": {
+            "mean_daily": -5.875,
+            "interval95": [
+              -17.3,
+              0.825
+            ]
+          },
+          "long": {
+            "mean_daily": 74.025,
+            "interval95": [
+              3.5743750000000007,
+              174.900625
+            ]
+          }
+        }
+      },
+      "retained": {
+        "policies": {
+          "volume": {
+            "n": 436,
+            "opportunities": 733,
+            "mean_overlapping_gross": 1.4351978171896316,
+            "gross": 1838.5,
+            "net": {
+              "3": 530.5,
+              "6": -777.5,
+              "9": -2085.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1026.0,
+                "intrabar_drawdown_lower": 1054.0,
+                "intrabar_drawdown_upper": 1054.0,
+                "marked_budget_margin": 474.0,
+                "intrabar_upper_budget_margin": 446.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 1536.0,
+                "intrabar_drawdown_lower": 1566.5,
+                "intrabar_drawdown_upper": 1566.5,
+                "marked_budget_margin": -36.0,
+                "intrabar_upper_budget_margin": -66.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 2427.0,
+                "intrabar_drawdown_lower": 2457.5,
+                "intrabar_drawdown_upper": 2457.5,
+                "marked_budget_margin": -927.0,
+                "intrabar_upper_budget_margin": -957.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -1390.0
+          },
+          "body": {
+            "n": 426,
+            "opportunities": 733,
+            "mean_overlapping_gross": 3.038199181446112,
+            "gross": 2882.0,
+            "net": {
+              "3": 1604.0,
+              "6": 326.0,
+              "9": -952.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 953.0,
+                "intrabar_drawdown_lower": 992.0,
+                "intrabar_drawdown_upper": 992.0,
+                "marked_budget_margin": 547.0,
+                "intrabar_upper_budget_margin": 508.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 1430.5,
+                "intrabar_drawdown_lower": 1494.5,
+                "intrabar_drawdown_upper": 1494.5,
+                "marked_budget_margin": 69.5,
+                "intrabar_upper_budget_margin": 5.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 2345.0,
+                "intrabar_drawdown_lower": 2379.5,
+                "intrabar_drawdown_upper": 2379.5,
+                "marked_budget_margin": -845.0,
+                "intrabar_upper_budget_margin": -879.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -452.5
+          },
+          "long": {
+            "n": 436,
+            "opportunities": 733,
+            "mean_overlapping_gross": 1.888130968622101,
+            "gross": -182.5,
+            "net": {
+              "3": -1490.5,
+              "6": -2798.5,
+              "9": -4106.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2537.0,
+                "intrabar_drawdown_lower": 2592.0,
+                "intrabar_drawdown_upper": 2592.0,
+                "marked_budget_margin": -1037.0,
+                "intrabar_upper_budget_margin": -1092.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3809.0,
+                "intrabar_drawdown_lower": 3864.0,
+                "intrabar_drawdown_upper": 3864.0,
+                "marked_budget_margin": -2309.0,
+                "intrabar_upper_budget_margin": -2364.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 5081.0,
+                "intrabar_drawdown_lower": 5136.0,
+                "intrabar_drawdown_upper": 5136.0,
+                "marked_budget_margin": -3581.0,
+                "intrabar_upper_budget_margin": -3636.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3577.0
+          },
+          "price": {
+            "n": 955,
+            "opportunities": 1870,
+            "mean_overlapping_gross": 0.6553475935828877,
+            "gross": 1653.5,
+            "net": {
+              "3": -1211.5,
+              "6": -4076.5,
+              "9": -6941.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3994.0,
+                "intrabar_drawdown_lower": 4032.5,
+                "intrabar_drawdown_upper": 4032.5,
+                "marked_budget_margin": -2494.0,
+                "intrabar_upper_budget_margin": -2532.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 6033.5,
+                "intrabar_drawdown_lower": 6066.0,
+                "intrabar_drawdown_upper": 6066.0,
+                "marked_budget_margin": -4533.5,
+                "intrabar_upper_budget_margin": -4566.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 8689.5,
+                "intrabar_drawdown_lower": 8723.5,
+                "intrabar_drawdown_upper": 8723.5,
+                "marked_budget_margin": -7189.5,
+                "intrabar_upper_budget_margin": -7223.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -4873.0
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -19.4375,
+            "interval95": [
+              -98.94468749999999,
+              56.13937499999997
+            ]
+          },
+          "price": {
+            "mean_daily": 82.475,
+            "interval95": [
+              -96.553125,
+              218.95093749999998
+            ]
+          },
+          "body": {
+            "mean_daily": -27.5875,
+            "interval95": [
+              -122.515,
+              42.81499999999996
+            ]
+          },
+          "long": {
+            "mean_daily": 50.525,
+            "interval95": [
+              -47.426874999999995,
+              132.27624999999998
+            ]
+          }
+        }
+      }
+    },
+    "1": {
+      "crossed": {
+        "policies": {
+          "volume": {
+            "n": 428,
+            "opportunities": 693,
+            "mean_overlapping_gross": 0.06565656565656566,
+            "gross": 53.5,
+            "net": {
+              "3": -1230.5,
+              "6": -2514.5,
+              "9": -3798.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1936.0,
+                "intrabar_drawdown_lower": 1953.0,
+                "intrabar_drawdown_upper": 1953.0,
+                "marked_budget_margin": -436.0,
+                "intrabar_upper_budget_margin": -453.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3057.5,
+                "intrabar_drawdown_lower": 3070.0,
+                "intrabar_drawdown_upper": 3070.0,
+                "marked_budget_margin": -1557.5,
+                "intrabar_upper_budget_margin": -1570.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4200.5,
+                "intrabar_drawdown_lower": 4210.5,
+                "intrabar_drawdown_upper": 4210.5,
+                "marked_budget_margin": -2700.5,
+                "intrabar_upper_budget_margin": -2710.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3104.0
+          },
+          "body": {
+            "n": 426,
+            "opportunities": 693,
+            "mean_overlapping_gross": 0.3189033189033189,
+            "gross": 234.5,
+            "net": {
+              "3": -1043.5,
+              "6": -2321.5,
+              "9": -3599.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1696.0,
+                "intrabar_drawdown_lower": 1713.0,
+                "intrabar_drawdown_upper": 1713.0,
+                "marked_budget_margin": -196.0,
+                "intrabar_upper_budget_margin": -213.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 2811.5,
+                "intrabar_drawdown_lower": 2824.0,
+                "intrabar_drawdown_upper": 2824.0,
+                "marked_budget_margin": -1311.5,
+                "intrabar_upper_budget_margin": -1324.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 3948.5,
+                "intrabar_drawdown_lower": 3958.5,
+                "intrabar_drawdown_upper": 3958.5,
+                "marked_budget_margin": -2448.5,
+                "intrabar_upper_budget_margin": -2458.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -2911.0
+          },
+          "long": {
+            "n": 428,
+            "opportunities": 693,
+            "mean_overlapping_gross": -3.813131313131313,
+            "gross": -1916.5,
+            "net": {
+              "3": -3200.5,
+              "6": -4484.5,
+              "9": -5768.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 4006.5,
+                "intrabar_drawdown_lower": 4021.5,
+                "intrabar_drawdown_upper": 4021.5,
+                "marked_budget_margin": -2506.5,
+                "intrabar_upper_budget_margin": -2521.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 5242.5,
+                "intrabar_drawdown_lower": 5257.5,
+                "intrabar_drawdown_upper": 5257.5,
+                "marked_budget_margin": -3742.5,
+                "intrabar_upper_budget_margin": -3757.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 6478.5,
+                "intrabar_drawdown_lower": 6493.5,
+                "intrabar_drawdown_upper": 6493.5,
+                "marked_budget_margin": -4978.5,
+                "intrabar_upper_budget_margin": -4993.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -5193.5
+          },
+          "price": {
+            "n": 895,
+            "opportunities": 1823,
+            "mean_overlapping_gross": -0.058694459681843114,
+            "gross": -2338.5,
+            "net": {
+              "3": -5023.5,
+              "6": -7708.5,
+              "9": -10393.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 5412.5,
+                "intrabar_drawdown_lower": 5460.5,
+                "intrabar_drawdown_upper": 5460.5,
+                "marked_budget_margin": -3912.5,
+                "intrabar_upper_budget_margin": -3960.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 8052.5,
+                "intrabar_drawdown_lower": 8103.5,
+                "intrabar_drawdown_upper": 8103.5,
+                "marked_budget_margin": -6552.5,
+                "intrabar_upper_budget_margin": -6603.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 10692.5,
+                "intrabar_drawdown_lower": 10746.5,
+                "intrabar_drawdown_upper": 10746.5,
+                "marked_budget_margin": -9192.5,
+                "intrabar_upper_budget_margin": -9246.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -8962.0
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -62.8625,
+            "interval95": [
+              -106.4253125,
+              -21.810000000000038
+            ]
+          },
+          "price": {
+            "mean_daily": 129.85,
+            "interval95": [
+              44.4734375,
+              236.0434374999999
+            ]
+          },
+          "body": {
+            "mean_daily": -4.825,
+            "interval95": [
+              -15.4375,
+              2.6
+            ]
+          },
+          "long": {
+            "mean_daily": 49.25,
+            "interval95": [
+              -12.775,
+              116.45
+            ]
+          }
+        }
+      },
+      "retained": {
+        "policies": {
+          "volume": {
+            "n": 414,
+            "opportunities": 731,
+            "mean_overlapping_gross": -2.216142270861833,
+            "gross": 41.5,
+            "net": {
+              "3": -1200.5,
+              "6": -2442.5,
+              "9": -3684.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1471.0,
+                "intrabar_drawdown_lower": 1490.5,
+                "intrabar_drawdown_upper": 1490.5,
+                "marked_budget_margin": 29.0,
+                "intrabar_upper_budget_margin": 9.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 2509.0,
+                "intrabar_drawdown_lower": 2533.5,
+                "intrabar_drawdown_upper": 2533.5,
+                "marked_budget_margin": -1009.0,
+                "intrabar_upper_budget_margin": -1033.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 3749.5,
+                "intrabar_drawdown_lower": 3772.5,
+                "intrabar_drawdown_upper": 3772.5,
+                "marked_budget_margin": -2249.5,
+                "intrabar_upper_budget_margin": -2272.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3066.0
+          },
+          "body": {
+            "n": 405,
+            "opportunities": 731,
+            "mean_overlapping_gross": 0.8556771545827634,
+            "gross": 636.5,
+            "net": {
+              "3": -578.5,
+              "6": -1793.5,
+              "9": -3008.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1917.5,
+                "intrabar_drawdown_lower": 1948.5,
+                "intrabar_drawdown_upper": 1948.5,
+                "marked_budget_margin": -417.5,
+                "intrabar_upper_budget_margin": -448.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 2975.0,
+                "intrabar_drawdown_lower": 3092.0,
+                "intrabar_drawdown_upper": 3092.0,
+                "marked_budget_margin": -1475.0,
+                "intrabar_upper_budget_margin": -1592.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4125.5,
+                "intrabar_drawdown_lower": 4241.0,
+                "intrabar_drawdown_upper": 4241.0,
+                "marked_budget_margin": -2625.5,
+                "intrabar_upper_budget_margin": -2741.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -2452.5
+          },
+          "long": {
+            "n": 414,
+            "opportunities": 731,
+            "mean_overlapping_gross": 3.3816689466484267,
+            "gross": 897.5,
+            "net": {
+              "3": -344.5,
+              "6": -1586.5,
+              "9": -2828.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1464.5,
+                "intrabar_drawdown_lower": 1532.5,
+                "intrabar_drawdown_upper": 1532.5,
+                "marked_budget_margin": 35.5,
+                "intrabar_upper_budget_margin": -32.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 2545.5,
+                "intrabar_drawdown_lower": 2621.5,
+                "intrabar_drawdown_upper": 2621.5,
+                "marked_budget_margin": -1045.5,
+                "intrabar_upper_budget_margin": -1121.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 3753.0,
+                "intrabar_drawdown_lower": 3827.5,
+                "intrabar_drawdown_upper": 3827.5,
+                "marked_budget_margin": -2253.0,
+                "intrabar_upper_budget_margin": -2327.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -2313.0
+          },
+          "price": {
+            "n": 880,
+            "opportunities": 1863,
+            "mean_overlapping_gross": 0.4001610305958132,
+            "gross": 1154.5,
+            "net": {
+              "3": -1485.5,
+              "6": -4125.5,
+              "9": -6765.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3963.0,
+                "intrabar_drawdown_lower": 4015.0,
+                "intrabar_drawdown_upper": 4015.0,
+                "marked_budget_margin": -2463.0,
+                "intrabar_upper_budget_margin": -2515.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 5832.0,
+                "intrabar_drawdown_lower": 5865.5,
+                "intrabar_drawdown_upper": 5865.5,
+                "marked_budget_margin": -4332.0,
+                "intrabar_upper_budget_margin": -4365.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 8225.0,
+                "intrabar_drawdown_lower": 8268.5,
+                "intrabar_drawdown_upper": 8268.5,
+                "marked_budget_margin": -6725.0,
+                "intrabar_upper_budget_margin": -6768.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -4953.0
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -61.0625,
+            "interval95": [
+              -147.0509375,
+              9.737812499999997
+            ]
+          },
+          "price": {
+            "mean_daily": 42.075,
+            "interval95": [
+              -137.4275,
+              195.6878125
+            ]
+          },
+          "body": {
+            "mean_daily": -16.225,
+            "interval95": [
+              -123.5884375,
+              61.67531249999999
+            ]
+          },
+          "long": {
+            "mean_daily": -21.4,
+            "interval95": [
+              -131.500625,
+              67.72999999999992
+            ]
+          }
+        }
+      }
+    }
+  },
+  "external60": {
+    "0": {
+      "crossed": {
+        "policies": {
+          "volume": {
+            "n": 673,
+            "opportunities": 1038,
+            "mean_overlapping_gross": -0.7904624277456648,
+            "gross": -1095.0,
+            "net": {
+              "3": -3114.0,
+              "6": -5133.0,
+              "9": -7152.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3325.0,
+                "intrabar_drawdown_lower": 3365.5,
+                "intrabar_drawdown_upper": 3365.5,
+                "marked_budget_margin": -1825.0,
+                "intrabar_upper_budget_margin": -1865.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 5276.5,
+                "intrabar_drawdown_lower": 5301.0,
+                "intrabar_drawdown_upper": 5301.0,
+                "marked_budget_margin": -3776.5,
+                "intrabar_upper_budget_margin": -3801.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 7279.5,
+                "intrabar_drawdown_lower": 7293.0,
+                "intrabar_drawdown_upper": 7293.0,
+                "marked_budget_margin": -5779.5,
+                "intrabar_upper_budget_margin": -5793.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -5858.5
+          },
+          "body": {
+            "n": 670,
+            "opportunities": 1038,
+            "mean_overlapping_gross": -0.8709055876685935,
+            "gross": -1178.5,
+            "net": {
+              "3": -3188.5,
+              "6": -5198.5,
+              "9": -7208.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3399.5,
+                "intrabar_drawdown_lower": 3431.5,
+                "intrabar_drawdown_upper": 3431.5,
+                "marked_budget_margin": -1899.5,
+                "intrabar_upper_budget_margin": -1931.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 5342.0,
+                "intrabar_drawdown_lower": 5366.5,
+                "intrabar_drawdown_upper": 5366.5,
+                "marked_budget_margin": -3842.0,
+                "intrabar_upper_budget_margin": -3866.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 7336.0,
+                "intrabar_drawdown_lower": 7349.5,
+                "intrabar_drawdown_upper": 7349.5,
+                "marked_budget_margin": -5836.0,
+                "intrabar_upper_budget_margin": -5849.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -5924.0
+          },
+          "long": {
+            "n": 673,
+            "opportunities": 1038,
+            "mean_overlapping_gross": -0.9773603082851637,
+            "gross": 897.0,
+            "net": {
+              "3": -1122.0,
+              "6": -3141.0,
+              "9": -5160.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2128.5,
+                "intrabar_drawdown_lower": 2147.0,
+                "intrabar_drawdown_upper": 2147.0,
+                "marked_budget_margin": -628.5,
+                "intrabar_upper_budget_margin": -647.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3615.5,
+                "intrabar_drawdown_lower": 3648.0,
+                "intrabar_drawdown_upper": 3648.0,
+                "marked_budget_margin": -2115.5,
+                "intrabar_upper_budget_margin": -2148.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 5432.5,
+                "intrabar_drawdown_lower": 5461.0,
+                "intrabar_drawdown_upper": 5461.0,
+                "marked_budget_margin": -3932.5,
+                "intrabar_upper_budget_margin": -3961.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3893.5
+          },
+          "price": {
+            "n": 1457,
+            "opportunities": 2754,
+            "mean_overlapping_gross": -0.920479302832244,
+            "gross": 110.5,
+            "net": {
+              "3": -4260.5,
+              "6": -8631.5,
+              "9": -13002.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 5112.5,
+                "intrabar_drawdown_lower": 5145.0,
+                "intrabar_drawdown_upper": 5145.0,
+                "marked_budget_margin": -3612.5,
+                "intrabar_upper_budget_margin": -3645.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 8913.5,
+                "intrabar_drawdown_lower": 8954.5,
+                "intrabar_drawdown_upper": 8954.5,
+                "marked_budget_margin": -7413.5,
+                "intrabar_upper_budget_margin": -7454.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 13190.0,
+                "intrabar_drawdown_lower": 13232.0,
+                "intrabar_drawdown_upper": 13232.0,
+                "marked_budget_margin": -11690.0,
+                "intrabar_upper_budget_margin": -11732.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -9383.5
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -85.55,
+            "interval95": [
+              -132.46041666666667,
+              -42.10770833333334
+            ]
+          },
+          "price": {
+            "mean_daily": 58.30833333333333,
+            "interval95": [
+              2.398750000000001,
+              115.32791666666662
+            ]
+          },
+          "body": {
+            "mean_daily": 1.0916666666666666,
+            "interval95": [
+              0.0,
+              2.6166666666666667
+            ]
+          },
+          "long": {
+            "mean_daily": -33.2,
+            "interval95": [
+              -80.30416666666666,
+              14.651249999999981
+            ]
+          }
+        }
+      },
+      "retained": {
+        "policies": {
+          "volume": {
+            "n": 631,
+            "opportunities": 1050,
+            "mean_overlapping_gross": 0.09904761904761905,
+            "gross": 590.5,
+            "net": {
+              "3": -1302.5,
+              "6": -3195.5,
+              "9": -5088.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2312.5,
+                "intrabar_drawdown_lower": 2340.5,
+                "intrabar_drawdown_upper": 2340.5,
+                "marked_budget_margin": -812.5,
+                "intrabar_upper_budget_margin": -840.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3923.5,
+                "intrabar_drawdown_lower": 3949.0,
+                "intrabar_drawdown_upper": 3949.0,
+                "marked_budget_margin": -2423.5,
+                "intrabar_upper_budget_margin": -2449.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 5534.5,
+                "intrabar_drawdown_lower": 5566.0,
+                "intrabar_drawdown_upper": 5566.0,
+                "marked_budget_margin": -4034.5,
+                "intrabar_upper_budget_margin": -4066.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3720.0
+          },
+          "body": {
+            "n": 615,
+            "opportunities": 1050,
+            "mean_overlapping_gross": 0.259047619047619,
+            "gross": 1054.0,
+            "net": {
+              "3": -791.0,
+              "6": -2636.0,
+              "9": -4481.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2061.5,
+                "intrabar_drawdown_lower": 2072.5,
+                "intrabar_drawdown_upper": 2072.5,
+                "marked_budget_margin": -561.5,
+                "intrabar_upper_budget_margin": -572.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3287.0,
+                "intrabar_drawdown_lower": 3307.0,
+                "intrabar_drawdown_upper": 3307.0,
+                "marked_budget_margin": -1787.0,
+                "intrabar_upper_budget_margin": -1807.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4705.5,
+                "intrabar_drawdown_lower": 4736.5,
+                "intrabar_drawdown_upper": 4736.5,
+                "marked_budget_margin": -3205.5,
+                "intrabar_upper_budget_margin": -3236.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3203.0
+          },
+          "long": {
+            "n": 631,
+            "opportunities": 1050,
+            "mean_overlapping_gross": 1.9295238095238094,
+            "gross": 111.5,
+            "net": {
+              "3": -1781.5,
+              "6": -3674.5,
+              "9": -5567.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3217.0,
+                "intrabar_drawdown_lower": 3246.5,
+                "intrabar_drawdown_upper": 3246.5,
+                "marked_budget_margin": -1717.0,
+                "intrabar_upper_budget_margin": -1746.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 4307.5,
+                "intrabar_drawdown_lower": 4329.5,
+                "intrabar_drawdown_upper": 4329.5,
+                "marked_budget_margin": -2807.5,
+                "intrabar_upper_budget_margin": -2829.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 5738.0,
+                "intrabar_drawdown_lower": 5781.0,
+                "intrabar_drawdown_upper": 5781.0,
+                "marked_budget_margin": -4238.0,
+                "intrabar_upper_budget_margin": -4281.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -4169.5
+          },
+          "price": {
+            "n": 1449,
+            "opportunities": 2916,
+            "mean_overlapping_gross": 1.9338134430727023,
+            "gross": 2148.0,
+            "net": {
+              "3": -2199.0,
+              "6": -6546.0,
+              "9": -10893.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3204.0,
+                "intrabar_drawdown_lower": 3229.5,
+                "intrabar_drawdown_upper": 3229.5,
+                "marked_budget_margin": -1704.0,
+                "intrabar_upper_budget_margin": -1729.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 7368.0,
+                "intrabar_drawdown_lower": 7393.5,
+                "intrabar_drawdown_upper": 7393.5,
+                "marked_budget_margin": -5868.0,
+                "intrabar_upper_budget_margin": -5893.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 11540.5,
+                "intrabar_drawdown_lower": 11559.5,
+                "intrabar_drawdown_upper": 11559.5,
+                "marked_budget_margin": -10040.5,
+                "intrabar_upper_budget_margin": -10059.5,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -7386.0
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -53.25833333333333,
+            "interval95": [
+              -91.40083333333334,
+              -15.415416666666685
+            ]
+          },
+          "price": {
+            "mean_daily": 55.84166666666667,
+            "interval95": [
+              -15.742291666666667,
+              133.2
+            ]
+          },
+          "body": {
+            "mean_daily": -9.325,
+            "interval95": [
+              -56.459375,
+              33.49166666666667
+            ]
+          },
+          "long": {
+            "mean_daily": 7.983333333333333,
+            "interval95": [
+              -53.468333333333334,
+              67.81708333333333
+            ]
+          }
+        }
+      }
+    },
+    "1": {
+      "crossed": {
+        "policies": {
+          "volume": {
+            "n": 647,
+            "opportunities": 1033,
+            "mean_overlapping_gross": -0.5953533397870281,
+            "gross": 87.0,
+            "net": {
+              "3": -1854.0,
+              "6": -3795.0,
+              "9": -5736.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2570.5,
+                "intrabar_drawdown_lower": 2597.5,
+                "intrabar_drawdown_upper": 2597.5,
+                "marked_budget_margin": -1070.5,
+                "intrabar_upper_budget_margin": -1097.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 4103.0,
+                "intrabar_drawdown_lower": 4114.5,
+                "intrabar_drawdown_upper": 4114.5,
+                "marked_budget_margin": -2603.0,
+                "intrabar_upper_budget_margin": -2614.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 6008.0,
+                "intrabar_drawdown_lower": 6017.0,
+                "intrabar_drawdown_upper": 6017.0,
+                "marked_budget_margin": -4508.0,
+                "intrabar_upper_budget_margin": -4517.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -4319.0
+          },
+          "body": {
+            "n": 645,
+            "opportunities": 1033,
+            "mean_overlapping_gross": -0.670377541142304,
+            "gross": 13.0,
+            "net": {
+              "3": -1922.0,
+              "6": -3857.0,
+              "9": -5792.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2581.5,
+                "intrabar_drawdown_lower": 2598.5,
+                "intrabar_drawdown_upper": 2598.5,
+                "marked_budget_margin": -1081.5,
+                "intrabar_upper_budget_margin": -1098.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 4165.0,
+                "intrabar_drawdown_lower": 4176.5,
+                "intrabar_drawdown_upper": 4176.5,
+                "marked_budget_margin": -2665.0,
+                "intrabar_upper_budget_margin": -2676.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 6064.0,
+                "intrabar_drawdown_lower": 6073.0,
+                "intrabar_drawdown_upper": 6073.0,
+                "marked_budget_margin": -4564.0,
+                "intrabar_upper_budget_margin": -4573.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -4381.0
+          },
+          "long": {
+            "n": 647,
+            "opportunities": 1033,
+            "mean_overlapping_gross": -1.0183930300096806,
+            "gross": 597.0,
+            "net": {
+              "3": -1344.0,
+              "6": -3285.0,
+              "9": -5226.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2047.5,
+                "intrabar_drawdown_lower": 2076.5,
+                "intrabar_drawdown_upper": 2076.5,
+                "marked_budget_margin": -547.5,
+                "intrabar_upper_budget_margin": -576.5,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3662.5,
+                "intrabar_drawdown_lower": 3690.0,
+                "intrabar_drawdown_upper": 3690.0,
+                "marked_budget_margin": -2162.5,
+                "intrabar_upper_budget_margin": -2190.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 5533.0,
+                "intrabar_drawdown_lower": 5562.0,
+                "intrabar_drawdown_upper": 5562.0,
+                "marked_budget_margin": -4033.0,
+                "intrabar_upper_budget_margin": -4062.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3893.0
+          },
+          "price": {
+            "n": 1337,
+            "opportunities": 2746,
+            "mean_overlapping_gross": 0.4227967953386744,
+            "gross": 2605.5,
+            "net": {
+              "3": -1405.5,
+              "6": -5416.5,
+              "9": -9427.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2534.5,
+                "intrabar_drawdown_lower": 2584.0,
+                "intrabar_drawdown_upper": 2584.0,
+                "marked_budget_margin": -1034.5,
+                "intrabar_upper_budget_margin": -1084.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 5869.0,
+                "intrabar_drawdown_lower": 5894.0,
+                "intrabar_drawdown_upper": 5894.0,
+                "marked_budget_margin": -4369.0,
+                "intrabar_upper_budget_margin": -4394.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 9809.5,
+                "intrabar_drawdown_lower": 9833.0,
+                "intrabar_drawdown_upper": 9833.0,
+                "marked_budget_margin": -8309.5,
+                "intrabar_upper_budget_margin": -8333.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -6187.5
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -63.25,
+            "interval95": [
+              -105.5675,
+              -18.265625000000014
+            ]
+          },
+          "price": {
+            "mean_daily": 27.025,
+            "interval95": [
+              -24.575416666666666,
+              80.675
+            ]
+          },
+          "body": {
+            "mean_daily": 1.0333333333333334,
+            "interval95": [
+              -0.8,
+              3.533333333333333
+            ]
+          },
+          "long": {
+            "mean_daily": -8.5,
+            "interval95": [
+              -57.58708333333333,
+              40.56874999999997
+            ]
+          }
+        }
+      },
+      "retained": {
+        "policies": {
+          "volume": {
+            "n": 610,
+            "opportunities": 1044,
+            "mean_overlapping_gross": 1.9276819923371646,
+            "gross": 1591.0,
+            "net": {
+              "3": -239.0,
+              "6": -2069.0,
+              "9": -3899.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 987.0,
+                "intrabar_drawdown_lower": 1026.0,
+                "intrabar_drawdown_upper": 1026.0,
+                "marked_budget_margin": 513.0,
+                "intrabar_upper_budget_margin": 474.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 2288.0,
+                "intrabar_drawdown_lower": 2313.0,
+                "intrabar_drawdown_upper": 2313.0,
+                "marked_budget_margin": -788.0,
+                "intrabar_upper_budget_margin": -813.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4026.5,
+                "intrabar_drawdown_lower": 4045.0,
+                "intrabar_drawdown_upper": 4045.0,
+                "marked_budget_margin": -2526.5,
+                "intrabar_upper_budget_margin": -2545.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -2695.5
+          },
+          "body": {
+            "n": 594,
+            "opportunities": 1044,
+            "mean_overlapping_gross": 0.9171455938697318,
+            "gross": 720.5,
+            "net": {
+              "3": -1061.5,
+              "6": -2843.5,
+              "9": -4625.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 1622.0,
+                "intrabar_drawdown_lower": 1668.0,
+                "intrabar_drawdown_upper": 1668.0,
+                "marked_budget_margin": -122.0,
+                "intrabar_upper_budget_margin": -168.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 3076.0,
+                "intrabar_drawdown_lower": 3111.5,
+                "intrabar_drawdown_upper": 3111.5,
+                "marked_budget_margin": -1576.0,
+                "intrabar_upper_budget_margin": -1611.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4681.5,
+                "intrabar_drawdown_lower": 4710.0,
+                "intrabar_drawdown_upper": 4710.0,
+                "marked_budget_margin": -3181.5,
+                "intrabar_upper_budget_margin": -3210.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -3470.0
+          },
+          "long": {
+            "n": 610,
+            "opportunities": 1044,
+            "mean_overlapping_gross": 2.843390804597701,
+            "gross": 1525.0,
+            "net": {
+              "3": -305.0,
+              "6": -2135.0,
+              "9": -3965.0
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 2035.0,
+                "intrabar_drawdown_lower": 2051.0,
+                "intrabar_drawdown_upper": 2051.0,
+                "marked_budget_margin": -535.0,
+                "intrabar_upper_budget_margin": -551.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 2767.0,
+                "intrabar_drawdown_lower": 2782.5,
+                "intrabar_drawdown_upper": 2782.5,
+                "marked_budget_margin": -1267.0,
+                "intrabar_upper_budget_margin": -1282.5,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 4177.5,
+                "intrabar_drawdown_lower": 4207.0,
+                "intrabar_drawdown_upper": 4207.0,
+                "marked_budget_margin": -2677.5,
+                "intrabar_upper_budget_margin": -2707.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -2727.0
+          },
+          "price": {
+            "n": 1339,
+            "opportunities": 2907,
+            "mean_overlapping_gross": 0.8255933952528379,
+            "gross": 649.5,
+            "net": {
+              "3": -3367.5,
+              "6": -7384.5,
+              "9": -11401.5
+            },
+            "drawdown": {
+              "3": {
+                "marked_drawdown": 3562.0,
+                "intrabar_drawdown_lower": 3629.0,
+                "intrabar_drawdown_upper": 3629.0,
+                "marked_budget_margin": -2062.0,
+                "intrabar_upper_budget_margin": -2129.0,
+                "drawdown_budget": 1500.0
+              },
+              "6": {
+                "marked_drawdown": 7503.0,
+                "intrabar_drawdown_lower": 7515.0,
+                "intrabar_drawdown_upper": 7515.0,
+                "marked_budget_margin": -6003.0,
+                "intrabar_upper_budget_margin": -6015.0,
+                "drawdown_budget": 1500.0
+              },
+              "9": {
+                "marked_drawdown": 11507.5,
+                "intrabar_drawdown_lower": 11514.0,
+                "intrabar_drawdown_upper": 11514.0,
+                "marked_budget_margin": -10007.5,
+                "intrabar_upper_budget_margin": -10014.0,
+                "drawdown_budget": 1500.0
+              }
+            },
+            "without_top3_net6": -7987.0
+          }
+        },
+        "paired_vs": {
+          "cash": {
+            "mean_daily": -34.483333333333334,
+            "interval95": [
+              -60.258541666666666,
+              -7.632291666666682
+            ]
+          },
+          "price": {
+            "mean_daily": 88.59166666666667,
+            "interval95": [
+              23.581875,
+              170.06708333333333
+            ]
+          },
+          "body": {
+            "mean_daily": 12.908333333333333,
+            "interval95": [
+              -20.550208333333334,
+              44.325
+            ]
+          },
+          "long": {
+            "mean_daily": 1.1,
+            "interval95": [
+              -37.2025,
+              40.6
+            ]
+          }
+        }
+      }
+    }
+  }
+}

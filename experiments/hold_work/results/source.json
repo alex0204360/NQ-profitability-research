@@ -1,0 +1,275 @@
+{
+  "discovery": {
+    "source": "experiments/reservoir_lab/response_evidence/results/discovery/replay.html",
+    "sha256": "de3a53aa1e88cb4f26fa47248ba7182dec86623e6abee3e9564323efc09f6a8a",
+    "daily_labels_source": "experiments/reservoir_lab/response_evidence/results/discovery/daily.csv",
+    "session_count": 40,
+    "bar_count": 15596,
+    "timezone": "America/New_York",
+    "missing_minutes": {
+      "2026-09-17": [
+        "2026-09-17T11:50:00-04:00"
+      ],
+      "2026-09-22": [
+        "2026-09-22T11:50:00-04:00"
+      ],
+      "2026-10-02": [
+        "2026-10-02T11:50:00-04:00"
+      ],
+      "2026-10-07": [
+        "2026-10-07T11:50:00-04:00"
+      ]
+    },
+    "sessions": [
+      {
+        "date": "2026-09-14",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-15",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-16",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-17",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-18",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-21",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-22",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-23",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-24",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-25",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-28",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-29",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-09-30",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-01",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-02",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-05",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-06",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-07",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-08",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-09",
+        "panel": "earlier20"
+      },
+      {
+        "date": "2026-10-26",
+        "panel": "replication5"
+      },
+      {
+        "date": "2026-10-27",
+        "panel": "replication5"
+      },
+      {
+        "date": "2026-10-28",
+        "panel": "replication5"
+      },
+      {
+        "date": "2026-10-29",
+        "panel": "replication5"
+      },
+      {
+        "date": "2026-11-02",
+        "panel": "replication5"
+      },
+      {
+        "date": "2026-11-03",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-04",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-05",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-06",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-09",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-10",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-11",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-12",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-13",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-16",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-17",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-18",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-19",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-20",
+        "panel": "november14"
+      },
+      {
+        "date": "2026-11-25",
+        "panel": "nov25"
+      }
+    ]
+  },
+  "external": {
+    "source_commit": "60abd3fb6369c6ce0b6a4a65b0f2562fc96b1264",
+    "hashes": {
+      "MNQ.csv": "129623f45308a98a1a345473ac5fe4d03d5d53f7dd177a608d946eb3d3d6ea99",
+      "MNQ_5min.csv": "1e42bc9a8a682c19e7cd460ab003b522b8643bda23b70e5f8235633d1ccf08f4"
+    },
+    "included_dates": [
+      "2026-01-20",
+      "2026-01-21",
+      "2026-01-22",
+      "2026-01-23",
+      "2026-01-26",
+      "2026-01-27",
+      "2026-01-28",
+      "2026-01-29",
+      "2026-01-30",
+      "2026-02-02",
+      "2026-02-03",
+      "2026-02-04",
+      "2026-02-05",
+      "2026-02-06",
+      "2026-02-09",
+      "2026-02-10",
+      "2026-02-11",
+      "2026-02-12",
+      "2026-02-13",
+      "2026-02-17",
+      "2026-02-18",
+      "2026-02-19",
+      "2026-02-20",
+      "2026-02-23",
+      "2026-02-24",
+      "2026-02-25",
+      "2026-02-26",
+      "2026-02-27",
+      "2026-03-02",
+      "2026-03-03",
+      "2026-03-04",
+      "2026-03-05",
+      "2026-03-06",
+      "2026-03-09",
+      "2026-03-10",
+      "2026-03-11",
+      "2026-03-12",
+      "2026-03-13",
+      "2026-03-16",
+      "2026-03-17",
+      "2026-03-18",
+      "2026-03-19",
+      "2026-03-20",
+      "2026-03-23",
+      "2026-03-24",
+      "2026-03-25",
+      "2026-03-26",
+      "2026-03-27",
+      "2026-03-30",
+      "2026-03-31",
+      "2026-04-01",
+      "2026-04-02",
+      "2026-04-06",
+      "2026-04-07",
+      "2026-04-08",
+      "2026-04-09",
+      "2026-04-10",
+      "2026-04-13",
+      "2026-04-14",
+      "2026-04-15"
+    ],
+    "excluded_weekdays": {
+      "2026-02-16": 210,
+      "2026-04-03": 0
+    },
+    "overlap_5min": 4680,
+    "total_groups": 4680,
+    "exact_ohlcv": 4680,
+    "exact_by_column": {
+      "open": 4680,
+      "high": 4680,
+      "low": 4680,
+      "close": 4680,
+      "volume": 4680
+    },
+    "zero_volume_minutes": 0
+  },
+  "external_hashes": {
+    "MNQ.csv": "129623f45308a98a1a345473ac5fe4d03d5d53f7dd177a608d946eb3d3d6ea99",
+    "MNQ_5min.csv": "1e42bc9a8a682c19e7cd460ab003b522b8643bda23b70e5f8235633d1ccf08f4"
+  },
+  "external_source_commit": "60abd3fb6369c6ce0b6a4a65b0f2562fc96b1264"
+}

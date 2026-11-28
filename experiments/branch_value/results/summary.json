@@ -1,0 +1,1067 @@
+{
+  "discovery40": {
+    "0": {
+      "scheduled": 218,
+      "common": 218,
+      "original_trades": 394,
+      "branches": {
+        "0": {
+          "n": 214,
+          "mean_realized_pts": 0.49883177570093457
+        },
+        "1": {
+          "n": 4,
+          "mean_realized_pts": -11.0
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 4782.78125,
+          "mae": 41.07912844036697,
+          "bias": -0.28784403669724773,
+          "rank": null,
+          "early_exits": 0,
+          "increment_usd": 0.0,
+          "without_best_three": 0.0,
+          "costs": {
+            "3": {
+              "original_net": 1634.5,
+              "edited_net": 1634.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "6": {
+              "original_net": 452.5,
+              "edited_net": 452.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "9": {
+              "original_net": -729.5,
+              "edited_net": -729.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            }
+          }
+        },
+        "pooled": {
+          "mse": 4887.74012572941,
+          "mae": 41.089739761703065,
+          "bias": -5.018044179552446,
+          "rank": -0.08276158438460494,
+          "early_exits": 217,
+          "increment_usd": -188.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 1634.5,
+              "edited_net": 1446.0,
+              "saved_on_losers": 7320.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1444.5
+            },
+            "6": {
+              "original_net": 452.5,
+              "edited_net": 264.0,
+              "saved_on_losers": 7533.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1296.5
+            },
+            "9": {
+              "original_net": -729.5,
+              "edited_net": -918.0,
+              "saved_on_losers": 7601.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1228.0
+            }
+          }
+        },
+        "feasibility": {
+          "mse": 4906.580032460661,
+          "mae": 41.19912673756795,
+          "bias": -5.690010030433443,
+          "rank": -0.10021101598659068,
+          "early_exits": 217,
+          "increment_usd": -188.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 1634.5,
+              "edited_net": 1446.0,
+              "saved_on_losers": 7320.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1444.5
+            },
+            "6": {
+              "original_net": 452.5,
+              "edited_net": 264.0,
+              "saved_on_losers": 7533.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1296.5
+            },
+            "9": {
+              "original_net": -729.5,
+              "edited_net": -918.0,
+              "saved_on_losers": 7601.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1228.0
+            }
+          }
+        },
+        "laplace": {
+          "mse": 4906.521539721517,
+          "mae": 41.196674830804035,
+          "bias": -5.691970643525248,
+          "rank": -0.10014672952146339,
+          "early_exits": 217,
+          "increment_usd": -188.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 1634.5,
+              "edited_net": 1446.0,
+              "saved_on_losers": 7320.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1444.5
+            },
+            "6": {
+              "original_net": 452.5,
+              "edited_net": 264.0,
+              "saved_on_losers": 7533.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1296.5
+            },
+            "9": {
+              "original_net": -729.5,
+              "edited_net": -918.0,
+              "saved_on_losers": 7601.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1228.0
+            }
+          }
+        },
+        "grid": {
+          "mse": 4906.517414736556,
+          "mae": 41.196484288503406,
+          "bias": -5.69207857331489,
+          "rank": -0.10008765547242748,
+          "early_exits": 217,
+          "increment_usd": -188.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 1634.5,
+              "edited_net": 1446.0,
+              "saved_on_losers": 7320.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1444.5
+            },
+            "6": {
+              "original_net": 452.5,
+              "edited_net": 264.0,
+              "saved_on_losers": 7533.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1296.5
+            },
+            "9": {
+              "original_net": -729.5,
+              "edited_net": -918.0,
+              "saved_on_losers": 7601.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1228.0
+            }
+          }
+        },
+        "retrospective": {
+          "mse": 4906.876117477802,
+          "mae": 41.200744769633424,
+          "bias": -5.6873338792458314,
+          "rank": -0.10334483637221069,
+          "early_exits": 217,
+          "increment_usd": -188.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 1634.5,
+              "edited_net": 1446.0,
+              "saved_on_losers": 7320.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1444.5
+            },
+            "6": {
+              "original_net": 452.5,
+              "edited_net": 264.0,
+              "saved_on_losers": 7533.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1296.5
+            },
+            "9": {
+              "original_net": -729.5,
+              "edited_net": -918.0,
+              "saved_on_losers": 7601.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 9018.0,
+              "added_gain_on_winners": 1228.0
+            }
+          }
+        }
+      },
+      "grid_minus": {
+        "zero": {
+          "mse_delta": 123.73616473655613,
+          "ci95": [
+            -30.116841546966796,
+            314.0054264396186
+          ]
+        },
+        "pooled": {
+          "mse_delta": 18.777289007146234,
+          "ci95": [
+            -0.8246653326126351,
+            42.577801574676
+          ]
+        },
+        "feasibility": {
+          "mse_delta": -0.06261772410436109,
+          "ci95": [
+            -0.13180640606810118,
+            -0.0035144597787900717
+          ]
+        },
+        "laplace": {
+          "mse_delta": -0.004124984961563302,
+          "ci95": [
+            -0.010457366405649916,
+            0.0010768486104766918
+          ]
+        },
+        "retrospective": {
+          "mse_delta": -0.3587027412467957,
+          "ci95": [
+            -0.735938362633976,
+            -0.015571756168433488
+          ]
+        }
+      }
+    },
+    "1": {
+      "scheduled": 181,
+      "common": 181,
+      "original_trades": 361,
+      "branches": {
+        "0": {
+          "n": 180,
+          "mean_realized_pts": -1.65
+        },
+        "1": {
+          "n": 1,
+          "mean_realized_pts": 17.5
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 5628.973066298343,
+          "mae": 45.187845303867405,
+          "bias": 1.5441988950276244,
+          "rank": null,
+          "early_exits": 0,
+          "increment_usd": 0.0,
+          "without_best_three": 0.0,
+          "costs": {
+            "3": {
+              "original_net": 759.5,
+              "edited_net": 759.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "6": {
+              "original_net": -323.5,
+              "edited_net": -323.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "9": {
+              "original_net": -1406.5,
+              "edited_net": -1406.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            }
+          }
+        },
+        "pooled": {
+          "mse": 5704.264530496014,
+          "mae": 45.41075341950431,
+          "bias": 1.3550232455907563,
+          "rank": -0.08152165390477695,
+          "early_exits": 89,
+          "increment_usd": -537.5,
+          "without_best_three": -1393.5,
+          "costs": {
+            "3": {
+              "original_net": 759.5,
+              "edited_net": 222.0,
+              "saved_on_losers": 1736.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3031.5,
+              "added_gain_on_winners": 757.5
+            },
+            "6": {
+              "original_net": -323.5,
+              "edited_net": -861.0,
+              "saved_on_losers": 1768.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3031.5,
+              "added_gain_on_winners": 725.5
+            },
+            "9": {
+              "original_net": -1406.5,
+              "edited_net": -1944.0,
+              "saved_on_losers": 1768.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3031.5,
+              "added_gain_on_winners": 721.0
+            }
+          }
+        },
+        "feasibility": {
+          "mse": 5714.02887586415,
+          "mae": 45.507766385254634,
+          "bias": 1.0708686067035265,
+          "rank": -0.08896417422390156,
+          "early_exits": 93,
+          "increment_usd": -1191.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 759.5,
+              "edited_net": -432.0,
+              "saved_on_losers": 1754.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 757.5
+            },
+            "6": {
+              "original_net": -323.5,
+              "edited_net": -1515.0,
+              "saved_on_losers": 1786.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 725.5
+            },
+            "9": {
+              "original_net": -1406.5,
+              "edited_net": -2598.0,
+              "saved_on_losers": 1786.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 721.0
+            }
+          }
+        },
+        "laplace": {
+          "mse": 5713.849533524197,
+          "mae": 45.50417382122563,
+          "bias": 1.0674874299455974,
+          "rank": -0.08863834260693919,
+          "early_exits": 93,
+          "increment_usd": -1191.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 759.5,
+              "edited_net": -432.0,
+              "saved_on_losers": 1754.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 757.5
+            },
+            "6": {
+              "original_net": -323.5,
+              "edited_net": -1515.0,
+              "saved_on_losers": 1786.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 725.5
+            },
+            "9": {
+              "original_net": -1406.5,
+              "edited_net": -2598.0,
+              "saved_on_losers": 1786.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 721.0
+            }
+          }
+        },
+        "grid": {
+          "mse": 5713.820941046786,
+          "mae": 45.50358083371336,
+          "bias": 1.066968426871483,
+          "rank": -0.08856750964672999,
+          "early_exits": 93,
+          "increment_usd": -1191.5,
+          "without_best_three": -2047.5,
+          "costs": {
+            "3": {
+              "original_net": 759.5,
+              "edited_net": -432.0,
+              "saved_on_losers": 1754.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 757.5
+            },
+            "6": {
+              "original_net": -323.5,
+              "edited_net": -1515.0,
+              "saved_on_losers": 1786.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 725.5
+            },
+            "9": {
+              "original_net": -1406.5,
+              "edited_net": -2598.0,
+              "saved_on_losers": 1786.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 721.0
+            }
+          }
+        },
+        "retrospective": {
+          "mse": 5713.750460983255,
+          "mae": 45.50243389715977,
+          "bias": 1.0605694276751887,
+          "rank": -0.08769019283956737,
+          "early_exits": 95,
+          "increment_usd": -1082.0,
+          "without_best_three": -1938.0,
+          "costs": {
+            "3": {
+              "original_net": 759.5,
+              "edited_net": -322.5,
+              "saved_on_losers": 1832.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 789.0
+            },
+            "6": {
+              "original_net": -323.5,
+              "edited_net": -1405.5,
+              "saved_on_losers": 1864.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 757.0
+            },
+            "9": {
+              "original_net": -1406.5,
+              "edited_net": -2488.5,
+              "saved_on_losers": 1864.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 3703.5,
+              "added_gain_on_winners": 752.5
+            }
+          }
+        }
+      },
+      "grid_minus": {
+        "zero": {
+          "mse_delta": 84.84787474844383,
+          "ci95": [
+            -15.608962627588726,
+            223.6072875489115
+          ]
+        },
+        "pooled": {
+          "mse_delta": 9.556410550772368,
+          "ci95": [
+            -2.5393678858993183,
+            22.265262190638083
+          ]
+        },
+        "feasibility": {
+          "mse_delta": -0.2079348173644481,
+          "ci95": [
+            -0.43728743145733634,
+            -0.03494079033670508
+          ]
+        },
+        "laplace": {
+          "mse_delta": -0.02859247741019581,
+          "ci95": [
+            -0.058060755204658476,
+            -0.006437236204858215
+          ]
+        },
+        "retrospective": {
+          "mse_delta": 0.07048006353168622,
+          "ci95": [
+            -0.07662075186803559,
+            0.26694995314793046
+          ]
+        }
+      }
+    }
+  },
+  "external60": {
+    "0": {
+      "scheduled": 272,
+      "common": 272,
+      "original_trades": 541,
+      "branches": {
+        "0": {
+          "n": 267,
+          "mean_realized_pts": -0.07209737827715355
+        },
+        "1": {
+          "n": 5,
+          "mean_realized_pts": -9.5
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 2686.2134650735293,
+          "mae": 35.66452205882353,
+          "bias": 0.24540441176470587,
+          "rank": null,
+          "early_exits": 0,
+          "increment_usd": 0.0,
+          "without_best_three": 0.0,
+          "costs": {
+            "3": {
+              "original_net": -2198.0,
+              "edited_net": -2198.0,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "6": {
+              "original_net": -3821.0,
+              "edited_net": -3821.0,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "9": {
+              "original_net": -5444.0,
+              "edited_net": -5444.0,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            }
+          }
+        },
+        "pooled": {
+          "mse": 2693.4591855218146,
+          "mae": 35.41508321857806,
+          "bias": -2.548923785294524,
+          "rank": 0.0686626445403854,
+          "early_exits": 226,
+          "increment_usd": -88.5,
+          "without_best_three": -1151.5,
+          "costs": {
+            "3": {
+              "original_net": -2198.0,
+              "edited_net": -2286.5,
+              "saved_on_losers": 6645.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 8394.0,
+              "added_gain_on_winners": 1555.5
+            },
+            "6": {
+              "original_net": -3821.0,
+              "edited_net": -3909.5,
+              "saved_on_losers": 6819.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 8394.0,
+              "added_gain_on_winners": 1486.0
+            },
+            "9": {
+              "original_net": -5444.0,
+              "edited_net": -5532.5,
+              "saved_on_losers": 6900.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 8394.0,
+              "added_gain_on_winners": 1405.0
+            }
+          }
+        },
+        "feasibility": {
+          "mse": 2701.386511036752,
+          "mae": 35.43591911679113,
+          "bias": -2.76437331006191,
+          "rank": 0.06736175599736392,
+          "early_exits": 219,
+          "increment_usd": -176.5,
+          "without_best_three": -997.5,
+          "costs": {
+            "3": {
+              "original_net": -2198.0,
+              "edited_net": -2374.5,
+              "saved_on_losers": 6151.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1524.0
+            },
+            "6": {
+              "original_net": -3821.0,
+              "edited_net": -3997.5,
+              "saved_on_losers": 6325.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1454.5
+            },
+            "9": {
+              "original_net": -5444.0,
+              "edited_net": -5620.5,
+              "saved_on_losers": 6406.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1373.5
+            }
+          }
+        },
+        "laplace": {
+          "mse": 2701.2566755464304,
+          "mae": 35.443152820337694,
+          "bias": -2.7612805149155037,
+          "rank": 0.06555488353100816,
+          "early_exits": 219,
+          "increment_usd": -176.5,
+          "without_best_three": -997.5,
+          "costs": {
+            "3": {
+              "original_net": -2198.0,
+              "edited_net": -2374.5,
+              "saved_on_losers": 6151.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1524.0
+            },
+            "6": {
+              "original_net": -3821.0,
+              "edited_net": -3997.5,
+              "saved_on_losers": 6325.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1454.5
+            },
+            "9": {
+              "original_net": -5444.0,
+              "edited_net": -5620.5,
+              "saved_on_losers": 6406.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1373.5
+            }
+          }
+        },
+        "grid": {
+          "mse": 2701.2348422840732,
+          "mae": 35.44384560859018,
+          "bias": -2.7609802054527086,
+          "rank": 0.06531694883989399,
+          "early_exits": 219,
+          "increment_usd": -176.5,
+          "without_best_three": -997.5,
+          "costs": {
+            "3": {
+              "original_net": -2198.0,
+              "edited_net": -2374.5,
+              "saved_on_losers": 6151.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1524.0
+            },
+            "6": {
+              "original_net": -3821.0,
+              "edited_net": -3997.5,
+              "saved_on_losers": 6325.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1454.5
+            },
+            "9": {
+              "original_net": -5444.0,
+              "edited_net": -5620.5,
+              "saved_on_losers": 6406.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1373.5
+            }
+          }
+        },
+        "retrospective": {
+          "mse": 2700.296563577299,
+          "mae": 35.436630133312995,
+          "bias": -2.763425124187787,
+          "rank": 0.06678123113069813,
+          "early_exits": 218,
+          "increment_usd": -186.0,
+          "without_best_three": -1007.0,
+          "costs": {
+            "3": {
+              "original_net": -2198.0,
+              "edited_net": -2384.0,
+              "saved_on_losers": 6151.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1514.5
+            },
+            "6": {
+              "original_net": -3821.0,
+              "edited_net": -4007.0,
+              "saved_on_losers": 6325.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1445.0
+            },
+            "9": {
+              "original_net": -5444.0,
+              "edited_net": -5630.0,
+              "saved_on_losers": 6406.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 7956.5,
+              "added_gain_on_winners": 1364.0
+            }
+          }
+        }
+      },
+      "grid_minus": {
+        "zero": {
+          "mse_delta": 15.021377210543532,
+          "ci95": [
+            -54.315750030052385,
+            82.37754624902466
+          ]
+        },
+        "pooled": {
+          "mse_delta": 7.775656762258202,
+          "ci95": [
+            -4.36190698481688,
+            23.239622776824362
+          ]
+        },
+        "feasibility": {
+          "mse_delta": -0.151668752678847,
+          "ci95": [
+            -1.0547441475659534,
+            0.418416790962923
+          ]
+        },
+        "laplace": {
+          "mse_delta": -0.021833262357230557,
+          "ci95": [
+            -0.11530706971526243,
+            0.03274721562395255
+          ]
+        },
+        "retrospective": {
+          "mse_delta": 0.9382787067742653,
+          "ci95": [
+            -0.07859935202275653,
+            2.1795096053012304
+          ]
+        }
+      }
+    },
+    "1": {
+      "scheduled": 252,
+      "common": 252,
+      "original_trades": 509,
+      "branches": {
+        "0": {
+          "n": 246,
+          "mean_realized_pts": 0.021341463414634148
+        },
+        "1": {
+          "n": 6,
+          "mean_realized_pts": 4.708333333333333
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 2418.592757936508,
+          "mae": 33.61904761904762,
+          "bias": -0.13293650793650794,
+          "rank": null,
+          "early_exits": 0,
+          "increment_usd": 0.0,
+          "without_best_three": 0.0,
+          "costs": {
+            "3": {
+              "original_net": -1207.5,
+              "edited_net": -1207.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "6": {
+              "original_net": -2734.5,
+              "edited_net": -2734.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            },
+            "9": {
+              "original_net": -4261.5,
+              "edited_net": -4261.5,
+              "saved_on_losers": 0.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": -0.0,
+              "added_gain_on_winners": 0.0
+            }
+          }
+        },
+        "pooled": {
+          "mse": 2432.069682367823,
+          "mae": 33.7134059575035,
+          "bias": -0.7885952597888501,
+          "rank": -0.0035045581379143497,
+          "early_exits": 156,
+          "increment_usd": -78.5,
+          "without_best_three": -922.0,
+          "costs": {
+            "3": {
+              "original_net": -1207.5,
+              "edited_net": -1286.0,
+              "saved_on_losers": 4448.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5436.0,
+              "added_gain_on_winners": 909.0
+            },
+            "6": {
+              "original_net": -2734.5,
+              "edited_net": -2813.0,
+              "saved_on_losers": 4464.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5436.0,
+              "added_gain_on_winners": 893.0
+            },
+            "9": {
+              "original_net": -4261.5,
+              "edited_net": -4340.0,
+              "saved_on_losers": 4599.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5436.0,
+              "added_gain_on_winners": 758.5
+            }
+          }
+        },
+        "feasibility": {
+          "mse": 2439.028111327238,
+          "mae": 33.75809182141442,
+          "bias": -0.8241530494534712,
+          "rank": -0.003630912700070886,
+          "early_exits": 159,
+          "increment_usd": -306.0,
+          "without_best_three": -1149.5,
+          "costs": {
+            "3": {
+              "original_net": -1207.5,
+              "edited_net": -1513.5,
+              "saved_on_losers": 4448.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 909.0
+            },
+            "6": {
+              "original_net": -2734.5,
+              "edited_net": -3040.5,
+              "saved_on_losers": 4464.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 893.0
+            },
+            "9": {
+              "original_net": -4261.5,
+              "edited_net": -4567.5,
+              "saved_on_losers": 4599.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 758.5
+            }
+          }
+        },
+        "laplace": {
+          "mse": 2438.9979949892136,
+          "mae": 33.75460936485873,
+          "bias": -0.8267359293557287,
+          "rank": -0.002807920818962295,
+          "early_exits": 159,
+          "increment_usd": -306.0,
+          "without_best_three": -1149.5,
+          "costs": {
+            "3": {
+              "original_net": -1207.5,
+              "edited_net": -1513.5,
+              "saved_on_losers": 4448.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 909.0
+            },
+            "6": {
+              "original_net": -2734.5,
+              "edited_net": -3040.5,
+              "saved_on_losers": 4464.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 893.0
+            },
+            "9": {
+              "original_net": -4261.5,
+              "edited_net": -4567.5,
+              "saved_on_losers": 4599.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 758.5
+            }
+          }
+        },
+        "grid": {
+          "mse": 2438.9949936956777,
+          "mae": 33.75428736577106,
+          "bias": -0.8268751622216006,
+          "rank": -0.002654195683994403,
+          "early_exits": 159,
+          "increment_usd": -306.0,
+          "without_best_three": -1149.5,
+          "costs": {
+            "3": {
+              "original_net": -1207.5,
+              "edited_net": -1513.5,
+              "saved_on_losers": 4448.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 909.0
+            },
+            "6": {
+              "original_net": -2734.5,
+              "edited_net": -3040.5,
+              "saved_on_losers": 4464.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 893.0
+            },
+            "9": {
+              "original_net": -4261.5,
+              "edited_net": -4567.5,
+              "saved_on_losers": 4599.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 758.5
+            }
+          }
+        },
+        "retrospective": {
+          "mse": 2439.284131976601,
+          "mae": 33.7497064561384,
+          "bias": -0.8209533908301639,
+          "rank": -0.0026043287499682333,
+          "early_exits": 159,
+          "increment_usd": -306.0,
+          "without_best_three": -1149.5,
+          "costs": {
+            "3": {
+              "original_net": -1207.5,
+              "edited_net": -1513.5,
+              "saved_on_losers": 4448.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 909.0
+            },
+            "6": {
+              "original_net": -2734.5,
+              "edited_net": -3040.5,
+              "saved_on_losers": 4464.5,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 893.0
+            },
+            "9": {
+              "original_net": -4261.5,
+              "edited_net": -4567.5,
+              "saved_on_losers": 4599.0,
+              "added_loss_on_losers": -0.0,
+              "surrendered_on_winners": 5663.5,
+              "added_gain_on_winners": 758.5
+            }
+          }
+        }
+      },
+      "grid_minus": {
+        "zero": {
+          "mse_delta": 20.402235759170477,
+          "ci95": [
+            -12.315188221976896,
+            52.619230832957015
+          ]
+        },
+        "pooled": {
+          "mse_delta": 6.925311327855271,
+          "ci95": [
+            -0.844237984579193,
+            17.038286829851018
+          ]
+        },
+        "feasibility": {
+          "mse_delta": -0.033117631559763695,
+          "ci95": [
+            -0.2441675868982266,
+            0.2541921601182176
+          ]
+        },
+        "laplace": {
+          "mse_delta": -0.0030012935351707713,
+          "ci95": [
+            -0.020948657392305073,
+            0.015717727318705518
+          ]
+        },
+        "retrospective": {
+          "mse_delta": -0.28913828092274557,
+          "ci95": [
+            -0.8849742505712527,
+            0.22334097155686963
+          ]
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "warnings.csv.gz": "bfebe37db1d5d7671cd5fd749f27dbb4a53155369704e806f63767acf0cd6ef9",
+    "first-decisions.csv.gz": "546fca10f1056be1ff5db1528d568f5648f80f40879b587b6b374f92fa88f8d6",
+    "trades.csv.gz": "c3b17ebf2451b19836e96c9359681dc0c7189305d06457724bbd7a0d97af0060"
+  }
+}

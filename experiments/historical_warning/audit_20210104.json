@@ -1,0 +1,72 @@
+{
+  "candidate": "mbytes21/MNQ_DATA",
+  "commit": "fc5508e2c152938d6d9eb70a36b888ae26107176",
+  "path": "plaintext_csv/MNQ 03-21/20210104.Last.csv",
+  "url": "https://raw.githubusercontent.com/mbytes21/MNQ_DATA/fc5508e2c152938d6d9eb70a36b888ae26107176/plaintext_csv/MNQ%2003-21/20210104.Last.csv",
+  "admission": "NOT_ADMITTED",
+  "metrics": {
+    "bytes": 78990,
+    "git_blob_sha1": "0f8c70f116fc4a2edaaa31ebf94f270ace2b6b71",
+    "sha256": "67f695599d168b0b5926ebe283f4f0b45364b342812bb5917224dfb24e8324b0",
+    "expected_hashes_match": true,
+    "header": [
+      "datetime",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume"
+    ],
+    "row_count": 1365,
+    "unique_timestamp_count": 1365,
+    "duplicate_timestamp_count": 0,
+    "duplicate_full_row_count": 0,
+    "timestamp_start_naive": "2021-01-04 00:01:00",
+    "timestamp_end_naive": "2021-01-05 00:00:00",
+    "timestamp_date_counts": {
+      "2021-01-04": 1364,
+      "2021-01-05": 1
+    },
+    "strictly_increasing": true,
+    "minute_delta_seconds": {
+      "60": 1362,
+      "960": 1,
+      "3660": 1
+    },
+    "non_60_second_gaps": [
+      {
+        "from": "2021-01-04 16:15:00",
+        "to": "2021-01-04 16:31:00",
+        "seconds": 960
+      },
+      {
+        "from": "2021-01-04 17:00:00",
+        "to": "2021-01-04 18:01:00",
+        "seconds": 3660
+      }
+    ],
+    "naive_clock_rows_0930_1559": 390,
+    "naive_clock_rows_0931_1600": 390,
+    "ohlc_bound_violations": 0,
+    "off_0_25_tick_price_fields": 0,
+    "volume_negative_rows": 0,
+    "volume_noninteger_rows": 0,
+    "volume_zero_rows": 0,
+    "volume_sum": 912077.0,
+    "volume_min": 4.0,
+    "volume_max": 8311.0
+  },
+  "stop_reason": [
+    "No published provenance or transformation lineage binds these observed CSV bytes to a vendor/feed.",
+    "No source documentation resolves timestamp timezone or start/end label convention; session-break anchors are suggestive but cannot establish the representation mapping.",
+    "No published source establishes Last as exchange-trade prints or defines volume units/aggregation semantics.",
+    "No documented instrument mapping or independent evidence establishes that the bytes represent the March 2021 MNQ H21 contract."
+  ],
+  "decision": "Stop after this single-file audit; no scoring or model outcomes inspected.",
+  "references": [
+    "https://github.com/mbytes21/MNQ_DATA/tree/fc5508e2c152938d6d9eb70a36b888ae26107176/plaintext_csv",
+    "https://static.ninjatrader.com/support/helpGuides/nt8/exporting.htm",
+    "https://static.ninjatrader.com/support/helpGuides/nt8/importing.htm",
+    "https://www.cmegroup.com/notices/electronic-trading/2021/06/20210621.html"
+  ]
+}

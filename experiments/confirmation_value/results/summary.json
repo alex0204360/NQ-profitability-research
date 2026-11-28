@@ -1,0 +1,413 @@
+{
+  "discovery40": {
+    "0": {
+      "original_trades": 394,
+      "scheduled": 212,
+      "scored": 212,
+      "branches": {
+        "0": {
+          "n": 148,
+          "split_at_exit": 2,
+          "mean_pre": 7.787162162162162,
+          "mean_remaining": -4.554054054054054,
+          "mean_total": 3.233108108108108,
+          "nonzero_remaining": 145
+        },
+        "1": {
+          "n": 64,
+          "split_at_exit": 64,
+          "mean_pre": -14.921875,
+          "mean_remaining": 0.0,
+          "mean_total": -14.921875,
+          "nonzero_remaining": 0
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 2294.4227594339623,
+          "early_exits": 0,
+          "increment_usd": -0.0,
+          "net": {
+            "3": 1634.5,
+            "6": 452.5,
+            "9": -729.5
+          }
+        },
+        "previous_grid": {
+          "mse": 2298.530175843197,
+          "early_exits": 210,
+          "increment_usd": 865.0,
+          "net": {
+            "3": 2499.5,
+            "6": 1317.5,
+            "9": 135.5
+          }
+        },
+        "unweighted": {
+          "mse": 2322.1416057296146,
+          "early_exits": 209,
+          "increment_usd": 901.5,
+          "net": {
+            "3": 2536.0,
+            "6": 1354.0,
+            "9": 172.0
+          }
+        },
+        "survival_feasibility": {
+          "mse": 2304.605680623136,
+          "early_exits": 209,
+          "increment_usd": 901.5,
+          "net": {
+            "3": 2536.0,
+            "6": 1354.0,
+            "9": 172.0
+          }
+        },
+        "survival_laplace": {
+          "mse": 2310.417907948235,
+          "early_exits": 209,
+          "increment_usd": 901.5,
+          "net": {
+            "3": 2536.0,
+            "6": 1354.0,
+            "9": 172.0
+          }
+        },
+        "survival_grid": {
+          "mse": 2311.1001620530496,
+          "early_exits": 209,
+          "increment_usd": 901.5,
+          "net": {
+            "3": 2536.0,
+            "6": 1354.0,
+            "9": 172.0
+          },
+          "mse_minus_zero": {
+            "delta": 16.677402619087488,
+            "ci95": [
+              -45.00338354651073,
+              76.37498810068396
+            ]
+          },
+          "mse_minus_previous_grid": {
+            "delta": 12.56998620985311,
+            "ci95": [
+              -43.39660389733362,
+              84.2301219592518
+            ]
+          }
+        }
+      },
+      "always_exit_increment_usd": 953.0
+    },
+    "1": {
+      "original_trades": 361,
+      "scheduled": 174,
+      "scored": 174,
+      "branches": {
+        "0": {
+          "n": 122,
+          "split_at_exit": 2,
+          "mean_pre": -2.790983606557377,
+          "mean_remaining": -1.9938524590163935,
+          "mean_total": -4.784836065573771,
+          "nonzero_remaining": 120
+        },
+        "1": {
+          "n": 52,
+          "split_at_exit": 52,
+          "mean_pre": -1.8221153846153846,
+          "mean_remaining": 0.0,
+          "mean_total": -1.8221153846153846,
+          "nonzero_remaining": 0
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 2870.6831896551726,
+          "early_exits": 0,
+          "increment_usd": -0.0,
+          "net": {
+            "3": 759.5,
+            "6": -323.5,
+            "9": -1406.5
+          }
+        },
+        "previous_grid": {
+          "mse": 2886.578244992295,
+          "early_exits": 166,
+          "increment_usd": 1154.0,
+          "net": {
+            "3": 1913.5,
+            "6": 830.5,
+            "9": -252.5
+          }
+        },
+        "unweighted": {
+          "mse": 2903.882519243854,
+          "early_exits": 158,
+          "increment_usd": 747.5,
+          "net": {
+            "3": 1507.0,
+            "6": 424.0,
+            "9": -659.0
+          }
+        },
+        "survival_feasibility": {
+          "mse": 2893.508551853364,
+          "early_exits": 158,
+          "increment_usd": 747.5,
+          "net": {
+            "3": 1507.0,
+            "6": 424.0,
+            "9": -659.0
+          }
+        },
+        "survival_laplace": {
+          "mse": 2891.6594727513534,
+          "early_exits": 158,
+          "increment_usd": 747.5,
+          "net": {
+            "3": 1507.0,
+            "6": 424.0,
+            "9": -659.0
+          }
+        },
+        "survival_grid": {
+          "mse": 2891.9976871368754,
+          "early_exits": 158,
+          "increment_usd": 747.5,
+          "net": {
+            "3": 1507.0,
+            "6": 424.0,
+            "9": -659.0
+          },
+          "mse_minus_zero": {
+            "delta": 21.31449748170313,
+            "ci95": [
+              -8.492324607772359,
+              61.615624459350585
+            ]
+          },
+          "mse_minus_previous_grid": {
+            "delta": 5.419442144580125,
+            "ci95": [
+              -58.97759337191479,
+              86.50430789386641
+            ]
+          }
+        }
+      },
+      "always_exit_increment_usd": 1357.0
+    }
+  },
+  "external60": {
+    "0": {
+      "original_trades": 541,
+      "scheduled": 268,
+      "scored": 268,
+      "branches": {
+        "0": {
+          "n": 157,
+          "split_at_exit": 1,
+          "mean_pre": 5.019108280254777,
+          "mean_remaining": 0.49363057324840764,
+          "mean_total": 5.512738853503185,
+          "nonzero_remaining": 155
+        },
+        "1": {
+          "n": 111,
+          "split_at_exit": 111,
+          "mean_pre": -9.711711711711711,
+          "mean_remaining": 0.0,
+          "mean_total": -9.711711711711711,
+          "nonzero_remaining": 0
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 1287.5153917910447,
+          "early_exits": 0,
+          "increment_usd": -0.0,
+          "net": {
+            "3": -2198.0,
+            "6": -3821.0,
+            "9": -5444.0
+          }
+        },
+        "previous_grid": {
+          "mse": 1303.6306442376363,
+          "early_exits": 187,
+          "increment_usd": 413.0,
+          "net": {
+            "3": -1785.0,
+            "6": -3408.0,
+            "9": -5031.0
+          }
+        },
+        "unweighted": {
+          "mse": 1308.6414294715323,
+          "early_exits": 172,
+          "increment_usd": 335.5,
+          "net": {
+            "3": -1862.5,
+            "6": -3485.5,
+            "9": -5108.5
+          }
+        },
+        "survival_feasibility": {
+          "mse": 1298.6407275235267,
+          "early_exits": 172,
+          "increment_usd": 335.5,
+          "net": {
+            "3": -1862.5,
+            "6": -3485.5,
+            "9": -5108.5
+          }
+        },
+        "survival_laplace": {
+          "mse": 1298.7960770911845,
+          "early_exits": 172,
+          "increment_usd": 335.5,
+          "net": {
+            "3": -1862.5,
+            "6": -3485.5,
+            "9": -5108.5
+          }
+        },
+        "survival_grid": {
+          "mse": 1299.205287887309,
+          "early_exits": 172,
+          "increment_usd": 335.5,
+          "net": {
+            "3": -1862.5,
+            "6": -3485.5,
+            "9": -5108.5
+          },
+          "mse_minus_zero": {
+            "delta": 11.689896096264118,
+            "ci95": [
+              -14.334582112075354,
+              38.45366531325193
+            ]
+          },
+          "mse_minus_previous_grid": {
+            "delta": -4.4253563503272915,
+            "ci95": [
+              -33.00860391045558,
+              20.836133880298384
+            ]
+          }
+        }
+      },
+      "always_exit_increment_usd": 425.0
+    },
+    "1": {
+      "original_trades": 509,
+      "scheduled": 246,
+      "scored": 246,
+      "branches": {
+        "0": {
+          "n": 149,
+          "split_at_exit": 0,
+          "mean_pre": -0.19463087248322147,
+          "mean_remaining": 3.422818791946309,
+          "mean_total": 3.228187919463087,
+          "nonzero_remaining": 149
+        },
+        "1": {
+          "n": 97,
+          "split_at_exit": 97,
+          "mean_pre": 0.7731958762886598,
+          "mean_remaining": 0.0,
+          "mean_total": 0.7731958762886598,
+          "nonzero_remaining": 0
+        }
+      },
+      "models": {
+        "zero": {
+          "mse": 1268.9618902439024,
+          "early_exits": 0,
+          "increment_usd": -0.0,
+          "net": {
+            "3": -1207.5,
+            "6": -2734.5,
+            "9": -4261.5
+          }
+        },
+        "previous_grid": {
+          "mse": 1292.4730507585944,
+          "early_exits": 116,
+          "increment_usd": -385.0,
+          "net": {
+            "3": -1592.5,
+            "6": -3119.5,
+            "9": -4646.5
+          }
+        },
+        "unweighted": {
+          "mse": 1274.2855006073812,
+          "early_exits": 107,
+          "increment_usd": -187.0,
+          "net": {
+            "3": -1394.5,
+            "6": -2921.5,
+            "9": -4448.5
+          }
+        },
+        "survival_feasibility": {
+          "mse": 1270.6713932486925,
+          "early_exits": 107,
+          "increment_usd": -187.0,
+          "net": {
+            "3": -1394.5,
+            "6": -2921.5,
+            "9": -4448.5
+          }
+        },
+        "survival_laplace": {
+          "mse": 1271.2527300649986,
+          "early_exits": 107,
+          "increment_usd": -187.0,
+          "net": {
+            "3": -1394.5,
+            "6": -2921.5,
+            "9": -4448.5
+          }
+        },
+        "survival_grid": {
+          "mse": 1271.2549530916224,
+          "early_exits": 107,
+          "increment_usd": -187.0,
+          "net": {
+            "3": -1394.5,
+            "6": -2921.5,
+            "9": -4448.5
+          },
+          "mse_minus_zero": {
+            "delta": 2.2930628477203077,
+            "ci95": [
+              -18.381020365344167,
+              23.498472954454208
+            ]
+          },
+          "mse_minus_previous_grid": {
+            "delta": -21.218097666971975,
+            "ci95": [
+              -47.37159868520686,
+              0.9198814876303905
+            ]
+          }
+        }
+      },
+      "always_exit_increment_usd": -1112.0
+    }
+  },
+  "input_sha256": {
+    "reachable_value/results/predictions.csv.gz": "8d895894cef200fab0ee434102d84e00d2df067048ff564b8d3b4898b5c43aef",
+    "capacity/results/activations.csv.gz": "c25c0dbddc786db72e88fecaafb3a4ced689dd00b1d0bb0356f680a58f1e7b1c",
+    "capacity/results/scores.csv.gz": "3b053e5e565c79d919c77c5c7e1a6079376abffaa3ab6fa66ae333fd5ec80622",
+    "capacity/results/trades.csv.gz": "e964c29e9f44b90862113da0000904ce0f52df9e64d6db7d6f4497cbc46ca2c5",
+    "reversal_hazard/results/warnings.csv.gz": "bfebe37db1d5d7671cd5fd749f27dbb4a53155369704e806f63767acf0cd6ef9"
+  }
+}

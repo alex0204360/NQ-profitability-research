@@ -1,0 +1,1994 @@
+{
+  "discovery40": {
+    "dates": [
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30",
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-11-02",
+      "2026-11-03",
+      "2026-11-04",
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12",
+      "2026-11-13",
+      "2026-11-16",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19",
+      "2026-11-20",
+      "2026-11-25"
+    ],
+    "issued": 13120,
+    "censored": 4,
+    "subsets": {
+      "all": {
+        "n": 13116,
+        "reversals": 710,
+        "prevalence": 0.054132357426044525,
+        "models": {
+          "constant": {
+            "brier": 0.05123933589585422,
+            "log_loss": 0.21083649686374065,
+            "mean_probability": 0.060986515273351666,
+            "spearman": 0.014343742575837277,
+            "auc": 0.5182931702742652,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 13116,
+                "mean_predicted": 0.060986515273351666,
+                "observed": 0.054132357426044525
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.03873745406394478,
+            "log_loss": 0.11357471665787168,
+            "mean_probability": 0.05124363444910707,
+            "spearman": 0.49113567734993474,
+            "auc": 0.9286814876036811,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 10627,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 2489,
+                "mean_predicted": 0.2700327478643986,
+                "observed": 0.28525512253917235
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.034313563931812535,
+            "log_loss": 0.1017616752753368,
+            "mean_probability": 0.0539283771449633,
+            "spearman": 0.5260995930447394,
+            "auc": 0.959202498563848,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 10627,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 259,
+                "mean_predicted": 0.08338730337227396,
+                "observed": 0.07335907335907337
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 630,
+                "mean_predicted": 0.14980696835765467,
+                "observed": 0.11428571428571428
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 658,
+                "mean_predicted": 0.2761250029270763,
+                "observed": 0.2978723404255319
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 942,
+                "mean_predicted": 0.43488178457386517,
+                "observed": 0.44904458598726116
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.03424063303168799,
+            "log_loss": 0.10140724185178628,
+            "mean_probability": 0.05340333473531196,
+            "spearman": 0.5261461577219391,
+            "auc": 0.9592431422324046,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 10729,
+                "mean_predicted": 0.0004099532676224412,
+                "observed": 0.00018641066268990585
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 335,
+                "mean_predicted": 0.07229560832734037,
+                "observed": 0.08955223880597014
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 480,
+                "mean_predicted": 0.15029174618541533,
+                "observed": 0.13958333333333334
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 590,
+                "mean_predicted": 0.2771348756297102,
+                "observed": 0.29152542372881357
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 843,
+                "mean_predicted": 0.4338912543884537,
+                "observed": 0.43534994068801897
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 139,
+                "mean_predicted": 0.5064804226645803,
+                "observed": 0.5179856115107914
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.016998702864166236,
+            "ci95": [
+              -0.020038860050714022,
+              -0.0138428194994092
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.0044968210322567925,
+            "ci95": [
+              -0.005966257148798799,
+              -0.00297445212347303
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": -7.29309001245416e-05,
+            "ci95": [
+              -0.00017176859862050206,
+              2.5137434533591946e-05
+            ]
+          }
+        }
+      },
+      "reachable": {
+        "n": 2489,
+        "reversals": 710,
+        "prevalence": 0.28525512253917235,
+        "models": {
+          "constant": {
+            "brier": 0.2541121457371594,
+            "log_loss": 0.8425460036305226,
+            "mean_probability": 0.061187946335986045,
+            "spearman": -0.02544446526088142,
+            "auc": 0.483740667727557,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 2489,
+                "mean_predicted": 0.061187946335986045,
+                "observed": 0.28525512253917235
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.20413035255231005,
+            "log_loss": 0.5984874876172485,
+            "mean_probability": 0.2700327478643986,
+            "spearman": 0.004154223694781876,
+            "auc": 0.5026546010181381,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 2489,
+                "mean_predicted": 0.2700327478643986,
+                "observed": 0.28525512253917235
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.18081828225377788,
+            "log_loss": 0.5362376480136618,
+            "mean_probability": 0.2841802308691598,
+            "spearman": 0.33707052658056597,
+            "auc": 0.715495332874142,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 259,
+                "mean_predicted": 0.08338730337227396,
+                "observed": 0.07335907335907337
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 630,
+                "mean_predicted": 0.14980696835765467,
+                "observed": 0.11428571428571428
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 658,
+                "mean_predicted": 0.2761250029270763,
+                "observed": 0.2978723404255319
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 942,
+                "mean_predicted": 0.43488178457386517,
+                "observed": 0.44904458598726116
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.18043396659044583,
+            "log_loss": 0.5343699305434775,
+            "mean_probability": 0.2814134746437733,
+            "spearman": 0.33751386106298187,
+            "auc": 0.7157787647752734,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 102,
+                "mean_predicted": 0.043121456944325225,
+                "observed": 0.0196078431372549
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 335,
+                "mean_predicted": 0.07229560832734037,
+                "observed": 0.08955223880597014
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 480,
+                "mean_predicted": 0.15029174618541533,
+                "observed": 0.13958333333333334
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 590,
+                "mean_predicted": 0.2771348756297102,
+                "observed": 0.29152542372881357
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 843,
+                "mean_predicted": 0.4338912543884537,
+                "observed": 0.43534994068801897
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 139,
+                "mean_predicted": 0.5064804226645803,
+                "observed": 0.5179856115107914
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.07367817914671358,
+            "ci95": [
+              -0.08513899843773154,
+              -0.06328606503553126
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.023696385961864238,
+            "ci95": [
+              -0.028051421637642026,
+              -0.01853587232157156
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": -0.0003843156633320561,
+            "ci95": [
+              -0.0008154592033537389,
+              0.00015961647878814524
+            ]
+          }
+        }
+      },
+      "held": {
+        "n": 8325,
+        "reversals": 399,
+        "prevalence": 0.04792792792792793,
+        "models": {
+          "constant": {
+            "brier": 0.04579112095163818,
+            "log_loss": 0.19386266936658558,
+            "mean_probability": 0.06093389031054084,
+            "spearman": 0.013317300901587758,
+            "auc": 0.517989713117009,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 8325,
+                "mean_predicted": 0.06093389031054084,
+                "observed": 0.04792792792792793
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.03474132672308394,
+            "log_loss": 0.10238835331062479,
+            "mean_probability": 0.047058464063585034,
+            "spearman": 0.4863546031964491,
+            "auc": 0.9336453042776004,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 6881,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 1444,
+                "mean_predicted": 0.27130312557433894,
+                "observed": 0.27631578947368424
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.03148106569216027,
+            "log_loss": 0.09361876890853144,
+            "mean_probability": 0.046567003070738126,
+            "spearman": 0.5159816674944151,
+            "auc": 0.9600648100189915,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 6881,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 164,
+                "mean_predicted": 0.08407116513406963,
+                "observed": 0.10365853658536585
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 399,
+                "mean_predicted": 0.14866147559751106,
+                "observed": 0.12781954887218044
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 412,
+                "mean_predicted": 0.2734833734655179,
+                "observed": 0.3131067961165049
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 469,
+                "mean_predicted": 0.43047238987357606,
+                "observed": 0.43070362473347545
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.03148034513364584,
+            "log_loss": 0.09361005484306159,
+            "mean_probability": 0.045830947794335365,
+            "spearman": 0.5160377006884744,
+            "auc": 0.9601147709040454,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 6942,
+                "mean_predicted": 0.00037248429359534754,
+                "observed": 0.0002881014116969173
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 220,
+                "mean_predicted": 0.07222432544055665,
+                "observed": 0.10454545454545454
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 301,
+                "mean_predicted": 0.1498826703128712,
+                "observed": 0.15282392026578073
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 368,
+                "mean_predicted": 0.27402234133933234,
+                "observed": 0.3179347826086957
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 435,
+                "mean_predicted": 0.4304465587110774,
+                "observed": 0.42528735632183906
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 59,
+                "mean_predicted": 0.5062431255663277,
+                "observed": 0.4406779661016949
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.014310775817992344,
+            "ci95": [
+              -0.016711887504727307,
+              -0.011836664282868004
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.0032609815894381043,
+            "ci95": [
+              -0.004585796178123014,
+              -0.0019604872338607727
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": -7.205585144281995e-07,
+            "ci95": [
+              -9.222980806934007e-05,
+              8.986579122126497e-05
+            ]
+          }
+        }
+      },
+      "held_reachable": {
+        "n": 1444,
+        "reversals": 399,
+        "prevalence": 0.27631578947368424,
+        "models": {
+          "constant": {
+            "brier": 0.2462946475335312,
+            "log_loss": 0.8184122623397875,
+            "mean_probability": 0.06127615051840923,
+            "spearman": -0.04189701721054031,
+            "auc": 0.4729695051024691,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 1444,
+                "mean_predicted": 0.06127615051840923,
+                "observed": 0.27631578947368424
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.20029192864935857,
+            "log_loss": 0.590288199658941,
+            "mean_probability": 0.27130312557433894,
+            "spearman": -0.005083551842013564,
+            "auc": 0.49672026957345516,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 1444,
+                "mean_predicted": 0.27130312557433894,
+                "observed": 0.27631578947368424
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.18149575615459435,
+            "log_loss": 0.5397294807202796,
+            "mean_probability": 0.2684697372326142,
+            "spearman": 0.305325850474258,
+            "auc": 0.6971040040292118,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 164,
+                "mean_predicted": 0.08407116513406963,
+                "observed": 0.10365853658536585
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 399,
+                "mean_predicted": 0.14866147559751106,
+                "observed": 0.12781954887218044
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 412,
+                "mean_predicted": 0.2734833734655179,
+                "observed": 0.3131067961165049
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 469,
+                "mean_predicted": 0.43047238987357606,
+                "observed": 0.43070362473347545
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.18149160196509803,
+            "log_loss": 0.5396792420810576,
+            "mean_probability": 0.2642262052547381,
+            "spearman": 0.3059128476741209,
+            "auc": 0.6974829418042714,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 61,
+                "mean_predicted": 0.04238993387112956,
+                "observed": 0.03278688524590164
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 220,
+                "mean_predicted": 0.07222432544055665,
+                "observed": 0.10454545454545454
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 301,
+                "mean_predicted": 0.1498826703128712,
+                "observed": 0.15282392026578073
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 368,
+                "mean_predicted": 0.27402234133933234,
+                "observed": 0.3179347826086957
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 435,
+                "mean_predicted": 0.4304465587110774,
+                "observed": 0.42528735632183906
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 59,
+                "mean_predicted": 0.5062431255663277,
+                "observed": 0.4406779661016949
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.06480304556843315,
+            "ci95": [
+              -0.0774013929900493,
+              -0.05504090271427711
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.01880032668426054,
+            "ci95": [
+              -0.023356643630603826,
+              -0.013405397428456338
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": -4.15418949627061e-06,
+            "ci95": [
+              -0.00047301893960665335,
+              0.0005812438890559225
+            ]
+          }
+        }
+      }
+    }
+  },
+  "external60": {
+    "dates": [
+      "2026-01-20",
+      "2026-01-21",
+      "2026-01-22",
+      "2026-01-23",
+      "2026-01-26",
+      "2026-01-27",
+      "2026-01-28",
+      "2026-01-29",
+      "2026-01-30",
+      "2026-02-02",
+      "2026-02-03",
+      "2026-02-04",
+      "2026-02-05",
+      "2026-02-06",
+      "2026-02-09",
+      "2026-02-10",
+      "2026-02-11",
+      "2026-02-12",
+      "2026-02-13",
+      "2026-02-17",
+      "2026-02-18",
+      "2026-02-19",
+      "2026-02-20",
+      "2026-02-23",
+      "2026-02-24",
+      "2026-02-25",
+      "2026-02-26",
+      "2026-02-27",
+      "2026-03-02",
+      "2026-03-03",
+      "2026-03-04",
+      "2026-03-05",
+      "2026-03-06",
+      "2026-03-09",
+      "2026-03-10",
+      "2026-03-11",
+      "2026-03-12",
+      "2026-03-13",
+      "2026-03-16",
+      "2026-03-17",
+      "2026-03-18",
+      "2026-03-19",
+      "2026-03-20",
+      "2026-03-23",
+      "2026-03-24",
+      "2026-03-25",
+      "2026-03-26",
+      "2026-03-27",
+      "2026-03-30",
+      "2026-03-31",
+      "2026-04-01",
+      "2026-04-02",
+      "2026-04-06",
+      "2026-04-07",
+      "2026-04-08",
+      "2026-04-09",
+      "2026-04-10",
+      "2026-04-13",
+      "2026-04-14",
+      "2026-04-15"
+    ],
+    "issued": 19633,
+    "censored": 0,
+    "subsets": {
+      "all": {
+        "n": 19633,
+        "reversals": 1073,
+        "prevalence": 0.05465288035450517,
+        "models": {
+          "constant": {
+            "brier": 0.05168790713054166,
+            "log_loss": 0.21220244262230278,
+            "mean_probability": 0.05605458888753592,
+            "spearman": -0.011181419866255406,
+            "auc": 0.4858014961676897,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 353,
+                "mean_predicted": 0.047492767598842814,
+                "observed": 0.0764872521246459
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 19280,
+                "mean_predicted": 0.05621134837482371,
+                "observed": 0.05425311203319502
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.03843514439546544,
+            "log_loss": 0.11186727515066082,
+            "mean_probability": 0.05460010532869826,
+            "spearman": 0.5029328960890739,
+            "auc": 0.9308864025291641,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 16036,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 3597,
+                "mean_predicted": 0.29801608782828265,
+                "observed": 0.2983041423408396
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.03434120562291392,
+            "log_loss": 0.10139882728942853,
+            "mean_probability": 0.05318569920802764,
+            "spearman": 0.536768818992169,
+            "auc": 0.9598763838898351,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 16036,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 397,
+                "mean_predicted": 0.0826894680484724,
+                "observed": 0.06297229219143577
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 772,
+                "mean_predicted": 0.1476968567683613,
+                "observed": 0.15803108808290156
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 1034,
+                "mean_predicted": 0.275534721212899,
+                "observed": 0.281431334622824
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 1394,
+                "mean_predicted": 0.4393416345600076,
+                "observed": 0.45552367288378764
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.03435306560464099,
+            "log_loss": 0.1014387417340774,
+            "mean_probability": 0.05269274378795432,
+            "spearman": 0.5367358218076597,
+            "auc": 0.9598481135713597,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 16113,
+                "mean_predicted": 0.00022347601804285306,
+                "observed": 0.0003723701359150996
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 493,
+                "mean_predicted": 0.07217919051142875,
+                "observed": 0.07707910750507099
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 676,
+                "mean_predicted": 0.14912805835850965,
+                "observed": 0.1804733727810651
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 927,
+                "mean_predicted": 0.2809257762657756,
+                "observed": 0.2837108953613808
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 1198,
+                "mean_predicted": 0.43385712794191233,
+                "observed": 0.44240400667779634
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 226,
+                "mean_predicted": 0.5059372896677466,
+                "observed": 0.504424778761062
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.01733484152590066,
+            "ci95": [
+              -0.01931972549896477,
+              -0.015360453719518705
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.0040820787908244505,
+            "ci95": [
+              -0.004842227418647619,
+              -0.0033400672756265415
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": 1.1859981727072023e-05,
+            "ci95": [
+              -3.156902978270843e-05,
+              5.458585668252599e-05
+            ]
+          }
+        }
+      },
+      "reachable": {
+        "n": 3597,
+        "reversals": 1073,
+        "prevalence": 0.2983041423408396,
+        "models": {
+          "constant": {
+            "brier": 0.2680526989421851,
+            "log_loss": 0.9007673387011597,
+            "mean_probability": 0.055797543873151084,
+            "spearman": 0.03406925330170728,
+            "auc": 0.5214928300616043,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 91,
+                "mean_predicted": 0.04749276759884283,
+                "observed": 0.2967032967032967
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 3506,
+                "mean_predicted": 0.05601309853400735,
+                "observed": 0.29834569309754705
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.20978515149184687,
+            "log_loss": 0.6105849811022813,
+            "mean_probability": 0.29801608782828265,
+            "spearman": -0.013030750504020637,
+            "auc": 0.4917795685187346,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 3597,
+                "mean_predicted": 0.29801608782828265,
+                "observed": 0.2983041423408396
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.1874397803710506,
+            "log_loss": 0.5534465221477154,
+            "mean_probability": 0.2902960335143749,
+            "spearman": 0.3248273875383439,
+            "auc": 0.7049547087937164,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 397,
+                "mean_predicted": 0.0826894680484724,
+                "observed": 0.06297229219143577
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 772,
+                "mean_predicted": 0.1476968567683613,
+                "observed": 0.15803108808290156
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 1034,
+                "mean_predicted": 0.275534721212899,
+                "observed": 0.281431334622824
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 1394,
+                "mean_predicted": 0.4393416345600076,
+                "observed": 0.45552367288378764
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.18750451404390234,
+            "log_loss": 0.5536643815560532,
+            "mean_probability": 0.2876054041670578,
+            "spearman": 0.32449791887335716,
+            "auc": 0.704746825627748,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 77,
+                "mean_predicted": 0.04676453348992845,
+                "observed": 0.07792207792207792
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 493,
+                "mean_predicted": 0.07217919051142875,
+                "observed": 0.07707910750507099
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 676,
+                "mean_predicted": 0.14912805835850965,
+                "observed": 0.1804733727810651
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 927,
+                "mean_predicted": 0.2809257762657756,
+                "observed": 0.2837108953613808
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 1198,
+                "mean_predicted": 0.43385712794191233,
+                "observed": 0.44240400667779634
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 226,
+                "mean_predicted": 0.5059372896677466,
+                "observed": 0.504424778761062
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.08054818489828273,
+            "ci95": [
+              -0.09424039335744554,
+              -0.06834844355283327
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.022280637447944517,
+            "ci95": [
+              -0.02621673787654964,
+              -0.018680694526240698
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": 6.473367285171116e-05,
+            "ci95": [
+              -0.0001744263025803303,
+              0.00029353402515254506
+            ]
+          }
+        }
+      },
+      "held": {
+        "n": 12505,
+        "reversals": 546,
+        "prevalence": 0.0436625349860056,
+        "models": {
+          "constant": {
+            "brier": 0.04191858066198467,
+            "log_loss": 0.18105366546065813,
+            "mean_probability": 0.056050063506911774,
+            "spearman": -0.004367824560537297,
+            "auc": 0.4938305694639836,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 169,
+                "mean_predicted": 0.047492767598842814,
+                "observed": 0.0650887573964497
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 12336,
+                "mean_predicted": 0.05616729624106089,
+                "observed": 0.04336900129701686
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.0308500877197288,
+            "log_loss": 0.08993841234990935,
+            "mean_probability": 0.04425292476161856,
+            "spearman": 0.5094832539020655,
+            "auc": 0.9444975614178724,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 10655,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 1850,
+                "mean_predicted": 0.29912585088867033,
+                "observed": 0.2951351351351351
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.02750789323490934,
+            "log_loss": 0.08154137104875926,
+            "mean_probability": 0.04108852929050107,
+            "spearman": 0.5367260744708338,
+            "auc": 0.9682662711762134,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 10655,
+                "mean_predicted": 0.0,
+                "observed": 0.0
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 222,
+                "mean_predicted": 0.08261228173534789,
+                "observed": 0.07657657657657657
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 429,
+                "mean_predicted": 0.14800378046474455,
+                "observed": 0.16317016317016317
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 570,
+                "mean_predicted": 0.2757491862136043,
+                "observed": 0.2964912280701754
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 629,
+                "mean_predicted": 0.4368862865999027,
+                "observed": 0.4610492845786963
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.027522014499924356,
+            "log_loss": 0.08166484043935435,
+            "mean_probability": 0.04058643426640567,
+            "spearman": 0.5366845596227039,
+            "auc": 0.9682300515773214,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 10696,
+                "mean_predicted": 0.00017994367087714863,
+                "observed": 0.00028047868362004487
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 280,
+                "mean_predicted": 0.07245497675500384,
+                "observed": 0.09642857142857143
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 372,
+                "mean_predicted": 0.149297574860077,
+                "observed": 0.1774193548387097
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 510,
+                "mean_predicted": 0.28149118434850023,
+                "observed": 0.3
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 554,
+                "mean_predicted": 0.4317330395581411,
+                "observed": 0.4314079422382672
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 93,
+                "mean_predicted": 0.5058277819936118,
+                "observed": 0.6236559139784946
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.01439656616206031,
+            "ci95": [
+              -0.015834401934482264,
+              -0.01307065403804816
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.0033280732198044368,
+            "ci95": [
+              -0.003998925612773564,
+              -0.0026099310028498755
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": 1.4121265015018625e-05,
+            "ci95": [
+              -4.0872970979705e-05,
+              7.675203247493912e-05
+            ]
+          }
+        }
+      },
+      "held_reachable": {
+        "n": 1850,
+        "reversals": 546,
+        "prevalence": 0.2951351351351351,
+        "models": {
+          "constant": {
+            "brier": 0.26519890807345337,
+            "log_loss": 0.8914258370344028,
+            "mean_probability": 0.0558988013301558,
+            "spearman": 0.03308526895301466,
+            "auc": 0.520936565990247,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 30,
+                "mean_predicted": 0.047492767598842814,
+                "observed": 0.36666666666666664
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 1820,
+                "mean_predicted": 0.05603736232572689,
+                "observed": 0.29395604395604397
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "feasibility": {
+            "brier": 0.20852991726227493,
+            "log_loss": 0.6079292926650209,
+            "mean_probability": 0.29912585088867033,
+            "spearman": -0.014244061848885657,
+            "auc": 0.4909864547517922,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 1850,
+                "mean_predicted": 0.29912585088867033,
+                "observed": 0.2951351351351351
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "laplace": {
+            "brier": 0.18593848913650882,
+            "log_loss": 0.5511698324104903,
+            "mean_probability": 0.2777362479879545,
+            "spearman": 0.3301696529542738,
+            "auc": 0.708969583586148,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 222,
+                "mean_predicted": 0.08261228173534789,
+                "observed": 0.07657657657657657
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 429,
+                "mean_predicted": 0.14800378046474455,
+                "observed": 0.16317016317016317
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 570,
+                "mean_predicted": 0.2757491862136043,
+                "observed": 0.2964912280701754
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 629,
+                "mean_predicted": 0.4368862865999027,
+                "observed": 0.4610492845786963
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 0,
+                "mean_predicted": null,
+                "observed": null
+              }
+            ]
+          },
+          "grid": {
+            "brier": 0.18603394125489411,
+            "log_loss": 0.5520044187507019,
+            "mean_probability": 0.27434235702778537,
+            "spearman": 0.3296448273833169,
+            "auc": 0.7086374132002966,
+            "bins": [
+              {
+                "low": 0.0,
+                "high": 0.05,
+                "n": 41,
+                "mean_predicted": 0.04694335374882883,
+                "observed": 0.07317073170731707
+              },
+              {
+                "low": 0.05,
+                "high": 0.1,
+                "n": 280,
+                "mean_predicted": 0.07245497675500384,
+                "observed": 0.09642857142857143
+              },
+              {
+                "low": 0.1,
+                "high": 0.2,
+                "n": 372,
+                "mean_predicted": 0.149297574860077,
+                "observed": 0.1774193548387097
+              },
+              {
+                "low": 0.2,
+                "high": 0.35,
+                "n": 510,
+                "mean_predicted": 0.28149118434850023,
+                "observed": 0.3
+              },
+              {
+                "low": 0.35,
+                "high": 0.5,
+                "n": 554,
+                "mean_predicted": 0.4317330395581411,
+                "observed": 0.4314079422382672
+              },
+              {
+                "low": 0.5,
+                "high": 1.0,
+                "n": 93,
+                "mean_predicted": 0.5058277819936118,
+                "observed": 0.6236559139784946
+              }
+            ]
+          }
+        },
+        "paired": {
+          "constant": {
+            "grid_minus_control": -0.07916496681855921,
+            "ci95": [
+              -0.09177594286921156,
+              -0.06796169080222578
+            ]
+          },
+          "feasibility": {
+            "grid_minus_control": -0.0224959760073808,
+            "ci95": [
+              -0.02672127595581219,
+              -0.017847015409095248
+            ]
+          },
+          "laplace": {
+            "grid_minus_control": 9.545211838530158e-05,
+            "ci95": [
+              -0.00028226121489948933,
+              0.0005175790999747889
+            ]
+          }
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "scores.csv.gz": "3b053e5e565c79d919c77c5c7e1a6079376abffaa3ab6fa66ae333fd5ec80622",
+    "activations.csv.gz": "c25c0dbddc786db72e88fecaafb3a4ced689dd00b1d0bb0356f680a58f1e7b1c"
+  }
+}

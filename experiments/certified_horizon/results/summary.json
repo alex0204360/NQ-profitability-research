@@ -1,0 +1,166 @@
+{
+  "discovery40": {
+    "all": {
+      "issued": 13120,
+      "by_earliest": {
+        "1": {
+          "issued": 2489,
+          "examined_to_h": 2489,
+          "at_h": 710,
+          "rate": 0.28525512253917235
+        },
+        "2": {
+          "issued": 10556,
+          "examined_to_h": 10520,
+          "at_h": 286,
+          "rate": 0.027186311787072242
+        },
+        "3": {
+          "issued": 68,
+          "examined_to_h": 68,
+          "at_h": 0,
+          "rate": 0.0
+        },
+        "4": {
+          "issued": 7,
+          "examined_to_h": 7,
+          "at_h": 0,
+          "rate": 0.0
+        }
+      },
+      "guaranteed_unchanged": {
+        "1": 10631,
+        "2": 75,
+        "3": 7
+      },
+      "strict_prefix_checks": 10709,
+      "gaps_or_cutoff_before_h": 36,
+      "first_flip_observed": 11998,
+      "max_deficit_identity_error": 1.5543122344752192e-15,
+      "near_next_deficit_zero": 25,
+      "immune_with_next_observation": 10627,
+      "immune_becoming_reachable": 883,
+      "max_required_charge_on_transition": 0.782506823476471
+    },
+    "held": {
+      "issued": 8329,
+      "by_earliest": {
+        "1": {
+          "issued": 1444,
+          "examined_to_h": 1444,
+          "at_h": 399,
+          "rate": 0.27631578947368424
+        },
+        "2": {
+          "issued": 6813,
+          "examined_to_h": 6783,
+          "at_h": 164,
+          "rate": 0.024178092289547398
+        },
+        "3": {
+          "issued": 65,
+          "examined_to_h": 65,
+          "at_h": 0,
+          "rate": 0.0
+        },
+        "4": {
+          "issued": 7,
+          "examined_to_h": 7,
+          "at_h": 0,
+          "rate": 0.0
+        }
+      },
+      "guaranteed_unchanged": {
+        "1": 6885,
+        "2": 72,
+        "3": 7
+      },
+      "strict_prefix_checks": 6960,
+      "gaps_or_cutoff_before_h": 30,
+      "first_flip_observed": 7351,
+      "max_deficit_identity_error": 1.5543122344752192e-15,
+      "near_next_deficit_zero": 0,
+      "immune_with_next_observation": 6881,
+      "immune_becoming_reachable": 570,
+      "max_required_charge_on_transition": 0.7126903012288329
+    }
+  },
+  "external60": {
+    "all": {
+      "issued": 19633,
+      "by_earliest": {
+        "1": {
+          "issued": 3597,
+          "examined_to_h": 3597,
+          "at_h": 1073,
+          "rate": 0.2983041423408396
+        },
+        "2": {
+          "issued": 16011,
+          "examined_to_h": 15967,
+          "at_h": 471,
+          "rate": 0.02949834032692428
+        },
+        "3": {
+          "issued": 25,
+          "examined_to_h": 25,
+          "at_h": 0,
+          "rate": 0.0
+        }
+      },
+      "guaranteed_unchanged": {
+        "1": 16036,
+        "2": 25,
+        "3": 0
+      },
+      "strict_prefix_checks": 16061,
+      "gaps_or_cutoff_before_h": 44,
+      "first_flip_observed": 18845,
+      "max_deficit_identity_error": 4.440892098500626e-16,
+      "near_next_deficit_zero": 0,
+      "immune_with_next_observation": 16036,
+      "immune_becoming_reachable": 1284,
+      "max_required_charge_on_transition": 0.7383403834918603
+    },
+    "held": {
+      "issued": 12505,
+      "by_earliest": {
+        "1": {
+          "issued": 1850,
+          "examined_to_h": 1850,
+          "at_h": 546,
+          "rate": 0.2951351351351351
+        },
+        "2": {
+          "issued": 10630,
+          "examined_to_h": 10591,
+          "at_h": 270,
+          "rate": 0.02549334340477764
+        },
+        "3": {
+          "issued": 25,
+          "examined_to_h": 25,
+          "at_h": 0,
+          "rate": 0.0
+        }
+      },
+      "guaranteed_unchanged": {
+        "1": 10655,
+        "2": 25,
+        "3": 0
+      },
+      "strict_prefix_checks": 10680,
+      "gaps_or_cutoff_before_h": 39,
+      "first_flip_observed": 11977,
+      "max_deficit_identity_error": 4.440892098500626e-16,
+      "near_next_deficit_zero": 0,
+      "immune_with_next_observation": 10655,
+      "immune_becoming_reachable": 796,
+      "max_required_charge_on_transition": 0.7383403834918603
+    }
+  },
+  "input_sha256": {
+    "scores.csv.gz": "3b053e5e565c79d919c77c5c7e1a6079376abffaa3ab6fa66ae333fd5ec80622",
+    "warnings.csv.gz": "bfebe37db1d5d7671cd5fd749f27dbb4a53155369704e806f63767acf0cd6ef9"
+  }
+}

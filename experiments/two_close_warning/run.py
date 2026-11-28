@@ -69,7 +69,7 @@ def issue(day, prior_paths, rate):
     return queries[["source","date","stamp","held","templates",*MODELS,"target","sign_disagreement","near_boundary"]], template,next_rate
 
 
-def score(rows, dates):
+def score(rows, dates, models=MODELS, primary="joint"):
     resolved = rows.dropna(subset=["target"])
     n = len(dates)
     starts = np.random.default_rng(604).integers(n,size=(10000,(n+4)//5,1))
@@ -77,7 +77,7 @@ def score(rows, dates):
     totals = resolved.groupby("date").size().reindex(dates,fill_value=0).to_numpy()[select].sum(axis=1)
     out = dict(issued=len(rows),resolved=len(resolved),events=int(resolved.target.sum()),models={},paired={},
                sign_disagreements=int(resolved.sign_disagreement.sum()),near_zero=int(resolved.near_boundary.sum()))
-    for name in MODELS:
+    for name in models:
         p,y = resolved[name],resolved.target
         error = (p-y)**2
         bins = []
@@ -87,8 +87,8 @@ def score(rows, dates):
                 mean_prediction=float(p[sel].mean()) if sel.any() else None,
                 observed=float(y[sel].mean()) if sel.any() else None))
         out["models"][name]=dict(brier=error.mean(),mean=p.mean(),**rank_metrics(y.to_numpy(),p.to_numpy()),bins=bins)
-        if name != "joint":
-            diff = (resolved.joint-y)**2-error
+        if name != primary:
+            diff = (resolved[primary]-y)**2-error
             daily = diff.groupby(resolved.date).sum().reindex(dates,fill_value=0).to_numpy()
             sampled = daily[select].sum(axis=1)
             out["paired"][name]=dict(delta=diff.mean(),

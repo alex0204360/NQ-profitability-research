@@ -1,0 +1,518 @@
+{
+  "dates": [
+    "2026-01-21",
+    "2026-01-22",
+    "2026-01-23",
+    "2026-01-26",
+    "2026-01-27",
+    "2026-01-28",
+    "2026-01-29",
+    "2026-01-30",
+    "2026-02-02",
+    "2026-02-03",
+    "2026-02-04",
+    "2026-02-05",
+    "2026-02-06",
+    "2026-02-09",
+    "2026-02-10",
+    "2026-02-11",
+    "2026-02-12",
+    "2026-02-13",
+    "2026-02-17",
+    "2026-02-18",
+    "2026-02-19",
+    "2026-02-20",
+    "2026-02-23",
+    "2026-02-24",
+    "2026-02-25",
+    "2026-02-26",
+    "2026-02-27",
+    "2026-03-02",
+    "2026-03-03",
+    "2026-03-04",
+    "2026-03-05",
+    "2026-03-06",
+    "2026-03-09",
+    "2026-03-10",
+    "2026-03-11",
+    "2026-03-12",
+    "2026-03-13",
+    "2026-03-16",
+    "2026-03-17",
+    "2026-03-18",
+    "2026-03-19",
+    "2026-03-20",
+    "2026-03-23",
+    "2026-03-24",
+    "2026-03-25",
+    "2026-03-26",
+    "2026-03-27",
+    "2026-03-30",
+    "2026-03-31",
+    "2026-04-01",
+    "2026-04-02",
+    "2026-04-06",
+    "2026-04-07",
+    "2026-04-08",
+    "2026-04-09",
+    "2026-04-10",
+    "2026-04-13",
+    "2026-04-14",
+    "2026-04-15"
+  ],
+  "bars": 20768,
+  "diagnostics": {
+    "all": {
+      "rows": 20768,
+      "nonzero_volume_scores": 15451,
+      "mean_abs_volume_score_pts": 0.17226352209689996,
+      "mean_signed_pts": {
+        "close_to_open": 0.09112577041602465,
+        "peer_close_to_open": -0.22262615562403698,
+        "spread_convergence": 0.31375192604006163,
+        "paid_0": -0.1017189907550077,
+        "paid_1": 0.02005489214175655,
+        "basis_paid_0": 0.0193807781201849,
+        "basis_paid_1": -0.0032501926040061635
+      },
+      "rank": {
+        "volume": {
+          "close_to_open": 0.2649175034259405,
+          "paid_0": -0.01360303171785768,
+          "paid_1": 0.005668321566733598
+        },
+        "equal": {
+          "close_to_open": 0.26618246508914545,
+          "paid_0": -0.013032760656967736,
+          "paid_1": 0.005752498361909007
+        },
+        "peer": {
+          "close_to_open": 0.26618246508914545,
+          "paid_0": -0.013032760656967736,
+          "paid_1": 0.005752498361909007
+        },
+        "micro_reversion": {
+          "close_to_open": 0.032102178145318475,
+          "paid_0": 0.01521964876987747,
+          "paid_1": -0.011297487211218298
+        }
+      }
+    },
+    "volume_gate": {
+      "rows": 1,
+      "nonzero_volume_scores": 1,
+      "mean_abs_volume_score_pts": 12.630264753411991,
+      "mean_signed_pts": {
+        "close_to_open": 20.5,
+        "peer_close_to_open": -0.25,
+        "spread_convergence": 20.75,
+        "paid_0": -10.5,
+        "paid_1": 5.0,
+        "basis_paid_0": 6.25,
+        "basis_paid_1": 0.25
+      },
+      "rank": {
+        "volume": {
+          "close_to_open": null,
+          "paid_0": null,
+          "paid_1": null
+        },
+        "equal": {
+          "close_to_open": null,
+          "paid_0": null,
+          "paid_1": null
+        },
+        "peer": {
+          "close_to_open": null,
+          "paid_0": null,
+          "paid_1": null
+        },
+        "micro_reversion": {
+          "close_to_open": null,
+          "paid_0": null,
+          "paid_1": null
+        }
+      }
+    }
+  },
+  "policies": {
+    "0": {
+      "volume": {
+        "trades": 1,
+        "active_days": 1,
+        "gross": -21.0,
+        "long": 0,
+        "without_best_day_at6": -27.0,
+        "costs": {
+          "3": {
+            "net": -24.0,
+            "without_best_trade": -24.0,
+            "marked_drawdown": 24.0,
+            "intrabar_drawdown_lower": 39.5,
+            "intrabar_drawdown_upper": 45.5,
+            "marked_budget_margin": 1476.0,
+            "intrabar_upper_budget_margin": 1454.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": -27.0,
+            "without_best_trade": -27.0,
+            "marked_drawdown": 27.0,
+            "intrabar_drawdown_lower": 41.0,
+            "intrabar_drawdown_upper": 45.5,
+            "marked_budget_margin": 1473.0,
+            "intrabar_upper_budget_margin": 1454.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": -30.0,
+            "without_best_trade": -30.0,
+            "marked_drawdown": 30.0,
+            "intrabar_drawdown_lower": 42.5,
+            "intrabar_drawdown_upper": 45.5,
+            "marked_budget_margin": 1470.0,
+            "intrabar_upper_budget_margin": 1454.5,
+            "drawdown_budget": 1500.0
+          }
+        }
+      },
+      "equal": {
+        "trades": 1,
+        "active_days": 1,
+        "gross": -21.0,
+        "long": 0,
+        "without_best_day_at6": -27.0,
+        "costs": {
+          "3": {
+            "net": -24.0,
+            "without_best_trade": -24.0,
+            "marked_drawdown": 24.0,
+            "intrabar_drawdown_lower": 39.5,
+            "intrabar_drawdown_upper": 45.5,
+            "marked_budget_margin": 1476.0,
+            "intrabar_upper_budget_margin": 1454.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": -27.0,
+            "without_best_trade": -27.0,
+            "marked_drawdown": 27.0,
+            "intrabar_drawdown_lower": 41.0,
+            "intrabar_drawdown_upper": 45.5,
+            "marked_budget_margin": 1473.0,
+            "intrabar_upper_budget_margin": 1454.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": -30.0,
+            "without_best_trade": -30.0,
+            "marked_drawdown": 30.0,
+            "intrabar_drawdown_lower": 42.5,
+            "intrabar_drawdown_upper": 45.5,
+            "marked_budget_margin": 1470.0,
+            "intrabar_upper_budget_margin": 1454.5,
+            "drawdown_budget": 1500.0
+          }
+        }
+      },
+      "peer": {
+        "trades": 5,
+        "active_days": 5,
+        "gross": -24.0,
+        "long": 3,
+        "without_best_day_at6": -76.5,
+        "costs": {
+          "3": {
+            "net": -39.0,
+            "without_best_trade": -64.5,
+            "marked_drawdown": 80.0,
+            "intrabar_drawdown_lower": 109.0,
+            "intrabar_drawdown_upper": 109.0,
+            "marked_budget_margin": 1420.0,
+            "intrabar_upper_budget_margin": 1391.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": -54.0,
+            "without_best_trade": -76.5,
+            "marked_drawdown": 90.5,
+            "intrabar_drawdown_lower": 115.0,
+            "intrabar_drawdown_upper": 115.0,
+            "marked_budget_margin": 1409.5,
+            "intrabar_upper_budget_margin": 1385.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": -69.0,
+            "without_best_trade": -88.5,
+            "marked_drawdown": 101.0,
+            "intrabar_drawdown_lower": 123.5,
+            "intrabar_drawdown_upper": 123.5,
+            "marked_budget_margin": 1399.0,
+            "intrabar_upper_budget_margin": 1376.5,
+            "drawdown_budget": 1500.0
+          }
+        }
+      },
+      "micro_reversion": {
+        "trades": 6489,
+        "active_days": 59,
+        "gross": 5257.0,
+        "long": 3298,
+        "without_best_day_at6": -34299.0,
+        "costs": {
+          "3": {
+            "net": -14210.0,
+            "without_best_trade": -14423.5,
+            "marked_drawdown": 14271.5,
+            "intrabar_drawdown_lower": 14317.5,
+            "intrabar_drawdown_upper": 14317.5,
+            "marked_budget_margin": -12771.5,
+            "intrabar_upper_budget_margin": -12817.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": -33677.0,
+            "without_best_trade": -33887.5,
+            "marked_drawdown": 33716.0,
+            "intrabar_drawdown_lower": 33760.5,
+            "intrabar_drawdown_upper": 33760.5,
+            "marked_budget_margin": -32216.0,
+            "intrabar_upper_budget_margin": -32260.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": -53144.0,
+            "without_best_trade": -53351.5,
+            "marked_drawdown": 53167.5,
+            "intrabar_drawdown_lower": 53203.5,
+            "intrabar_drawdown_upper": 53203.5,
+            "marked_budget_margin": -51667.5,
+            "intrabar_upper_budget_margin": -51703.5,
+            "drawdown_budget": 1500.0
+          }
+        }
+      }
+    },
+    "1": {
+      "volume": {
+        "trades": 1,
+        "active_days": 1,
+        "gross": 10.0,
+        "long": 0,
+        "without_best_day_at6": 0.0,
+        "costs": {
+          "3": {
+            "net": 7.0,
+            "without_best_trade": 0.0,
+            "marked_drawdown": 2.0,
+            "intrabar_drawdown_lower": 25.0,
+            "intrabar_drawdown_upper": 35.0,
+            "marked_budget_margin": 1498.0,
+            "intrabar_upper_budget_margin": 1465.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": 4.0,
+            "without_best_trade": 0.0,
+            "marked_drawdown": 3.5,
+            "intrabar_drawdown_lower": 26.5,
+            "intrabar_drawdown_upper": 35.0,
+            "marked_budget_margin": 1496.5,
+            "intrabar_upper_budget_margin": 1465.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": 1.0,
+            "without_best_trade": 0.0,
+            "marked_drawdown": 5.0,
+            "intrabar_drawdown_lower": 28.0,
+            "intrabar_drawdown_upper": 35.0,
+            "marked_budget_margin": 1495.0,
+            "intrabar_upper_budget_margin": 1465.0,
+            "drawdown_budget": 1500.0
+          }
+        }
+      },
+      "equal": {
+        "trades": 1,
+        "active_days": 1,
+        "gross": 10.0,
+        "long": 0,
+        "without_best_day_at6": 0.0,
+        "costs": {
+          "3": {
+            "net": 7.0,
+            "without_best_trade": 0.0,
+            "marked_drawdown": 2.0,
+            "intrabar_drawdown_lower": 25.0,
+            "intrabar_drawdown_upper": 35.0,
+            "marked_budget_margin": 1498.0,
+            "intrabar_upper_budget_margin": 1465.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": 4.0,
+            "without_best_trade": 0.0,
+            "marked_drawdown": 3.5,
+            "intrabar_drawdown_lower": 26.5,
+            "intrabar_drawdown_upper": 35.0,
+            "marked_budget_margin": 1496.5,
+            "intrabar_upper_budget_margin": 1465.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": 1.0,
+            "without_best_trade": 0.0,
+            "marked_drawdown": 5.0,
+            "intrabar_drawdown_lower": 28.0,
+            "intrabar_drawdown_upper": 35.0,
+            "marked_budget_margin": 1495.0,
+            "intrabar_upper_budget_margin": 1465.0,
+            "drawdown_budget": 1500.0
+          }
+        }
+      },
+      "peer": {
+        "trades": 5,
+        "active_days": 5,
+        "gross": 11.5,
+        "long": 3,
+        "without_best_day_at6": -74.5,
+        "costs": {
+          "3": {
+            "net": -3.5,
+            "without_best_trade": -62.5,
+            "marked_drawdown": 67.0,
+            "intrabar_drawdown_lower": 79.5,
+            "intrabar_drawdown_upper": 79.5,
+            "marked_budget_margin": 1433.0,
+            "intrabar_upper_budget_margin": 1420.5,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": -18.5,
+            "without_best_trade": -74.5,
+            "marked_drawdown": 70.0,
+            "intrabar_drawdown_lower": 82.5,
+            "intrabar_drawdown_upper": 82.5,
+            "marked_budget_margin": 1430.0,
+            "intrabar_upper_budget_margin": 1417.5,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": -33.5,
+            "without_best_trade": -86.5,
+            "marked_drawdown": 73.0,
+            "intrabar_drawdown_lower": 85.5,
+            "intrabar_drawdown_upper": 85.5,
+            "marked_budget_margin": 1427.0,
+            "intrabar_upper_budget_margin": 1414.5,
+            "drawdown_budget": 1500.0
+          }
+        }
+      },
+      "micro_reversion": {
+        "trades": 4887,
+        "active_days": 59,
+        "gross": -3192.5,
+        "long": 2484,
+        "without_best_day_at6": -32514.5,
+        "costs": {
+          "3": {
+            "net": -17853.5,
+            "without_best_trade": -18081.0,
+            "marked_drawdown": 18343.0,
+            "intrabar_drawdown_lower": 18398.0,
+            "intrabar_drawdown_upper": 18398.0,
+            "marked_budget_margin": -16843.0,
+            "intrabar_upper_budget_margin": -16898.0,
+            "drawdown_budget": 1500.0
+          },
+          "6": {
+            "net": -32514.5,
+            "without_best_trade": -32739.0,
+            "marked_drawdown": 32786.0,
+            "intrabar_drawdown_lower": 32843.0,
+            "intrabar_drawdown_upper": 32843.0,
+            "marked_budget_margin": -31286.0,
+            "intrabar_upper_budget_margin": -31343.0,
+            "drawdown_budget": 1500.0
+          },
+          "9": {
+            "net": -47175.5,
+            "without_best_trade": -47397.0,
+            "marked_drawdown": 47232.5,
+            "intrabar_drawdown_lower": 47290.5,
+            "intrabar_drawdown_upper": 47290.5,
+            "marked_budget_margin": -45732.5,
+            "intrabar_upper_budget_margin": -45790.5,
+            "drawdown_budget": 1500.0
+          }
+        }
+      }
+    }
+  },
+  "paired": {
+    "0": {
+      "cash": {
+        "daily_mean": -0.4576271186440678,
+        "interval95": [
+          -1.3728813559322033,
+          0.0
+        ]
+      },
+      "equal": {
+        "daily_mean": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ]
+      },
+      "peer": {
+        "daily_mean": 0.4576271186440678,
+        "interval95": [
+          -1.1016949152542372,
+          2.4322033898305087
+        ]
+      },
+      "micro_reversion": {
+        "daily_mean": 570.3389830508474,
+        "interval95": [
+          467.21800847457627,
+          679.7802966101694
+        ]
+      }
+    },
+    "1": {
+      "cash": {
+        "daily_mean": 0.06779661016949153,
+        "interval95": [
+          0.0,
+          0.2033898305084746
+        ]
+      },
+      "equal": {
+        "daily_mean": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ]
+      },
+      "peer": {
+        "daily_mean": 0.3813559322033898,
+        "interval95": [
+          -2.483050847457627,
+          3.593220338983051
+        ]
+      },
+      "micro_reversion": {
+        "daily_mean": 551.1610169491526,
+        "interval95": [
+          477.185593220339,
+          626.4093220338982
+        ]
+      }
+    }
+  }
+}
